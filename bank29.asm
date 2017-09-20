@@ -1,3 +1,5 @@
+; code bank
+
 bank $29
 org $8000
 
