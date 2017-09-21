@@ -23,24 +23,25 @@ org $8000
   STA $A1                                   ; $388043 |
   STA $A0                                   ; $388045 |
 loc_70047:
+code_388047:
   LDA #$00                                  ; $388047 |
   STA $059A                                 ; $388049 |
-  JSR $E0FD                                 ; $38804C |
+  JSR code_3FE0FD                           ; $38804C |
 loc_7004F:
-  JSR $8B0F                                 ; $38804F |
-  JSR $8E95                                 ; $388052 |
+  JSR code_388B0F                           ; $38804F |
+  JSR code_388E95                           ; $388052 |
   LDA $05C8                                 ; $388055 |
   BEQ loc_70062                             ; $388058 |
   BPL loc_7005F                             ; $38805A |
-  JMP $80EF                                 ; $38805C |
+  JMP code_3880EF                           ; $38805C |
 
 loc_7005F:
-  JMP $80EA                                 ; $38805F |
+  JMP code_3880EA                           ; $38805F |
 
 loc_70062:
   LDA $9A                                   ; $388062 |
   BEQ loc_70069                             ; $388064 |
-  JMP $80C3                                 ; $388066 |
+  JMP code_3880C3                           ; $388066 |
 
 loc_70069:
   LDA $99                                   ; $388069 |
@@ -48,17 +49,17 @@ loc_70069:
   LDA $A7                                   ; $38806D |
   CMP #$05                                  ; $38806F |
   BEQ loc_70096                             ; $388071 |
-  JSR $8531                                 ; $388073 |
+  JSR code_388531                           ; $388073 |
   LDA #$01                                  ; $388076 |
-  JSR $E0FD                                 ; $388078 |
-  JSR $8B0F                                 ; $38807B |
+  JSR code_3FE0FD                           ; $388078 |
+  JSR code_388B0F                           ; $38807B |
   LDA #$06                                  ; $38807E |
   STA $95                                   ; $388080 |
   BNE loc_70087                             ; $388082 |
 loc_70084:
-  JSR $856A                                 ; $388084 |
+  JSR code_38856A                           ; $388084 |
 loc_70087:
-  JSR $8E95                                 ; $388087 |
+  JSR code_388E95                           ; $388087 |
   LDA $9A                                   ; $38808A |
   BNE loc_700C3                             ; $38808C |
   DEC $95                                   ; $38808E |
@@ -66,28 +67,31 @@ loc_70087:
   LDA $99                                   ; $388092 |
   BEQ loc_70047                             ; $388094 |
 loc_70096:
+code_388096:
   LDA #$00                                  ; $388096 |
   STA $A3                                   ; $388098 |
   STA $059A                                 ; $38809A |
-  JSR $8531                                 ; $38809D |
+  JSR code_388531                           ; $38809D |
   LDA #$02                                  ; $3880A0 |
-  JSR $E0FD                                 ; $3880A2 |
+  JSR code_3FE0FD                           ; $3880A2 |
+code_3880A5:
   LDA $9A                                   ; $3880A5 |
   BNE loc_700C3                             ; $3880A7 |
-  JSR $8B0F                                 ; $3880A9 |
-  JSR $8E95                                 ; $3880AC |
+  JSR code_388B0F                           ; $3880A9 |
+  JSR code_388E95                           ; $3880AC |
   LDA $05C8                                 ; $3880AF |
   BEQ loc_700B7                             ; $3880B2 |
-  JMP $80EA                                 ; $3880B4 |
+  JMP code_3880EA                           ; $3880B4 |
 
 loc_700B7:
   LDA $99                                   ; $3880B7 |
   BEQ loc_70047                             ; $3880B9 |
   CMP $03CE                                 ; $3880BB |
   BNE loc_70096                             ; $3880BE |
-  JMP $80A5                                 ; $3880C0 |
+  JMP code_3880A5                           ; $3880C0 |
 
 loc_700C3:
+code_3880C3:
   LDA $9B                                   ; $3880C3 |
   BNE loc_700D7                             ; $3880C5 |
   LDA $03CE                                 ; $3880C7 |
@@ -96,7 +100,7 @@ loc_700C3:
   LDA $40                                   ; $3880CE |
   AND #$04                                  ; $3880D0 |
   BEQ loc_700D7                             ; $3880D2 |
-  JMP $828A                                 ; $3880D4 |
+  JMP code_38828A                           ; $3880D4 |
 
 loc_700D7:
   LDA $064B                                 ; $3880D7 |
@@ -109,22 +113,25 @@ loc_700E5:
   LDA #$FA                                  ; $3880E5 |
   STA $05C8                                 ; $3880E7 |
 loc_700EA:
+code_3880EA:
   LDA #$CC                                  ; $3880EA |
   STA $05B1                                 ; $3880EC |
+code_3880EF:
   LDA #$00                                  ; $3880EF |
   STA $059A                                 ; $3880F1 |
   LDA #$07                                  ; $3880F4 |
-  JSR $E0FD                                 ; $3880F6 |
+  JSR code_3FE0FD                           ; $3880F6 |
 loc_700F9:
   LDA $A7                                   ; $3880F9 |
   CMP #$15                                  ; $3880FB |
   BNE loc_70105                             ; $3880FD |
-  JSR $8B0F                                 ; $3880FF |
-  JMP $8108                                 ; $388102 |
+  JSR code_388B0F                           ; $3880FF |
+  JMP code_388108                           ; $388102 |
 
 loc_70105:
-  JSR $8BA0                                 ; $388105 |
-  JSR $8E95                                 ; $388108 |
+  JSR code_388BA0                           ; $388105 |
+code_388108:
+  JSR code_388E95                           ; $388108 |
   LDY $9B                                   ; $38810B |
   DEY                                       ; $38810D |
   BNE loc_7011F                             ; $38810E |
@@ -154,7 +161,7 @@ loc_70135:
   LDA #$00                                  ; $38813E |
   STA $05C8                                 ; $388140 |
 loc_70143:
-  JSR $8531                                 ; $388143 |
+  JSR code_388531                           ; $388143 |
   LDA $05B1                                 ; $388146 |
   BNE loc_700F9                             ; $388149 |
   LDA #$00                                  ; $38814B |
@@ -165,7 +172,7 @@ loc_70143:
   BEQ loc_7017D                             ; $388155 |
   LDA $802A,y                               ; $388157 |
   TAY                                       ; $38815A |
-  JSR $E522                                 ; $38815B |
+  JSR code_3FE522                           ; $38815B |
   LDA #$00                                  ; $38815E |
   STA $98                                   ; $388160 |
   LDA #$08                                  ; $388162 |
@@ -173,19 +180,19 @@ loc_70143:
 loc_70166:
   LDA $40                                   ; $388166 |
   BNE loc_70174                             ; $388168 |
-  JSR $8E95                                 ; $38816A |
+  JSR code_388E95                           ; $38816A |
   DEC $95                                   ; $38816D |
   BNE loc_70166                             ; $38816F |
-  JMP $8047                                 ; $388171 |
+  JMP code_388047                           ; $388171 |
 
 loc_70174:
   LDA $42                                   ; $388174 |
   AND #$80                                  ; $388176 |
   BEQ loc_7017D                             ; $388178 |
-  JMP $80C3                                 ; $38817A |
+  JMP code_3880C3                           ; $38817A |
 
 loc_7017D:
-  JMP $8096                                 ; $38817D |
+  JMP code_388096                           ; $38817D |
 
 loc_70180:
   LDA #$00                                  ; $388180 |
@@ -195,8 +202,9 @@ loc_70180:
   LDA #$04                                  ; $388188 |
   STA $9D                                   ; $38818A |
   LDA #$06                                  ; $38818C |
-  JSR $E0FD                                 ; $38818E |
+  JSR code_3FE0FD                           ; $38818E |
 loc_70191:
+code_388191:
   LDA $05B1                                 ; $388191 |
   CLC                                       ; $388194 |
   ADC #$E0                                  ; $388195 |
@@ -207,21 +215,21 @@ loc_70191:
   BMI loc_701C7                             ; $3881A1 |
   STA $05C8                                 ; $3881A3 |
   STA $EE                                   ; $3881A6 |
-  JSR $8254                                 ; $3881A8 |
+  JSR code_388254                           ; $3881A8 |
   LDA $064B                                 ; $3881AB |
   AND #$01                                  ; $3881AE |
   BNE loc_701BB                             ; $3881B0 |
-  JSR $8E95                                 ; $3881B2 |
+  JSR code_388E95                           ; $3881B2 |
   LDA $40                                   ; $3881B5 |
   AND #$80                                  ; $3881B7 |
   BNE loc_70191                             ; $3881B9 |
 loc_701BB:
   LDA #$3F                                  ; $3881BB |
   STA $DC                                   ; $3881BD |
-  JMP $80EA                                 ; $3881BF |
+  JMP code_3880EA                           ; $3881BF |
 
   LDA #$06                                  ; $3881C2 |
-  JSR $E0FD                                 ; $3881C4 |
+  JSR code_3FE0FD                           ; $3881C4 |
 loc_701C7:
   LDA $04CB                                 ; $3881C7 |
   SEC                                       ; $3881CA |
@@ -238,8 +246,8 @@ loc_701D8:
   STA $EC                                   ; $3881DC |
   STA $05B1                                 ; $3881DE |
   STA $05C8                                 ; $3881E1 |
-  JSR $8254                                 ; $3881E4 |
-  JSR $8E95                                 ; $3881E7 |
+  JSR code_388254                           ; $3881E4 |
+  JSR code_388E95                           ; $3881E7 |
   LDA $40                                   ; $3881EA |
   AND #$80                                  ; $3881EC |
   BEQ loc_701BB                             ; $3881EE |
@@ -264,7 +272,7 @@ loc_701F7:
   LDA $05C8                                 ; $388217 |
   ADC #$FF                                  ; $38821A |
   BMI loc_70221                             ; $38821C |
-  JMP $8191                                 ; $38821E |
+  JMP code_388191                           ; $38821E |
 
 loc_70221:
   LDY $064B                                 ; $388221 |
@@ -284,19 +292,20 @@ loc_7023C:
   STA $05C8                                 ; $38823C |
   STA $EE                                   ; $38823F |
 loc_70241:
-  JSR $8254                                 ; $388241 |
-  JSR $8E95                                 ; $388244 |
+  JSR code_388254                           ; $388241 |
+  JSR code_388E95                           ; $388244 |
   LDA $40                                   ; $388247 |
   AND #$80                                  ; $388249 |
   BNE loc_701F7                             ; $38824B |
   LDA #$3F                                  ; $38824D |
   STA $DC                                   ; $38824F |
-  JMP $80EA                                 ; $388251 |
+  JMP code_3880EA                           ; $388251 |
 
+code_388254:
   LDA $9B                                   ; $388254 |
   CMP #$01                                  ; $388256 |
   BEQ loc_7025D                             ; $388258 |
-  JMP $80EA                                 ; $38825A |
+  JMP code_3880EA                           ; $38825A |
 
 loc_7025D:
   DEC $9D                                   ; $38825D |
@@ -309,28 +318,30 @@ loc_7025D:
   STA $05C8                                 ; $38826B |
   LDA #$3F                                  ; $38826E |
   STA $DC                                   ; $388270 |
-  JMP $80EA                                 ; $388272 |
+  JMP code_3880EA                           ; $388272 |
 
 loc_70275:
-  JSR $8531                                 ; $388275 |
+  JSR code_388531                           ; $388275 |
   LDY $99                                   ; $388278 |
   LDA $800F,y                               ; $38827A |
   STA $ED                                   ; $38827D |
   LDA $8012,y                               ; $38827F |
   STA $EB                                   ; $388282 |
-  JSR $856A                                 ; $388284 |
-  JMP $86FB                                 ; $388287 |
+  JSR code_38856A                           ; $388284 |
+  JMP code_3886FB                           ; $388287 |
 
+code_38828A:
   LDA #$00                                  ; $38828A |
   STA $98                                   ; $38828C |
   LDA #$1A                                  ; $38828E |
   STA $95                                   ; $388290 |
   LDY #$02                                  ; $388292 |
   LDX #$05                                  ; $388294 |
-  JSR $CB28                                 ; $388296 |
+  JSR code_3ECB28                           ; $388296 |
 
   db $41                                    ; $388299 |
 
+code_38829A:
   LDA #$03                                  ; $38829A |
   STA $059A                                 ; $38829C |
   LDA #$08                                  ; $38829F |
@@ -338,11 +349,13 @@ loc_70275:
   LDY #$03                                  ; $3882A3 |
   STY $94                                   ; $3882A5 |
   LDX $8F                                   ; $3882A7 |
-  JSR $E522                                 ; $3882A9 |
-  JMP $82B2                                 ; $3882AC |
+  JSR code_3FE522                           ; $3882A9 |
+  JMP code_3882B2                           ; $3882AC |
 
 loc_702AF:
-  JSR $8E95                                 ; $3882AF |
+code_3882AF:
+  JSR code_388E95                           ; $3882AF |
+code_3882B2:
   LDY $03CE                                 ; $3882B2 |
   LDA $064B                                 ; $3882B5 |
   CMP #$09                                  ; $3882B8 |
@@ -358,13 +371,13 @@ loc_702C8:
   LDA $800C,y                               ; $3882CD |
   STA $EB                                   ; $3882D0 |
 loc_702D2:
-  JSR $86CE                                 ; $3882D2 |
+  JSR code_3886CE                           ; $3882D2 |
   LDA $12                                   ; $3882D5 |
   BNE loc_702FA                             ; $3882D7 |
   LDA $05B1                                 ; $3882D9 |
   CMP #$41                                  ; $3882DC |
   BCC loc_702E3                             ; $3882DE |
-  JMP $82FA                                 ; $3882E0 |
+  JMP code_3882FA                           ; $3882E0 |
 
 loc_702E3:
   LDA $9A                                   ; $3882E3 |
@@ -381,8 +394,9 @@ loc_702F6:
   DEC $95                                   ; $3882F6 |
   BNE loc_702AF                             ; $3882F8 |
 loc_702FA:
+code_3882FA:
   LDX #$00                                  ; $3882FA |
-  JSR $8531                                 ; $3882FC |
+  JSR code_388531                           ; $3882FC |
   LDA #$04                                  ; $3882FF |
   STA $95                                   ; $388301 |
   STX $11                                   ; $388303 |
@@ -390,7 +404,7 @@ loc_702FA:
   STA $00                                   ; $388308 |
   LDA $9133                                 ; $38830A |
   STA $01                                   ; $38830D |
-  JSR $D9CD                                 ; $38830F |
+  JSR code_3ED9CD                           ; $38830F |
   LDA $11                                   ; $388312 |
   AND #$01                                  ; $388314 |
   BNE loc_702AF                             ; $388316 |
@@ -400,11 +414,11 @@ loc_702FA:
   STA $00                                   ; $38831F |
   LDA $9134                                 ; $388321 |
   STA $01                                   ; $388324 |
-  JSR $D9CD                                 ; $388326 |
+  JSR code_3ED9CD                           ; $388326 |
   LDA $11                                   ; $388329 |
   AND #$01                                  ; $38832B |
   BEQ loc_70332                             ; $38832D |
-  JMP $82AF                                 ; $38832F |
+  JMP code_3882AF                           ; $38832F |
 
 loc_70332:
   LDY $03CE                                 ; $388332 |
@@ -416,11 +430,12 @@ loc_70332:
   STA $A3                                   ; $388341 |
   LDA $05B1                                 ; $388343 |
   BEQ loc_7034B                             ; $388346 |
-  JMP $80EA                                 ; $388348 |
+  JMP code_3880EA                           ; $388348 |
 
 loc_7034B:
-  JMP $8047                                 ; $38834B |
+  JMP code_388047                           ; $38834B |
 
+code_38834E:
   LDA #$3F                                  ; $38834E |
   STA $DC                                   ; $388350 |
   LDA $03B7                                 ; $388352 |
@@ -431,15 +446,17 @@ loc_7034B:
   STA $9D                                   ; $38835E |
   STA $97                                   ; $388360 |
   STA $98                                   ; $388362 |
+code_388364:
   LDA #$04                                  ; $388364 |
-  JSR $E0FD                                 ; $388366 |
+  JSR code_3FE0FD                           ; $388366 |
+code_388369:
   LDA #$00                                  ; $388369 |
   STA $11                                   ; $38836B |
   LDA $9129                                 ; $38836D |
   STA $00                                   ; $388370 |
   LDA $913D                                 ; $388372 |
   STA $01                                   ; $388375 |
-  JSR $D9CD                                 ; $388377 |
+  JSR code_3ED9CD                           ; $388377 |
   LDA $11                                   ; $38837A |
   CMP #$08                                  ; $38837C |
   BNE loc_70384                             ; $38837E |
@@ -450,7 +467,7 @@ loc_70384:
   STA $00                                   ; $388387 |
   LDA $913E                                 ; $388389 |
   STA $01                                   ; $38838C |
-  JSR $D9CD                                 ; $38838E |
+  JSR code_3ED9CD                           ; $38838E |
   LDA $11                                   ; $388391 |
   LDX $8F                                   ; $388393 |
   LDA $11                                   ; $388395 |
@@ -468,14 +485,14 @@ loc_703A3:
   ADC #$0D                                  ; $3883AB |
   AND #$08                                  ; $3883AD |
   BNE loc_703B4                             ; $3883AF |
-  JMP $8047                                 ; $3883B1 |
+  JMP code_388047                           ; $3883B1 |
 
 loc_703B4:
   LDA #$05                                  ; $3883B4 |
 loc_703B6:
-  JSR $E0FD                                 ; $3883B6 |
+  JSR code_3FE0FD                           ; $3883B6 |
 loc_703B9:
-  JSR $856A                                 ; $3883B9 |
+  JSR code_38856A                           ; $3883B9 |
   LDA $97                                   ; $3883BC |
   BNE loc_703E5                             ; $3883BE |
   LDA $40                                   ; $3883C0 |
@@ -491,26 +508,26 @@ loc_703B9:
   LDA #$00                                  ; $3883D3 |
   STA $ED                                   ; $3883D5 |
   STA $EB                                   ; $3883D7 |
-  JSR $E4D1                                 ; $3883D9 |
-  JSR $8E95                                 ; $3883DC |
-  JMP $8369                                 ; $3883DF |
+  JSR code_3FE4D1                           ; $3883D9 |
+  JSR code_388E95                           ; $3883DC |
+  JMP code_388369                           ; $3883DF |
 
 loc_703E2:
-  JMP $8047                                 ; $3883E2 |
+  JMP code_388047                           ; $3883E2 |
 
 loc_703E5:
   LDA $9A                                   ; $3883E5 |
   BNE loc_70411                             ; $3883E7 |
-  JSR $8E95                                 ; $3883E9 |
+  JSR code_388E95                           ; $3883E9 |
   LDA $0510                                 ; $3883EC |
   BMI loc_703F4                             ; $3883EF |
   INC $0555,x                               ; $3883F1 |
 loc_703F4:
-  JSR $856A                                 ; $3883F4 |
+  JSR code_38856A                           ; $3883F4 |
   LDA $97                                   ; $3883F7 |
   CMP #$10                                  ; $3883F9 |
   BNE loc_70405                             ; $3883FB |
-  JSR $8531                                 ; $3883FD |
+  JSR code_388531                           ; $3883FD |
   LDA #$00                                  ; $388400 |
   STA $0510                                 ; $388402 |
 loc_70405:
@@ -521,17 +538,18 @@ loc_70405:
   BEQ loc_70414                             ; $38840D |
   BNE loc_703E5                             ; $38840F |
 loc_70411:
-  JMP $80EA                                 ; $388411 |
+  JMP code_3880EA                           ; $388411 |
 
 loc_70414:
-  JMP $8364                                 ; $388414 |
+  JMP code_388364                           ; $388414 |
 
+code_388417:
   LDA #$2B                                  ; $388417 |
-  JSR $C8B2                                 ; $388419 |
+  JSR code_3EC8B2                           ; $388419 |
   LDY #$01                                  ; $38841C |
-  JSR $C5F0                                 ; $38841E |
+  JSR code_3EC5F0                           ; $38841E |
   LDA #$0B                                  ; $388421 |
-  JSR $C9EF                                 ; $388423 |
+  JSR code_3EC9EF                           ; $388423 |
   LDA #$FF                                  ; $388426 |
   STA $9E                                   ; $388428 |
   LDA #$00                                  ; $38842A |
@@ -539,7 +557,7 @@ loc_70414:
   STA $98                                   ; $38842E |
   LDA #$0C                                  ; $388430 |
   STA $95                                   ; $388432 |
-  JSR $8531                                 ; $388434 |
+  JSR code_388531                           ; $388434 |
   LDA $94                                   ; $388437 |
   CMP #$04                                  ; $388439 |
   BEQ loc_7049E                             ; $38843B |
@@ -565,56 +583,57 @@ loc_70446:
   LDA #$00                                  ; $388465 |
   STA $05C8                                 ; $388467 |
 loc_7046A:
-  JSR $8B0F                                 ; $38846A |
-  JSR $8531                                 ; $38846D |
-  JSR $8E95                                 ; $388470 |
+  JSR code_388B0F                           ; $38846A |
+  JSR code_388531                           ; $38846D |
+  JSR code_388E95                           ; $388470 |
   DEC $95                                   ; $388473 |
   BNE loc_70446                             ; $388475 |
   LDA #$00                                  ; $388477 |
   STA $9E                                   ; $388479 |
-  JMP $80EF                                 ; $38847B |
+  JMP code_3880EF                           ; $38847B |
 
 loc_7047E:
   LDA $9B                                   ; $38847E |
   CMP #$02                                  ; $388480 |
   BNE loc_70489                             ; $388482 |
   LDY #$34                                  ; $388484 |
-  JSR $E55D                                 ; $388486 |
+  JSR code_3FE55D                           ; $388486 |
 loc_70489:
   LDA #$00                                  ; $388489 |
   STA $99                                   ; $38848B |
-  JSR $8B0F                                 ; $38848D |
-  JSR $8E95                                 ; $388490 |
+  JSR code_388B0F                           ; $38848D |
+  JSR code_388E95                           ; $388490 |
   DEC $95                                   ; $388493 |
   BNE loc_70489                             ; $388495 |
   LDA #$00                                  ; $388497 |
   STA $9E                                   ; $388499 |
-  JMP $8047                                 ; $38849B |
+  JMP code_388047                           ; $38849B |
 
 loc_7049E:
   LDA #$00                                  ; $38849E |
   STA $99                                   ; $3884A0 |
-  JSR $8E95                                 ; $3884A2 |
+  JSR code_388E95                           ; $3884A2 |
   DEC $95                                   ; $3884A5 |
   BNE loc_7049E                             ; $3884A7 |
   LDA #$00                                  ; $3884A9 |
   STA $9E                                   ; $3884AB |
-  JMP $834E                                 ; $3884AD |
+  JMP code_38834E                           ; $3884AD |
 
+code_3884B0:
   LDA $AE                                   ; $3884B0 |
-  JSR $C9EF                                 ; $3884B2 |
+  JSR code_3EC9EF                           ; $3884B2 |
   LDY $9B                                   ; $3884B5 |
   LDA $852E,y                               ; $3884B7 |
   TAY                                       ; $3884BA |
   LDX #$00                                  ; $3884BB |
-  JSR $E522                                 ; $3884BD |
+  JSR code_3FE522                           ; $3884BD |
   LDY #$01                                  ; $3884C0 |
-  JSR $C5F0                                 ; $3884C2 |
+  JSR code_3EC5F0                           ; $3884C2 |
   LDA #$25                                  ; $3884C5 |
   STA $DC                                   ; $3884C7 |
   LDX #$05                                  ; $3884C9 |
   LDY #$07                                  ; $3884CB |
-  JSR $CB28                                 ; $3884CD |
+  JSR code_3ECB28                           ; $3884CD |
 
   db $41                                    ; $3884D0 |
 
@@ -649,8 +668,8 @@ loc_704FA:
   LDA $40                                   ; $38850A |
   AND #$C3                                  ; $38850C |
   STA $40                                   ; $38850E |
-  JSR $86D5                                 ; $388510 |
-  JSR $8EB9                                 ; $388513 |
+  JSR code_3886D5                           ; $388510 |
+  JSR code_388EB9                           ; $388513 |
   DEC $95                                   ; $388516 |
   BNE loc_704E7                             ; $388518 |
   LDA #$00                                  ; $38851A |
@@ -658,15 +677,16 @@ loc_704FA:
   LDA $94                                   ; $38851E |
   CMP #$03                                  ; $388520 |
   BEQ loc_70527                             ; $388522 |
-  JMP $8047                                 ; $388524 |
+  JMP code_388047                           ; $388524 |
 
 loc_70527:
   LDA #$01                                  ; $388527 |
   STA $95                                   ; $388529 |
-  JMP $829A                                 ; $38852B |
+  JMP code_38829A                           ; $38852B |
 
   db $0A, $27, $36                          ; $38852E |
 
+code_388531:
   LDA $99                                   ; $388531 |
   BEQ locret_70549                          ; $388533 |
   CMP $03CE                                 ; $388535 |
@@ -685,6 +705,7 @@ locret_70549:
   db $82, $D9, $7E, $7A, $D9, $AE, $86, $85 ; $38855A |
   db $85, $85, $85, $85, $85, $85, $85, $85 ; $388562 |
 
+code_38856A:
   LDY $0699                                 ; $38856A |
   LDA $8556,y                               ; $38856D |
   STA $08                                   ; $388570 |
@@ -701,19 +722,19 @@ loc_70584:
   LDA $42                                   ; $388584 |
   AND #$40                                  ; $388586 |
   BEQ loc_705A9                             ; $388588 |
-  JSR $8605                                 ; $38858A |
+  JSR code_388605                           ; $38858A |
   BMI loc_705A6                             ; $38858D |
   LDA $0699                                 ; $38858F |
   CLC                                       ; $388592 |
   ADC #$80                                  ; $388593 |
   TAY                                       ; $388595 |
-  JSR $E512                                 ; $388596 |
+  JSR code_3FE512                           ; $388596 |
   BCS loc_705A6                             ; $388599 |
 loc_7059B:
   LDA $40                                   ; $38859B |
   STA $05B1,x                               ; $38859D |
-  JSR $8615                                 ; $3885A0 |
-  JMP $E55D                                 ; $3885A3 |
+  JSR code_388615                           ; $3885A0 |
+  JMP code_3FE55D                           ; $3885A3 |
 
 loc_705A6:
   LDX $8F                                   ; $3885A6 |
@@ -721,12 +742,12 @@ loc_705A6:
 
 loc_705A9:
   LDX $8F                                   ; $3885A9 |
-  JMP $86B2                                 ; $3885AB |
+  JMP code_3886B2                           ; $3885AB |
 
   LDA $42                                   ; $3885AE |
   AND #$40                                  ; $3885B0 |
   BEQ loc_705A9                             ; $3885B2 |
-  JSR $8605                                 ; $3885B4 |
+  JSR code_388605                           ; $3885B4 |
   BMI loc_705A6                             ; $3885B7 |
   LDA $03A4                                 ; $3885B9 |
   BNE loc_705D0                             ; $3885BC |
@@ -736,7 +757,7 @@ loc_705A9:
   STA $DC                                   ; $3885C5 |
   LDY #$0D                                  ; $3885C7 |
   LDX #$04                                  ; $3885C9 |
-  JSR $CB28                                 ; $3885CB |
+  JSR code_3ECB28                           ; $3885CB |
 
   db $41                                    ; $3885CE |
 
@@ -744,13 +765,13 @@ loc_705A9:
 
 loc_705D0:
   LDY #$09                                  ; $3885D0 |
-  JSR $E510                                 ; $3885D2 |
+  JSR code_3FE510                           ; $3885D2 |
   BCS loc_705A6                             ; $3885D5 |
   BCC loc_7059B                             ; $3885D7 |
   LDA $42                                   ; $3885D9 |
   AND #$40                                  ; $3885DB |
   BEQ loc_705A9                             ; $3885DD |
-  JSR $8605                                 ; $3885DF |
+  JSR code_388605                           ; $3885DF |
   BMI loc_705A6                             ; $3885E2 |
   LDA $03A1                                 ; $3885E4 |
   ORA $03A2                                 ; $3885E7 |
@@ -762,13 +783,14 @@ loc_705D0:
   ADC #$80                                  ; $3885F6 |
   TAY                                       ; $3885F8 |
   LDX #$01                                  ; $3885F9 |
-  JSR $CB28                                 ; $3885FB |
+  JSR code_3ECB28                           ; $3885FB |
 
   db $41                                    ; $3885FE |
 
-  JSR $8615                                 ; $3885FF |
-  JMP $E55D                                 ; $388602 |
+  JSR code_388615                           ; $3885FF |
+  JMP code_3FE55D                           ; $388602 |
 
+code_388605:
   LDA $9B                                   ; $388605 |
   ASL                                       ; $388607 |
   ASL                                       ; $388608 |
@@ -780,6 +802,7 @@ loc_705D0:
   STA $96                                   ; $388612 |
   RTS                                       ; $388614 |
 
+code_388615:
   LDY $96                                   ; $388615 |
   LDA $03CE                                 ; $388617 |
   STA $03CE,x                               ; $38861A |
@@ -810,7 +833,7 @@ loc_70648:
   LDA #$03                                  ; $388648 |
   STA $A4                                   ; $38864A |
 loc_7064C:
-  JSR $8605                                 ; $38864C |
+  JSR code_388605                           ; $38864C |
   BMI loc_70689                             ; $38864F |
   LDY $00                                   ; $388651 |
   LDA $9E                                   ; $388653 |
@@ -824,23 +847,23 @@ loc_7065B:
 loc_70660:
   LDA $854A,y                               ; $388660 |
   TAY                                       ; $388663 |
-  JSR $E510                                 ; $388664 |
+  JSR code_3FE510                           ; $388664 |
   BCS loc_70689                             ; $388667 |
-  JSR $8615                                 ; $388669 |
+  JSR code_388615                           ; $388669 |
   LDA $9B                                   ; $38866C |
   CMP #$02                                  ; $38866E |
   BNE loc_70678                             ; $388670 |
-  JSR $E522                                 ; $388672 |
-  JMP $8417                                 ; $388675 |
+  JSR code_3FE522                           ; $388672 |
+  JMP code_388417                           ; $388675 |
 
 loc_70678:
-  JSR $E55D                                 ; $388678 |
+  JSR code_3FE55D                           ; $388678 |
   LDA $22                                   ; $38867B |
   BEQ loc_70689                             ; $38867D |
   LDY #$01                                  ; $38867F |
-  JSR $C5F0                                 ; $388681 |
+  JSR code_3EC5F0                           ; $388681 |
   LDA $AE                                   ; $388684 |
-  JSR $C9EF                                 ; $388686 |
+  JSR code_3EC9EF                           ; $388686 |
 loc_70689:
   LDX $8F                                   ; $388689 |
   RTS                                       ; $38868B |
@@ -866,8 +889,9 @@ loc_706A9:
   CMP #$24                                  ; $3886A9 |
   BNE loc_706B2                             ; $3886AB |
   LDX #$02                                  ; $3886AD |
-  JSR $C5C7                                 ; $3886AF |
+  JSR code_3EC5C7                           ; $3886AF |
 loc_706B2:
+code_3886B2:
   LDA $97                                   ; $3886B2 |
   BEQ locret_706CD                          ; $3886B4 |
   DEC $97                                   ; $3886B6 |
@@ -880,16 +904,18 @@ loc_706B2:
   TAY                                       ; $3886C1 |
   LDA $E114,y                               ; $3886C2 |
   TAY                                       ; $3886C5 |
-  JSR $E55D                                 ; $3886C6 |
+  JSR code_3FE55D                           ; $3886C6 |
   LDA #$00                                  ; $3886C9 |
   STA $98                                   ; $3886CB |
 locret_706CD:
   RTS                                       ; $3886CD |
 
+code_3886CE:
   LDA $9E                                   ; $3886CE |
   BMI loc_706D5                             ; $3886D0 |
-  JSR $856A                                 ; $3886D2 |
+  JSR code_38856A                           ; $3886D2 |
 loc_706D5:
+code_3886D5:
   LDA #$40                                  ; $3886D5 |
   LDY $064B                                 ; $3886D7 |
   CPY #$08                                  ; $3886DA |
@@ -909,6 +935,7 @@ loc_706E0:
 loc_706F6:
   STA $05C8                                 ; $3886F6 |
   STA $EE                                   ; $3886F9 |
+code_3886FB:
   LDA $069A                                 ; $3886FB |
   CLC                                       ; $3886FE |
   ADC $EB                                   ; $3886FF |
@@ -938,7 +965,7 @@ loc_7071E:
 loc_70730:
   ORA $A3                                   ; $388730 |
   STA $06                                   ; $388732 |
-  JSR $E4D1                                 ; $388734 |
+  JSR code_3FE4D1                           ; $388734 |
   LDA $03B7                                 ; $388737 |
   AND #$DF                                  ; $38873A |
   STA $03B7                                 ; $38873C |
@@ -950,7 +977,7 @@ loc_70730:
   STA $00                                   ; $38874A |
   LDA $912D,y                               ; $38874C |
   STA $01                                   ; $38874F |
-  JSR $D9CD                                 ; $388751 |
+  JSR code_3ED9CD                           ; $388751 |
   LDA $064B                                 ; $388754 |
   STA $067C                                 ; $388757 |
   LDA $11                                   ; $38875A |
@@ -958,7 +985,7 @@ loc_70730:
   BEQ loc_70763                             ; $38875F |
   STA $A7                                   ; $388761 |
 loc_70763:
-  JSR $887E                                 ; $388763 |
+  JSR code_38887E                           ; $388763 |
   LDA #$00                                  ; $388766 |
   STA $11                                   ; $388768 |
   LDY $05                                   ; $38876A |
@@ -967,10 +994,10 @@ loc_70763:
   LDY $07                                   ; $388771 |
   LDA $912F,y                               ; $388773 |
   STA $01                                   ; $388776 |
-  JSR $D9CD                                 ; $388778 |
+  JSR code_3ED9CD                           ; $388778 |
   LDA $11                                   ; $38877B |
   BEQ loc_7078C                             ; $38877D |
-  JSR $8A96                                 ; $38877F |
+  JSR code_388A96                           ; $38877F |
   LDA $11                                   ; $388782 |
   LDY #$00                                  ; $388784 |
   STY $11                                   ; $388786 |
@@ -985,10 +1012,10 @@ loc_7078C:
   STA $00                                   ; $388797 |
   LDA $912D,y                               ; $388799 |
   STA $01                                   ; $38879C |
-  JSR $D9CD                                 ; $38879E |
+  JSR code_3ED9CD                           ; $38879E |
   LDA $11                                   ; $3887A1 |
   BEQ loc_707B2                             ; $3887A3 |
-  JSR $8A96                                 ; $3887A5 |
+  JSR code_388A96                           ; $3887A5 |
   LDA $11                                   ; $3887A8 |
   LDY #$00                                  ; $3887AA |
   STY $11                                   ; $3887AC |
@@ -1001,10 +1028,10 @@ loc_707B2:
   STA $00                                   ; $3887B9 |
   LDA $912D,y                               ; $3887BB |
   STA $01                                   ; $3887BE |
-  JSR $D9CD                                 ; $3887C0 |
+  JSR code_3ED9CD                           ; $3887C0 |
   LDA $11                                   ; $3887C3 |
   BEQ loc_707CE                             ; $3887C5 |
-  JSR $887E                                 ; $3887C7 |
+  JSR code_38887E                           ; $3887C7 |
   LDA #$00                                  ; $3887CA |
   STA $11                                   ; $3887CC |
 loc_707CE:
@@ -1013,10 +1040,10 @@ loc_707CE:
   STA $00                                   ; $3887D3 |
   LDA $912D,y                               ; $3887D5 |
   STA $01                                   ; $3887D8 |
-  JSR $D9CD                                 ; $3887DA |
+  JSR code_3ED9CD                           ; $3887DA |
   LDA $11                                   ; $3887DD |
   BEQ loc_707E8                             ; $3887DF |
-  JSR $887E                                 ; $3887E1 |
+  JSR code_38887E                           ; $3887E1 |
   LDA #$00                                  ; $3887E4 |
   STA $11                                   ; $3887E6 |
 loc_707E8:
@@ -1025,10 +1052,10 @@ loc_707E8:
   STA $00                                   ; $3887ED |
   LDA $912D,y                               ; $3887EF |
   STA $01                                   ; $3887F2 |
-  JSR $D9CD                                 ; $3887F4 |
+  JSR code_3ED9CD                           ; $3887F4 |
   LDA $11                                   ; $3887F7 |
   BEQ loc_707FE                             ; $3887F9 |
-  JSR $8A96                                 ; $3887FB |
+  JSR code_388A96                           ; $3887FB |
 loc_707FE:
   LDA $AD                                   ; $3887FE |
   BEQ loc_70805                             ; $388800 |
@@ -1054,13 +1081,13 @@ loc_70823:
   STA $01                                   ; $388823 |
   LDA #$00                                  ; $388825 |
   STA $11                                   ; $388827 |
-  JSR $D9CD                                 ; $388829 |
+  JSR code_3ED9CD                           ; $388829 |
   LDA $11                                   ; $38882C |
   CMP #$03                                  ; $38882E |
   BEQ loc_70839                             ; $388830 |
   AND #$01                                  ; $388832 |
   BEQ loc_70839                             ; $388834 |
-  JMP $8E62                                 ; $388836 |
+  JMP code_388E62                           ; $388836 |
 
 loc_70839:
   LDA $40                                   ; $388839 |
@@ -1077,7 +1104,7 @@ loc_70846:
   STA $00                                   ; $38884D |
   LDA $912D,y                               ; $38884F |
   STA $01                                   ; $388852 |
-  JSR $D9CD                                 ; $388854 |
+  JSR code_3ED9CD                           ; $388854 |
   LDX $8F                                   ; $388857 |
   LDA $11                                   ; $388859 |
   CMP #$04                                  ; $38885B |
@@ -1092,13 +1119,14 @@ loc_7086C:
   LDA #$00                                  ; $38886C |
   STA $05B1                                 ; $38886E |
   STA $05C8                                 ; $388871 |
-  JSR $DB5E                                 ; $388874 |
-  JSR $E4CB                                 ; $388877 |
-  JMP $834E                                 ; $38887A |
+  JSR code_3EDB5E                           ; $388874 |
+  JSR code_3FE4CB                           ; $388877 |
+  JMP code_38834E                           ; $38887A |
 
 locret_7087D:
   RTS                                       ; $38887D |
 
+code_38887E:
   TAY                                       ; $38887E |
   LDA $888C,y                               ; $38887F |
   STA $0C                                   ; $388882 |
@@ -1118,7 +1146,7 @@ locret_7087D:
   LDA $067C                                 ; $3888CC |
   CMP #$09                                  ; $3888CF |
   BNE loc_708D6                             ; $3888D1 |
-  JSR $88EA                                 ; $3888D3 |
+  JSR code_3888EA                           ; $3888D3 |
 loc_708D6:
   LDA $03B7                                 ; $3888D6 |
   ORA #$20                                  ; $3888D9 |
@@ -1128,17 +1156,18 @@ loc_708D6:
   LDA $067C                                 ; $3888DF |
   CMP #$06                                  ; $3888E2 |
   BNE locret_708E9                          ; $3888E4 |
-  JSR $88EA                                 ; $3888E6 |
+  JSR code_3888EA                           ; $3888E6 |
 locret_708E9:
   RTS                                       ; $3888E9 |
 
+code_3888EA:
   LDA #$50                                  ; $3888EA |
   STA $DC                                   ; $3888EC |
   LDA $064B                                 ; $3888EE |
   STA $067C                                 ; $3888F1 |
   LDY #$44                                  ; $3888F4 |
   LDX #$06                                  ; $3888F6 |
-  JSR $CB28                                 ; $3888F8 |
+  JSR code_3ECB28                           ; $3888F8 |
 
   db $41                                    ; $3888FB |
 
@@ -1158,7 +1187,7 @@ locret_708E9:
   STA $05B1                                 ; $388917 |
   LDA #$F0                                  ; $38891A |
   LDY #$AE                                  ; $38891C |
-  JMP $8955                                 ; $38891E |
+  JMP code_388955                           ; $38891E |
 
   LDA #$01                                  ; $388921 |
   STA $05B1                                 ; $388923 |
@@ -1184,6 +1213,7 @@ loc_7094F:
   LDA #$00                                  ; $38894F |
   STA $9D                                   ; $388951 |
   LDA #$10                                  ; $388953 |
+code_388955:
   CLC                                       ; $388955 |
   ADC $04CB                                 ; $388956 |
   AND #$F0                                  ; $388959 |
@@ -1196,11 +1226,11 @@ loc_7094F:
   STA $0486,x                               ; $388968 |
   LDA $046F                                 ; $38896B |
   STA $046F,x                               ; $38896E |
-  JSR $CB28                                 ; $388971 |
+  JSR code_3ECB28                           ; $388971 |
 
   db $41                                    ; $388974 |
 
-  JMP $8A7F                                 ; $388975 |
+  JMP code_388A7F                           ; $388975 |
 
   RTS                                       ; $388978 |
 
@@ -1215,7 +1245,7 @@ loc_7094F:
   STA $11                                   ; $38898C |
   STA $00                                   ; $38898E |
   STA $01                                   ; $388990 |
-  JSR $D9CD                                 ; $388992 |
+  JSR code_3ED9CD                           ; $388992 |
   LDA $11                                   ; $388995 |
   CMP #$08                                  ; $388997 |
   BEQ loc_709BA                             ; $388999 |
@@ -1230,7 +1260,7 @@ locret_7099B:
   STA $11                                   ; $3889A9 |
   STA $00                                   ; $3889AB |
   STA $01                                   ; $3889AD |
-  JSR $D9CD                                 ; $3889AF |
+  JSR code_3ED9CD                           ; $3889AF |
   LDA $11                                   ; $3889B2 |
   BNE loc_709DC                             ; $3889B4 |
   LDA #$10                                  ; $3889B6 |
@@ -1248,7 +1278,7 @@ loc_709BA:
   LDA $046F                                 ; $3889CF |
   STA $046F,x                               ; $3889D2 |
   LDY #$72                                  ; $3889D5 |
-  JSR $CB28                                 ; $3889D7 |
+  JSR code_3ECB28                           ; $3889D7 |
 
   db $41                                    ; $3889DA |
 
@@ -1259,7 +1289,7 @@ loc_709DC:
   BNE locret_709E9                          ; $3889DF |
   LDX #$06                                  ; $3889E1 |
   LDY #$40                                  ; $3889E3 |
-  JSR $CB28                                 ; $3889E5 |
+  JSR code_3ECB28                           ; $3889E5 |
 
   db $41                                    ; $3889E8 |
 
@@ -1298,11 +1328,11 @@ loc_70A10:
   ADC $01                                   ; $388A22 |
   AND #$F0                                  ; $388A24 |
   STA $4E                                   ; $388A26 |
-  JSR $D8AB                                 ; $388A28 |
-  JSR $DB94                                 ; $388A2B |
-  JSR $D92E                                 ; $388A2E |
+  JSR code_3ED8AB                           ; $388A28 |
+  JSR code_3EDB94                           ; $388A2B |
+  JSR code_3ED92E                           ; $388A2E |
   LDY #$8B                                  ; $388A31 |
-  JSR $E5AB                                 ; $388A33 |
+  JSR code_3FE5AB                           ; $388A33 |
   BCS loc_70A4D                             ; $388A36 |
   LDA $4D                                   ; $388A38 |
   CLC                                       ; $388A3A |
@@ -1315,38 +1345,40 @@ loc_70A10:
   ADC #$07                                  ; $388A48 |
   STA $04CB,x                               ; $388A4A |
 loc_70A4D:
-  JMP $8A72                                 ; $388A4D |
+  JMP code_388A72                           ; $388A4D |
 
   LDA #$80                                  ; $388A50 |
   STA $069A                                 ; $388A52 |
   LDA #$FF                                  ; $388A55 |
   STA $069B                                 ; $388A57 |
-  JMP $8A72                                 ; $388A5A |
+  JMP code_388A72                           ; $388A5A |
 
   LDA #$80                                  ; $388A5D |
   STA $069A                                 ; $388A5F |
   LDA #$00                                  ; $388A62 |
   STA $069B                                 ; $388A64 |
-  JMP $8A72                                 ; $388A67 |
+  JMP code_388A72                           ; $388A67 |
 
   LDA $03B7                                 ; $388A6A |
   ORA #$20                                  ; $388A6D |
   STA $03B7                                 ; $388A6F |
 loc_70A72:
+code_388A72:
   LDA #$00                                  ; $388A72 |
   LDY $05C8                                 ; $388A74 |
   BMI loc_70A7C                             ; $388A77 |
   STA $05B1                                 ; $388A79 |
 loc_70A7C:
   STA $05C8                                 ; $388A7C |
-  JSR $DB6D                                 ; $388A7F |
+code_388A7F:
+  JSR code_3EDB6D                           ; $388A7F |
   LDX $8F                                   ; $388A82 |
   INC $AD                                   ; $388A84 |
-  JMP $E4CB                                 ; $388A86 |
+  JMP code_3FE4CB                           ; $388A86 |
 
   LDA $A2                                   ; $388A89 |
   BNE loc_70A72                             ; $388A8B |
-  JMP $8E62                                 ; $388A8D |
+  JMP code_388E62                           ; $388A8D |
 
   LDA $EE                                   ; $388A90 |
   BPL loc_70A72                             ; $388A92 |
@@ -1354,6 +1386,7 @@ loc_70A7C:
 
   RTS                                       ; $388A95 |
 
+code_388A96:
   TAY                                       ; $388A96 |
   LDA $8AA4,y                               ; $388A97 |
   STA $0C                                   ; $388A9A |
@@ -1381,19 +1414,20 @@ loc_70AED:
   STA $A1                                   ; $388AF1 |
   LDA $11                                   ; $388AF3 |
   STA $12                                   ; $388AF5 |
-  JSR $DB4F                                 ; $388AF7 |
+  JSR code_3EDB4F                           ; $388AF7 |
   LDX $8F                                   ; $388AFA |
-  JMP $E4CB                                 ; $388AFC |
+  JMP code_3FE4CB                           ; $388AFC |
 
   LDA $A2                                   ; $388AFF |
   BNE loc_70AED                             ; $388B01 |
-  JMP $8E62                                 ; $388B03 |
+  JMP code_388E62                           ; $388B03 |
 
   LDA $03B7                                 ; $388B06 |
   ORA #$20                                  ; $388B09 |
   STA $03B7                                 ; $388B0B |
   RTS                                       ; $388B0E |
 
+code_388B0F:
   LDA $A7                                   ; $388B0F |
   CMP #$15                                  ; $388B11 |
   BEQ loc_70B19                             ; $388B13 |
@@ -1435,7 +1469,7 @@ loc_70B26:
   STA $A0                                   ; $388B57 |
   STA $A1                                   ; $388B59 |
 loc_70B5B:
-  JMP $86CE                                 ; $388B5B |
+  JMP code_3886CE                           ; $388B5B |
 
 loc_70B5E:
   LDA $A7                                   ; $388B5E |
@@ -1448,7 +1482,7 @@ loc_70B5E:
   LDA $8BED,y                               ; $388B6D |
   STA $A0                                   ; $388B70 |
   STA $EB                                   ; $388B72 |
-  JMP $86CE                                 ; $388B74 |
+  JMP code_3886CE                           ; $388B74 |
 
 loc_70B77:
   LDY $99                                   ; $388B77 |
@@ -1458,7 +1492,7 @@ loc_70B77:
   LDA $8BF3,y                               ; $388B80 |
   STA $A0                                   ; $388B83 |
   STA $EB                                   ; $388B85 |
-  JMP $86CE                                 ; $388B87 |
+  JMP code_3886CE                           ; $388B87 |
 
 loc_70B8A:
   LDA $064B                                 ; $388B8A |
@@ -1469,9 +1503,10 @@ loc_70B8A:
   STA $ED                                   ; $388B96 |
   LDA $8BF9,y                               ; $388B98 |
   STA $EB                                   ; $388B9B |
-  JMP $86CE                                 ; $388B9D |
+  JMP code_3886CE                           ; $388B9D |
 
 loc_70BA0:
+code_388BA0:
   LDA $A7                                   ; $388BA0 |
   CMP #$0C                                  ; $388BA2 |
   BEQ loc_70BAA                             ; $388BA4 |
@@ -1483,7 +1518,7 @@ loc_70BAA:
   BEQ loc_70BB8                             ; $388BAF |
   CMP #$0A                                  ; $388BB1 |
   BEQ loc_70BB8                             ; $388BB3 |
-  JMP $8BD5                                 ; $388BB5 |
+  JMP code_388BD5                           ; $388BB5 |
 
 loc_70BB8:
   LDA #$B0                                  ; $388BB8 |
@@ -1501,6 +1536,7 @@ loc_70BB8:
 loc_70BD2:
   STA $05C8                                 ; $388BD2 |
 loc_70BD5:
+code_388BD5:
   LDA #$00                                  ; $388BD5 |
   STA $A1                                   ; $388BD7 |
   STA $A0                                   ; $388BD9 |
@@ -1509,13 +1545,14 @@ loc_70BD5:
   STA $ED                                   ; $388BE0 |
   LDA $8BED,y                               ; $388BE2 |
   STA $EB                                   ; $388BE5 |
-  JMP $86CE                                 ; $388BE7 |
+  JMP code_3886CE                           ; $388BE7 |
 
   db $00, $01, $FE, $00, $4C, $B4, $00, $02 ; $388BEA |
   db $FE, $00, $00, $00, $00, $00, $FF, $00 ; $388BF2 |
   db $80, $80, $00, $06, $FA, $00, $00, $FF ; $388BFA |
   db $00, $FA, $06, $00, $FF, $00, $00      ; $388C02 |
 
+code_388C09:
   LDA #$01                                  ; $388C09 |
   STA $00                                   ; $388C0B |
   LDA $0486                                 ; $388C0D |
@@ -1544,13 +1581,14 @@ loc_70C21:
 loc_70C36:
   TXA                                       ; $388C36 |
   AND $00                                   ; $388C37 |
-  JMP $DBAD                                 ; $388C39 |
+  JMP code_3EDBAD                           ; $388C39 |
 
 locret_70C3C:
   RTS                                       ; $388C3C |
 
   db $00, $04, $FC, $00, $05, $FB           ; $388C3D |
 
+code_388C43:
   LDA #$00                                  ; $388C43 |
   STA $05DF,x                               ; $388C45 |
   LDA #$23                                  ; $388C48 |
@@ -1563,16 +1601,17 @@ locret_70C3C:
   STA $05C8,x                               ; $388C5A |
   LDY #$00                                  ; $388C5D |
   LDA #$04                                  ; $388C5F |
-  JMP $E8CC                                 ; $388C61 |
+  JMP code_3FE8CC                           ; $388C61 |
 
   db $57, $00, $00, $0B, $0F, $1A           ; $388C64 |
 
-  JSR $EBD1                                 ; $388C6A |
-  JMP $8C79                                 ; $388C6D |
+  JSR code_3FEBD1                           ; $388C6A |
+  JMP code_388C79                           ; $388C6D |
 
   db $7E, $00, $00, $0B, $0F, $1A           ; $388C70 |
 
-  JSR $EBD1                                 ; $388C76 |
+  JSR code_3FEBD1                           ; $388C76 |
+code_388C79:
   LDY #$01                                  ; $388C79 |
   LDA $0486                                 ; $388C7B |
   CMP $0486,x                               ; $388C7E |
@@ -1585,55 +1624,56 @@ loc_70C85:
   STA $05C8,x                               ; $388C8C |
   LDA #$00                                  ; $388C8F |
   STA $05DF,x                               ; $388C91 |
-  JMP $8CA3                                 ; $388C94 |
+  JMP code_388CA3                           ; $388C94 |
 
   db $10, $00, $00, $14, $01, $11           ; $388C97 |
 
-  JSR $EBD1                                 ; $388C9D |
-  JSR $8C43                                 ; $388CA0 |
+  JSR code_3FEBD1                           ; $388C9D |
+  JSR code_388C43                           ; $388CA0 |
+code_388CA3:
   LDA $05C8,x                               ; $388CA3 |
   STA $ED                                   ; $388CA6 |
   LDA $05DF,x                               ; $388CA8 |
   STA $EE                                   ; $388CAB |
-  JSR $E4CB                                 ; $388CAD |
-  JSR $8FDF                                 ; $388CB0 |
-  JMP $8CA3                                 ; $388CB3 |
+  JSR code_3FE4CB                           ; $388CAD |
+  JSR code_388FDF                           ; $388CB0 |
+  JMP code_388CA3                           ; $388CB3 |
 
   db $1A, $00, $00, $15, $02, $11           ; $388CB6 |
 
-  JSR $EBD1                                 ; $388CBC |
-  JSR $8C43                                 ; $388CBF |
+  JSR code_3FEBD1                           ; $388CBC |
+  JSR code_388C43                           ; $388CBF |
   LDA #$28                                  ; $388CC2 |
-  JSR $C8B2                                 ; $388CC4 |
-  JMP $8CA3                                 ; $388CC7 |
+  JSR code_3EC8B2                           ; $388CC4 |
+  JMP code_388CA3                           ; $388CC7 |
 
   db $19, $00, $00, $16, $03, $13           ; $388CCA |
 
-  JSR $EBD1                                 ; $388CD0 |
-  JSR $8C43                                 ; $388CD3 |
+  JSR code_3FEBD1                           ; $388CD0 |
+  JSR code_388C43                           ; $388CD3 |
   LDY #$06                                  ; $388CD6 |
   LDX #$01                                  ; $388CD8 |
-  JSR $CB28                                 ; $388CDA |
+  JSR code_3ECB28                           ; $388CDA |
 
   db $41                                    ; $388CDD |
 
   LDY #$06                                  ; $388CDE |
   INX                                       ; $388CE0 |
-  JSR $CB28                                 ; $388CE1 |
+  JSR code_3ECB28                           ; $388CE1 |
 
   db $41                                    ; $388CE4 |
 
   LDX $8F                                   ; $388CE5 |
   LDA #$28                                  ; $388CE7 |
-  JSR $C8B2                                 ; $388CE9 |
+  JSR code_3EC8B2                           ; $388CE9 |
   LDY $03CE                                 ; $388CEC |
   LDA $8C40,y                               ; $388CEF |
   STA $05C8,x                               ; $388CF2 |
-  JMP $8CA3                                 ; $388CF5 |
+  JMP code_388CA3                           ; $388CF5 |
 
   db $2C, $00, $00, $13, $04, $14           ; $388CF8 |
 
-  JSR $EBD1                                 ; $388CFE |
+  JSR code_3FEBD1                           ; $388CFE |
   LDA #$04                                  ; $388D01 |
   STA $05B1,x                               ; $388D03 |
   LDA #$2C                                  ; $388D06 |
@@ -1642,7 +1682,7 @@ loc_70C85:
 
   db $30, $00, $00, $12, $03, $13           ; $388D0D |
 
-  JSR $EBD1                                 ; $388D13 |
+  JSR code_3FEBD1                           ; $388D13 |
   LDA #$0C                                  ; $388D16 |
   STA $05B1,x                               ; $388D18 |
   LDA #$30                                  ; $388D1B |
@@ -1651,7 +1691,7 @@ loc_70C85:
 
   db $35, $00, $00, $11, $02, $12           ; $388D22 |
 
-  JSR $EBD1                                 ; $388D28 |
+  JSR code_3FEBD1                           ; $388D28 |
   LDA #$10                                  ; $388D2B |
   STA $05B1,x                               ; $388D2D |
   LDA #$35                                  ; $388D30 |
@@ -1661,14 +1701,14 @@ loc_70D35:
   LDA #$07                                  ; $388D38 |
   STA $A6                                   ; $388D3A |
 loc_70D3C:
-  JSR $E468                                 ; $388D3C |
+  JSR code_3FE468                           ; $388D3C |
   LDA $97                                   ; $388D3F |
   DEC $A6                                   ; $388D41 |
   BNE loc_70D3C                             ; $388D43 |
-  JSR $8C43                                 ; $388D45 |
+  JSR code_388C43                           ; $388D45 |
   LDA $05F6,x                               ; $388D48 |
   TAY                                       ; $388D4B |
-  JSR $E522                                 ; $388D4C |
+  JSR code_3FE522                           ; $388D4C |
 loc_70D4F:
   LDA $0583,x                               ; $388D4F |
   CMP #$14                                  ; $388D52 |
@@ -1678,50 +1718,53 @@ loc_70D4F:
   LDA #$00                                  ; $388D5A |
   STA $00                                   ; $388D5C |
   STA $01                                   ; $388D5E |
-  JSR $D9CD                                 ; $388D60 |
+  JSR code_3ED9CD                           ; $388D60 |
   LDA $11                                   ; $388D63 |
   BEQ loc_70D78                             ; $388D65 |
   CMP #$0B                                  ; $388D67 |
   BEQ loc_70D75                             ; $388D69 |
   CMP #$1B                                  ; $388D6B |
   BNE loc_70D78                             ; $388D6D |
-  JSR $8DF8                                 ; $388D6F |
-  JMP $8D78                                 ; $388D72 |
+  JSR code_388DF8                           ; $388D6F |
+  JMP code_388D78                           ; $388D72 |
 
 loc_70D75:
-  JSR $8D9D                                 ; $388D75 |
+  JSR code_388D9D                           ; $388D75 |
 loc_70D78:
+code_388D78:
   LDA $05C8,x                               ; $388D78 |
   STA $ED                                   ; $388D7B |
   LDA $05DF,x                               ; $388D7D |
   STA $EE                                   ; $388D80 |
-  JSR $E4CB                                 ; $388D82 |
-  JSR $8FDF                                 ; $388D85 |
+  JSR code_3FE4CB                           ; $388D82 |
+  JSR code_388FDF                           ; $388D85 |
   DEC $05B1,x                               ; $388D88 |
   BNE loc_70D4F                             ; $388D8B |
   LDA #$0A                                  ; $388D8D |
   STA $05B1,x                               ; $388D8F |
 loc_70D92:
-  JSR $E468                                 ; $388D92 |
+  JSR code_3FE468                           ; $388D92 |
   DEC $05B1,x                               ; $388D95 |
   BNE loc_70D92                             ; $388D98 |
-  JMP $E456                                 ; $388D9A |
+  JMP code_3FE456                           ; $388D9A |
 
+code_388D9D:
   LDA #$3E                                  ; $388D9D |
   LDY $51                                   ; $388D9F |
   BEQ loc_70DA5                             ; $388DA1 |
   LDA #$2C                                  ; $388DA3 |
 loc_70DA5:
   STA $DC                                   ; $388DA5 |
-  JSR $E14F                                 ; $388DA7 |
+  JSR code_3FE14F                           ; $388DA7 |
   LDX $8F                                   ; $388DAA |
   LDY #$7A                                  ; $388DAC |
-  JSR $CB28                                 ; $388DAE |
+  JSR code_3ECB28                           ; $388DAE |
 
   db $41                                    ; $388DB1 |
 
-  JMP $E477                                 ; $388DB2 |
+  JMP code_3FE477                           ; $388DB2 |
 
+code_388DB5:
   LDA $13                                   ; $388DB5 |
   AND #$FE                                  ; $388DB7 |
   STA $80                                   ; $388DB9 |
@@ -1737,24 +1780,25 @@ loc_70DA5:
   CLC                                       ; $388DCF |
   ADC #$10                                  ; $388DD0 |
   STA $04CB,x                               ; $388DD2 |
-  JSR $D8AB                                 ; $388DD5 |
-  JSR $DB94                                 ; $388DD8 |
-  JSR $D92E                                 ; $388DDB |
+  JSR code_3ED8AB                           ; $388DD5 |
+  JSR code_3EDB94                           ; $388DD8 |
+  JSR code_3ED92E                           ; $388DDB |
   INC $6B                                   ; $388DDE |
   LDA $5C                                   ; $388DE0 |
   CLC                                       ; $388DE2 |
   ADC #$40                                  ; $388DE3 |
   STA $5C                                   ; $388DE5 |
-  JSR $DB94                                 ; $388DE7 |
-  JSR $D92E                                 ; $388DEA |
+  JSR code_3EDB94                           ; $388DE7 |
+  JSR code_3ED92E                           ; $388DEA |
   LDX $8F                                   ; $388DED |
   LDY #$76                                  ; $388DEF |
-  JSR $CB28                                 ; $388DF1 |
+  JSR code_3ECB28                           ; $388DF1 |
 
   db $41                                    ; $388DF4 |
 
-  JMP $E477                                 ; $388DF5 |
+  JMP code_3FE477                           ; $388DF5 |
 
+code_388DF8:
   LDA $13                                   ; $388DF8 |
   AND #$FC                                  ; $388DFA |
   STA $80                                   ; $388DFC |
@@ -1773,24 +1817,25 @@ loc_70DA5:
   STA $4E                                   ; $388E16 |
   ADC #$20                                  ; $388E18 |
   STA $04CB,x                               ; $388E1A |
-  JSR $D8AB                                 ; $388E1D |
-  JSR $DB94                                 ; $388E20 |
-  JSR $D92E                                 ; $388E23 |
+  JSR code_3ED8AB                           ; $388E1D |
+  JSR code_3EDB94                           ; $388E20 |
+  JSR code_3ED92E                           ; $388E23 |
   INC $6B                                   ; $388E26 |
-  JSR $8E43                                 ; $388E28 |
+  JSR code_388E43                           ; $388E28 |
   DEC $6B                                   ; $388E2B |
-  JSR $8E43                                 ; $388E2D |
+  JSR code_388E43                           ; $388E2D |
   INC $6B                                   ; $388E30 |
-  JSR $8E43                                 ; $388E32 |
+  JSR code_388E43                           ; $388E32 |
   LDX $8F                                   ; $388E35 |
   LDY #$25                                  ; $388E37 |
-  JSR $CB28                                 ; $388E39 |
+  JSR code_3ECB28                           ; $388E39 |
 
   db $41                                    ; $388E3C |
 
-  JSR $C62B                                 ; $388E3D |
-  JMP $E477                                 ; $388E40 |
+  JSR code_3EC62B                           ; $388E3D |
+  JMP code_3FE477                           ; $388E40 |
 
+code_388E43:
   LDA $5C                                   ; $388E43 |
   CLC                                       ; $388E45 |
   ADC #$40                                  ; $388E46 |
@@ -1798,30 +1843,32 @@ loc_70DA5:
   LDA $5D                                   ; $388E4A |
   ADC #$00                                  ; $388E4C |
   STA $5D                                   ; $388E4E |
-  JSR $DB94                                 ; $388E50 |
-  JMP $D92E                                 ; $388E53 |
+  JSR code_3EDB94                           ; $388E50 |
+  JMP code_3ED92E                           ; $388E53 |
 
 loc_70E56:
-  JSR $E468                                 ; $388E56 |
+  JSR code_3FE468                           ; $388E56 |
   LDA $03A3                                 ; $388E59 |
   BNE loc_70E56                             ; $388E5C |
   STA $03A0,x                               ; $388E5E |
   RTS                                       ; $388E61 |
 
+code_388E62:
   LDX #$00                                  ; $388E62 |
   STX $03A1                                 ; $388E64 |
   STX $03A2                                 ; $388E67 |
   STX $03A3                                 ; $388E6A |
   STX $03A4                                 ; $388E6D |
-  JSR $ED3E                                 ; $388E70 |
+  JSR code_3FED3E                           ; $388E70 |
   LDA #$F0                                  ; $388E73 |
   STA $95                                   ; $388E75 |
   LDA #$01                                  ; $388E77 |
   STA $03B7                                 ; $388E79 |
 loc_70E7C:
-  JSR $E468                                 ; $388E7C |
+  JSR code_3FE468                           ; $388E7C |
   DEC $95                                   ; $388E7F |
   BNE loc_70E7C                             ; $388E81 |
+code_388E83:
   LDA #$10                                  ; $388E83 |
   STA $04CB                                 ; $388E85 |
   LDA #$02                                  ; $388E88 |
@@ -1830,9 +1877,10 @@ loc_70E7C:
   LDA #$03                                  ; $388E8E |
 loc_70E90:
   STA $F0                                   ; $388E90 |
-  JMP $E456                                 ; $388E92 |
+  JMP code_3FE456                           ; $388E92 |
 
-  JSR $924D                                 ; $388E95 |
+code_388E95:
+  JSR code_38924D                           ; $388E95 |
   LDA $03B7                                 ; $388E98 |
   AND #$FE                                  ; $388E9B |
   STA $03B7                                 ; $388E9D |
@@ -1849,13 +1897,15 @@ loc_70E90:
   ORA $00                                   ; $388EB4 |
   STA $03B7                                 ; $388EB6 |
 loc_70EB9:
+code_388EB9:
   LDA #$00                                  ; $388EB9 |
   STA $96                                   ; $388EBB |
   LDA $04CB,x                               ; $388EBD |
   CLC                                       ; $388EC0 |
   ADC $059A                                 ; $388EC1 |
   STA $02                                   ; $388EC4 |
-  JSR $ECC9                                 ; $388EC6 |
+  JSR code_3FECC9                           ; $388EC6 |
+code_388EC9:
   BCC loc_70EE5                             ; $388EC9 |
   STA $04                                   ; $388ECB |
   LSR                                       ; $388ECD |
@@ -1867,22 +1917,22 @@ loc_70EB9:
   STA $08                                   ; $388ED5 |
   LDA $8F56,x                               ; $388ED7 |
   STA $09                                   ; $388EDA |
-  JSR $E482                                 ; $388EDC |
-  JSR $ECF5                                 ; $388EDF |
-  JMP $8EC9                                 ; $388EE2 |
+  JSR code_3FE482                           ; $388EDC |
+  JSR code_3FECF5                           ; $388EDF |
+  JMP code_388EC9                           ; $388EE2 |
 
 loc_70EE5:
   LDA $03E5                                 ; $388EE5 |
   BPL loc_70EED                             ; $388EE8 |
-  JMP $8E62                                 ; $388EEA |
+  JMP code_388E62                           ; $388EEA |
 
 loc_70EED:
   LDA $96                                   ; $388EED |
   BEQ loc_70EF4                             ; $388EEF |
-  JMP $84B0                                 ; $388EF1 |
+  JMP code_3884B0                           ; $388EF1 |
 
 loc_70EF4:
-  JSR $8C09                                 ; $388EF4 |
+  JSR code_388C09                           ; $388EF4 |
   LDA $04B4                                 ; $388EF7 |
   BNE loc_70F1A                             ; $388EFA |
   LDA $04CB                                 ; $388EFC |
@@ -1895,10 +1945,10 @@ loc_70EF4:
   LDA #$3C                                  ; $388F0C |
   STA $95                                   ; $388F0E |
 loc_70F10:
-  JSR $E468                                 ; $388F10 |
+  JSR code_3FE468                           ; $388F10 |
   DEC $95                                   ; $388F13 |
   BNE loc_70F10                             ; $388F15 |
-  JMP $8E83                                 ; $388F17 |
+  JMP code_388E83                           ; $388F17 |
 
 loc_70F1A:
   LDA #$00                                  ; $388F1A |
@@ -1923,20 +1973,21 @@ loc_70F3D:
   CLC                                       ; $388F3D |
   ADC $56                                   ; $388F3E |
   STA $0486                                 ; $388F40 |
-  JMP $E468                                 ; $388F43 |
+  JMP code_3FE468                           ; $388F43 |
 
   db $71, $72, $96, $72, $72, $96, $72, $6C ; $388F46 |
   db $66, $96, $71, $72, $72, $72, $72, $72 ; $388F4E |
   db $8F, $8F, $8F, $8F, $8F, $8F, $8F, $8F ; $388F56 |
   db $8F, $8F, $8F, $8F, $8F, $8F, $8F, $8F ; $388F5E |
 
-  JSR $8F72                                 ; $388F66 |
-  JMP $8F96                                 ; $388F69 |
+  JSR code_388F72                           ; $388F66 |
+  JMP code_388F96                           ; $388F69 |
 
   LDA #$20                                  ; $388F6C |
   STA $056C,y                               ; $388F6E |
   RTS                                       ; $388F71 |
 
+code_388F72:
   LDA $A2                                   ; $388F72 |
   BNE locret_70F95                          ; $388F74 |
   LDA $96                                   ; $388F76 |
@@ -1956,6 +2007,7 @@ loc_70F3D:
 locret_70F95:
   RTS                                       ; $388F95 |
 
+code_388F96:
   LDX #$00                                  ; $388F96 |
   LDA $EB                                   ; $388F98 |
   CMP $EC                                   ; $388F9A |
@@ -1975,16 +2027,18 @@ loc_70FB5:
   STA $056C,y                               ; $388FB7 |
   STX $EE                                   ; $388FBA |
 loc_70FBC:
-  JMP $E4CB                                 ; $388FBC |
+  JMP code_3FE4CB                           ; $388FBC |
 
   db $21, $67, $D6, $A2, $28, $27, $D6, $27 ; $388FBF |
   db $D6, $67, $67, $67, $19, $27, $67, $67 ; $388FC7 |
   db $90, $90, $90, $90, $90, $90, $90, $90 ; $388FCF |
   db $90, $90, $90, $90, $91, $90, $90, $90 ; $388FD7 |
 
+code_388FDF:
   LDA $0583,x                               ; $388FDF |
   BEQ loc_71016                             ; $388FE2 |
-  JSR $ECC4                                 ; $388FE4 |
+  JSR code_3FECC4                           ; $388FE4 |
+code_388FE7:
   BCC loc_7100B                             ; $388FE7 |
   STA $04                                   ; $388FE9 |
   LSR                                       ; $388FEB |
@@ -1998,10 +2052,10 @@ loc_70FBC:
   STA $09                                   ; $388FF8 |
   LDX $8F                                   ; $388FFA |
   STY $06AE                                 ; $388FFC |
-  JSR $E482                                 ; $388FFF |
+  JSR code_3FE482                           ; $388FFF |
   LDY $06AE                                 ; $389002 |
-  JSR $ECF5                                 ; $389005 |
-  JMP $8FE7                                 ; $389008 |
+  JSR code_3FECF5                           ; $389005 |
+  JMP code_388FE7                           ; $389008 |
 
 loc_7100B:
   LDA $0583,x                               ; $38900B |
@@ -2010,13 +2064,13 @@ loc_7100B:
   CMP #$DF                                  ; $389012 |
   BEQ loc_7101B                             ; $389014 |
 loc_71016:
-  JSR $E485                                 ; $389016 |
+  JSR code_3FE485                           ; $389016 |
   BCS loc_7101E                             ; $389019 |
 loc_7101B:
-  JMP $E468                                 ; $38901B |
+  JMP code_3FE468                           ; $38901B |
 
 loc_7101E:
-  JMP $E456                                 ; $38901E |
+  JMP code_3FE456                           ; $38901E |
 
   LDA $0583,x                               ; $389021 |
   STA $056C,y                               ; $389024 |
@@ -2083,10 +2137,10 @@ loc_71088:
 loc_71097:
   LDA $03E5,y                               ; $389097 |
   EOR #$FF                                  ; $38909A |
-  JMP $9E8E                                 ; $38909C |
+  JMP code_389E8E                           ; $38909C |
 
 loc_7109F:
-  JMP $E456                                 ; $38909F |
+  JMP code_3FE456                           ; $38909F |
 
   LDA $03A0,y                               ; $3890A2 |
   CMP #$A2                                  ; $3890A5 |
@@ -2099,7 +2153,7 @@ loc_7109F:
   CMP #$14                                  ; $3890B5 |
   BEQ loc_71067                             ; $3890B7 |
 loc_710B9:
-  JSR $E5B8                                 ; $3890B9 |
+  JSR code_3FE5B8                           ; $3890B9 |
   LDA $11                                   ; $3890BC |
   CMP $03CE,y                               ; $3890BE |
 loc_710C1:
@@ -2111,8 +2165,9 @@ loc_710C1:
   BEQ locret_71116                          ; $3890CC |
   LDA #$00                                  ; $3890CE |
   STA $0583,x                               ; $3890D0 |
-  JMP $90D6                                 ; $3890D3 |
+  JMP code_3890D6                           ; $3890D3 |
 
+code_3890D6:
   LDA $0583,x                               ; $3890D6 |
   CMP #$94                                  ; $3890D9 |
   BEQ locret_71116                          ; $3890DB |
@@ -2122,7 +2177,7 @@ loc_710C1:
   LDA #$00                                  ; $3890E4 |
   STA $0583,x                               ; $3890E6 |
   STA $EE                                   ; $3890E9 |
-  JSR $E4CB                                 ; $3890EB |
+  JSR code_3FE4CB                           ; $3890EB |
   LDA $05C8,x                               ; $3890EE |
   EOR #$FF                                  ; $3890F1 |
   STA $05C8,x                               ; $3890F3 |
@@ -2152,14 +2207,14 @@ locret_71116:
   db $0C, $F7, $07, $00, $08, $00           ; $38913F |
 
   LDY #$01                                  ; $389145 |
-  JSR $C5F0                                 ; $389147 |
-  JSR $D6F1                                 ; $38914A |
+  JSR code_3EC5F0                           ; $389147 |
+  JSR code_3ED6F1                           ; $38914A |
   LDA $05B1                                 ; $38914D |
   STA $05DF                                 ; $389150 |
   LDA $05C8                                 ; $389153 |
   STA $05F6                                 ; $389156 |
   LDA $AE                                   ; $389159 |
-  JSR $C9EF                                 ; $38915B |
+  JSR code_3EC9EF                           ; $38915B |
   LDA #$00                                  ; $38915E |
   STA $98                                   ; $389160 |
   LDA $06A5                                 ; $389162 |
@@ -2170,26 +2225,26 @@ locret_71116:
   AND #$08                                  ; $38916D |
   BEQ loc_71174                             ; $38916F |
 loc_71171:
-  JMP $9208                                 ; $389171 |
+  JMP code_389208                           ; $389171 |
 
 loc_71174:
   LDA #$80                                  ; $389174 |
   STA $0486                                 ; $389176 |
   LDA #$07                                  ; $389179 |
-  JSR $E0FD                                 ; $38917B |
+  JSR code_3FE0FD                           ; $38917B |
   LDA #$00                                  ; $38917E |
   STA $05DF                                 ; $389180 |
   LDA #$F8                                  ; $389183 |
   STA $05F6                                 ; $389185 |
 loc_71188:
-  JSR $E468                                 ; $389188 |
+  JSR code_3FE468                           ; $389188 |
   LDA #$00                                  ; $38918B |
   STA $ED                                   ; $38918D |
   STA $EB                                   ; $38918F |
   LDA #$40                                  ; $389191 |
   STA $00                                   ; $389193 |
-  JSR $ECA4                                 ; $389195 |
-  JSR $E4D3                                 ; $389198 |
+  JSR code_3FECA4                           ; $389195 |
+  JSR code_3FE4D3                           ; $389198 |
   LDA $05F6                                 ; $38919B |
   BMI loc_71188                             ; $38919E |
   LDA $04CB                                 ; $3891A0 |
@@ -2204,12 +2259,12 @@ loc_71188:
   LDX #$08                                  ; $3891B4 |
 loc_711B6:
   LDY #$01                                  ; $3891B6 |
-  JSR $CB28                                 ; $3891B8 |
+  JSR code_3ECB28                           ; $3891B8 |
 
   db $41                                    ; $3891BB |
 
   LDY #$09                                  ; $3891BC |
-  JSR $E522                                 ; $3891BE |
+  JSR code_3FE522                           ; $3891BE |
   LDY $95                                   ; $3891C1 |
   LDA $EF53,y                               ; $3891C3 |
   STA $0486,x                               ; $3891C6 |
@@ -2229,60 +2284,63 @@ loc_711B6:
   BPL loc_711B6                             ; $3891EC |
   LDA #$DC                                  ; $3891EE |
   STA $05B1                                 ; $3891F0 |
+code_3891F3:
   DEC $05B1                                 ; $3891F3 |
   BEQ loc_711FE                             ; $3891F6 |
-  JSR $E468                                 ; $3891F8 |
-  JMP $91F3                                 ; $3891FB |
+  JSR code_3FE468                           ; $3891F8 |
+  JMP code_3891F3                           ; $3891FB |
 
 loc_711FE:
   LDA #$F0                                  ; $3891FE |
   STA $DC                                   ; $389200 |
-  JSR $D6F1                                 ; $389202 |
+  JSR code_3ED6F1                           ; $389202 |
 loc_71205:
-  JSR $E468                                 ; $389205 |
+  JSR code_3FE468                           ; $389205 |
+code_389208:
   LDA #$00                                  ; $389208 |
   STA $ED                                   ; $38920A |
   STA $EB                                   ; $38920C |
   TAX                                       ; $38920E |
   LDA #$40                                  ; $38920F |
   STA $00                                   ; $389211 |
-  JSR $ECA4                                 ; $389213 |
-  JSR $E4D1                                 ; $389216 |
+  JSR code_3FECA4                           ; $389213 |
+  JSR code_3FE4D1                           ; $389216 |
   LDA #$00                                  ; $389219 |
   STA $11                                   ; $38921B |
   LDA #$07                                  ; $38921D |
   STA $00                                   ; $38921F |
   LDA #$0C                                  ; $389221 |
   STA $01                                   ; $389223 |
-  JSR $D9CD                                 ; $389225 |
+  JSR code_3ED9CD                           ; $389225 |
   LDA $11                                   ; $389228 |
   BNE loc_71237                             ; $38922A |
   LDA #$F9                                  ; $38922C |
   STA $00                                   ; $38922E |
-  JSR $D9CD                                 ; $389230 |
+  JSR code_3ED9CD                           ; $389230 |
   LDA $11                                   ; $389233 |
   BEQ loc_71205                             ; $389235 |
 loc_71237:
-  JSR $DB6D                                 ; $389237 |
-  JSR $DFB9                                 ; $38923A |
+  JSR code_3EDB6D                           ; $389237 |
+  JSR code_3EDFB9                           ; $38923A |
   LDA #$01                                  ; $38923D |
   STA $F0                                   ; $38923F |
-  JMP $E456                                 ; $389241 |
+  JMP code_3FE456                           ; $389241 |
 
   db $FC, $04, $00, $00, $00, $00, $04, $FC ; $389244 |
 
 locret_7124C:
   RTS                                       ; $38924C |
 
+code_38924D:
   LDA $42                                   ; $38924D |
   AND #$10                                  ; $38924F |
   BEQ locret_7124C                          ; $389251 |
   LDA #$34                                  ; $389253 |
   STA $DC                                   ; $389255 |
-  JSR $DEBD                                 ; $389257 |
-  JSR $CA3D                                 ; $38925A |
-  JSR $96D0                                 ; $38925D |
-  JSR $E1DD                                 ; $389260 |
+  JSR code_3EDEBD                           ; $389257 |
+  JSR code_3ECA3D                           ; $38925A |
+  JSR code_3896D0                           ; $38925D |
+  JSR code_3FE1DD                           ; $389260 |
   LDA $06A0                                 ; $389263 |
   PHA                                       ; $389266 |
   LDA $F4                                   ; $389267 |
@@ -2313,43 +2371,43 @@ locret_7124C:
   STA $A000                                 ; $389295 |
   STA $069C                                 ; $389298 |
   STA $069D                                 ; $38929B |
-  JSR $9624                                 ; $38929E |
-  JSR $DEA3                                 ; $3892A1 |
-  JSR $C9BF                                 ; $3892A4 |
+  JSR code_389624                           ; $38929E |
+  JSR code_3EDEA3                           ; $3892A1 |
+  JSR code_3EC9BF                           ; $3892A4 |
   LDA #$21                                  ; $3892A7 |
-  JSR $C9EF                                 ; $3892A9 |
+  JSR code_3EC9EF                           ; $3892A9 |
   LDA #$10                                  ; $3892AC |
-  JSR $CB28                                 ; $3892AE |
+  JSR code_3ECB28                           ; $3892AE |
 
   db $00                                    ; $3892B1 |
 
   LDA #$04                                  ; $3892B2 |
   STA $F1                                   ; $3892B4 |
   LDA #$11                                  ; $3892B6 |
-  JSR $CB28                                 ; $3892B8 |
+  JSR code_3ECB28                           ; $3892B8 |
 
   db $00                                    ; $3892BB |
 
   LDA #$00                                  ; $3892BC |
   STA $F1                                   ; $3892BE |
   LDA #$88                                  ; $3892C0 |
-  JSR $CAA4                                 ; $3892C2 |
+  JSR code_3ECAA4                           ; $3892C2 |
   LDA #$1E                                  ; $3892C5 |
-  JSR $CAA4                                 ; $3892C7 |
-  JSR $C62B                                 ; $3892CA |
-  JSR $9A09                                 ; $3892CD |
-  JSR $9A85                                 ; $3892D0 |
+  JSR code_3ECAA4                           ; $3892C7 |
+  JSR code_3EC62B                           ; $3892CA |
+  JSR code_389A09                           ; $3892CD |
+  JSR code_389A85                           ; $3892D0 |
   LDA #$1B                                  ; $3892D3 |
   STA $0688                                 ; $3892D5 |
   LDY #$09                                  ; $3892D8 |
 loc_712DA:
-  JSR $99E7                                 ; $3892DA |
+  JSR code_3899E7                           ; $3892DA |
   DEY                                       ; $3892DD |
   BPL loc_712DA                             ; $3892DE |
   LDA $0696                                 ; $3892E0 |
   BEQ loc_712EB                             ; $3892E3 |
   LDA #$46                                  ; $3892E5 |
-  JSR $CB28                                 ; $3892E7 |
+  JSR code_3ECB28                           ; $3892E7 |
 
   db $00                                    ; $3892EA |
 
@@ -2360,7 +2418,7 @@ loc_712EB:
   LDX #$04                                  ; $3892F2 |
 loc_712F4:
   LDY #$50                                  ; $3892F4 |
-  JSR $CB28                                 ; $3892F6 |
+  JSR code_3ECB28                           ; $3892F6 |
 
   db $41                                    ; $3892F9 |
 
@@ -2375,7 +2433,7 @@ loc_712F4:
   ADC #$B0                                  ; $389309 |
   TAY                                       ; $38930B |
 loc_7130C:
-  JSR $E522                                 ; $38930C |
+  JSR code_3FE522                           ; $38930C |
   LDA $9381,x                               ; $38930F |
   STA $0486,x                               ; $389312 |
   LDA #$97                                  ; $389315 |
@@ -2393,7 +2451,7 @@ loc_7131D:
   BEQ loc_7133A                             ; $38932F |
   INC $0625                                 ; $389331 |
   LDA #$89                                  ; $389334 |
-  JSR $CB28                                 ; $389336 |
+  JSR code_3ECB28                           ; $389336 |
 
   db $00                                    ; $389339 |
 
@@ -2403,25 +2461,25 @@ loc_7133A:
   BEQ loc_7134A                             ; $38933F |
   INC $0626                                 ; $389341 |
   LDA #$8A                                  ; $389344 |
-  JSR $CB28                                 ; $389346 |
+  JSR code_3ECB28                           ; $389346 |
 
   db $00                                    ; $389349 |
 
 loc_7134A:
   LDX #$07                                  ; $38934A |
   LDY #$01                                  ; $38934C |
-  JSR $CB28                                 ; $38934E |
+  JSR code_3ECB28                           ; $38934E |
 
   db $41                                    ; $389351 |
 
   LDY #$06                                  ; $389352 |
-  JSR $E4A7                                 ; $389354 |
+  JSR code_3FE4A7                           ; $389354 |
   LDY #$9C                                  ; $389357 |
-  JSR $E522                                 ; $389359 |
+  JSR code_3FE522                           ; $389359 |
   LDA $9B                                   ; $38935C |
   STA $04                                   ; $38935E |
-  JSR $E1DD                                 ; $389360 |
-  JSR $CA89                                 ; $389363 |
+  JSR code_3FE1DD                           ; $389360 |
+  JSR code_3ECA89                           ; $389363 |
   LDY $06A4                                 ; $389366 |
   LDA $9376,y                               ; $389369 |
   STA $08                                   ; $38936C |
@@ -2432,13 +2490,14 @@ loc_7134A:
   db $86, $39, $FC, $93, $94, $94, $00, $00 ; $389376 |
   db $01, $03, $02, $00, $98, $A8, $B8, $C8 ; $38937E |
 
-  JSR $9639                                 ; $389386 |
+code_389386:
+  JSR code_389639                           ; $389386 |
   LDA #$00                                  ; $389389 |
   STA $0699                                 ; $38938B |
   STA $06A4                                 ; $38938E |
 loc_71391:
-  JSR $E1DD                                 ; $389391 |
-  JSR $C62B                                 ; $389394 |
+  JSR code_3FE1DD                           ; $389391 |
+  JSR code_3EC62B                           ; $389394 |
   LDA $42                                   ; $389397 |
   BEQ loc_71391                             ; $389399 |
   BIT $FF59                                 ; $38939B |
@@ -2452,12 +2511,12 @@ loc_713A4:
   BEQ loc_713B5                             ; $3893AB |
   LDA #$00                                  ; $3893AD |
   STA $06A3                                 ; $3893AF |
-  JMP $9439                                 ; $3893B2 |
+  JMP code_389439                           ; $3893B2 |
 
 loc_713B5:
   BIT $FF5C                                 ; $3893B5 |
   BEQ loc_713BD                             ; $3893B8 |
-  JMP $94FC                                 ; $3893BA |
+  JMP code_3894FC                           ; $3893BA |
 
 loc_713BD:
   AND #$03                                  ; $3893BD |
@@ -2480,7 +2539,7 @@ loc_713CE:
   TAY                                       ; $3893DC |
   LDA $0624,y                               ; $3893DD |
   BMI loc_713A4                             ; $3893E0 |
-  JSR $9639                                 ; $3893E2 |
+  JSR code_389639                           ; $3893E2 |
 loc_713E5:
   LDA $42                                   ; $3893E5 |
   AND #$90                                  ; $3893E7 |
@@ -2488,24 +2547,24 @@ loc_713E5:
   LDA $9B                                   ; $3893EB |
   CMP $04                                   ; $3893ED |
   BNE loc_713F4                             ; $3893EF |
-  JMP $958A                                 ; $3893F1 |
+  JMP code_38958A                           ; $3893F1 |
 
 loc_713F4:
-  JSR $9617                                 ; $3893F4 |
+  JSR code_389617                           ; $3893F4 |
   LDA $9B                                   ; $3893F7 |
   BNE loc_713FE                             ; $3893F9 |
-  JMP $958A                                 ; $3893FB |
+  JMP code_38958A                           ; $3893FB |
 
 loc_713FE:
   LDA #$00                                  ; $3893FE |
   STA $0699                                 ; $389400 |
   LDA #$33                                  ; $389403 |
   STA $DC                                   ; $389405 |
-  JSR $965F                                 ; $389407 |
+  JSR code_38965F                           ; $389407 |
   LDA $40                                   ; $38940A |
   AND #$90                                  ; $38940C |
   BEQ loc_71413                             ; $38940E |
-  JMP $958E                                 ; $389410 |
+  JMP code_38958E                           ; $389410 |
 
 loc_71413:
   LDA $04                                   ; $389413 |
@@ -2513,27 +2572,29 @@ loc_71413:
   LDY $9B                                   ; $389417 |
   DEY                                       ; $389419 |
   BEQ loc_71422                             ; $38941A |
-  JSR $997B                                 ; $38941C |
-  JMP $958E                                 ; $38941F |
+  JSR code_38997B                           ; $38941C |
+  JMP code_38958E                           ; $38941F |
 
 loc_71422:
-  JSR $98FF                                 ; $389422 |
-  JMP $958E                                 ; $389425 |
+  JSR code_3898FF                           ; $389422 |
+  JMP code_38958E                           ; $389425 |
 
 loc_71428:
   LDY $9B                                   ; $389428 |
   DEY                                       ; $38942A |
   BEQ loc_71433                             ; $38942B |
-  JSR $977A                                 ; $38942D |
-  JMP $958E                                 ; $389430 |
+  JSR code_38977A                           ; $38942D |
+  JMP code_38958E                           ; $389430 |
 
 loc_71433:
-  JSR $9866                                 ; $389433 |
-  JMP $958E                                 ; $389436 |
+  JSR code_389866                           ; $389433 |
+  JMP code_38958E                           ; $389436 |
 
-  JSR $9657                                 ; $389439 |
+code_389439:
+  JSR code_389657                           ; $389439 |
   LDA #$01                                  ; $38943C |
   STA $06A4                                 ; $38943E |
+code_389441:
   LDY $06A2                                 ; $389441 |
   LDA $94F8,y                               ; $389444 |
   CLC                                       ; $389447 |
@@ -2546,18 +2607,18 @@ loc_71433:
   TYA                                       ; $389456 |
   PHA                                       ; $389457 |
   LDA #$2A                                  ; $389458 |
-  JSR $CB28                                 ; $38945A |
+  JSR code_3ECB28                           ; $38945A |
 
   db $00                                    ; $38945D |
 
   PLA                                       ; $38945E |
   ADC #$20                                  ; $38945F |
-  JSR $CB28                                 ; $389461 |
+  JSR code_3ECB28                           ; $389461 |
 
   db $00                                    ; $389464 |
 
 loc_71465:
-  JSR $C62B                                 ; $389465 |
+  JSR code_3EC62B                           ; $389465 |
   LDA $42                                   ; $389468 |
   BEQ loc_71465                             ; $38946A |
   BIT $FF59                                 ; $38946C |
@@ -2569,7 +2630,7 @@ loc_71477:
   LDA $42                                   ; $389477 |
   AND #$90                                  ; $389479 |
   BEQ loc_71492                             ; $38947B |
-  JSR $9617                                 ; $38947D |
+  JSR code_389617                           ; $38947D |
   LDA $06A2                                 ; $389480 |
   ORA $06A3                                 ; $389483 |
   BNE loc_7148B                             ; $389486 |
@@ -2577,7 +2638,7 @@ loc_71477:
 loc_7148B:
   LDA #$00                                  ; $38948B |
   STA $9B                                   ; $38948D |
-  JMP $958A                                 ; $38948F |
+  JMP code_38958A                           ; $38948F |
 
 loc_71492:
   LDA $42                                   ; $389492 |
@@ -2601,11 +2662,11 @@ loc_71492:
   AND #$08                                  ; $3894B4 |
   BEQ loc_714C1                             ; $3894B6 |
   LDA #$2A                                  ; $3894B8 |
-  JSR $CB28                                 ; $3894BA |
+  JSR code_3ECB28                           ; $3894BA |
 
   db $00                                    ; $3894BD |
 
-  JMP $9386                                 ; $3894BE |
+  JMP code_389386                           ; $3894BE |
 
 loc_714C1:
   CMP #$06                                  ; $3894C1 |
@@ -2616,11 +2677,11 @@ loc_714C1:
   AND #$04                                  ; $3894CB |
   BEQ loc_714D8                             ; $3894CD |
   LDA #$2A                                  ; $3894CF |
-  JSR $CB28                                 ; $3894D1 |
+  JSR code_3ECB28                           ; $3894D1 |
 
   db $00                                    ; $3894D4 |
 
-  JMP $94FC                                 ; $3894D5 |
+  JMP code_3894FC                           ; $3894D5 |
 
 loc_714D8:
   STA $06A3                                 ; $3894D8 |
@@ -2633,30 +2694,31 @@ loc_714D8:
   EOR #$01                                  ; $3894E8 |
   STA $06A2                                 ; $3894EA |
 loc_714ED:
-  JMP $9441                                 ; $3894ED |
+  JMP code_389441                           ; $3894ED |
 
   db $00, $01, $02, $03, $04, $06, $00, $05 ; $3894F0 |
   db $00, $05, $00, $05                     ; $3894F8 |
 
-  JSR $9657                                 ; $3894FC |
+code_3894FC:
+  JSR code_389657                           ; $3894FC |
   LDA #$00                                  ; $3894FF |
   STA $0699                                 ; $389501 |
   LDA #$02                                  ; $389504 |
   STA $06A4                                 ; $389506 |
 loc_71509:
   LDA #$2B                                  ; $389509 |
-  JSR $CB28                                 ; $38950B |
+  JSR code_3ECB28                           ; $38950B |
 
   db $00                                    ; $38950E |
 
 loc_7150F:
-  JSR $C62B                                 ; $38950F |
+  JSR code_3EC62B                           ; $38950F |
   LDA $42                                   ; $389512 |
   BEQ loc_7150F                             ; $389514 |
   BIT $FF59                                 ; $389516 |
   BNE loc_7150F                             ; $389519 |
   LDA #$2C                                  ; $38951B |
-  JSR $CB28                                 ; $38951D |
+  JSR code_3ECB28                           ; $38951D |
 
   db $00                                    ; $389520 |
 
@@ -2671,7 +2733,8 @@ loc_7150F:
   CMP #$1B                                  ; $389533 |
   BEQ loc_71509                             ; $389535 |
   DEC $06A1                                 ; $389537 |
-  JSR $9A85                                 ; $38953A |
+  JSR code_389A85                           ; $38953A |
+code_38953D:
   LDA $03E5                                 ; $38953D |
   CMP #$1B                                  ; $389540 |
   BEQ loc_7156F                             ; $389542 |
@@ -2682,12 +2745,12 @@ loc_7150F:
   STA $09                                   ; $38954E |
   LDA #$D5                                  ; $389550 |
   STA $08                                   ; $389552 |
-  JSR $9A2A                                 ; $389554 |
+  JSR code_389A2A                           ; $389554 |
   LDA #$31                                  ; $389557 |
   STA $DC                                   ; $389559 |
   LDA #$04                                  ; $38955B |
-  JSR $C5F6                                 ; $38955D |
-  JMP $953D                                 ; $389560 |
+  JSR code_3EC5F6                           ; $38955D |
+  JMP code_38953D                           ; $389560 |
 
 loc_71563:
   LDA $42                                   ; $389563 |
@@ -2698,7 +2761,7 @@ loc_71563:
 loc_7156F:
   LDA #$32                                  ; $38956F |
   STA $DC                                   ; $389571 |
-  JMP $9386                                 ; $389573 |
+  JMP code_389386                           ; $389573 |
 
 loc_71576:
   LDA #$32                                  ; $389576 |
@@ -2709,17 +2772,19 @@ loc_71576:
   STA $06A3                                 ; $389580 |
   LDA #$08                                  ; $389583 |
   STA $42                                   ; $389585 |
-  JMP $9439                                 ; $389587 |
+  JMP code_389439                           ; $389587 |
 
+code_38958A:
   LDA #$33                                  ; $38958A |
   STA $DC                                   ; $38958C |
-  JSR $CA3D                                 ; $38958E |
-  JSR $C9BF                                 ; $389591 |
-  JSR $9624                                 ; $389594 |
+code_38958E:
+  JSR code_3ECA3D                           ; $38958E |
+  JSR code_3EC9BF                           ; $389591 |
+  JSR code_389624                           ; $389594 |
   STA $F8                                   ; $389597 |
-  JSR $E1DD                                 ; $389599 |
-  JSR $DEAF                                 ; $38959C |
-  JSR $DC66                                 ; $38959F |
+  JSR code_3FE1DD                           ; $389599 |
+  JSR code_3EDEAF                           ; $38959C |
+  JSR code_3EDC66                           ; $38959F |
   PLA                                       ; $3895A2 |
   STA $F8                                   ; $3895A3 |
   PLA                                       ; $3895A5 |
@@ -2737,10 +2802,10 @@ loc_71576:
   STA $A000                                 ; $3895BA |
   PLA                                       ; $3895BD |
   STA $F4                                   ; $3895BE |
-  JSR $96DE                                 ; $3895C0 |
+  JSR code_3896DE                           ; $3895C0 |
   LDA $0682                                 ; $3895C3 |
   BEQ loc_715CC                             ; $3895C6 |
-  JSR $CB28                                 ; $3895C8 |
+  JSR code_3ECB28                           ; $3895C8 |
 
   db $00                                    ; $3895CB |
 
@@ -2749,18 +2814,18 @@ loc_715CC:
   LDA $9614,x                               ; $3895CE |
   STA $06AB                                 ; $3895D1 |
   LDA $96C7,x                               ; $3895D4 |
-  JSR $CAA4                                 ; $3895D7 |
+  JSR code_3ECAA4                           ; $3895D7 |
   LDA $96CA,x                               ; $3895DA |
   STA $AE                                   ; $3895DD |
-  JSR $C9EF                                 ; $3895DF |
+  JSR code_3EC9EF                           ; $3895DF |
   LDX $0699                                 ; $3895E2 |
   BEQ loc_715F8                             ; $3895E5 |
-  JSR $9617                                 ; $3895E7 |
+  JSR code_389617                           ; $3895E7 |
   LDA $F708,x                               ; $3895EA |
-  JSR $CAA4                                 ; $3895ED |
+  JSR code_3ECAA4                           ; $3895ED |
   LDA $962F,x                               ; $3895F0 |
   STA $AE                                   ; $3895F3 |
-  JSR $C9EF                                 ; $3895F5 |
+  JSR code_3EC9EF                           ; $3895F5 |
 loc_715F8:
   LDA #$00                                  ; $3895F8 |
   STA $03A1                                 ; $3895FA |
@@ -2768,21 +2833,23 @@ loc_715F8:
   STA $06A0                                 ; $3895FE |
   LDA $94                                   ; $389601 |
   LDX #$00                                  ; $389603 |
-  JSR $E0FD                                 ; $389605 |
-  JSR $E1DD                                 ; $389608 |
-  JSR $CF4A                                 ; $38960B |
-  JSR $CA89                                 ; $38960E |
-  JMP $DF11                                 ; $389611 |
+  JSR code_3FE0FD                           ; $389605 |
+  JSR code_3FE1DD                           ; $389608 |
+  JSR code_3ECF4A                           ; $38960B |
+  JSR code_3ECA89                           ; $38960E |
+  JMP code_3EDF11                           ; $389611 |
 
   db $5A, $3C, $3C                          ; $389614 |
 
+code_389617:
   LDA #$FF                                  ; $389617 |
   STA $A5                                   ; $389619 |
   LDA #$00                                  ; $38961B |
   STA $9E                                   ; $38961D |
   LDY #$01                                  ; $38961F |
-  JMP $C5F0                                 ; $389621 |
+  JMP code_3EC5F0                           ; $389621 |
 
+code_389624:
   LDX #$07                                  ; $389624 |
   LDA #$00                                  ; $389626 |
 loc_71628:
@@ -2794,9 +2861,10 @@ loc_71628:
   db $09, $B0, $B1, $B2, $B3, $B4, $B5, $B6 ; $38962F |
   db $B7, $09                               ; $389637 |
 
+code_389639:
   LDX #$06                                  ; $389639 |
   LDY #$01                                  ; $38963B |
-  JSR $CB28                                 ; $38963D |
+  JSR code_3ECB28                           ; $38963D |
 
   db $41                                    ; $389640 |
 
@@ -2809,12 +2877,14 @@ loc_71628:
   CLC                                       ; $389650 |
   ADC $9B                                   ; $389651 |
   TAY                                       ; $389653 |
-  JMP $E522                                 ; $389654 |
+  JMP code_3FE522                           ; $389654 |
 
+code_389657:
   LDA #$00                                  ; $389657 |
   STA $03A6                                 ; $389659 |
-  JMP $E1DD                                 ; $38965C |
+  JMP code_3FE1DD                           ; $38965C |
 
+code_38965F:
   LDA #$00                                  ; $38965F |
   LDY #$04                                  ; $389661 |
 loc_71663:
@@ -2830,7 +2900,7 @@ loc_71663:
   LDA #$01                                  ; $389677 |
   STA $F4                                   ; $389679 |
 loc_7167B:
-  JSR $C62B                                 ; $38967B |
+  JSR code_3EC62B                           ; $38967B |
   LDY #$07                                  ; $38967E |
 loc_71680:
   LDA $03B7,y                               ; $389680 |
@@ -2853,13 +2923,13 @@ loc_7169A:
   CLC                                       ; $3896A3 |
   ADC #$08                                  ; $3896A4 |
   STA $F7                                   ; $3896A6 |
-  JSR $E1DD                                 ; $3896A8 |
+  JSR code_3FE1DD                           ; $3896A8 |
   LDA $F7                                   ; $3896AB |
   CMP #$F8                                  ; $3896AD |
   BNE loc_7167B                             ; $3896AF |
   LDA #$00                                  ; $3896B1 |
   STA $F4                                   ; $3896B3 |
-  JSR $C62B                                 ; $3896B5 |
+  JSR code_3EC62B                           ; $3896B5 |
   LDA $F8                                   ; $3896B8 |
   EOR #$01                                  ; $3896BA |
   STA $F8                                   ; $3896BC |
@@ -2872,6 +2942,7 @@ loc_7169A:
   db $00, $02, $03, $09, $0A, $0A, $2C, $54 ; $3896C7 |
   db $7C                                    ; $3896CF |
 
+code_3896D0:
   LDX #$16                                  ; $3896D0 |
 loc_716D2:
   LDA $03B7,x                               ; $3896D2 |
@@ -2881,6 +2952,7 @@ loc_716D2:
   BPL loc_716D2                             ; $3896DB |
   RTS                                       ; $3896DD |
 
+code_3896DE:
   LDX #$16                                  ; $3896DE |
 loc_716E0:
   LDA $03B7,x                               ; $3896E0 |
@@ -2890,13 +2962,14 @@ loc_716E0:
   BPL loc_716E0                             ; $3896E9 |
   RTS                                       ; $3896EB |
 
+code_3896EC:
   LDA #$00                                  ; $3896EC |
   STA $05DF,x                               ; $3896EE |
   LDA #$04                                  ; $3896F1 |
   STA $05F6,x                               ; $3896F3 |
 loc_716F6:
-  JSR $C62B                                 ; $3896F6 |
-  JSR $E1DD                                 ; $3896F9 |
+  JSR code_3EC62B                           ; $3896F6 |
+  JSR code_3FE1DD                           ; $3896F9 |
   LDA #$08                                  ; $3896FC |
   STA $0555,x                               ; $3896FE |
   LDA $05DF,x                               ; $389701 |
@@ -2915,7 +2988,7 @@ loc_71717:
   LDA #$00                                  ; $38971C |
   STA $ED                                   ; $38971E |
   STA $EB                                   ; $389720 |
-  JSR $E4D3                                 ; $389722 |
+  JSR code_3FE4D3                           ; $389722 |
   LDA $04CB,x                               ; $389725 |
   CMP #$88                                  ; $389728 |
   BCC loc_716F6                             ; $38972A |
@@ -2928,33 +3001,35 @@ loc_71717:
   LDA #$08                                  ; $38973A |
   STA $05B1,x                               ; $38973C |
 loc_7173F:
-  JSR $C62B                                 ; $38973F |
-  JSR $E1DD                                 ; $389742 |
+  JSR code_3EC62B                           ; $38973F |
+  JSR code_3FE1DD                           ; $389742 |
   DEC $05B1,x                               ; $389745 |
   BNE loc_7173F                             ; $389748 |
   RTS                                       ; $38974A |
 
+code_38974B:
   LDY #$0D                                  ; $38974B |
   LDX #$06                                  ; $38974D |
-  JSR $CB28                                 ; $38974F |
+  JSR code_3ECB28                           ; $38974F |
 
   db $41                                    ; $389752 |
 
   LDY #$07                                  ; $389753 |
-  JSR $E4A7                                 ; $389755 |
+  JSR code_3FE4A7                           ; $389755 |
   LDY $04                                   ; $389758 |
   LDA $9761,y                               ; $38975A |
   TAY                                       ; $38975D |
-  JMP $E522                                 ; $38975E |
+  JMP code_3FE522                           ; $38975E |
 
   db $C1, $1B, $29                          ; $389761 |
 
+code_389764:
   STA $05B7                                 ; $389764 |
 loc_71767:
   LDA $40                                   ; $389767 |
   BNE loc_71777                             ; $389769 |
-  JSR $E1DD                                 ; $38976B |
-  JSR $C62B                                 ; $38976E |
+  JSR code_3FE1DD                           ; $38976B |
+  JSR code_3EC62B                           ; $38976E |
   DEC $05B7                                 ; $389771 |
   BNE loc_71767                             ; $389774 |
   RTS                                       ; $389776 |
@@ -2964,42 +3039,44 @@ loc_71777:
   PLA                                       ; $389778 |
   RTS                                       ; $389779 |
 
+code_38977A:
   LDA #$05                                  ; $38977A |
-  JSR $CAA4                                 ; $38977C |
+  JSR code_3ECAA4                           ; $38977C |
   LDA #$19                                  ; $38977F |
-  JSR $C9EF                                 ; $389781 |
+  JSR code_3EC9EF                           ; $389781 |
   LDA #$1E                                  ; $389784 |
-  JSR $C5F6                                 ; $389786 |
-  JSR $974B                                 ; $389789 |
+  JSR code_3EC5F6                           ; $389786 |
+  JSR code_38974B                           ; $389789 |
   LDY #$0D                                  ; $38978C |
   LDX #$07                                  ; $38978E |
-  JSR $CB28                                 ; $389790 |
+  JSR code_3ECB28                           ; $389790 |
 
   db $41                                    ; $389793 |
 
   LDY #$04                                  ; $389794 |
-  JSR $E4A7                                 ; $389796 |
+  JSR code_3FE4A7                           ; $389796 |
   LDY #$3F                                  ; $389799 |
-  JSR $E522                                 ; $38979B |
-  JSR $96EC                                 ; $38979E |
+  JSR code_3FE522                           ; $38979B |
+  JSR code_3896EC                           ; $38979E |
   LDY #$3D                                  ; $3897A1 |
-  JSR $E522                                 ; $3897A3 |
+  JSR code_3FE522                           ; $3897A3 |
   LDX #$06                                  ; $3897A6 |
   LDY #$3C                                  ; $3897A8 |
-  JSR $E522                                 ; $3897AA |
+  JSR code_3FE522                           ; $3897AA |
   LDA #$4A                                  ; $3897AD |
-  JSR $9764                                 ; $3897AF |
+  JSR code_389764                           ; $3897AF |
   LDA #$0E                                  ; $3897B2 |
   STA $05B8                                 ; $3897B4 |
 loc_717B7:
-  JSR $E1DD                                 ; $3897B7 |
-  JSR $C62B                                 ; $3897BA |
+  JSR code_3FE1DD                           ; $3897B7 |
+  JSR code_3EC62B                           ; $3897BA |
   LDA $048D                                 ; $3897BD |
   CLC                                       ; $3897C0 |
   ADC #$04                                  ; $3897C1 |
   STA $048D                                 ; $3897C3 |
   DEC $05B8                                 ; $3897C6 |
   BNE loc_717B7                             ; $3897C9 |
+code_3897CB:
   LDA #$00                                  ; $3897CB |
   STA $03A7                                 ; $3897CD |
   LDA #$2A                                  ; $3897D0 |
@@ -3013,17 +3090,17 @@ loc_717D9:
   LDA #$2B                                  ; $3897E0 |
   STA $DC                                   ; $3897E2 |
 loc_717E4:
-  JSR $E1DD                                 ; $3897E4 |
-  JSR $C62B                                 ; $3897E7 |
+  JSR code_3FE1DD                           ; $3897E4 |
+  JSR code_3EC62B                           ; $3897E7 |
   DEC $05B7                                 ; $3897EA |
   BNE loc_717D9                             ; $3897ED |
   LDA #$00                                  ; $3897EF |
   STA $08                                   ; $3897F1 |
   LDA #$98                                  ; $3897F3 |
   STA $09                                   ; $3897F5 |
-  JSR $9820                                 ; $3897F7 |
+  JSR code_389820                           ; $3897F7 |
   LDA #$3C                                  ; $3897FA |
-  JSR $C5F6                                 ; $3897FC |
+  JSR code_3EC5F6                           ; $3897FC |
   RTS                                       ; $3897FF |
 
   db $09, $27, $80, $82, $84, $86, $88, $9E ; $389800 |
@@ -3031,6 +3108,7 @@ loc_717E4:
   db $00, $0A, $27, $8A, $8C, $8E, $9E, $9E ; $389810 |
   db $90, $92, $94, $96, $98, $9A, $9C, $00 ; $389818 |
 
+code_389820:
   LDY #$00                                  ; $389820 |
   LDA ($08),y                               ; $389822 |
   STA $0A                                   ; $389824 |
@@ -3042,7 +3120,7 @@ loc_7182C:
   LDA $40                                   ; $38982C |
   BNE loc_71863                             ; $38982E |
   LDA #$08                                  ; $389830 |
-  JSR $C5F6                                 ; $389832 |
+  JSR code_3EC5F6                           ; $389832 |
   LDA #$27                                  ; $389835 |
   STA $DC                                   ; $389837 |
   LDX $47                                   ; $389839 |
@@ -3073,36 +3151,37 @@ loc_71863:
   PLA                                       ; $389864 |
   RTS                                       ; $389865 |
 
+code_389866:
   LDA #$04                                  ; $389866 |
-  JSR $CAA4                                 ; $389868 |
+  JSR code_3ECAA4                           ; $389868 |
   LDA #$19                                  ; $38986B |
-  JSR $C9EF                                 ; $38986D |
+  JSR code_3EC9EF                           ; $38986D |
   LDA #$1E                                  ; $389870 |
-  JSR $C5F6                                 ; $389872 |
-  JSR $974B                                 ; $389875 |
+  JSR code_3EC5F6                           ; $389872 |
+  JSR code_38974B                           ; $389875 |
   LDY #$0D                                  ; $389878 |
   LDX #$07                                  ; $38987A |
-  JSR $CB28                                 ; $38987C |
+  JSR code_3ECB28                           ; $38987C |
 
   db $41                                    ; $38987F |
 
   LDY #$04                                  ; $389880 |
-  JSR $E4A7                                 ; $389882 |
+  JSR code_3FE4A7                           ; $389882 |
   LDY #$3A                                  ; $389885 |
-  JSR $E522                                 ; $389887 |
-  JSR $96EC                                 ; $38988A |
+  JSR code_3FE522                           ; $389887 |
+  JSR code_3896EC                           ; $38988A |
   LDY #$3B ; '                              ; $38988D |
-  JSR $E522                                 ; $38988F |
+  JSR code_3FE522                           ; $38988F |
   LDX #$06                                  ; $389892 |
   LDY #$39                                  ; $389894 |
-  JSR $E522                                 ; $389896 |
+  JSR code_3FE522                           ; $389896 |
   LDA #$4A                                  ; $389899 |
-  JSR $9764                                 ; $38989B |
+  JSR code_389764                           ; $38989B |
   LDA #$0E                                  ; $38989E |
   STA $05B8                                 ; $3898A0 |
 loc_718A3:
-  JSR $E1DD                                 ; $3898A3 |
-  JSR $C62B                                 ; $3898A6 |
+  JSR code_3FE1DD                           ; $3898A3 |
+  JSR code_3EC62B                           ; $3898A6 |
   LDA $048D                                 ; $3898A9 |
   CLC                                       ; $3898AC |
   ADC #$04                                  ; $3898AD |
@@ -3114,10 +3193,11 @@ loc_718A3:
   LDA #$2A                                  ; $3898BC |
   STA $DC                                   ; $3898BE |
   LDA #$38                                  ; $3898C0 |
-  JSR $9764                                 ; $3898C2 |
+  JSR code_389764                           ; $3898C2 |
   LDX #$06                                  ; $3898C5 |
   LDY #$38                                  ; $3898C7 |
-  JSR $E522                                 ; $3898C9 |
+  JSR code_3FE522                           ; $3898C9 |
+code_3898CC:
   LDA #$2D                                  ; $3898CC |
   STA $DC                                   ; $3898CE |
   LDA #$22                                  ; $3898D0 |
@@ -3126,9 +3206,9 @@ loc_718A3:
   STA $03CE,x                               ; $3898D7 |
 loc_718DA:
   LDY #$04                                  ; $3898DA |
-  JSR $E60E                                 ; $3898DC |
-  JSR $E1DD                                 ; $3898DF |
-  JSR $C62B                                 ; $3898E2 |
+  JSR code_3FE60E                           ; $3898DC |
+  JSR code_3FE1DD                           ; $3898DF |
+  JSR code_3EC62B                           ; $3898E2 |
   DEC $05B7                                 ; $3898E5 |
   BNE loc_718DA                             ; $3898E8 |
   LDA #$3F                                  ; $3898EA |
@@ -3137,44 +3217,45 @@ loc_718DA:
   STA $08                                   ; $3898F0 |
   LDA #$98                                  ; $3898F2 |
   STA $09                                   ; $3898F4 |
-  JSR $9820                                 ; $3898F6 |
+  JSR code_389820                           ; $3898F6 |
   LDA #$3C                                  ; $3898F9 |
-  JSR $C5F6                                 ; $3898FB |
+  JSR code_3EC5F6                           ; $3898FB |
   RTS                                       ; $3898FE |
 
+code_3898FF:
   LDA #$07                                  ; $3898FF |
-  JSR $CAA4                                 ; $389901 |
+  JSR code_3ECAA4                           ; $389901 |
   LDA #$19                                  ; $389904 |
-  JSR $C9EF                                 ; $389906 |
+  JSR code_3EC9EF                           ; $389906 |
   LDA #$22                                  ; $389909 |
-  JSR $C5F6                                 ; $38990B |
+  JSR code_3EC5F6                           ; $38990B |
   LDY #$0D                                  ; $38990E |
   LDX #$06                                  ; $389910 |
-  JSR $CB28                                 ; $389912 |
+  JSR code_3ECB28                           ; $389912 |
 
   db $41                                    ; $389915 |
 
   LDY #$08                                  ; $389916 |
-  JSR $E4A7                                 ; $389918 |
+  JSR code_3FE4A7                           ; $389918 |
   LDY #$41                                  ; $38991B |
-  JSR $E522                                 ; $38991D |
+  JSR code_3FE522                           ; $38991D |
   LDA #$20                                  ; $389920 |
-  JSR $9764                                 ; $389922 |
+  JSR code_389764                           ; $389922 |
   LDY #$0D                                  ; $389925 |
   LDX #$07                                  ; $389927 |
-  JSR $CB28                                 ; $389929 |
+  JSR code_3ECB28                           ; $389929 |
 
   db $41                                    ; $38992C |
 
   LDY #$08                                  ; $38992D |
-  JSR $E4A7                                 ; $38992F |
+  JSR code_3FE4A7                           ; $38992F |
   LDY #$42                                  ; $389932 |
-  JSR $E522                                 ; $389934 |
+  JSR code_3FE522                           ; $389934 |
   LDA #$10                                  ; $389937 |
   STA $05B7                                 ; $389939 |
 loc_7193C:
-  JSR $E1DD                                 ; $38993C |
-  JSR $C62B                                 ; $38993F |
+  JSR code_3FE1DD                           ; $38993C |
+  JSR code_3EC62B                           ; $38993F |
   DEC $04D2                                 ; $389942 |
   DEC $04D2                                 ; $389945 |
   DEC $05B7                                 ; $389948 |
@@ -3182,8 +3263,8 @@ loc_7193C:
   LDA #$10                                  ; $38994D |
   STA $05B7                                 ; $38994F |
 loc_71952:
-  JSR $E1DD                                 ; $389952 |
-  JSR $C62B                                 ; $389955 |
+  JSR code_3FE1DD                           ; $389952 |
+  JSR code_3EC62B                           ; $389955 |
   INC $04D2                                 ; $389958 |
   INC $04D2                                 ; $38995B |
   DEC $05B7                                 ; $38995E |
@@ -3193,45 +3274,46 @@ loc_71952:
   LDA #$00                                  ; $389967 |
   STA $03A7                                 ; $389969 |
   LDA #$3C                                  ; $38996C |
-  JSR $9764                                 ; $38996E |
+  JSR code_389764                           ; $38996E |
   LDX #$06                                  ; $389971 |
   LDY #$43                                  ; $389973 |
-  JSR $E522                                 ; $389975 |
-  JMP $98CC                                 ; $389978 |
+  JSR code_3FE522                           ; $389975 |
+  JMP code_3898CC                           ; $389978 |
 
+code_38997B:
   LDA #$06                                  ; $38997B |
-  JSR $CAA4                                 ; $38997D |
+  JSR code_3ECAA4                           ; $38997D |
   LDA #$19                                  ; $389980 |
-  JSR $C9EF                                 ; $389982 |
+  JSR code_3EC9EF                           ; $389982 |
   LDA #$22                                  ; $389985 |
-  JSR $C5F6                                 ; $389987 |
+  JSR code_3EC5F6                           ; $389987 |
   LDY #$0D                                  ; $38998A |
   LDX #$06                                  ; $38998C |
-  JSR $CB28                                 ; $38998E |
+  JSR code_3ECB28                           ; $38998E |
 
   db $41                                    ; $389991 |
 
   LDY #$08                                  ; $389992 |
-  JSR $E4A7                                 ; $389994 |
+  JSR code_3FE4A7                           ; $389994 |
   LDY #$3E                                  ; $389997 |
-  JSR $E522                                 ; $389999 |
+  JSR code_3FE522                           ; $389999 |
   LDA #$20                                  ; $38999C |
-  JSR $9764                                 ; $38999E |
+  JSR code_389764                           ; $38999E |
   LDY #$0D                                  ; $3899A1 |
   LDX #$07                                  ; $3899A3 |
-  JSR $CB28                                 ; $3899A5 |
+  JSR code_3ECB28                           ; $3899A5 |
 
   db $41                                    ; $3899A8 |
 
   LDY #$08                                  ; $3899A9 |
-  JSR $E4A7                                 ; $3899AB |
+  JSR code_3FE4A7                           ; $3899AB |
   LDY #$40                                  ; $3899AE |
-  JSR $E522                                 ; $3899B0 |
+  JSR code_3FE522                           ; $3899B0 |
   LDA #$10                                  ; $3899B3 |
   STA $05B7                                 ; $3899B5 |
 loc_719B8:
-  JSR $E1DD                                 ; $3899B8 |
-  JSR $C62B                                 ; $3899BB |
+  JSR code_3FE1DD                           ; $3899B8 |
+  JSR code_3EC62B                           ; $3899BB |
   DEC $04D2                                 ; $3899BE |
   DEC $04D2                                 ; $3899C1 |
   DEC $05B7                                 ; $3899C4 |
@@ -3239,19 +3321,20 @@ loc_719B8:
   LDA #$10                                  ; $3899C9 |
   STA $05B7                                 ; $3899CB |
 loc_719CE:
-  JSR $E1DD                                 ; $3899CE |
-  JSR $C62B                                 ; $3899D1 |
+  JSR code_3FE1DD                           ; $3899CE |
+  JSR code_3EC62B                           ; $3899D1 |
   INC $04D2                                 ; $3899D4 |
   INC $04D2                                 ; $3899D7 |
   DEC $05B7                                 ; $3899DA |
   BNE loc_719CE                             ; $3899DD |
   LDA #$2A                                  ; $3899DF |
   STA $DC                                   ; $3899E1 |
-  JMP $97CB                                 ; $3899E3 |
+  JMP code_3897CB                           ; $3899E3 |
 
 locret_719E6:
   RTS                                       ; $3899E6 |
 
+code_3899E7:
   LDA $0688,y                               ; $3899E7 |
   CMP #$80                                  ; $3899EA |
   BEQ locret_719E6                          ; $3899EC |
@@ -3259,7 +3342,7 @@ locret_719E6:
   BEQ loc_719F8                             ; $3899EF |
   CLC                                       ; $3899F1 |
   ADC #$37                                  ; $3899F2 |
-  JSR $CB28                                 ; $3899F4 |
+  JSR code_3ECB28                           ; $3899F4 |
 
   db $00                                    ; $3899F7 |
 
@@ -3271,6 +3354,7 @@ loc_719F8:
   LDA $9A71,y                               ; $389A02 |
   STA $08                                   ; $389A05 |
   BNE loc_71A16                             ; $389A07 |
+code_389A09:
   LDA $03E5                                 ; $389A09 |
   STA $01                                   ; $389A0C |
   LDA #$20                                  ; $389A0E |
@@ -3282,8 +3366,8 @@ loc_71A16:
   PHA                                       ; $389A17 |
   TYA                                       ; $389A18 |
   PHA                                       ; $389A19 |
-  JSR $9A2A                                 ; $389A1A |
-  JSR $C6D7                                 ; $389A1D |
+  JSR code_389A2A                           ; $389A1A |
+  JSR code_3EC6D7                           ; $389A1D |
   LDA $FC                                   ; $389A20 |
   STA {PPU_CTRL}                            ; $389A22 |
   PLA                                       ; $389A25 |
@@ -3292,6 +3376,7 @@ loc_71A16:
   TAX                                       ; $389A28 |
   RTS                                       ; $389A29 |
 
+code_389A2A:
   LDX $47                                   ; $389A2A |
   LDA #$07                                  ; $389A2C |
   STA $0780,x                               ; $389A2E |
@@ -3341,6 +3426,7 @@ loc_71A6E:
   db $35, $75, $21, $21, $21, $22, $22, $21 ; $389A79 |
   db $21, $21, $22, $22                     ; $389A81 |
 
+code_389A85:
   LDX $47                                   ; $389A85 |
   LDA #$01                                  ; $389A87 |
   STA $0780,x                               ; $389A89 |
@@ -3369,10 +3455,10 @@ loc_71A6E:
 
   db $65, $00, $00, $14, $02, $52           ; $389ABB |
 
-  JSR $EBD1                                 ; $389AC1 |
+  JSR code_3FEBD1                           ; $389AC1 |
   LDA #$FF                                  ; $389AC4 |
-  JSR $9E8E                                 ; $389AC6 |
-  JSR $8C43                                 ; $389AC9 |
+  JSR code_389E8E                           ; $389AC6 |
+  JSR code_388C43                           ; $389AC9 |
   LDA $0689                                 ; $389ACC |
   AND #$01                                  ; $389ACF |
   TAY                                       ; $389AD1 |
@@ -3392,6 +3478,7 @@ loc_71A6E:
   TAY                                       ; $389AF0 |
   LDA $9B19,y                               ; $389AF1 |
   STA $05C8,x                               ; $389AF4 |
+code_389AF7:
   LDA $05C8,x                               ; $389AF7 |
   STA $ED                                   ; $389AFA |
   LDA $05DF,x                               ; $389AFC |
@@ -3400,17 +3487,17 @@ loc_71A6E:
   STA $EC                                   ; $389B04 |
   LDA #$00                                  ; $389B06 |
   STA $EB                                   ; $389B08 |
-  JSR $E4D1                                 ; $389B0A |
-  JSR $8FDF                                 ; $389B0D |
-  JMP $9AF7                                 ; $389B10 |
+  JSR code_3FE4D1                           ; $389B0A |
+  JSR code_388FDF                           ; $389B0D |
+  JMP code_389AF7                           ; $389B10 |
 
   db $02, $FE, $00, $FF, $40, $C0, $FA, $00 ; $389B13 |
   db $06, $71, $00, $00, $14, $02, $62      ; $389B1B |
 
-  JSR $EBD1                                 ; $389B22 |
+  JSR code_3FEBD1                           ; $389B22 |
   LDA #$FF                                  ; $389B25 |
-  JSR $9E8E                                 ; $389B27 |
-  JSR $8C43                                 ; $389B2A |
+  JSR code_389E8E                           ; $389B27 |
+  JSR code_388C43                           ; $389B2A |
   LDA $03CE                                 ; $389B2D |
   TAY                                       ; $389B30 |
   LDA $9B7A,y                               ; $389B31 |
@@ -3424,11 +3511,11 @@ loc_71B37:
   STA $08                                   ; $389B42 |
   LDA #$9B                                  ; $389B44 |
   STA $09                                   ; $389B46 |
-  JSR $EC06                                 ; $389B48 |
+  JSR code_3FEC06                           ; $389B48 |
   LDA $12                                   ; $389B4B |
   AND #$01                                  ; $389B4D |
   BNE loc_71B77                             ; $389B4F |
-  JSR $8FDF                                 ; $389B51 |
+  JSR code_388FDF                           ; $389B51 |
   LDA $056C,x                               ; $389B54 |
   BEQ loc_71B37                             ; $389B57 |
   AND #$F0                                  ; $389B59 |
@@ -3441,19 +3528,19 @@ loc_71B64:
   STA $EE                                   ; $389B66 |
   LDA #$00                                  ; $389B68 |
   STA $ED                                   ; $389B6A |
-  JSR $E4CB                                 ; $389B6C |
-  JSR $E468                                 ; $389B6F |
-  JSR $E485                                 ; $389B72 |
+  JSR code_3FE4CB                           ; $389B6C |
+  JSR code_3FE468                           ; $389B6F |
+  JSR code_3FE485                           ; $389B72 |
   BCC loc_71B64                             ; $389B75 |
 loc_71B77:
-  JMP $E456                                 ; $389B77 |
+  JMP code_3FE456                           ; $389B77 |
 
   db $00, $03, $FD, $08, $00, $08, $FC, $F8 ; $389B7A |
   db $00, $F8, $FC, $08, $08, $08, $08, $F8 ; $389B82 |
   db $F8, $F8, $F8                          ; $389B8A |
 
   LDA #$FD                                  ; $389B8D |
-  JSR $9E8E                                 ; $389B8F |
+  JSR code_389E8E                           ; $389B8F |
   LDA #$23                                  ; $389B92 |
   STA $DC                                   ; $389B94 |
   LDY $03CE                                 ; $389B96 |
@@ -3463,14 +3550,15 @@ loc_71B77:
   ASL                                       ; $389B9C |
   STA $063B                                 ; $389B9D |
   LDX #$01                                  ; $389BA0 |
-  JSR $9BB1                                 ; $389BA2 |
-  JSR $9BB1                                 ; $389BA5 |
-  JSR $9BB1                                 ; $389BA8 |
-  JSR $9BB1                                 ; $389BAB |
-  JMP $E477                                 ; $389BAE |
+  JSR code_389BB1                           ; $389BA2 |
+  JSR code_389BB1                           ; $389BA5 |
+  JSR code_389BB1                           ; $389BA8 |
+  JSR code_389BB1                           ; $389BAB |
+  JMP code_3FE477                           ; $389BAE |
 
+code_389BB1:
   LDY #$8E                                  ; $389BB1 |
-  JSR $CB28                                 ; $389BB3 |
+  JSR code_3ECB28                           ; $389BB3 |
 
   db $41                                    ; $389BB6 |
 
@@ -3480,7 +3568,7 @@ loc_71B77:
   STA $03B7,x                               ; $389BBE |
   LDY #$00                                  ; $389BC1 |
   LDA #$03                                  ; $389BC3 |
-  JSR $E8FD                                 ; $389BC5 |
+  JSR code_3FE8FD                           ; $389BC5 |
   LDY $063B                                 ; $389BC8 |
   INC $063B                                 ; $389BCB |
   LDA $9BF9,y                               ; $389BCE |
@@ -3492,7 +3580,7 @@ loc_71B77:
   STA $ED                                   ; $389BDD |
   LDA $9BF1,y                               ; $389BDF |
   STA $EE                                   ; $389BE2 |
-  JSR $E4D3                                 ; $389BE4 |
+  JSR code_3FE4D3                           ; $389BE4 |
   INX                                       ; $389BE7 |
   RTS                                       ; $389BE8 |
 
@@ -3501,24 +3589,25 @@ loc_71B77:
   db $03, $04, $04, $05, $0D, $0C, $0C, $0B ; $389BF9 |
   db $66, $00, $00, $15, $02, $72           ; $389C01 |
 
-  JSR $EBD1                                 ; $389C07 |
+  JSR code_3FEBD1                           ; $389C07 |
   LDA #$0A                                  ; $389C0A |
   STA $05B1,x                               ; $389C0C |
 loc_71C0F:
-  JSR $8FDF                                 ; $389C0F |
+  JSR code_388FDF                           ; $389C0F |
   DEC $05B1,x                               ; $389C12 |
   BNE loc_71C0F                             ; $389C15 |
+code_389C17:
   LDY #$08                                  ; $389C17 |
-  JSR $E60E                                 ; $389C19 |
-  JSR $8FDF                                 ; $389C1C |
-  JMP $9C17                                 ; $389C1F |
+  JSR code_3FE60E                           ; $389C19 |
+  JSR code_388FDF                           ; $389C1C |
+  JMP code_389C17                           ; $389C1F |
 
   db $67, $00, $00, $14, $04, $84           ; $389C22 |
 
-  JSR $EBD1                                 ; $389C28 |
+  JSR code_3FEBD1                           ; $389C28 |
   LDA #$FF                                  ; $389C2B |
-  JSR $9E8E                                 ; $389C2D |
-  JSR $8C43                                 ; $389C30 |
+  JSR code_389E8E                           ; $389C2D |
+  JSR code_388C43                           ; $389C30 |
   LDA #$02                                  ; $389C33 |
   STA $05B1,x                               ; $389C35 |
   LDA #$00                                  ; $389C38 |
@@ -3527,7 +3616,7 @@ loc_71C0F:
   STA $00                                   ; $389C40 |
   STA $01                                   ; $389C42 |
   STA $11                                   ; $389C44 |
-  JSR $D9CD                                 ; $389C46 |
+  JSR code_3ED9CD                           ; $389C46 |
   LDA $11                                   ; $389C49 |
   BEQ loc_71C59                             ; $389C4B |
   LDA $0486                                 ; $389C4D |
@@ -3541,23 +3630,25 @@ loc_71C59:
   STA $EB                                   ; $389C60 |
   STA $EE                                   ; $389C62 |
   STA $EC                                   ; $389C64 |
-  JSR $E4D1                                 ; $389C66 |
-  JSR $9C90                                 ; $389C69 |
-  JSR $8FDF                                 ; $389C6C |
+  JSR code_3FE4D1                           ; $389C66 |
+  JSR code_389C90                           ; $389C69 |
+  JSR code_388FDF                           ; $389C6C |
   DEC $05B1,x                               ; $389C6F |
   BNE loc_71C59                             ; $389C72 |
+code_389C74:
   LDA $05C8,x                               ; $389C74 |
   STA $ED                                   ; $389C77 |
   LDA #$00                                  ; $389C79 |
   STA $EB                                   ; $389C7B |
   LDA #$40                                  ; $389C7D |
   STA $00                                   ; $389C7F |
-  JSR $ECA4                                 ; $389C81 |
-  JSR $E4D1                                 ; $389C84 |
-  JSR $9C90                                 ; $389C87 |
-  JSR $8FDF                                 ; $389C8A |
-  JMP $9C74                                 ; $389C8D |
+  JSR code_3FECA4                           ; $389C81 |
+  JSR code_3FE4D1                           ; $389C84 |
+  JSR code_389C90                           ; $389C87 |
+  JSR code_388FDF                           ; $389C8A |
+  JMP code_389C74                           ; $389C8D |
 
+code_389C90:
   LDA $0486,x                               ; $389C90 |
   SEC                                       ; $389C93 |
   SBC $56                                   ; $389C94 |
@@ -3567,7 +3658,7 @@ loc_71C59:
   STA $00                                   ; $389C9C |
   STA $01                                   ; $389C9E |
   STA $11                                   ; $389CA0 |
-  JSR $D9CD                                 ; $389CA2 |
+  JSR code_3ED9CD                           ; $389CA2 |
   LDA $11                                   ; $389CA5 |
   BEQ loc_71CB1                             ; $389CA7 |
   CMP #$0D                                  ; $389CA9 |
@@ -3580,7 +3671,7 @@ loc_71CB1:
   STA $11                                   ; $389CB5 |
   LDA #$08                                  ; $389CB7 |
   STA $01                                   ; $389CB9 |
-  JSR $D9CD                                 ; $389CBB |
+  JSR code_3ED9CD                           ; $389CBB |
   LDA $11                                   ; $389CBE |
   BEQ locret_71CD1                          ; $389CC0 |
   CMP #$0D                                  ; $389CC2 |
@@ -3590,8 +3681,8 @@ loc_71CB1:
   RTS                                       ; $389CCA |
 
 loc_71CCB:
-  JSR $8DB5                                 ; $389CCB |
-  JMP $E456                                 ; $389CCE |
+  JSR code_388DB5                           ; $389CCB |
+  JMP code_3FE456                           ; $389CCE |
 
 locret_71CD1:
   RTS                                       ; $389CD1 |
@@ -3599,17 +3690,17 @@ locret_71CD1:
 loc_71CD2:
   LDA #$4A                                  ; $389CD2 |
   STA $059A,x                               ; $389CD4 |
-  JSR $DB4F                                 ; $389CD7 |
+  JSR code_3EDB4F                           ; $389CD7 |
   LDY #$6B                                  ; $389CDA |
   BNE loc_71CE8                             ; $389CDC |
 loc_71CDE:
   LDA #$49                                  ; $389CDE |
   STA $059A,x                               ; $389CE0 |
-  JSR $DB6D                                 ; $389CE3 |
+  JSR code_3EDB6D                           ; $389CE3 |
   LDY #$68                                  ; $389CE6 |
 loc_71CE8:
-  JSR $E522                                 ; $389CE8 |
-  JSR $E4CB                                 ; $389CEB |
+  JSR code_3FE522                           ; $389CE8 |
+  JSR code_3FE4CB                           ; $389CEB |
   LDA #$1E                                  ; $389CEE |
   STA $05B1,x                               ; $389CF0 |
 loc_71CF3:
@@ -3617,24 +3708,25 @@ loc_71CF3:
   CLC                                       ; $389CF6 |
   ADC $04CB,x                               ; $389CF7 |
   STA $04CB,x                               ; $389CFA |
-  JSR $8FDF                                 ; $389CFD |
+  JSR code_388FDF                           ; $389CFD |
   DEC $05B1,x                               ; $389D00 |
   BNE loc_71CF3                             ; $389D03 |
-  JMP $E456                                 ; $389D05 |
+  JMP code_3FE456                           ; $389D05 |
 
   LDA #$FC                                  ; $389D08 |
-  JSR $9E8E                                 ; $389D0A |
+  JSR code_389E8E                           ; $389D0A |
   LDA #$00                                  ; $389D0D |
   STA $063B                                 ; $389D0F |
   LDX #$01                                  ; $389D12 |
-  JSR $9D23                                 ; $389D14 |
-  JSR $9D23                                 ; $389D17 |
-  JSR $9D23                                 ; $389D1A |
-  JSR $9D23                                 ; $389D1D |
-  JMP $E477                                 ; $389D20 |
+  JSR code_389D23                           ; $389D14 |
+  JSR code_389D23                           ; $389D17 |
+  JSR code_389D23                           ; $389D1A |
+  JSR code_389D23                           ; $389D1D |
+  JMP code_3FE477                           ; $389D20 |
 
+code_389D23:
   LDY #$8D                                  ; $389D23 |
-  JSR $CB28                                 ; $389D25 |
+  JSR code_3ECB28                           ; $389D25 |
 
   db $41                                    ; $389D28 |
 
@@ -3646,7 +3738,7 @@ loc_71CF3:
   LDA #$1D                                  ; $389D37 |
   CLC                                       ; $389D39 |
   ADC $063B                                 ; $389D3A |
-  JSR $E8FD                                 ; $389D3D |
+  JSR code_3FE8FD                           ; $389D3D |
   LDY $063B                                 ; $389D40 |
   LDA $9D4E,y                               ; $389D43 |
   STA $03CE,x                               ; $389D46 |
@@ -3657,13 +3749,14 @@ loc_71CF3:
   db $04, $00, $0C, $08, $6E, $00, $00, $05 ; $389D4E |
   db $00, $94                               ; $389D56 |
 
-  JSR $EBD1                                 ; $389D58 |
+  JSR code_3FEBD1                           ; $389D58 |
 loc_71D5B:
+code_389D5B:
   LDA #$02                                  ; $389D5B |
   STA $05B1,x                               ; $389D5D |
 loc_71D60:
   LDY #$08                                  ; $389D60 |
-  JSR $E60E                                 ; $389D62 |
+  JSR code_3FE60E                           ; $389D62 |
   LDA $0486                                 ; $389D65 |
   SEC                                       ; $389D68 |
   SBC $05DF,x                               ; $389D69 |
@@ -3672,12 +3765,12 @@ loc_71D60:
   SEC                                       ; $389D71 |
   SBC $05F6,x                               ; $389D72 |
   STA $EE                                   ; $389D75 |
-  JSR $E4CB                                 ; $389D77 |
+  JSR code_3FE4CB                           ; $389D77 |
   LDA $0486                                 ; $389D7A |
   STA $05DF,x                               ; $389D7D |
   LDA $04CB                                 ; $389D80 |
   STA $05F6,x                               ; $389D83 |
-  JSR $8FDF                                 ; $389D86 |
+  JSR code_388FDF                           ; $389D86 |
   DEC $05B1,x                               ; $389D89 |
   BNE loc_71D60                             ; $389D8C |
   INC $03CE,x                               ; $389D8E |
@@ -3686,18 +3779,18 @@ loc_71D60:
   STA $03CE,x                               ; $389D96 |
   LDA #$00                                  ; $389D99 |
   STA $03B7,x                               ; $389D9B |
-  JSR $E485                                 ; $389D9E |
+  JSR code_3FE485                           ; $389D9E |
   BCC loc_71D5B                             ; $389DA1 |
   LDA #$01                                  ; $389DA3 |
   STA $03B7,x                               ; $389DA5 |
-  JMP $9D5B                                 ; $389DA8 |
+  JMP code_389D5B                           ; $389DA8 |
 
   db $70, $00, $00, $14, $04, $A3           ; $389DAB |
 
-  JSR $EBD1                                 ; $389DB1 |
+  JSR code_3FEBD1                           ; $389DB1 |
   LDA #$FF                                  ; $389DB4 |
-  JSR $9E8E                                 ; $389DB6 |
-  JSR $8C43                                 ; $389DB9 |
+  JSR code_389E8E                           ; $389DB6 |
+  JSR code_388C43                           ; $389DB9 |
   LDA #$14                                  ; $389DBC |
   STA $0624,x                               ; $389DBE |
   LDY $03CE                                 ; $389DC1 |
@@ -3721,16 +3814,16 @@ loc_71DE9:
   STA $03CE,x                               ; $389DE9 |
 loc_71DEC:
   LDY #$08                                  ; $389DEC |
-  JSR $E60E                                 ; $389DEE |
-  JSR $8FDF                                 ; $389DF1 |
+  JSR code_3FE60E                           ; $389DEE |
+  JSR code_388FDF                           ; $389DF1 |
   DEC $0624,x                               ; $389DF4 |
   BNE loc_71DEC                             ; $389DF7 |
 loc_71DF9:
-  JSR $ECFC                                 ; $389DF9 |
+  JSR code_3FECFC                           ; $389DF9 |
 loc_71DFC:
   LDY #$08                                  ; $389DFC |
-  JSR $E60E                                 ; $389DFE |
-  JSR $8FDF                                 ; $389E01 |
+  JSR code_3FE60E                           ; $389DFE |
+  JSR code_388FDF                           ; $389E01 |
   LDA $F3                                   ; $389E04 |
   AND #$01                                  ; $389E06 |
   BEQ loc_71DF9                             ; $389E08 |
@@ -3739,34 +3832,35 @@ loc_71DFC:
   LDA $059A                                 ; $389E0F |
   STA $0A                                   ; $389E12 |
   LDY #$00                                  ; $389E14 |
-  JSR $F712                                 ; $389E16 |
+  JSR code_3FF712                           ; $389E16 |
   LDA $11                                   ; $389E19 |
   BEQ loc_71DFC                             ; $389E1B |
-  JMP $E456                                 ; $389E1D |
+  JMP code_3FE456                           ; $389E1D |
 
   db $6F, $00, $00, $14, $04, $B3           ; $389E20 |
 
-  JSR $EBD1                                 ; $389E26 |
+  JSR code_3FEBD1                           ; $389E26 |
   LDA #$FF                                  ; $389E29 |
-  JSR $9E8E                                 ; $389E2B |
-  JSR $8C43                                 ; $389E2E |
+  JSR code_389E8E                           ; $389E2B |
+  JSR code_388C43                           ; $389E2E |
   LDA #$00                                  ; $389E31 |
   STA $060D,x                               ; $389E33 |
   LDA #$02                                  ; $389E36 |
   STA $0624,x                               ; $389E38 |
+code_389E3B:
   LDY #$02                                  ; $389E3B |
-  JSR $EEC9                                 ; $389E3D |
+  JSR code_3FEEC9                           ; $389E3D |
   LDA $05C8,x                               ; $389E40 |
   STA $ED                                   ; $389E43 |
   LDA #$00                                  ; $389E45 |
   STA $EB                                   ; $389E47 |
-  JSR $E4D1                                 ; $389E49 |
-  JSR $8FDF                                 ; $389E4C |
-  JMP $9E3B                                 ; $389E4F |
+  JSR code_3FE4D1                           ; $389E49 |
+  JSR code_388FDF                           ; $389E4C |
+  JMP code_389E3B                           ; $389E4F |
 
   LDA #$FC                                  ; $389E52 |
-  JSR $9E8E                                 ; $389E54 |
-  JSR $DEC9                                 ; $389E57 |
+  JSR code_389E8E                           ; $389E54 |
+  JSR code_3EDEC9                           ; $389E57 |
   LDX #$15                                  ; $389E5A |
 loc_71E5C:
   LDA $03A0,x                               ; $389E5C |
@@ -3790,11 +3884,12 @@ loc_71E77:
   LDA #$10                                  ; $389E7E |
   STA $05B1,x                               ; $389E80 |
 loc_71E83:
-  JSR $E468                                 ; $389E83 |
+  JSR code_3FE468                           ; $389E83 |
   DEC $05B1,x                               ; $389E86 |
   BNE loc_71E83                             ; $389E89 |
-  JMP $E456                                 ; $389E8B |
+  JMP code_3FE456                           ; $389E8B |
 
+code_389E8E:
   LDY $0699                                 ; $389E8E |
   PHA                                       ; $389E91 |
   LDA $0688,y                               ; $389E92 |
@@ -3814,14 +3909,14 @@ loc_71EA6:
   LDA $0583,x                               ; $389EA7 |
   CMP #$DF                                  ; $389EAA |
   BEQ locret_71EB1                          ; $389EAC |
-  JMP $E456                                 ; $389EAE |
+  JMP code_3FE456                           ; $389EAE |
 
 locret_71EB1:
   RTS                                       ; $389EB1 |
 
   db $C0, $00, $00, $14, $04, $DF           ; $389EB2 |
 
-  JSR $EBD1                                 ; $389EB8 |
+  JSR code_3FEBD1                           ; $389EB8 |
   LDA $57                                   ; $389EBB |
   STA $046F,x                               ; $389EBD |
   LDA $56                                   ; $389EC0 |
@@ -3833,6 +3928,7 @@ locret_71EB1:
   LDA #$06                                  ; $389ECF |
   STA $03CE,x                               ; $389ED1 |
 loc_71ED4:
+code_389ED4:
   LDA $03B7                                 ; $389ED4 |
   AND #$40                                  ; $389ED7 |
   STA $03B7,x                               ; $389ED9 |
@@ -3860,7 +3956,7 @@ loc_71EFF:
   STA $08                                   ; $389F02 |
   LDA $046F                                 ; $389F04 |
   STA $09                                   ; $389F07 |
-  JMP $9F1D                                 ; $389F09 |
+  JMP code_389F1D                           ; $389F09 |
 
 loc_71F0C:
   LDA $0486                                 ; $389F0C |
@@ -3870,8 +3966,9 @@ loc_71F0C:
   LDA $046F                                 ; $389F15 |
   ADC $F053,y                               ; $389F18 |
   STA $09                                   ; $389F1B |
-  JSR $F8BD                                 ; $389F1D |
-  JSR $ED01                                 ; $389F20 |
+code_389F1D:
+  JSR code_3FF8BD                           ; $389F1D |
+  JSR code_3FED01                           ; $389F20 |
   LDA $08                                   ; $389F23 |
   SEC                                       ; $389F25 |
   SBC $0486,x                               ; $389F26 |
@@ -3887,13 +3984,13 @@ loc_71F0C:
   CMP #$06                                  ; $389F39 |
   BCC loc_71F40                             ; $389F3B |
 loc_71F3D:
-  JSR $9F8A                                 ; $389F3D |
+  JSR code_389F8A                           ; $389F3D |
 loc_71F40:
-  JSR $8FDF                                 ; $389F40 |
+  JSR code_388FDF                           ; $389F40 |
   LDA $F3                                   ; $389F43 |
   AND #$1F                                  ; $389F45 |
   BNE loc_71ED4                             ; $389F47 |
-  JSR $9F71                                 ; $389F49 |
+  JSR code_389F71                           ; $389F49 |
   BCC loc_71ED4                             ; $389F4C |
   TYA                                       ; $389F4E |
   STA $05B1,x                               ; $389F4F |
@@ -3903,16 +4000,17 @@ loc_71F52:
   BNE loc_71F5F                             ; $389F56 |
   LDA $05B1,x                               ; $389F58 |
   TAY                                       ; $389F5B |
-  JSR $ECFE                                 ; $389F5C |
+  JSR code_3FECFE                           ; $389F5C |
 loc_71F5F:
-  JSR $9F8A                                 ; $389F5F |
-  JSR $8FDF                                 ; $389F62 |
+  JSR code_389F8A                           ; $389F5F |
+  JSR code_388FDF                           ; $389F62 |
   LDA $05B1,x                               ; $389F65 |
   TAY                                       ; $389F68 |
   LDA $03E5,y                               ; $389F69 |
   BPL loc_71F52                             ; $389F6C |
-  JMP $9ED4                                 ; $389F6E |
+  JMP code_389ED4                           ; $389F6E |
 
+code_389F71:
   LDY #$16                                  ; $389F71 |
 loc_71F73:
   LDA $03A0,y                               ; $389F73 |
@@ -3931,8 +4029,9 @@ loc_71F83:
   CLC                                       ; $389F88 |
   RTS                                       ; $389F89 |
 
+code_389F8A:
   LDY #$0A                                  ; $389F8A |
-  JSR $E60E                                 ; $389F8C |
+  JSR code_3FE60E                           ; $389F8C |
   LDA $03B7,x                               ; $389F8F |
   AND #$BE                                  ; $389F92 |
   LDY $ED                                   ; $389F94 |
@@ -3956,11 +4055,11 @@ loc_71FB2:
 
 loc_71FB8:
   LDY #$0A                                  ; $389FB8 |
-  JSR $E60E                                 ; $389FBA |
-  JSR $E468                                 ; $389FBD |
-  JSR $E485                                 ; $389FC0 |
+  JSR code_3FE60E                           ; $389FBA |
+  JSR code_3FE468                           ; $389FBD |
+  JSR code_3FE485                           ; $389FC0 |
   BCC loc_71FB8                             ; $389FC3 |
-  JMP $E456                                 ; $389FC5 |
+  JMP code_3FE456                           ; $389FC5 |
 
   AND #$BE                                  ; $389FC8 |
   LDY $ED                                   ; $389FCA |
@@ -3984,52 +4083,55 @@ loc_71FE8:
 
 loc_71FEE:
   LDY #$0A                                  ; $389FEE |
-  JSR $E62F                                 ; $389FF0 |
+  JSR code_3FE62F                           ; $389FF0 |
   JSR $E489                                 ; $389FF3 |
-  JSR $E4A6                                 ; $389FF6 |
+  JSR code_3FE4A6                           ; $389FF6 |
   BCC loc_71FEE                             ; $389FF9 |
-  JMP $E477                                 ; $389FFB |
+  JMP code_3FE477                           ; $389FFB |
 
   ADC ($F1),y                               ; $389FFE |
 
 bank $39
 org $8000
 
-  JSR $E468                                 ; $398000 |
-  JMP $8000                                 ; $398003 |
+code_398000:
+  JSR code_3FE468                           ; $398000 |
+  JMP code_398000                           ; $398003 |
 
   LDA #$7F                                  ; $398006 |
   STA $03E5,x                               ; $398008 |
-  JSR $E468                                 ; $39800B |
+code_39800B:
+  JSR code_3FE468                           ; $39800B |
   LDA $056C,x                               ; $39800E |
   BEQ loc_7201B                             ; $398011 |
   STA $0574                                 ; $398013 |
   LDA #$00                                  ; $398016 |
   STA $056C,x                               ; $398018 |
 loc_7201B:
-  JMP $800B                                 ; $39801B |
+  JMP code_39800B                           ; $39801B |
 
   db $78, $BA, $00, $02, $0E, $E5           ; $39801E |
 
-  JSR $EBD1                                 ; $398024 |
+  JSR code_3FEBD1                           ; $398024 |
   LDX $8F                                   ; $398027 |
   LDA #$ED                                  ; $398029 |
   STA $0E                                   ; $39802B |
   LDA #$80                                  ; $39802D |
   STA $0F                                   ; $39802F |
-  JSR $813F                                 ; $398031 |
+  JSR code_39813F                           ; $398031 |
   LDA #$5A                                  ; $398034 |
-  JSR $8110                                 ; $398036 |
+  JSR code_398110                           ; $398036 |
+code_398039:
   LDX $8F                                   ; $398039 |
   LDA #$1E                                  ; $39803B |
   STA $05B1,x                               ; $39803D |
 loc_72040:
-  JSR $EF5B                                 ; $398040 |
+  JSR code_3FEF5B                           ; $398040 |
   DEC $05B1,x                               ; $398043 |
   BNE loc_72040                             ; $398046 |
   LDX #$09                                  ; $398048 |
   LDY #$7A                                  ; $39804A |
-  JSR $E522                                 ; $39804C |
+  JSR code_3FE522                           ; $39804C |
   LDA $DF                                   ; $39804F |
   AND #$01                                  ; $398051 |
   TAY                                       ; $398053 |
@@ -4043,100 +4145,105 @@ loc_72040:
 
   LDX #$08                                  ; $398065 |
   LDY #$79                                  ; $398067 |
-  JSR $E522                                 ; $398069 |
+  JSR code_3FE522                           ; $398069 |
   LDA #$12                                  ; $39806C |
   STA $05B1,x                               ; $39806E |
 loc_72071:
-  JSR $EF5B                                 ; $398071 |
+  JSR code_3FEF5B                           ; $398071 |
   DEC $05B1,x                               ; $398074 |
   BNE loc_72071                             ; $398077 |
   LDA #$18                                  ; $398079 |
   STA $05B1,x                               ; $39807B |
   LDY #$00                                  ; $39807E |
-  JSR $F8AE                                 ; $398080 |
+  JSR code_3FF8AE                           ; $398080 |
   LDA $11                                   ; $398083 |
   STA $03CE,x                               ; $398085 |
   LDX #$0F                                  ; $398088 |
   LDY #$D9                                  ; $39808A |
-  JSR $CB28                                 ; $39808C |
+  JSR code_3ECB28                           ; $39808C |
 
   db $41                                    ; $39808F |
 
   LDA #$2E                                  ; $398090 |
   LDY $8F                                   ; $398092 |
-  JSR $E8FD                                 ; $398094 |
+  JSR code_3FE8FD                           ; $398094 |
   LDY $03D6                                 ; $398097 |
   INY                                       ; $39809A |
   STY $03DD                                 ; $39809B |
   LDX #$0E                                  ; $39809E |
   LDY #$D9                                  ; $3980A0 |
-  JSR $CB28                                 ; $3980A2 |
+  JSR code_3ECB28                           ; $3980A2 |
 
   db $41                                    ; $3980A5 |
 
   LDA #$2E                                  ; $3980A6 |
   LDY $8F                                   ; $3980A8 |
-  JSR $E8FD                                 ; $3980AA |
+  JSR code_3FE8FD                           ; $3980AA |
   LDY $03D6                                 ; $3980AD |
   DEY                                       ; $3980B0 |
   STY $03DC                                 ; $3980B1 |
 loc_720B4:
-  JSR $EF5B                                 ; $3980B4 |
+  JSR code_3FEF5B                           ; $3980B4 |
   DEC $05B1,x                               ; $3980B7 |
   BNE loc_720C1                             ; $3980BA |
   LDY #$78                                  ; $3980BC |
-  JSR $E522                                 ; $3980BE |
+  JSR code_3FE522                           ; $3980BE |
 loc_720C1:
   LDA $03AF                                 ; $3980C1 |
   ORA $03AF                                 ; $3980C4 |
   BNE loc_720B4                             ; $3980C7 |
-  JMP $8039                                 ; $3980C9 |
+  JMP code_398039                           ; $3980C9 |
 
   LDY #$7B                                  ; $3980CC |
   LDX #$09                                  ; $3980CE |
-  JSR $E522                                 ; $3980D0 |
+  JSR code_3FE522                           ; $3980D0 |
   LDX #$0F                                  ; $3980D3 |
   LDY #$D8                                  ; $3980D5 |
-  JSR $CB28                                 ; $3980D7 |
+  JSR code_3ECB28                           ; $3980D7 |
 
   db $41                                    ; $3980DA |
 
   LDA #$2D                                  ; $3980DB |
   LDY $8F                                   ; $3980DD |
-  JSR $E8FD                                 ; $3980DF |
+  JSR code_3FE8FD                           ; $3980DF |
 loc_720E2:
-  JSR $EF5B                                 ; $3980E2 |
+  JSR code_3FEF5B                           ; $3980E2 |
   LDA $03AF                                 ; $3980E5 |
   BNE loc_720E2                             ; $3980E8 |
-  JMP $8039                                 ; $3980EA |
+  JMP code_398039                           ; $3980EA |
 
   db $01, $D8, $6F, $05, $E5, $78, $D1, $B5 ; $3980ED |
   db $8B, $05, $E5, $7A, $D2, $D0, $9F, $10 ; $3980F5 |
   db $65, $7C, $D2, $F4, $AF, $22, $65, $7D ; $3980FD |
   db $D2, $F6, $8A, $05, $65, $8E, $00      ; $398105 |
 
+code_39810C:
   LDY #$02                                  ; $39810C |
   BNE loc_72116                             ; $39810E |
+code_398110:
   LDY #$00                                  ; $398110 |
   BEQ loc_72116                             ; $398112 |
+code_398114:
   LDY #$01                                  ; $398114 |
 loc_72116:
   STA $062C                                 ; $398116 |
-  JSR $C9EF                                 ; $398119 |
-  JSR $DEA3                                 ; $39811C |
+  JSR code_3EC9EF                           ; $398119 |
+  JSR code_3EDEA3                           ; $39811C |
   LDA #$30                                  ; $39811F |
   STA $49                                   ; $398121 |
   LDA $8139,y                               ; $398123 |
   STA $F5                                   ; $398126 |
   LDA $813C,y                               ; $398128 |
   STA $F6                                   ; $39812B |
-  JSR $8136                                 ; $39812D |
-  JSR $8136                                 ; $398130 |
-  JSR $8136                                 ; $398133 |
+  JSR code_398136                           ; $39812D |
+  JSR code_398136                           ; $398130 |
+  JSR code_398136                           ; $398133 |
+code_398136:
   JMP ($00F5)                               ; $398136 |
 
   db $E8, $E3, $DE, $E0, $E0, $E0           ; $398139 |
 
+code_39813F:
   LDY #$00                                  ; $39813F |
 loc_72141:
   TYA                                       ; $398141 |
@@ -4145,7 +4252,7 @@ loc_72141:
   BEQ loc_7217C                             ; $398145 |
   BPL loc_7214E                             ; $398147 |
   TAY                                       ; $398149 |
-  JSR $CB28                                 ; $39814A |
+  JSR code_3ECB28                           ; $39814A |
 
   db $41                                    ; $39814D |
 
@@ -4171,7 +4278,7 @@ loc_7214E:
   PHA                                       ; $39816F |
   LDA ($0E),y                               ; $398170 |
   TAY                                       ; $398172 |
-  JSR $E522                                 ; $398173 |
+  JSR code_3FE522                           ; $398173 |
   PLA                                       ; $398176 |
   TAY                                       ; $398177 |
   INX                                       ; $398178 |
@@ -4179,23 +4286,24 @@ loc_7214E:
   BNE loc_72141                             ; $39817A |
 loc_7217C:
   PLA                                       ; $39817C |
-  JSR $E1DD                                 ; $39817D |
+  JSR code_3FE1DD                           ; $39817D |
   LDX $8F                                   ; $398180 |
   RTS                                       ; $398182 |
 
   db $7F, $00, $00, $25, $0F, $43           ; $398183 |
 
-  JSR $EBD1                                 ; $398189 |
+  JSR code_3FEBD1                           ; $398189 |
   LDA #$0C                                  ; $39818C |
   STA $03CE,x                               ; $39818E |
+code_398191:
   LDY #$07                                  ; $398191 |
-  JSR $E60E                                 ; $398193 |
-  JSR $E9D3                                 ; $398196 |
-  JMP $8191                                 ; $398199 |
+  JSR code_3FE60E                           ; $398193 |
+  JSR code_3FE9D3                           ; $398196 |
+  JMP code_398191                           ; $398199 |
 
   db $7E, $00, $00, $0B, $7F, $E2           ; $39819C |
 
-  JSR $EBD1                                 ; $3981A2 |
+  JSR code_3FEBD1                           ; $3981A2 |
   LDA #$08                                  ; $3981A5 |
   STA $03CE,x                               ; $3981A7 |
   LDA #$FB                                  ; $3981AA |
@@ -4229,49 +4337,50 @@ loc_721CB:
   BNE loc_721F2                             ; $3981ED |
   INC $05B1,x                               ; $3981EF |
 loc_721F2:
-  JSR $8224                                 ; $3981F2 |
+  JSR code_398224                           ; $3981F2 |
   LDA $05B1,x                               ; $3981F5 |
   STA $ED                                   ; $3981F8 |
   LDA $05C8,x                               ; $3981FA |
   STA $EB                                   ; $3981FD |
   LDY #$03                                  ; $3981FF |
-  JSR $EE9A                                 ; $398201 |
-  JSR $E4D1                                 ; $398204 |
+  JSR code_3FEE9A                           ; $398201 |
+  JSR code_3FE4D1                           ; $398204 |
   LDA #$00                                  ; $398207 |
   STA $11                                   ; $398209 |
   STA $00                                   ; $39820B |
   STA $01                                   ; $39820D |
-  JSR $D9CD                                 ; $39820F |
+  JSR code_3ED9CD                           ; $39820F |
   LDA $11                                   ; $398212 |
   BEQ loc_721F2                             ; $398214 |
   LDY #$25                                  ; $398216 |
-  JSR $CB28                                 ; $398218 |
+  JSR code_3ECB28                           ; $398218 |
 
   db $41                                    ; $39821B |
 
   LDA #$42                                  ; $39821C |
   STA $05DF,x                               ; $39821E |
-  JMP $E477                                 ; $398221 |
+  JMP code_3FE477                           ; $398221 |
 
+code_398224:
   LDA $056C,x                               ; $398224 |
   BEQ loc_72244                             ; $398227 |
   CMP #$14                                  ; $398229 |
   BNE loc_72244                             ; $39822B |
   LDX #$06                                  ; $39822D |
   LDY #$DA                                  ; $39822F |
-  JSR $CB28                                 ; $398231 |
+  JSR code_3ECB28                           ; $398231 |
 
   db $41                                    ; $398234 |
 
   LDA #$03                                  ; $398235 |
   LDY $8F                                   ; $398237 |
-  JSR $E8FD                                 ; $398239 |
-  JMP $E456                                 ; $39823C |
+  JSR code_3FE8FD                           ; $398239 |
+  JMP code_3FE456                           ; $39823C |
 
   LDA #$00                                  ; $39823F |
   STA $056C,x                               ; $398241 |
 loc_72244:
-  JMP $E468                                 ; $398244 |
+  JMP code_3FE468                           ; $398244 |
 
   db $00, $00, $00, $00, $00, $00           ; $398247 |
 
@@ -4297,7 +4406,8 @@ loc_72244:
   INY                                       ; $398274 |
   TYA                                       ; $398275 |
   STA $0624,x                               ; $398276 |
-  JSR $E482                                 ; $398279 |
+  JSR code_3FE482                           ; $398279 |
+code_39827C:
   LDX $8F                                   ; $39827C |
 loc_7227E:
   LDA $0624,x                               ; $39827E |
@@ -4333,7 +4443,7 @@ loc_72286:
   INY                                       ; $3982B6 |
 loc_722B7:
   STY $AC                                   ; $3982B7 |
-  JSR $E482                                 ; $3982B9 |
+  JSR code_3FE482                           ; $3982B9 |
   BCC loc_72286                             ; $3982BC |
 loc_722BE:
   LDX $8F                                   ; $3982BE |
@@ -4345,10 +4455,10 @@ loc_722BE:
   INY                                       ; $3982CA |
   LDA ($AA),y                               ; $3982CB |
   STA $08                                   ; $3982CD |
-  JSR $E482                                 ; $3982CF |
+  JSR code_3FE482                           ; $3982CF |
 loc_722D2:
-  JSR $E468                                 ; $3982D2 |
-  JSR $E485                                 ; $3982D5 |
+  JSR code_3FE468                           ; $3982D2 |
+  JSR code_3FE485                           ; $3982D5 |
   BCC loc_7227E                             ; $3982D8 |
   LDA #$00                                  ; $3982DA |
   STA $0682                                 ; $3982DC |
@@ -4357,7 +4467,7 @@ loc_722D2:
   LDA #$03                                  ; $3982E4 |
 loc_722E6:
   STA $71                                   ; $3982E6 |
-  JMP $E456                                 ; $3982E8 |
+  JMP code_3FE456                           ; $3982E8 |
 
   db $EB, $EF, $F6, $00, $07, $2A, $42, $6B ; $3982EB |
   db $75, $7C, $43, $8A, $98, $C0, $C7, $D8 ; $3982F3 |
@@ -4398,10 +4508,12 @@ loc_722E6:
   db $85, $1A, $04, $84, $00, $00           ; $39840B |
 
   LDA #$0D                                  ; $398411 |
-  JMP $8416                                 ; $398413 |
+  JMP code_398416                           ; $398413 |
 
+code_398416:
   CMP $57                                   ; $398416 |
   BNE locret_72429                          ; $398418 |
+code_39841A:
   STA $0684                                 ; $39841A |
   LDA $064F                                 ; $39841D |
   STA $0685                                 ; $398420 |
@@ -4418,7 +4530,7 @@ locret_72429:
   CMP #$0E                                  ; $398438 |
   BNE locret_72441                          ; $39843A |
   LDX #$03                                  ; $39843C |
-  JSR $C5C7                                 ; $39843E |
+  JSR code_3EC5C7                           ; $39843E |
 locret_72441:
   RTS                                       ; $398441 |
 
@@ -4435,9 +4547,9 @@ locret_72441:
   STA $F4                                   ; $39845B |
   LDA #$1C                                  ; $39845D |
   STA $069E                                 ; $39845F |
-  JSR $C9EF                                 ; $398462 |
+  JSR code_3EC9EF                           ; $398462 |
   LDY #$02                                  ; $398465 |
-  JSR $C5F0                                 ; $398467 |
+  JSR code_3EC5F0                           ; $398467 |
 locret_7246A:
   RTS                                       ; $39846A |
 
@@ -4448,40 +4560,40 @@ locret_7246A:
   LDY $51                                   ; $398480 |
   LDA $9A96,y                               ; $398482 |
   STA $80                                   ; $398485 |
-  JMP $D441                                 ; $398487 |
+  JMP code_3ED441                           ; $398487 |
 
   db $00, $84, $8E, $00                     ; $39848A |
 
   LDY $51                                   ; $39848E |
   LDA $9AA6,y                               ; $398490 |
   STA $80                                   ; $398493 |
-  JMP $D441                                 ; $398495 |
+  JMP code_3ED441                           ; $398495 |
 
   db $84, $9B, $02                          ; $398498 |
 
   LDA #$1F                                  ; $39849B |
-  JSR $C9EF                                 ; $39849D |
+  JSR code_3EC9EF                           ; $39849D |
 loc_724A0:
-  JSR $E468                                 ; $3984A0 |
+  JSR code_3FE468                           ; $3984A0 |
   LDA #$87                                  ; $3984A3 |
   STA $73                                   ; $3984A5 |
   LDA $57                                   ; $3984A7 |
   STA $0697                                 ; $3984A9 |
-  JSR $D583                                 ; $3984AC |
-  JSR $E485                                 ; $3984AF |
+  JSR code_3ED583                           ; $3984AC |
+  JSR code_3FE485                           ; $3984AF |
   BCC loc_724A0                             ; $3984B2 |
   LDA #$03                                  ; $3984B4 |
   STA $71                                   ; $3984B6 |
   LDA #$1E                                  ; $3984B8 |
-  JSR $C9EF                                 ; $3984BA |
-  JMP $E456                                 ; $3984BD |
+  JSR code_3EC9EF                           ; $3984BA |
+  JMP code_3FE456                           ; $3984BD |
 
   db $02, $00, $00, $02, $00, $00, $00, $85 ; $3984C0 |
   db $2E, $00, $84, $D3, $01, $00, $1F, $04 ; $3984C8 |
   db $86, $00, $00                          ; $3984D0 |
 
   LDA #$0E                                  ; $3984D3 |
-  JMP $8416                                 ; $3984D5 |
+  JMP code_398416                           ; $3984D5 |
 
   db $02, $00, $00, $02, $8C, $00, $00, $00 ; $3984D8 |
   db $00, $00, $03, $83, $00, $02, $00, $00 ; $3984E0 |
@@ -4491,13 +4603,13 @@ loc_724A0:
 
   LDA #$83                                  ; $3984FC |
   STA $064F                                 ; $3984FE |
-  JSR $CAAA                                 ; $398501 |
-  JMP $E456                                 ; $398504 |
+  JSR code_3ECAAA                           ; $398501 |
+  JMP code_3FE456                           ; $398504 |
 
   db $02, $85, $0E, $05, $8D, $00, $00      ; $398507 |
 
   LDA #$08                                  ; $39850E |
-  JMP $8416                                 ; $398510 |
+  JMP code_398416                           ; $398510 |
 
   db $02, $00, $00, $05, $83, $00, $00, $00 ; $398513 |
   db $00, $00, $01, $8E, $87, $00, $02, $00 ; $39851B |
@@ -4505,7 +4617,7 @@ loc_724A0:
   db $00, $00, $00                          ; $39852B |
 
   LDX #$04                                  ; $39852E |
-  JMP $C5C7                                 ; $398530 |
+  JMP code_3EC5C7                           ; $398530 |
 
   db $00, $00, $00, $05, $00, $00, $03, $00 ; $398533 |
   db $00, $00, $00, $84, $80, $00, $02, $00 ; $39853B |
@@ -4527,43 +4639,43 @@ loc_724A0:
   STA $F4                                   ; $39856E |
   LDX #$08                                  ; $398570 |
   LDY #$50                                  ; $398572 |
-  JSR $CB28                                 ; $398574 |
+  JSR code_3ECB28                           ; $398574 |
 
   db $41                                    ; $398577 |
 
 loc_72578:
-  JSR $E468                                 ; $398578 |
+  JSR code_3FE468                           ; $398578 |
   LDA $03AA                                 ; $39857B |
   BNE loc_72578                             ; $39857E |
   LDA #$32                                  ; $398580 |
   STA $069E                                 ; $398582 |
-  JSR $C9EF                                 ; $398585 |
+  JSR code_3EC9EF                           ; $398585 |
   LDA #$00                                  ; $398588 |
   STA $069C                                 ; $39858A |
   STA $F4                                   ; $39858D |
-  JMP $827C                                 ; $39858F |
+  JMP code_39827C                           ; $39858F |
 
   LDA #$09                                  ; $398592 |
-  JMP $8416                                 ; $398594 |
+  JMP code_398416                           ; $398594 |
 
   db $02, $00, $00, $05, $91, $34, $00, $85 ; $398597 |
   db $A1, $03                               ; $39859F |
 
   LDA #$35                                  ; $3985A1 |
-  JSR $C9EF                                 ; $3985A3 |
+  JSR code_3EC9EF                           ; $3985A3 |
   LDA #$93                                  ; $3985A6 |
   STA $064F                                 ; $3985A8 |
-  JSR $CAAA                                 ; $3985AB |
-  JMP $E456                                 ; $3985AE |
+  JSR code_3ECAAA                           ; $3985AB |
+  JMP code_3FE456                           ; $3985AE |
 
   db $85, $B4, $03                          ; $3985B1 |
 
   LDA #$32                                  ; $3985B4 |
-  JSR $C9EF                                 ; $3985B6 |
+  JSR code_3EC9EF                           ; $3985B6 |
   LDA #$BB                                  ; $3985B9 |
   STA $064F                                 ; $3985BB |
-  JSR $CAAA                                 ; $3985BE |
-  JMP $E456                                 ; $3985C1 |
+  JSR code_3ECAAA                           ; $3985BE |
+  JMP code_3FE456                           ; $3985C1 |
 
   db $00, $84, $80, $03, $00, $4A, $00, $85 ; $3985C4 |
   db $D8, $01, $00, $00, $03, $00, $00, $02 ; $3985CC |
@@ -4572,7 +4684,7 @@ loc_72578:
   LDA $F4                                   ; $3985D8 |
   BNE locret_725F9                          ; $3985DA |
   LDX #$06                                  ; $3985DC |
-  JSR $C5C7                                 ; $3985DE |
+  JSR code_3EC5C7                           ; $3985DE |
   LDA #$1F                                  ; $3985E1 |
   STA $0672                                 ; $3985E3 |
   LDA #$0E                                  ; $3985E6 |
@@ -4582,7 +4694,7 @@ loc_72578:
   LDA #$95                                  ; $3985EF |
   STA $069E                                 ; $3985F1 |
   LDA #$0A                                  ; $3985F4 |
-  JSR $8416                                 ; $3985F6 |
+  JSR code_398416                           ; $3985F6 |
 locret_725F9:
   RTS                                       ; $3985F9 |
 
@@ -4590,7 +4702,7 @@ locret_725F9:
   db $00                                    ; $398602 |
 
   LDY #$02                                  ; $398603 |
-  JMP $C5F0                                 ; $398605 |
+  JMP code_3EC5F0                           ; $398605 |
 
   db $86, $11, $00, $86, $7F, $05, $95, $95 ; $398608 |
   db $00                                    ; $398610 |
@@ -4599,17 +4711,19 @@ locret_725F9:
   STA $05DE                                 ; $398613 |
   LDA #$98                                  ; $398616 |
   STA $05F5                                 ; $398618 |
+code_39861B:
   LDA #$01                                  ; $39861B |
   STA $05C7                                 ; $39861D |
 loc_72620:
-  JSR $E468                                 ; $398620 |
+  JSR code_3FE468                           ; $398620 |
   LDA $05B1,x                               ; $398623 |
   BNE loc_72620                             ; $398626 |
+code_398628:
   LDY #$7F                                  ; $398628 |
-  JSR $E5AB                                 ; $39862A |
+  JSR code_3FE5AB                           ; $39862A |
   BCC loc_72635                             ; $39862D |
-  JSR $E468                                 ; $39862F |
-  JMP $8628                                 ; $398632 |
+  JSR code_3FE468                           ; $39862F |
+  JMP code_398628                           ; $398632 |
 
 loc_72635:
   LDA $05DE                                 ; $398635 |
@@ -4622,32 +4736,33 @@ loc_72635:
   STA $04CB,x                               ; $398648 |
   STX $05C7                                 ; $39864B |
 loc_7264E:
-  JSR $E468                                 ; $39864E |
+code_39864E:
+  JSR code_3FE468                           ; $39864E |
   LDX $05C7                                 ; $398651 |
   LDA $03A0,x                               ; $398654 |
   BNE loc_7264E                             ; $398657 |
-  JSR $E468                                 ; $398659 |
+  JSR code_3FE468                           ; $398659 |
   INC $05F5                                 ; $39865C |
   LDA $05F5                                 ; $39865F |
-  JSR $CB28                                 ; $398662 |
+  JSR code_3ECB28                           ; $398662 |
 
   db $00                                    ; $398665 |
 
-  JSR $E468                                 ; $398666 |
+  JSR code_3FE468                           ; $398666 |
   INC $05F5                                 ; $398669 |
   LDA $05F5                                 ; $39866C |
-  JSR $CB28                                 ; $39866F |
+  JSR code_3ECB28                           ; $39866F |
 
   db $00                                    ; $398672 |
 
   INC $05F5                                 ; $398673 |
   LDA $05F5                                 ; $398676 |
   STA $0682                                 ; $398679 |
-  JMP $827C                                 ; $39867C |
+  JMP code_39827C                           ; $39867C |
 
   BCC locret_72686                          ; $39867F |
   LDX #$06                                  ; $398681 |
-  JSR $C5C7                                 ; $398683 |
+  JSR code_3EC5C7                           ; $398683 |
 locret_72686:
   RTS                                       ; $398686 |
 
@@ -4678,7 +4793,7 @@ locret_726D2:
   db $00, $5B, $01, $00, $00, $8E, $00      ; $3986F3 |
 
   LDA #$0A                                  ; $3986FA |
-  JMP $8416                                 ; $3986FC |
+  JMP code_398416                           ; $3986FC |
 
   db $02, $00, $00, $02, $00, $5E, $97, $01 ; $3986FF |
   db $00, $5C, $8F, $00, $00, $00, $00, $02 ; $398707 |
@@ -4690,8 +4805,8 @@ locret_726D2:
 
   LDA #$5D                                  ; $398733 |
   STA $069E                                 ; $398735 |
-  JSR $C9EF                                 ; $398738 |
-  JMP $87A6                                 ; $39873B |
+  JSR code_3EC9EF                           ; $398738 |
+  JMP code_3987A6                           ; $39873B |
 
   db $00, $00, $00, $01, $99, $B9, $00, $00 ; $39873E |
   db $00, $00, $05, $61, $00, $00, $87, $55 ; $398746 |
@@ -4699,21 +4814,22 @@ locret_726D2:
 
   LDX #$08                                  ; $398755 |
   LDY #$D0                                  ; $398757 |
-  JSR $CB28                                 ; $398759 |
+  JSR code_3ECB28                           ; $398759 |
 
   db $41                                    ; $39875C |
 
   LDA #$01                                  ; $39875D |
   STA $05C7                                 ; $39875F |
 loc_72762:
-  JSR $E468                                 ; $398762 |
+  JSR code_3FE468                           ; $398762 |
   LDA $05C7                                 ; $398765 |
   BNE loc_72762                             ; $398768 |
+code_39876A:
   LDY #$7F                                  ; $39876A |
-  JSR $E5AB                                 ; $39876C |
+  JSR code_3FE5AB                           ; $39876C |
   BCC loc_72777                             ; $39876F |
-  JSR $E468                                 ; $398771 |
-  JMP $876A                                 ; $398774 |
+  JSR code_3FE468                           ; $398771 |
+  JMP code_39876A                           ; $398774 |
 
 loc_72777:
   LDA #$03                                  ; $398777 |
@@ -4726,27 +4842,28 @@ loc_72777:
   LDA #$90                                  ; $398789 |
   STA $04CB,x                               ; $39878B |
   STX $05C7                                 ; $39878E |
-  JMP $864E                                 ; $398791 |
+  JMP code_39864E                           ; $398791 |
 
   db $00, $00, $00, $04, $00, $00, $8A, $00 ; $398794 |
   db $87, $A6, $01, $00, $00, $03, $00, $00 ; $39879C |
   db $94, $00                               ; $3987A4 |
 
+code_3987A6:
   LDA $23                                   ; $3987A6 |
   BNE locret_727AF                          ; $3987A8 |
   LDX #$07                                  ; $3987AA |
-  JMP $C5C7                                 ; $3987AC |
+  JMP code_3EC5C7                           ; $3987AC |
 
 locret_727AF:
   RTS                                       ; $3987AF |
 
 loc_727B0:
   LDA #$9A                                  ; $3987B0 |
-  JSR $87D4                                 ; $3987B2 |
+  JSR code_3987D4                           ; $3987B2 |
   LDA #$9B                                  ; $3987B5 |
-  JSR $87D4                                 ; $3987B7 |
+  JSR code_3987D4                           ; $3987B7 |
   LDA #$9C                                  ; $3987BA |
-  JSR $87D4                                 ; $3987BC |
+  JSR code_3987D4                           ; $3987BC |
   LDA $57                                   ; $3987BF |
   CMP #$1A                                  ; $3987C1 |
   BEQ loc_727B0                             ; $3987C3 |
@@ -4756,11 +4873,12 @@ loc_727B0:
   BEQ loc_727B0                             ; $3987CB |
   CMP #$14                                  ; $3987CD |
   BEQ loc_727B0                             ; $3987CF |
-  JMP $C5E6                                 ; $3987D1 |
+  JMP code_3EC5E6                           ; $3987D1 |
 
-  JSR $CAAA                                 ; $3987D4 |
+code_3987D4:
+  JSR code_3ECAAA                           ; $3987D4 |
   LDA #$04                                  ; $3987D7 |
-  JSR $C5F6                                 ; $3987D9 |
+  JSR code_3EC5F6                           ; $3987D9 |
   RTS                                       ; $3987DC |
 
   db $01, $00, $00, $00, $02, $87, $E8, $02 ; $3987DD |
@@ -4770,10 +4888,10 @@ loc_727B0:
   CMP #$03                                  ; $3987EA |
   BNE locret_727FB                          ; $3987EC |
   LDY #$02                                  ; $3987EE |
-  JSR $C5F0                                 ; $3987F0 |
+  JSR code_3EC5F0                           ; $3987F0 |
   LDA #$6C                                  ; $3987F3 |
   STA $069E                                 ; $3987F5 |
-  JSR $C9EF                                 ; $3987F8 |
+  JSR code_3EC9EF                           ; $3987F8 |
 locret_727FB:
   RTS                                       ; $3987FB |
 
@@ -4783,8 +4901,9 @@ locret_727FB:
   LDA $57                                   ; $39880A |
   CMP #$12                                  ; $39880C |
   BNE locret_72815                          ; $39880E |
+code_398810:
   LDX #$0A                                  ; $398810 |
-  JSR $C5C7                                 ; $398812 |
+  JSR code_3EC5C7                           ; $398812 |
 locret_72815:
   RTS                                       ; $398815 |
 
@@ -4792,7 +4911,7 @@ locret_72815:
   db $94, $00                               ; $39881E |
 
   LDA #$0E                                  ; $398820 |
-  JMP $841A                                 ; $398822 |
+  JMP code_39841A                           ; $398822 |
 
   db $02, $00, $00, $04, $00, $00, $90, $00 ; $398825 |
   db $88, $33, $01, $00, $00, $00           ; $39882D |
@@ -4816,14 +4935,14 @@ locret_72815:
   STA $F4                                   ; $39885A |
 loc_7285C:
   LDX #$0B                                  ; $39885C |
-  JMP $C5C7                                 ; $39885E |
+  JMP code_3EC5C7                           ; $39885E |
 
   db $02, $00, $00, $01, $00, $82, $00, $02 ; $398861 |
   db $84, $80, $01, $00, $00, $97, $00, $88 ; $398869 |
   db $79, $00, $00, $00, $01, $00, $00, $00 ; $398871 |
 
   LDA #$0E                                  ; $398879 |
-  JMP $8416                                 ; $39887B |
+  JMP code_398416                           ; $39887B |
 
   db $88, $5C, $00, $88, $8A, $02, $00, $00 ; $39887E |
   db $03, $00, $00, $00                     ; $398886 |
@@ -4834,7 +4953,7 @@ loc_7285C:
   LDA $060D,x                               ; $398890 |
   CLC                                       ; $398893 |
   ADC #$9F                                  ; $398894 |
-  JSR $CAA4                                 ; $398896 |
+  JSR code_3ECAA4                           ; $398896 |
   INC $060D,x                               ; $398899 |
   LDA $060D,x                               ; $39889C |
   CMP #$03                                  ; $39889F |
@@ -4846,10 +4965,10 @@ loc_728A8:
   CMP #$0A                                  ; $3988AA |
   BNE locret_728BB                          ; $3988AC |
   LDY #$02                                  ; $3988AE |
-  JSR $C5F0                                 ; $3988B0 |
+  JSR code_3EC5F0                           ; $3988B0 |
   LDA #$78                                  ; $3988B3 |
   STA $069E                                 ; $3988B5 |
-  JSR $C9EF                                 ; $3988B8 |
+  JSR code_3EC9EF                           ; $3988B8 |
 locret_728BB:
   RTS                                       ; $3988BB |
 
@@ -4857,7 +4976,7 @@ locret_728BB:
 
   LDA #$7B                                  ; $3988C2 |
   STA $069E                                 ; $3988C4 |
-  JMP $C9EF                                 ; $3988C7 |
+  JMP code_3EC9EF                           ; $3988C7 |
 
   db $00, $00, $00, $05, $00, $00, $93, $01 ; $3988CA |
   db $00, $00, $00, $00, $00, $00, $03, $00 ; $3988D2 |
@@ -4866,12 +4985,12 @@ locret_728BB:
   db $00, $88, $F1, $00, $84, $8E, $00      ; $3988EA |
 
   LDA #$55                                  ; $3988F1 |
-  JSR $CAA4                                 ; $3988F3 |
+  JSR code_3ECAA4                           ; $3988F3 |
   LDA #$B9                                  ; $3988F6 |
-  JSR $C9EF                                 ; $3988F8 |
+  JSR code_3EC9EF                           ; $3988F8 |
   LDA #$8B                                  ; $3988FB |
   STA $064F                                 ; $3988FD |
-  JMP $CAA4                                 ; $398900 |
+  JMP code_3ECAA4                           ; $398900 |
 
   db $00, $00, $00, $02, $00, $00, $03, $00 ; $398903 |
   db $00, $05, $00, $00, $8F, $00, $02, $00 ; $39890B |
@@ -4882,18 +5001,18 @@ locret_728BB:
   db $00, $84, $8E, $00                     ; $398933 |
 
   LDX #$06                                  ; $398937 |
-  JMP $C5C7                                 ; $398939 |
+  JMP code_3EC5C7                           ; $398939 |
 
   db $89, $42, $00, $84, $8E, $00           ; $39893C |
 
   LDA #$4A                                  ; $398942 |
-  JSR $CAA4                                 ; $398944 |
+  JSR code_3ECAA4                           ; $398944 |
   LDA #$D7                                  ; $398947 |
   STA $064F                                 ; $398949 |
-  JSR $CAA4                                 ; $39894C |
+  JSR code_3ECAA4                           ; $39894C |
   LDA #$F6                                  ; $39894F |
-  JSR $C9EF                                 ; $398951 |
-  JMP $8810                                 ; $398954 |
+  JSR code_3EC9EF                           ; $398951 |
+  JMP code_398810                           ; $398954 |
 
   db $92, $6F, $00, $00, $00, $01, $A3, $79 ; $398957 |
   db $00, $03, $89, $64, $00                ; $39895F |
@@ -4901,21 +5020,21 @@ locret_728BB:
   LDA #$78                                  ; $398964 |
   STA $069E                                 ; $398966 |
   LDA #$0B                                  ; $398969 |
-  JMP $8416                                 ; $39896B |
+  JMP code_398416                           ; $39896B |
 
   db $89, $74, $00, $84, $8E, $00, $A2, $0C ; $39896E |
   db $4C, $C7, $C5, $89, $7F, $01, $00, $00 ; $398976 |
   db $00                                    ; $39897E |
 
   LDX #$0D                                  ; $39897F |
-  JMP $C5C7                                 ; $398981 |
+  JMP code_3EC5C7                           ; $398981 |
 
   db $89, $7F, $02, $00, $00, $02, $00, $00 ; $398984 |
   db $00, $89, $99, $00, $00, $00, $02, $A8 ; $39898C |
   db $00, $03, $A2, $00, $00                ; $398994 |
 
   LDY #$02                                  ; $398999 |
-  JMP $C5F0                                 ; $39899B |
+  JMP code_3EC5F0                           ; $39899B |
 
   db $00, $89, $A5, $03, $00, $00, $00      ; $39899E |
 
@@ -4926,10 +5045,10 @@ locret_728BB:
   AND #$E0                                  ; $3989AF |
   ORA #$10                                  ; $3989B1 |
   STA $0486                                 ; $3989B3 |
-  JSR $9AB6                                 ; $3989B6 |
-  JSR $9AC4                                 ; $3989B9 |
+  JSR code_399AB6                           ; $3989B6 |
+  JSR code_399AC4                           ; $3989B9 |
   LDA #$00                                  ; $3989BC |
-  JSR $E0FD                                 ; $3989BE |
+  JSR code_3FE0FD                           ; $3989BE |
   LDA $03B7                                 ; $3989C1 |
   AND #$DF                                  ; $3989C4 |
   STA $03B7                                 ; $3989C6 |
@@ -4937,26 +5056,27 @@ locret_728BB:
   STA $0486                                 ; $3989CB |
   LDA #$50                                  ; $3989CE |
   STA $04CB                                 ; $3989D0 |
-  JSR $D6F1                                 ; $3989D3 |
-  JSR $E1DD                                 ; $3989D6 |
+  JSR code_3ED6F1                           ; $3989D3 |
+  JSR code_3FE1DD                           ; $3989D6 |
   LDA #$A9                                  ; $3989D9 |
   STA $064F                                 ; $3989DB |
   LDA #$08                                  ; $3989DE |
-  JSR $89F5                                 ; $3989E0 |
+  JSR code_3989F5                           ; $3989E0 |
   LDA #$F0                                  ; $3989E3 |
   STA $DC                                   ; $3989E5 |
-  JSR $C62B                                 ; $3989E7 |
+  JSR code_3EC62B                           ; $3989E7 |
   LDA #$0B                                  ; $3989EA |
   STA $DC                                   ; $3989EC |
-  JSR $DC66                                 ; $3989EE |
-  JSR $CA89                                 ; $3989F1 |
+  JSR code_3EDC66                           ; $3989EE |
+  JSR code_3ECA89                           ; $3989F1 |
 locret_729F4:
   RTS                                       ; $3989F4 |
 
+code_3989F5:
   STA $57                                   ; $3989F5 |
   STA $046F                                 ; $3989F7 |
   TAY                                       ; $3989FA |
-  JMP $D712                                 ; $3989FB |
+  JMP code_3ED712                           ; $3989FB |
 
   db $02, $8A, $05, $05, $00, $CA, $00      ; $3989FE |
 
@@ -4965,18 +5085,18 @@ locret_729F4:
   LDA $71                                   ; $398A09 |
   BEQ locret_72A3D                          ; $398A0B |
   LDA #$A8                                  ; $398A0D |
-  JSR $C9EF                                 ; $398A0F |
+  JSR code_3EC9EF                           ; $398A0F |
   LDA #$00                                  ; $398A12 |
   STA $71                                   ; $398A14 |
   LDA #$04                                  ; $398A16 |
   STA $05C7                                 ; $398A18 |
 loc_72A1B:
-  JSR $E468                                 ; $398A1B |
+  JSR code_3FE468                           ; $398A1B |
   LDA $F3                                   ; $398A1E |
   AND #$07                                  ; $398A20 |
   BNE loc_72A1B                             ; $398A22 |
   LDX #$0B                                  ; $398A24 |
-  JSR $CA59                                 ; $398A26 |
+  JSR code_3ECA59                           ; $398A26 |
   DEC $05C7                                 ; $398A29 |
   BNE loc_72A1B                             ; $398A2C |
   LDA #$07                                  ; $398A2E |
@@ -4984,7 +5104,7 @@ loc_72A1B:
   LDA #$00                                  ; $398A33 |
   STA $F4                                   ; $398A35 |
   STA $0672                                 ; $398A37 |
-  JMP $827C                                 ; $398A3A |
+  JMP code_39827C                           ; $398A3A |
 
 locret_72A3D:
   RTS                                       ; $398A3D |
@@ -4993,20 +5113,20 @@ locret_72A3D:
   db $00                                    ; $398A46 |
 
   LDX #$0E                                  ; $398A47 |
-  JMP $C5C7                                 ; $398A49 |
+  JMP code_3EC5C7                           ; $398A49 |
 
   db $8A, $55, $00, $00, $00, $01, $00, $A7 ; $398A4C |
   db $00                                    ; $398A54 |
 
   LDY #$02                                  ; $398A55 |
-  JMP $C5F0                                 ; $398A57 |
+  JMP code_3EC5F0                           ; $398A57 |
 
   db $8A, $60, $01, $00, $00, $00           ; $398A5A |
 
   LDA #$00                                  ; $398A60 |
   STA $0358                                 ; $398A62 |
   LDX #$0F                                  ; $398A65 |
-  JMP $C5C7                                 ; $398A67 |
+  JMP code_3EC5C7                           ; $398A67 |
 
   db $8A, $70, $01, $00, $00, $00           ; $398A6A |
 
@@ -5026,18 +5146,18 @@ loc_72A75:
   STA $FB                                   ; $398A88 |
   STA $05C8,x                               ; $398A8A |
   LDX #$10                                  ; $398A8D |
-  JSR $C5C7                                 ; $398A8F |
+  JSR code_3EC5C7                           ; $398A8F |
   LDA #$0A                                  ; $398A92 |
-  JMP $8416                                 ; $398A94 |
+  JMP code_398416                           ; $398A94 |
 
   db $8A, $60, $00, $00, $00, $02, $00, $A9 ; $398A97 |
   db $03, $00, $A8, $00, $8A, $A9, $00, $84 ; $398A9F |
   db $8E, $00                               ; $398AA7 |
 
   LDY #$02                                  ; $398AA9 |
-  JSR $C5F0                                 ; $398AAB |
+  JSR code_3EC5F0                           ; $398AAB |
   LDA #$AA                                  ; $398AAE |
-  JMP $C9EF                                 ; $398AB0 |
+  JMP code_3EC9EF                           ; $398AB0 |
 
   db $00, $84, $80, $01, $00, $00, $97, $00 ; $398AB3 |
   db $8A, $C1, $00, $84, $8E, $00           ; $398ABB |
@@ -5045,22 +5165,22 @@ loc_72A75:
   LDA #$B8                                  ; $398AC1 |
   STA $069E                                 ; $398AC3 |
   LDA #$B9                                  ; $398AC6 |
-  JSR $C9EF                                 ; $398AC8 |
+  JSR code_3EC9EF                           ; $398AC8 |
   LDA #$60                                  ; $398ACB |
-  JSR $CAA4                                 ; $398ACD |
+  JSR code_3ECAA4                           ; $398ACD |
   LDA #$B2                                  ; $398AD0 |
   STA $064F                                 ; $398AD2 |
-  JMP $CAA4                                 ; $398AD5 |
+  JMP code_3ECAA4                           ; $398AD5 |
 
   db $8A, $DE, $00, $84, $8E, $00           ; $398AD8 |
 
   LDY #$02                                  ; $398ADE |
-  JSR $C5F0                                 ; $398AE0 |
+  JSR code_3EC5F0                           ; $398AE0 |
   LDA #$69                                  ; $398AE3 |
-  JSR $CAA4                                 ; $398AE5 |
+  JSR code_3ECAA4                           ; $398AE5 |
   LDA #$D0                                  ; $398AE8 |
   STA $069E                                 ; $398AEA |
-  JMP $C9EF                                 ; $398AED |
+  JMP code_3EC9EF                           ; $398AED |
 
   db $8A, $F3, $03                          ; $398AF0 |
 
@@ -5072,51 +5192,54 @@ loc_72A75:
   LDA #$B1                                  ; $398AFA |
 loc_72AFC:
   STA $064F                                 ; $398AFC |
-  JSR $CAAA                                 ; $398AFF |
-  JMP $E456                                 ; $398B02 |
+  JSR code_3ECAAA                           ; $398AFF |
+  JMP code_3FE456                           ; $398B02 |
 
   db $8B, $0B, $00, $84, $8E, $00           ; $398B05 |
 
   LDA #$B9                                  ; $398B0B |
-  JSR $C9EF                                 ; $398B0D |
+  JSR code_3EC9EF                           ; $398B0D |
   LDA #$63                                  ; $398B10 |
-  JSR $CAA4                                 ; $398B12 |
+  JSR code_3ECAA4                           ; $398B12 |
   LDX #$12                                  ; $398B15 |
-  JMP $C5C7                                 ; $398B17 |
+  JMP code_3EC5C7                           ; $398B17 |
 
   db $02, $00, $00, $05, $B3, $00, $00, $8B ; $398B1A |
   db $24, $00                               ; $398B22 |
 
-  JSR $FA03                                 ; $398B24 |
+  JSR code_3FFA03                           ; $398B24 |
   LDX #$08                                  ; $398B27 |
   LDY #$E0                                  ; $398B29 |
-  JSR $CB28                                 ; $398B2B |
+  JSR code_3ECB28                           ; $398B2B |
 
   db $41                                    ; $398B2E |
 
+code_398B2F:
   LDA #$03                                  ; $398B2F |
+code_398B31:
   STA $05F5                                 ; $398B31 |
   LDA #$90                                  ; $398B34 |
   STA $060C                                 ; $398B36 |
 loc_72B39:
-  JSR $E468                                 ; $398B39 |
+  JSR code_3FE468                           ; $398B39 |
   LDA $03A8                                 ; $398B3C |
   BNE loc_72B39                             ; $398B3F |
   LDY #$7F                                  ; $398B41 |
-  JSR $E5AB                                 ; $398B43 |
+  JSR code_3FE5AB                           ; $398B43 |
   LDA $05F5                                 ; $398B46 |
   STA $05B1,x                               ; $398B49 |
   LDA $05DE                                 ; $398B4C |
   STA $05C8,x                               ; $398B4F |
   LDA $060C                                 ; $398B52 |
   STA $04CB,x                               ; $398B55 |
+code_398B58:
   LDA $048E                                 ; $398B58 |
   SEC                                       ; $398B5B |
   SBC #$10                                  ; $398B5C |
   STA $0486,x                               ; $398B5E |
   STX $05C7                                 ; $398B61 |
 loc_72B64:
-  JSR $E468                                 ; $398B64 |
+  JSR code_3FE468                           ; $398B64 |
   LDX $05C7                                 ; $398B67 |
   LDA $03A0,x                               ; $398B6A |
   BNE loc_72B64                             ; $398B6D |
@@ -5124,7 +5247,7 @@ loc_72B64:
   STA $069D                                 ; $398B71 |
   STA $069C                                 ; $398B74 |
   STA $FA                                   ; $398B77 |
-  JMP $F95A                                 ; $398B79 |
+  JMP code_3FF95A                           ; $398B79 |
 
   db $00, $00, $00, $01, $00, $CD, $00, $8B ; $398B7C |
   db $8C, $00, $00, $00, $02, $C4, $00, $00 ; $398B84 |
@@ -5134,95 +5257,95 @@ loc_72B64:
   db $8B, $93, $00, $84, $8E, $00           ; $398B8D |
 
   LDA #$6B                                  ; $398B93 |
-  JSR $CAA4                                 ; $398B95 |
+  JSR code_3ECAA4                           ; $398B95 |
   LDA #$D0                                  ; $398B98 |
-  JSR $C9EF                                 ; $398B9A |
+  JSR code_3EC9EF                           ; $398B9A |
   LDA #$00                                  ; $398B9D |
   STA $064F                                 ; $398B9F |
   LDA #$C3                                  ; $398BA2 |
-  JMP $CAA4                                 ; $398BA4 |
+  JMP code_3ECAA4                           ; $398BA4 |
 
   db $8B, $B3, $00, $8B, $B8, $02, $B9, $00 ; $398BA7 |
   db $03, $9D, $00, $00                     ; $398BAF |
 
   LDY #$02                                  ; $398BB3 |
-  JMP $C5F0                                 ; $398BB5 |
+  JMP code_3EC5F0                           ; $398BB5 |
 
   LDA $57                                   ; $398BB8 |
   CMP #$09                                  ; $398BBA |
   BNE locret_72BC1                          ; $398BBC |
-  JMP $8810                                 ; $398BBE |
+  JMP code_398810                           ; $398BBE |
 
 locret_72BC1:
   RTS                                       ; $398BC1 |
 
   db $8B, $C5, $00                          ; $398BC2 |
 
-  JSR $FA03                                 ; $398BC5 |
+  JSR code_3FFA03                           ; $398BC5 |
   LDX #$08                                  ; $398BC8 |
   LDY #$E5                                  ; $398BCA |
-  JSR $CB28                                 ; $398BCC |
+  JSR code_3ECB28                           ; $398BCC |
 
   db $41                                    ; $398BCF |
 
-  JMP $8B2F                                 ; $398BD0 |
+  JMP code_398B2F                           ; $398BD0 |
 
   db $8B, $D6, $00                          ; $398BD3 |
 
-  JSR $FA03                                 ; $398BD6 |
+  JSR code_3FFA03                           ; $398BD6 |
   LDX #$08                                  ; $398BD9 |
   LDY #$E8                                  ; $398BDB |
-  JSR $CB28                                 ; $398BDD |
+  JSR code_3ECB28                           ; $398BDD |
 
   db $41                                    ; $398BE0 |
 
   LDA #$07                                  ; $398BE1 |
-  JMP $8B31                                 ; $398BE3 |
+  JMP code_398B31                           ; $398BE3 |
 
   db $8B, $E9, $00                          ; $398BE6 |
 
   LDA #$B8                                  ; $398BE9 |
   STA $064F                                 ; $398BEB |
-  JSR $FA03                                 ; $398BEE |
+  JSR code_3FFA03                           ; $398BEE |
   LDX #$08                                  ; $398BF1 |
   LDY #$EB                                  ; $398BF3 |
-  JSR $CB28                                 ; $398BF5 |
+  JSR code_3ECB28                           ; $398BF5 |
 
   db $41                                    ; $398BF8 |
 
 loc_72BF9:
-  JSR $E468                                 ; $398BF9 |
+  JSR code_3FE468                           ; $398BF9 |
   LDA $03A8                                 ; $398BFC |
   BNE loc_72BF9                             ; $398BFF |
   LDY #$7F                                  ; $398C01 |
-  JSR $E5AB                                 ; $398C03 |
+  JSR code_3FE5AB                           ; $398C03 |
   LDA #$03                                  ; $398C06 |
   STA $05B1,x                               ; $398C08 |
   LDA #$8E                                  ; $398C0B |
   STA $05C8,x                               ; $398C0D |
   LDA $04D3                                 ; $398C10 |
   STA $04CB,x                               ; $398C13 |
-  JMP $8B58                                 ; $398C16 |
+  JMP code_398B58                           ; $398C16 |
 
   db $8C, $1C, $00                          ; $398C19 |
 
-  JSR $FA03                                 ; $398C1C |
+  JSR code_3FFA03                           ; $398C1C |
   LDX #$08                                  ; $398C1F |
   LDY #$D3                                  ; $398C21 |
-  JSR $CB28                                 ; $398C23 |
+  JSR code_3ECB28                           ; $398C23 |
 
   db $41                                    ; $398C26 |
 
 loc_72C27:
-  JSR $E468                                 ; $398C27 |
+  JSR code_3FE468                           ; $398C27 |
   LDA $03A8                                 ; $398C2A |
   BNE loc_72C27                             ; $398C2D |
   LDA #$D2                                  ; $398C2F |
   STA $03AA                                 ; $398C31 |
   LDY #$A0                                  ; $398C34 |
-  JSR $8DE9                                 ; $398C36 |
+  JSR code_398DE9                           ; $398C36 |
   LDY #$7F                                  ; $398C39 |
-  JSR $E5AB                                 ; $398C3B |
+  JSR code_3FE5AB                           ; $398C3B |
   LDA #$07                                  ; $398C3E |
   STA $05B1,x                               ; $398C40 |
   LDA #$1E                                  ; $398C43 |
@@ -5235,24 +5358,24 @@ loc_72C27:
   STA $04CB,x                               ; $398C54 |
   STX $05C7                                 ; $398C57 |
 loc_72C5A:
-  JSR $E468                                 ; $398C5A |
+  JSR code_3FE468                           ; $398C5A |
   LDX $05C7                                 ; $398C5D |
   LDA #$00                                  ; $398C60 |
   STA $40                                   ; $398C62 |
-  JSR $D430                                 ; $398C64 |
+  JSR code_3ED430                           ; $398C64 |
   LDA $03A0,x                               ; $398C67 |
   BNE loc_72C5A                             ; $398C6A |
   LDA #$00                                  ; $398C6C |
   STA $069D                                 ; $398C6E |
   STA $069C                                 ; $398C71 |
   STA $0682                                 ; $398C74 |
-  JSR $D6F1                                 ; $398C77 |
+  JSR code_3ED6F1                           ; $398C77 |
   LDA #$D2                                  ; $398C7A |
   STA $03AA                                 ; $398C7C |
   LDA #$D2                                  ; $398C7F |
-  JSR $CAA4                                 ; $398C81 |
+  JSR code_3ECAA4                           ; $398C81 |
   LDA #$E7                                  ; $398C84 |
-  JSR $C9EF                                 ; $398C86 |
+  JSR code_3EC9EF                           ; $398C86 |
 loc_72C89:
   LDA #$D4                                  ; $398C89 |
   STA $08                                   ; $398C8B |
@@ -5261,56 +5384,56 @@ loc_72C89:
   LDA #$70                                  ; $398C91 |
   STA $0A                                   ; $398C93 |
   LDX #$0A                                  ; $398C95 |
-  JSR $F8BD                                 ; $398C97 |
+  JSR code_3FF8BD                           ; $398C97 |
   LDA $11                                   ; $398C9A |
   STA $03CE,x                               ; $398C9C |
   LDY #$04                                  ; $398C9F |
-  JSR $E60E                                 ; $398CA1 |
+  JSR code_3FE60E                           ; $398CA1 |
 loc_72CA4:
   LDA #$00                                  ; $398CA4 |
   STA $40                                   ; $398CA6 |
-  JSR $D430                                 ; $398CA8 |
-  JSR $E468                                 ; $398CAB |
+  JSR code_3ED430                           ; $398CA8 |
+  JSR code_3FE468                           ; $398CAB |
   LDA $0490                                 ; $398CAE |
   CMP #$D0                                  ; $398CB1 |
   BCC loc_72C89                             ; $398CB3 |
   LDA $03E5                                 ; $398CB5 |
   BMI loc_72CA4                             ; $398CB8 |
   LDY #$A1                                  ; $398CBA |
-  JSR $8DE9                                 ; $398CBC |
-  JSR $91A5                                 ; $398CBF |
+  JSR code_398DE9                           ; $398CBC |
+  JSR code_3991A5                           ; $398CBF |
   LDA #$80                                  ; $398CC2 |
-  JSR $91D8                                 ; $398CC4 |
+  JSR code_3991D8                           ; $398CC4 |
   LDA #$01                                  ; $398CC7 |
-  JSR $919A                                 ; $398CC9 |
-  JSR $E005                                 ; $398CCC |
+  JSR code_39919A                           ; $398CC9 |
+  JSR code_3FE005                           ; $398CCC |
   LDA #$3C                                  ; $398CCF |
-  JSR $C5F6                                 ; $398CD1 |
+  JSR code_3EC5F6                           ; $398CD1 |
   LDA #$01                                  ; $398CD4 |
   STA $069F                                 ; $398CD6 |
   LDA #$6C                                  ; $398CD9 |
-  JSR $CB28                                 ; $398CDB |
+  JSR code_3ECB28                           ; $398CDB |
 
   db $00                                    ; $398CDE |
 
-  JSR $8DEE                                 ; $398CDF |
+  JSR code_398DEE                           ; $398CDF |
   LDA #$6D                                  ; $398CE2 |
-  JSR $CB28                                 ; $398CE4 |
+  JSR code_3ECB28                           ; $398CE4 |
 
   db $00                                    ; $398CE7 |
 
-  JSR $8DEE                                 ; $398CE8 |
+  JSR code_398DEE                           ; $398CE8 |
   LDY #$A2                                  ; $398CEB |
-  JSR $8DE9                                 ; $398CED |
+  JSR code_398DE9                           ; $398CED |
   LDX #$48                                  ; $398CF0 |
 loc_72CF2:
-  JSR $E005                                 ; $398CF2 |
+  JSR code_3FE005                           ; $398CF2 |
   DEX                                       ; $398CF5 |
   BNE loc_72CF2                             ; $398CF6 |
   LDY #$A4                                  ; $398CF8 |
-  JSR $8DE9                                 ; $398CFA |
+  JSR code_398DE9                           ; $398CFA |
   LDA #$07                                  ; $398CFD |
-  JSR $E0FD                                 ; $398CFF |
+  JSR code_3FE0FD                           ; $398CFF |
   LDX #$00                                  ; $398D02 |
   LDA #$03                                  ; $398D04 |
   STA $05F6,x                               ; $398D06 |
@@ -5327,37 +5450,37 @@ loc_72D18:
   LDA #$00                                  ; $398D1C |
   STA $EB                                   ; $398D1E |
   LDY #$05                                  ; $398D20 |
-  JSR $EE9A                                 ; $398D22 |
-  JSR $E4D3                                 ; $398D25 |
-  JSR $E005                                 ; $398D28 |
+  JSR code_3FEE9A                           ; $398D22 |
+  JSR code_3FE4D3                           ; $398D25 |
+  JSR code_3FE005                           ; $398D28 |
   LDX #$00                                  ; $398D2B |
   LDA $04CB,x                               ; $398D2D |
   CMP #$B4                                  ; $398D30 |
   BCC loc_72D18                             ; $398D32 |
   DEC $05F6,x                               ; $398D34 |
   BNE loc_72D09                             ; $398D37 |
-  JSR $91A5                                 ; $398D39 |
+  JSR code_3991A5                           ; $398D39 |
   LDX #$0A                                  ; $398D3C |
   LDA #$04                                  ; $398D3E |
   STA $03CE,x                               ; $398D40 |
 loc_72D43:
   LDX #$0A                                  ; $398D43 |
   LDY #$04                                  ; $398D45 |
-  JSR $E60E                                 ; $398D47 |
-  JSR $E005                                 ; $398D4A |
+  JSR code_3FE60E                           ; $398D47 |
+  JSR code_3FE005                           ; $398D4A |
   LDA $0490                                 ; $398D4D |
   CMP #$04                                  ; $398D50 |
   BCS loc_72D43                             ; $398D52 |
   LDA #$01                                  ; $398D54 |
   STA $03C1                                 ; $398D56 |
   LDA #$88                                  ; $398D59 |
-  JSR $91D8                                 ; $398D5B |
+  JSR code_3991D8                           ; $398D5B |
   LDA #$63                                  ; $398D5E |
   STA $DC                                   ; $398D60 |
   LDA #$BE                                  ; $398D62 |
-  JSR $C9EF                                 ; $398D64 |
+  JSR code_3EC9EF                           ; $398D64 |
   LDY #$BC                                  ; $398D67 |
-  JSR $8DE9                                 ; $398D69 |
+  JSR code_398DE9                           ; $398D69 |
   LDA #$30                                  ; $398D6C |
   STA $04D5                                 ; $398D6E |
   LDA #$00                                  ; $398D71 |
@@ -5376,57 +5499,59 @@ loc_72D79:
 loc_72D8F:
   LDX #$0A                                  ; $398D8F |
   LDY #$00                                  ; $398D91 |
-  JSR $E60E                                 ; $398D93 |
-  JSR $E005                                 ; $398D96 |
+  JSR code_3FE60E                           ; $398D93 |
+  JSR code_3FE005                           ; $398D96 |
   LDA #$01                                  ; $398D99 |
   LDY $0490                                 ; $398D9B |
   CPY $0486                                 ; $398D9E |
   BCS loc_72DA5                             ; $398DA1 |
   LDA #$02                                  ; $398DA3 |
 loc_72DA5:
-  JSR $919A                                 ; $398DA5 |
+  JSR code_39919A                           ; $398DA5 |
   DEC $05E9                                 ; $398DA8 |
   BNE loc_72D8F                             ; $398DAB |
   BEQ loc_72D79                             ; $398DAD |
 loc_72DAF:
   LDA #$F0                                  ; $398DAF |
   STA $DC                                   ; $398DB1 |
-  JSR $CA3D                                 ; $398DB3 |
-  JSR $CB28                                 ; $398DB6 |
+  JSR code_3ECA3D                           ; $398DB3 |
+  JSR code_3ECB28                           ; $398DB6 |
 
   db $42                                    ; $398DB9 |
 
   LDA #$E4                                  ; $398DBA |
-  JSR $C9EF                                 ; $398DBC |
+  JSR code_3EC9EF                           ; $398DBC |
   LDA #$E7                                  ; $398DBF |
-  JSR $C9EF                                 ; $398DC1 |
+  JSR code_3EC9EF                           ; $398DC1 |
   LDA #$00                                  ; $398DC4 |
   STA $03A0                                 ; $398DC6 |
-  JSR $E1DD                                 ; $398DC9 |
-  JSR $C9BF                                 ; $398DCC |
-  JSR $CA89                                 ; $398DCF |
+  JSR code_3FE1DD                           ; $398DC9 |
+  JSR code_3EC9BF                           ; $398DCC |
+  JSR code_3ECA89                           ; $398DCF |
   LDA #$6E                                  ; $398DD2 |
-  JSR $CB28                                 ; $398DD4 |
+  JSR code_3ECB28                           ; $398DD4 |
 
   db $00                                    ; $398DD7 |
 
   LDA #$5A                                  ; $398DD8 |
-  JSR $C5F6                                 ; $398DDA |
+  JSR code_3EC5F6                           ; $398DDA |
   LDA #$00                                  ; $398DDD |
   STA $069F                                 ; $398DDF |
   LDA #$01                                  ; $398DE2 |
   STA $F0                                   ; $398DE4 |
-  JMP $E456                                 ; $398DE6 |
+  JMP code_3FE456                           ; $398DE6 |
 
+code_398DE9:
   LDX #$0A                                  ; $398DE9 |
-  JMP $E522                                 ; $398DEB |
+  JMP code_3FE522                           ; $398DEB |
 
+code_398DEE:
   LDA #$5A                                  ; $398DEE |
-  JSR $C5F6                                 ; $398DF0 |
+  JSR code_3EC5F6                           ; $398DF0 |
   LDA #$00                                  ; $398DF3 |
   STA $069F                                 ; $398DF5 |
   LDA #$6F                                  ; $398DF8 |
-  JSR $CB28                                 ; $398DFA |
+  JSR code_3ECB28                           ; $398DFA |
 
   db $00                                    ; $398DFD |
 
@@ -5442,9 +5567,9 @@ loc_72DAF:
   db $31, $00, $8E, $3B, $00                ; $398E2C |
 
   LDA #$08                                  ; $398E31 |
-  JSR $8416                                 ; $398E33 |
+  JSR code_398416                           ; $398E33 |
   LDX #$13                                  ; $398E36 |
-  JMP $C5C7                                 ; $398E38 |
+  JMP code_3EC5C7                           ; $398E38 |
 
   LDA $03A0                                 ; $398E3B |
   CMP #$03                                  ; $398E3E |
@@ -5459,7 +5584,7 @@ loc_72E47:
   STX $11                                   ; $398E50 |
   STX $00                                   ; $398E52 |
   STX $01                                   ; $398E54 |
-  JSR $D9CF                                 ; $398E56 |
+  JSR code_3ED9CF                           ; $398E56 |
   LDA $11                                   ; $398E59 |
   CMP #$10                                  ; $398E5B |
   BNE locret_72EC2                          ; $398E5D |
@@ -5477,32 +5602,32 @@ loc_72E47:
   STA $0486                                 ; $398E77 |
   STA $06A9                                 ; $398E7A |
   PHA                                       ; $398E7D |
-  JSR $9AB6                                 ; $398E7E |
-  JSR $9AC4                                 ; $398E81 |
-  JSR $D6F1                                 ; $398E84 |
+  JSR code_399AB6                           ; $398E7E |
+  JSR code_399AC4                           ; $398E81 |
+  JSR code_3ED6F1                           ; $398E84 |
   PLA                                       ; $398E87 |
   CMP #$80                                  ; $398E88 |
   BEQ loc_72EC3                             ; $398E8A |
   LDA $063D                                 ; $398E8C |
   CLC                                       ; $398E8F |
   ADC #$09                                  ; $398E90 |
-  JSR $89F5                                 ; $398E92 |
+  JSR code_3989F5                           ; $398E92 |
   LDY #$02                                  ; $398E95 |
-  JSR $C5F0                                 ; $398E97 |
+  JSR code_3EC5F0                           ; $398E97 |
   LDA $063D                                 ; $398E9A |
   CLC                                       ; $398E9D |
   ADC #$9A                                  ; $398E9E |
-  JSR $C9EF                                 ; $398EA0 |
+  JSR code_3EC9EF                           ; $398EA0 |
   LDA #$40                                  ; $398EA3 |
   STA $0486                                 ; $398EA5 |
-  JSR $DC66                                 ; $398EA8 |
-  JSR $E01B                                 ; $398EAB |
-  JSR $E1DD                                 ; $398EAE |
-  JSR $CA89                                 ; $398EB1 |
+  JSR code_3EDC66                           ; $398EA8 |
+  JSR code_3FE01B                           ; $398EAB |
+  JSR code_3FE1DD                           ; $398EAE |
+  JSR code_3ECA89                           ; $398EB1 |
   LDA #$10                                  ; $398EB4 |
   STA $04CB                                 ; $398EB6 |
-  JSR $E037                                 ; $398EB9 |
-  JSR $9AC4                                 ; $398EBC |
+  JSR code_3FE037                           ; $398EB9 |
+  JSR code_399AC4                           ; $398EBC |
   INC $04CA                                 ; $398EBF |
 locret_72EC2:
   RTS                                       ; $398EC2 |
@@ -5519,14 +5644,14 @@ loc_72EC3:
 
   LDA #$0C                                  ; $398EE7 |
   STA $DC                                   ; $398EE9 |
-  JSR $FA5F                                 ; $398EEB |
+  JSR code_3FFA5F                           ; $398EEB |
   LDX $8F                                   ; $398EEE |
 loc_72EF0:
-  JSR $E468                                 ; $398EF0 |
+  JSR code_3FE468                           ; $398EF0 |
   LDA $03A8                                 ; $398EF3 |
   BNE loc_72EF0                             ; $398EF6 |
   LDY #$39                                  ; $398EF8 |
-  JSR $E5AB                                 ; $398EFA |
+  JSR code_3FE5AB                           ; $398EFA |
   LDA $04D3                                 ; $398EFD |
   STA $04CB,x                               ; $398F00 |
   LDA $048E                                 ; $398F03 |
@@ -5535,7 +5660,7 @@ loc_72EF0:
   STA $046F,x                               ; $398F0B |
   STX $063E                                 ; $398F0E |
 loc_72F11:
-  JSR $E468                                 ; $398F11 |
+  JSR code_3FE468                           ; $398F11 |
   LDX $063E                                 ; $398F14 |
   LDA #$10                                  ; $398F17 |
   STA $05B1,x                               ; $398F19 |
@@ -5543,32 +5668,32 @@ loc_72F11:
   BNE loc_72F11                             ; $398F1F |
   LDA #$00                                  ; $398F21 |
   STA $0642                                 ; $398F23 |
-  JSR $D6F1                                 ; $398F26 |
+  JSR code_3ED6F1                           ; $398F26 |
 loc_72F29:
   LDA #$00                                  ; $398F29 |
-  JSR $D430                                 ; $398F2B |
-  JSR $E468                                 ; $398F2E |
+  JSR code_3ED430                           ; $398F2B |
+  JSR code_3FE468                           ; $398F2E |
   LDA $04CB                                 ; $398F31 |
   CMP #$B4                                  ; $398F34 |
   BCC loc_72F29                             ; $398F36 |
-  JSR $DFB9                                 ; $398F38 |
-  JSR $CA3D                                 ; $398F3B |
+  JSR code_3EDFB9                           ; $398F38 |
+  JSR code_3ECA3D                           ; $398F3B |
   LDA #$0B                                  ; $398F3E |
   STA $DC                                   ; $398F40 |
   LDY $063D                                 ; $398F42 |
   LDA $8EDC,y                               ; $398F45 |
   STA $80                                   ; $398F48 |
-  JSR $DB94                                 ; $398F4A |
+  JSR code_3EDB94                           ; $398F4A |
   INC $80                                   ; $398F4D |
-  JSR $DB94                                 ; $398F4F |
+  JSR code_3EDB94                           ; $398F4F |
   INC $80                                   ; $398F52 |
-  JSR $DB94                                 ; $398F54 |
+  JSR code_3EDB94                           ; $398F54 |
   INC $80                                   ; $398F57 |
-  JSR $DB94                                 ; $398F59 |
+  JSR code_3EDB94                           ; $398F59 |
   LDA #$08                                  ; $398F5C |
-  JSR $89F5                                 ; $398F5E |
+  JSR code_3989F5                           ; $398F5E |
   LDA #$97                                  ; $398F61 |
-  JSR $C9EF                                 ; $398F63 |
+  JSR code_3EC9EF                           ; $398F63 |
   LDA $06A9                                 ; $398F66 |
   STA $0486                                 ; $398F69 |
   LDA $06AA                                 ; $398F6C |
@@ -5583,15 +5708,15 @@ loc_72F74:
   LDA #$FF                                  ; $398F7E |
   STA $034C                                 ; $398F80 |
 loc_72F83:
-  JSR $9AE6                                 ; $398F83 |
-  JSR $9AC4                                 ; $398F86 |
-  JMP $E456                                 ; $398F89 |
+  JSR code_399AE6                           ; $398F83 |
+  JSR code_399AC4                           ; $398F86 |
+  JMP code_3FE456                           ; $398F89 |
 
   db $8F, $95, $00, $00, $00, $01, $00, $00 ; $398F8C |
   db $00                                    ; $398F94 |
 
 loc_72F95:
-  JSR $E468                                 ; $398F95 |
+  JSR code_3FE468                           ; $398F95 |
   LDA $04CB                                 ; $398F98 |
   CMP #$77                                  ; $398F9B |
   BEQ loc_72F95                             ; $398F9D |
@@ -5599,7 +5724,7 @@ loc_72F95:
   STA $0486                                 ; $398FA1 |
   LDA #$53                                  ; $398FA4 |
   STA $04CB                                 ; $398FA6 |
-  JMP $827C                                 ; $398FA9 |
+  JMP code_39827C                           ; $398FA9 |
 
   db $00, $00, $00, $01, $BC, $3E, $00, $8F ; $398FAC |
   db $BC, $00, $00, $00, $05, $BD, $18, $00 ; $398FB4 |
@@ -5608,44 +5733,44 @@ loc_72F95:
   STA $05DE                                 ; $398FBE |
   LDA #$A1                                  ; $398FC1 |
   STA $05F5                                 ; $398FC3 |
-  JMP $861B                                 ; $398FC6 |
+  JMP code_39861B                           ; $398FC6 |
 
   db $8F, $CF, $00, $84, $8E, $00           ; $398FC9 |
 
   LDA #$6A                                  ; $398FCF |
-  JSR $CAA4                                 ; $398FD1 |
+  JSR code_3ECAA4                           ; $398FD1 |
   LDA #$D0                                  ; $398FD4 |
-  JSR $C9EF                                 ; $398FD6 |
+  JSR code_3EC9EF                           ; $398FD6 |
   LDA #$BE                                  ; $398FD9 |
   STA $064F                                 ; $398FDB |
-  JMP $CAA4                                 ; $398FDE |
+  JMP code_3ECAA4                           ; $398FDE |
 
   db $8F, $E4, $00                          ; $398FE1 |
 
-  JSR $FA03                                 ; $398FE4 |
+  JSR code_3FFA03                           ; $398FE4 |
   LDY #$B7                                  ; $398FE7 |
   LDX #$08                                  ; $398FE9 |
-  JSR $CB28                                 ; $398FEB |
+  JSR code_3ECB28                           ; $398FEB |
 
   db $41                                    ; $398FEE |
 
-  JMP $F95A                                 ; $398FEF |
+  JMP code_3FF95A                           ; $398FEF |
 
   db $8F, $F5, $00                          ; $398FF2 |
 
-  JSR $FA03                                 ; $398FF5 |
+  JSR code_3FFA03                           ; $398FF5 |
   LDX #$08                                  ; $398FF8 |
   LDY #$EF                                  ; $398FFA |
-  JSR $CB28                                 ; $398FFC |
+  JSR code_3ECB28                           ; $398FFC |
 
   db $41                                    ; $398FFF |
 
 loc_73000:
-  JSR $E468                                 ; $399000 |
+  JSR code_3FE468                           ; $399000 |
   LDA $03A8                                 ; $399003 |
   BNE loc_73000                             ; $399006 |
   LDA #$CC                                  ; $399008 |
-  JSR $C9EF                                 ; $39900A |
+  JSR code_3EC9EF                           ; $39900A |
   LDA #$00                                  ; $39900D |
   STA $0679                                 ; $39900F |
   STA $05E7                                 ; $399012 |
@@ -5654,67 +5779,67 @@ loc_73000:
   STA $03AD                                 ; $39901B |
   STA $03AE                                 ; $39901E |
   LDA #$8B                                  ; $399021 |
-  JSR $9210                                 ; $399023 |
+  JSR code_399210                           ; $399023 |
   LDA #$00                                  ; $399026 |
   STA $05B1,x                               ; $399028 |
 loc_7302B:
-  JSR $E468                                 ; $39902B |
+  JSR code_3FE468                           ; $39902B |
   LDX $05C7                                 ; $39902E |
   LDA $03A0,x                               ; $399031 |
   BNE loc_7302B                             ; $399034 |
   LDA #$8C                                  ; $399036 |
   STA $0682                                 ; $399038 |
-  JSR $CB28                                 ; $39903B |
+  JSR code_3ECB28                           ; $39903B |
 
   db $00                                    ; $39903E |
 
   LDX #$08                                  ; $39903F |
   LDY #$F1                                  ; $399041 |
-  JSR $CB28                                 ; $399043 |
+  JSR code_3ECB28                           ; $399043 |
 
   db $41                                    ; $399046 |
 
 loc_73047:
-  JSR $E468                                 ; $399047 |
+  JSR code_3FE468                           ; $399047 |
   LDA $03A8                                 ; $39904A |
   BNE loc_73047                             ; $39904D |
   LDA #$00                                  ; $39904F |
   STA $0679                                 ; $399051 |
   STA $05E7                                 ; $399054 |
   LDA #$8C                                  ; $399057 |
-  JSR $9210                                 ; $399059 |
+  JSR code_399210                           ; $399059 |
   LDA #$07                                  ; $39905C |
   STA $05B1,x                               ; $39905E |
 loc_73061:
-  JSR $E468                                 ; $399061 |
+  JSR code_3FE468                           ; $399061 |
   LDX $05C7                                 ; $399064 |
   LDA $03A0,x                               ; $399067 |
   BNE loc_73061                             ; $39906A |
   LDA #$8D                                  ; $39906C |
   STA $0682                                 ; $39906E |
-  JSR $CB28                                 ; $399071 |
+  JSR code_3ECB28                           ; $399071 |
 
   db $00                                    ; $399074 |
 
   LDX #$08                                  ; $399075 |
   LDY #$F2                                  ; $399077 |
-  JSR $CB28                                 ; $399079 |
+  JSR code_3ECB28                           ; $399079 |
 
   db $41                                    ; $39907C |
 
 loc_7307D:
-  JSR $E468                                 ; $39907D |
+  JSR code_3FE468                           ; $39907D |
   LDA $03A8                                 ; $399080 |
   BNE loc_7307D                             ; $399083 |
-  JSR $D6F1                                 ; $399085 |
+  JSR code_3ED6F1                           ; $399085 |
   LDY #$E9                                  ; $399088 |
   LDX #$08                                  ; $39908A |
-  JSR $CB28                                 ; $39908C |
+  JSR code_3ECB28                           ; $39908C |
 
   db $41                                    ; $39908F |
 
   LDY #$73                                  ; $399090 |
-  JSR $E522                                 ; $399092 |
+  JSR code_3FE522                           ; $399092 |
   LDA #$00                                  ; $399095 |
   STA $0679                                 ; $399097 |
   STA $05E7                                 ; $39909A |
@@ -5723,37 +5848,37 @@ loc_7307D:
   LDA $04D3                                 ; $3990A3 |
   STA $04E1                                 ; $3990A6 |
   LDA #$00                                  ; $3990A9 |
-  JSR $9210                                 ; $3990AB |
+  JSR code_399210                           ; $3990AB |
   LDA #$00                                  ; $3990AE |
   STA $05B1,x                               ; $3990B0 |
 loc_730B3:
   LDA #$00                                  ; $3990B3 |
-  JSR $D430                                 ; $3990B5 |
-  JSR $E468                                 ; $3990B8 |
+  JSR code_3ED430                           ; $3990B5 |
+  JSR code_3FE468                           ; $3990B8 |
   LDX $05C7                                 ; $3990BB |
   LDA $03A0,x                               ; $3990BE |
   BNE loc_730B3                             ; $3990C1 |
   LDA $03E5                                 ; $3990C3 |
   BMI loc_730B3                             ; $3990C6 |
   LDA #$D0                                  ; $3990C8 |
-  JSR $C9EF                                 ; $3990CA |
+  JSR code_3EC9EF                           ; $3990CA |
   LDA #$72                                  ; $3990CD |
-  JSR $CAA4                                 ; $3990CF |
+  JSR code_3ECAA4                           ; $3990CF |
 loc_730D2:
   LDA #$00                                  ; $3990D2 |
-  JSR $D430                                 ; $3990D4 |
-  JSR $E468                                 ; $3990D7 |
+  JSR code_3ED430                           ; $3990D4 |
+  JSR code_3FE468                           ; $3990D7 |
   LDA $05B1                                 ; $3990DA |
   BNE loc_730D2                             ; $3990DD |
-  JSR $91A5                                 ; $3990DF |
-  JSR $D6F1                                 ; $3990E2 |
+  JSR code_3991A5                           ; $3990DF |
+  JSR code_3ED6F1                           ; $3990E2 |
   LDX #$08                                  ; $3990E5 |
   LDY #$D6                                  ; $3990E7 |
-  JSR $CB28                                 ; $3990E9 |
+  JSR code_3ECB28                           ; $3990E9 |
 
   db $41                                    ; $3990EC |
 
-  JSR $EF0C                                 ; $3990ED |
+  JSR code_3FEF0C                           ; $3990ED |
   LDA $03B7,x                               ; $3990F0 |
   AND #$40                                  ; $3990F3 |
   EOR #$40                                  ; $3990F5 |
@@ -5766,22 +5891,22 @@ loc_730D2:
   LDA $9198,y                               ; $399100 |
   STA $05F6,x                               ; $399103 |
   LDY #$BD                                  ; $399106 |
-  JSR $E522                                 ; $399108 |
+  JSR code_3FE522                           ; $399108 |
   LDA #$00                                  ; $39910B |
   STA $060D,x                               ; $39910D |
   LDA #$FC                                  ; $399110 |
   STA $0624,x                               ; $399112 |
 loc_73115:
-  JSR $E1DD                                 ; $399115 |
-  JSR $C62B                                 ; $399118 |
+  JSR code_3FE1DD                           ; $399115 |
+  JSR code_3EC62B                           ; $399118 |
   LDX #$08                                  ; $39911B |
   LDY #$03                                  ; $39911D |
-  JSR $EE9A                                 ; $39911F |
+  JSR code_3FEE9A                           ; $39911F |
   LDA $05F6,x                               ; $399122 |
   STA $ED                                   ; $399125 |
   LDA #$00                                  ; $399127 |
   STA $EB                                   ; $399129 |
-  JSR $E4D3                                 ; $39912B |
+  JSR code_3FE4D3                           ; $39912B |
   LDA $048E                                 ; $39912E |
   CMP #$20                                  ; $399131 |
   BCS loc_73137                             ; $399133 |
@@ -5808,33 +5933,34 @@ loc_7314C:
   STA $05B9                                 ; $39915B |
   LDY #$BE                                  ; $39915E |
   LDX #$08                                  ; $399160 |
-  JSR $E522                                 ; $399162 |
+  JSR code_3FE522                           ; $399162 |
 loc_73165:
-  JSR $E1DD                                 ; $399165 |
-  JSR $C62B                                 ; $399168 |
+  JSR code_3FE1DD                           ; $399165 |
+  JSR code_3EC62B                           ; $399168 |
   DEC $05B9                                 ; $39916B |
   BNE loc_73165                             ; $39916E |
   LDY #$BF                                  ; $399170 |
   LDX #$08                                  ; $399172 |
-  JSR $E522                                 ; $399174 |
+  JSR code_3FE522                           ; $399174 |
   LDA #$F0                                  ; $399177 |
   STA $05B9                                 ; $399179 |
 loc_7317C:
-  JSR $E1DD                                 ; $39917C |
-  JSR $C62B                                 ; $39917F |
+  JSR code_3FE1DD                           ; $39917C |
+  JSR code_3EC62B                           ; $39917F |
   DEC $05B9                                 ; $399182 |
   BNE loc_7317C                             ; $399185 |
-  JSR $CA3D                                 ; $399187 |
+  JSR code_3ECA3D                           ; $399187 |
   LDA #$00                                  ; $39918A |
   STA $F4                                   ; $39918C |
-  JMP $D1F3                                 ; $39918E |
+  JMP code_3ED1F3                           ; $39918E |
 
   LDA #$00                                  ; $399191 |
   STA $F1                                   ; $399193 |
-  JMP $F95A                                 ; $399195 |
+  JMP code_3FF95A                           ; $399195 |
 
   db $FF, $01                               ; $399198 |
 
+code_39919A:
   TAY                                       ; $39919A |
   LDA $91A2,y                               ; $39919B |
   STA $03B7                                 ; $39919E |
@@ -5842,14 +5968,16 @@ loc_7317C:
 
   db $00, $40, $00                          ; $3991A2 |
 
+code_3991A5:
   LDY #$01                                  ; $3991A5 |
-  JSR $C5F0                                 ; $3991A7 |
+  JSR code_3EC5F0                           ; $3991A7 |
   LDA $AE                                   ; $3991AA |
-  JSR $C9EF                                 ; $3991AC |
+  JSR code_3EC9EF                           ; $3991AC |
   LDA #$00                                  ; $3991AF |
   STA $98                                   ; $3991B1 |
-  JMP $E0FD                                 ; $3991B3 |
+  JMP code_3FE0FD                           ; $3991B3 |
 
+code_3991B6:
   LDY $03CE                                 ; $3991B6 |
   LDA $91A2,y                               ; $3991B9 |
   STA $03B7                                 ; $3991BC |
@@ -5860,13 +5988,14 @@ loc_7317C:
   LDX #$00                                  ; $3991C9 |
   STX $EE                                   ; $3991CB |
   STX $EC                                   ; $3991CD |
-  JMP $E4D3                                 ; $3991CF |
+  JMP code_3FE4D3                           ; $3991CF |
 
   db $00, $01, $FE, $00, $4C, $B4           ; $3991D2 |
 
+code_3991D8:
   PHA                                       ; $3991D8 |
   LDA #$02                                  ; $3991D9 |
-  JSR $E0FD                                 ; $3991DB |
+  JSR code_3FE0FD                           ; $3991DB |
   PLA                                       ; $3991DE |
   STA $07                                   ; $3991DF |
   CMP $0486                                 ; $3991E1 |
@@ -5874,27 +6003,28 @@ loc_7317C:
   LDA #$02                                  ; $3991E6 |
   STA $03CE                                 ; $3991E8 |
 loc_731EB:
-  JSR $91B6                                 ; $3991EB |
-  JSR $E005                                 ; $3991EE |
+  JSR code_3991B6                           ; $3991EB |
+  JSR code_3FE005                           ; $3991EE |
   LDA $07                                   ; $3991F1 |
   CMP $0486                                 ; $3991F3 |
   BCC loc_731EB                             ; $3991F6 |
-  JMP $91A5                                 ; $3991F8 |
+  JMP code_3991A5                           ; $3991F8 |
 
 loc_731FB:
   LDA #$01                                  ; $3991FB |
   STA $03CE                                 ; $3991FD |
 loc_73200:
-  JSR $91B6                                 ; $399200 |
-  JSR $E005                                 ; $399203 |
+  JSR code_3991B6                           ; $399200 |
+  JSR code_3FE005                           ; $399203 |
   LDA $07                                   ; $399206 |
   CMP $0486                                 ; $399208 |
   BCS loc_73200                             ; $39920B |
-  JMP $91A5                                 ; $39920D |
+  JMP code_3991A5                           ; $39920D |
 
+code_399210:
   PHA                                       ; $399210 |
   LDY #$7F                                  ; $399211 |
-  JSR $E5AB                                 ; $399213 |
+  JSR code_3FE5AB                           ; $399213 |
   PLA                                       ; $399216 |
   STA $0682                                 ; $399217 |
   STA $05C8,x                               ; $39921A |
@@ -5920,7 +6050,7 @@ loc_73200:
   db $57, $01, $92, $5C, $00                ; $399252 |
 
   LDA #$08                                  ; $399257 |
-  JMP $8416                                 ; $399259 |
+  JMP code_398416                           ; $399259 |
 
   LDA $03A0                                 ; $39925C |
   CMP #$03                                  ; $39925F |
@@ -5933,14 +6063,15 @@ locret_73268:
   db $92, $6F, $01, $00, $00, $00           ; $399269 |
 
   LDA $57                                   ; $39926F |
-  JMP $8416                                 ; $399271 |
+  JMP code_398416                           ; $399271 |
 
   db $92, $6F, $00, $00, $00, $05, $00, $00 ; $399274 |
   db $00, $00, $00, $00, $05, $00, $00, $04 ; $39927C |
   db $00, $5B, $8C, $00                     ; $399284 |
 
 loc_73288:
-  JSR $E468                                 ; $399288 |
+code_399288:
+  JSR code_3FE468                           ; $399288 |
   LDA $056C,x                               ; $39928B |
   BEQ loc_73288                             ; $39928E |
   CMP #$1A                                  ; $399290 |
@@ -5949,7 +6080,7 @@ loc_73288:
   STA $0574                                 ; $399296 |
   LDX #$06                                  ; $399299 |
   LDY #$25                                  ; $39929B |
-  JSR $CB28                                 ; $39929D |
+  JSR code_3ECB28                           ; $39929D |
 
   db $41                                    ; $3992A0 |
 
@@ -5959,11 +6090,11 @@ loc_732A6:
   LDX $8F                                   ; $3992A6 |
   LDA #$00                                  ; $3992A8 |
   STA $056C,x                               ; $3992AA |
-  JMP $9288                                 ; $3992AD |
+  JMP code_399288                           ; $3992AD |
 
   db $54, $C0, $00, $05, $1B, $E6           ; $3992B0 |
 
-  JSR $EBD1                                 ; $3992B6 |
+  JSR code_3FEBD1                           ; $3992B6 |
   LDA #$2E                                  ; $3992B9 |
   STA $05DE                                 ; $3992BB |
   LDA $DF                                   ; $3992BE |
@@ -5973,24 +6104,25 @@ loc_732A6:
   STA $0E                                   ; $3992C7 |
   LDA #$93                                  ; $3992C9 |
   STA $0F                                   ; $3992CB |
-  JSR $813F                                 ; $3992CD |
+  JSR code_39813F                           ; $3992CD |
   LDA #$7F                                  ; $3992D0 |
-  JSR $8110                                 ; $3992D2 |
-  JSR $EF29                                 ; $3992D5 |
+  JSR code_398110                           ; $3992D2 |
+  JSR code_3FEF29                           ; $3992D5 |
   LDX $8F                                   ; $3992D8 |
   LDA $DF                                   ; $3992DA |
   STA $060D,x                               ; $3992DC |
 loc_732DF:
-  JSR $EF60                                 ; $3992DF |
+code_3992DF:
+  JSR code_3FEF60                           ; $3992DF |
   LDA $F3                                   ; $3992E2 |
   AND #$1F                                  ; $3992E4 |
   BNE loc_732DF                             ; $3992E6 |
   LDX #$09                                  ; $3992E8 |
   LDY #$58                                  ; $3992EA |
-  JSR $E522                                 ; $3992EC |
+  JSR code_3FE522                           ; $3992EC |
   LDX #$0C                                  ; $3992EF |
   LDY #$59                                  ; $3992F1 |
-  JSR $E522                                 ; $3992F3 |
+  JSR code_3FE522                           ; $3992F3 |
   LDX $8F                                   ; $3992F6 |
   LDA $060D,x                               ; $3992F8 |
   INC $060D,x                               ; $3992FB |
@@ -6011,42 +6143,43 @@ loc_732DF:
   LDA #$14                                  ; $399328 |
   STA $05B1,x                               ; $39932A |
 loc_7332D:
-  JSR $EF60                                 ; $39932D |
+  JSR code_3FEF60                           ; $39932D |
   DEC $05B1,x                               ; $399330 |
   BNE loc_7332D                             ; $399333 |
-  JMP $92DF                                 ; $399335 |
+  JMP code_3992DF                           ; $399335 |
 
   LDX #$0C                                  ; $399338 |
   LDY #$52                                  ; $39933A |
-  JSR $E522                                 ; $39933C |
+  JSR code_3FE522                           ; $39933C |
   LDY #$E2                                  ; $39933F |
-  JSR $E5AB                                 ; $399341 |
+  JSR code_3FE5AB                           ; $399341 |
   BCS loc_7334D                             ; $399344 |
   LDY $8F                                   ; $399346 |
   LDA #$2F                                  ; $399348 |
-  JSR $E8FD                                 ; $39934A |
+  JSR code_3FE8FD                           ; $39934A |
 loc_7334D:
-  JMP $92DF                                 ; $39934D |
+  JMP code_3992DF                           ; $39934D |
 
   LDX #$09                                  ; $399350 |
   LDY #$4F                                  ; $399352 |
-  JSR $E522                                 ; $399354 |
+  JSR code_3FE522                           ; $399354 |
   LDY #$E3                                  ; $399357 |
-  JSR $E5AB                                 ; $399359 |
+  JSR code_3FE5AB                           ; $399359 |
   BCS loc_73365                             ; $39935C |
   LDY #$09                                  ; $39935E |
   LDA #$30                                  ; $399360 |
-  JSR $E8FD                                 ; $399362 |
+  JSR code_3FE8FD                           ; $399362 |
 loc_73365:
-  JMP $92DF                                 ; $399365 |
+  JMP code_3992DF                           ; $399365 |
 
   db $57, $00, $00, $4E, $00, $22           ; $399368 |
 
-  JSR $EBD1                                 ; $39936E |
+  JSR code_3FEBD1                           ; $39936E |
   LDA #$00                                  ; $399371 |
   STA $05B1,x                               ; $399373 |
   LDA #$0C                                  ; $399376 |
   STA $03CE,x                               ; $399378 |
+code_39937B:
   LDA $05B1,x                               ; $39937B |
   TAY                                       ; $39937E |
   INC $05B1,x                               ; $39937F |
@@ -6054,13 +6187,13 @@ loc_73365:
   LDA $93EE,y                               ; $399385 |
   BPL loc_73398                             ; $399388 |
   LDY #$25                                  ; $39938A |
-  JSR $CB28                                 ; $39938C |
+  JSR code_3ECB28                           ; $39938C |
 
   db $41                                    ; $39938F |
 
   LDA #$00                                  ; $399390 |
   STA $05DF,x                               ; $399392 |
-  JMP $E477                                 ; $399395 |
+  JMP code_3FE477                           ; $399395 |
 
 loc_73398:
   STA $03CE,x                               ; $399398 |
@@ -6070,22 +6203,22 @@ loc_73398:
   INY                                       ; $3993A2 |
 loc_733A3:
   LDY #$00                                  ; $3993A3 |
-  JSR $E60E                                 ; $3993A5 |
-  JSR $E9D3                                 ; $3993A8 |
+  JSR code_3FE60E                           ; $3993A5 |
+  JSR code_3FE9D3                           ; $3993A8 |
   LDA $056C,x                               ; $3993AB |
   BEQ loc_733C6                             ; $3993AE |
   CMP #$14                                  ; $3993B0 |
   BNE loc_733C6                             ; $3993B2 |
   LDX #$06                                  ; $3993B4 |
   LDY #$E4                                  ; $3993B6 |
-  JSR $CB28                                 ; $3993B8 |
+  JSR code_3ECB28                           ; $3993B8 |
 
   db $41                                    ; $3993BB |
 
   LDA #$03                                  ; $3993BC |
   LDY $8F                                   ; $3993BE |
-  JSR $E8FD                                 ; $3993C0 |
-  JMP $E456                                 ; $3993C3 |
+  JSR code_3FE8FD                           ; $3993C0 |
+  JMP code_3FE456                           ; $3993C3 |
 
 loc_733C6:
   LDA $056C,x                               ; $3993C6 |
@@ -6093,20 +6226,21 @@ loc_733C6:
   CMP #$20                                  ; $3993CB |
   BNE loc_733E1                             ; $3993CD |
   LDY #$00                                  ; $3993CF |
-  JSR $E61A                                 ; $3993D1 |
+  JSR code_3FE61A                           ; $3993D1 |
   LDA $EB                                   ; $3993D4 |
   STA $069A                                 ; $3993D6 |
   LDA $ED                                   ; $3993D9 |
   STA $069B                                 ; $3993DB |
-  JMP $93E1                                 ; $3993DE |
+  JMP code_3993E1                           ; $3993DE |
 
 loc_733E1:
+code_3993E1:
   LDA #$00                                  ; $3993E1 |
   STA $056C,x                               ; $3993E3 |
 loc_733E6:
   DEC $05C8,x                               ; $3993E6 |
   BNE loc_733A3                             ; $3993E9 |
-  JMP $937B                                 ; $3993EB |
+  JMP code_39937B                           ; $3993EB |
 
   db $0C, $10, $0D, $11, $0E, $17, $0F, $1F ; $3993EE |
   db $FF, $01, $A0, $2F, $05, $E6, $53, $E1 ; $3993F6 |
@@ -6114,6 +6248,7 @@ loc_733E6:
   db $4D, $86, $50, $E1, $C8, $8F, $4C, $86 ; $399406 |
   db $51, $E1, $98, $37, $00, $00, $59, $00 ; $39940E |
 
+code_399416:
   LDA #$FE                                  ; $399416 |
   STA $F9                                   ; $399418 |
   LDA #$C1                                  ; $39941A |
@@ -6126,7 +6261,7 @@ loc_733E6:
 
   db $54, $CE, $00, $02, $1B, $E6           ; $399429 |
 
-  JSR $EBD1                                 ; $39942F |
+  JSR code_3FEBD1                           ; $39942F |
   LDA #$2F                                  ; $399432 |
   STA $05DE                                 ; $399434 |
   LDX $8F                                   ; $399437 |
@@ -6134,7 +6269,7 @@ loc_733E6:
   STA $0E                                   ; $39943B |
   LDA #$95                                  ; $39943D |
   STA $0F                                   ; $39943F |
-  JSR $813F                                 ; $399441 |
+  JSR code_39813F                           ; $399441 |
   LDA #$B4                                  ; $399444 |
   STA $05BA                                 ; $399446 |
   LDA #$01                                  ; $399449 |
@@ -6147,43 +6282,46 @@ loc_73450:
   BPL loc_73450                             ; $399457 |
   LDA #$00                                  ; $399459 |
   STA $FB                                   ; $39945B |
-  JSR $9416                                 ; $39945D |
+  JSR code_399416                           ; $39945D |
   STA $F8                                   ; $399460 |
   LDA #$B8                                  ; $399462 |
-  JSR $C9EF                                 ; $399464 |
-  JSR $EF29                                 ; $399467 |
-  JSR $953D                                 ; $39946A |
+  JSR code_3EC9EF                           ; $399464 |
+  JSR code_3FEF29                           ; $399467 |
+  JSR code_39953D                           ; $39946A |
   LDX $8F                                   ; $39946D |
   LDA #$B8                                  ; $39946F |
   STA $0624,x                               ; $399471 |
+code_399474:
   LDA #$0C                                  ; $399474 |
-  JSR $94FD                                 ; $399476 |
+  JSR code_3994FD                           ; $399476 |
   LDA $069D                                 ; $399479 |
   BEQ loc_73484                             ; $39947C |
-  JSR $EF60                                 ; $39947E |
-  JMP $9474                                 ; $399481 |
+  JSR code_3FEF60                           ; $39947E |
+  JMP code_399474                           ; $399481 |
 
 loc_73484:
   LDA #$00                                  ; $399484 |
   STA $F8                                   ; $399486 |
 loc_73488:
-  JSR $953D                                 ; $399488 |
+code_399488:
+  JSR code_39953D                           ; $399488 |
 loc_7348B:
   LDA #$0C                                  ; $39948B |
-  JSR $94FD                                 ; $39948D |
+  JSR code_3994FD                           ; $39948D |
+code_399490:
   LDA $0574                                 ; $399490 |
   ORA $0575                                 ; $399493 |
   ORA $0576                                 ; $399496 |
   BNE loc_734B3                             ; $399499 |
-  JSR $EF60                                 ; $39949B |
+  JSR code_3FEF60                           ; $39949B |
   LDA $0486                                 ; $39949E |
   CMP $048E                                 ; $3994A1 |
   BCS loc_734DA                             ; $3994A4 |
   LDA $048E                                 ; $3994A6 |
   CMP #$40                                  ; $3994A9 |
   BCS loc_7348B                             ; $3994AB |
-  JSR $9530                                 ; $3994AD |
-  JMP $9490                                 ; $3994B0 |
+  JSR code_399530                           ; $3994AD |
+  JMP code_399490                           ; $3994B0 |
 
 loc_734B3:
   LDA #$00                                  ; $3994B3 |
@@ -6191,36 +6329,38 @@ loc_734B3:
   STA $0576                                 ; $3994B8 |
   LDA #$08                                  ; $3994BB |
   STA $05B9                                 ; $3994BD |
-  JSR $953D                                 ; $3994C0 |
+  JSR code_39953D                           ; $3994C0 |
 loc_734C3:
-  JSR $EF60                                 ; $3994C3 |
+  JSR code_3FEF60                           ; $3994C3 |
   LDA $048E                                 ; $3994C6 |
   CMP #$AF                                  ; $3994C9 |
   BCS loc_734D2                             ; $3994CB |
   LDA #$04                                  ; $3994CD |
-  JSR $94FD                                 ; $3994CF |
+  JSR code_3994FD                           ; $3994CF |
 loc_734D2:
   DEC $05B9                                 ; $3994D2 |
   BNE loc_734C3                             ; $3994D5 |
-  JMP $9488                                 ; $3994D7 |
+  JMP code_399488                           ; $3994D7 |
 
 loc_734DA:
-  JSR $953D                                 ; $3994DA |
-  JMP $94E5                                 ; $3994DD |
+  JSR code_39953D                           ; $3994DA |
+  JMP code_3994E5                           ; $3994DD |
 
 loc_734E0:
   LDA #$04                                  ; $3994E0 |
-  JSR $94FD                                 ; $3994E2 |
-  JSR $EF60                                 ; $3994E5 |
+  JSR code_3994FD                           ; $3994E2 |
+code_3994E5:
+  JSR code_3FEF60                           ; $3994E5 |
   LDA $0486                                 ; $3994E8 |
   CMP $048E                                 ; $3994EB |
   BCC loc_73488                             ; $3994EE |
   LDA $048E                                 ; $3994F0 |
   CMP #$AF                                  ; $3994F3 |
   BCC loc_734E0                             ; $3994F5 |
-  JSR $9530                                 ; $3994F7 |
-  JMP $94E5                                 ; $3994FA |
+  JSR code_399530                           ; $3994F7 |
+  JMP code_3994E5                           ; $3994FA |
 
+code_3994FD:
   STA $03D6                                 ; $3994FD |
   LDA $05BA                                 ; $399500 |
   BEQ locret_7352F                          ; $399503 |
@@ -6233,7 +6373,7 @@ loc_73507:
   BNE loc_73515                             ; $399511 |
   LDY #$04                                  ; $399513 |
 loc_73515:
-  JSR $E60E                                 ; $399515 |
+  JSR code_3FE60E                           ; $399515 |
   LDA $57                                   ; $399518 |
   SEC                                       ; $39951A |
   SBC $046F,x                               ; $39951B |
@@ -6248,26 +6388,30 @@ loc_73515:
 locret_7352F:
   RTS                                       ; $39952F |
 
+code_399530:
   LDX #$0A                                  ; $399530 |
   LDY #$5D                                  ; $399532 |
-  JSR $E522                                 ; $399534 |
+  JSR code_3FE522                           ; $399534 |
   INX                                       ; $399537 |
   LDY #$5E                                  ; $399538 |
-  JMP $E522                                 ; $39953A |
+  JMP code_3FE522                           ; $39953A |
 
+code_39953D:
   LDX #$0A                                  ; $39953D |
   LDY #$5F                                  ; $39953F |
-  JSR $E522                                 ; $399541 |
+  JSR code_3FE522                           ; $399541 |
   INX                                       ; $399544 |
   LDY #$60                                  ; $399545 |
-  JMP $E522                                 ; $399547 |
+  JMP code_3FE522                           ; $399547 |
 
   CPX #$09                                  ; $39954A |
   BEQ loc_73554                             ; $39954C |
-  JSR $E468                                 ; $39954E |
-  JMP $954E                                 ; $399551 |
+code_39954E:
+  JSR code_3FE468                           ; $39954E |
+  JMP code_39954E                           ; $399551 |
 
 loc_73554:
+code_399554:
   LDA $04BC                                 ; $399554 |
   BNE loc_73584                             ; $399557 |
   DEC $05E8                                 ; $399559 |
@@ -6279,18 +6423,18 @@ loc_73554:
   LDA #$1E                                  ; $399567 |
   STA $05E8                                 ; $399569 |
   LDY #$2E                                  ; $39956C |
-  JSR $E5AB                                 ; $39956E |
+  JSR code_3FE5AB                           ; $39956E |
   BCS loc_7357F                             ; $399571 |
   LDA #$24                                  ; $399573 |
   STA $0458,x                               ; $399575 |
   LDY #$08                                  ; $399578 |
   LDA #$34                                  ; $39957A |
-  JSR $E8FD                                 ; $39957C |
+  JSR code_3FE8FD                           ; $39957C |
 loc_7357F:
   LDA #$62                                  ; $39957F |
   STA $05B1,x                               ; $399581 |
 loc_73584:
-  JSR $E468                                 ; $399584 |
+  JSR code_3FE468                           ; $399584 |
   DEC $05B1,x                               ; $399587 |
   BNE loc_735C9                             ; $39958A |
   LDA $0486                                 ; $39958C |
@@ -6300,36 +6444,36 @@ loc_73584:
   LDA #$0A                                  ; $399595 |
   STA $05C8,x                               ; $399597 |
   LDY #$E7                                  ; $39959A |
-  JSR $E5AB                                 ; $39959C |
+  JSR code_3FE5AB                           ; $39959C |
   BCS loc_735A8                             ; $39959F |
   LDY #$08                                  ; $3995A1 |
   LDA #$22                                  ; $3995A3 |
-  JSR $E8FD                                 ; $3995A5 |
+  JSR code_3FE8FD                           ; $3995A5 |
 loc_735A8:
-  JSR $9530                                 ; $3995A8 |
+  JSR code_399530                           ; $3995A8 |
   LDX #$08                                  ; $3995AB |
   LDY #$5B                                  ; $3995AD |
-  JSR $E522                                 ; $3995AF |
+  JSR code_3FE522                           ; $3995AF |
 loc_735B2:
-  JSR $E468                                 ; $3995B2 |
+  JSR code_3FE468                           ; $3995B2 |
   DEC $05C8,x                               ; $3995B5 |
   BNE loc_735B2                             ; $3995B8 |
   LDA #$B4                                  ; $3995BA |
   STA $05B1,x                               ; $3995BC |
-  JSR $953D                                 ; $3995BF |
+  JSR code_39953D                           ; $3995BF |
   LDX #$08                                  ; $3995C2 |
   LDY #$5A                                  ; $3995C4 |
-  JSR $E522                                 ; $3995C6 |
+  JSR code_3FE522                           ; $3995C6 |
 loc_735C9:
-  JMP $9554                                 ; $3995C9 |
+  JMP code_399554                           ; $3995C9 |
 
   db $01, $30, $77, $10, $E6, $5A, $E6, $50 ; $3995CC |
   db $87, $05, $86, $5C, $E6, $20, $AF, $05 ; $3995D4 |
   db $86, $5D, $E6, $60, $AF, $05, $86, $5E ; $3995DC |
   db $00, $54, $CF, $00, $02, $1B, $E6      ; $3995E4 |
 
-  JSR $EBD1                                 ; $3995EB |
-  JSR $9416                                 ; $3995EE |
+  JSR code_3FEBD1                           ; $3995EB |
+  JSR code_399416                           ; $3995EE |
   LDA #$1C                                  ; $3995F1 |
   STA $05DE                                 ; $3995F3 |
   LDX $8F                                   ; $3995F6 |
@@ -6337,14 +6481,14 @@ loc_735C9:
   STA $0E                                   ; $3995FA |
   LDA #$97                                  ; $3995FC |
   STA $0F                                   ; $3995FE |
-  JSR $813F                                 ; $399600 |
+  JSR code_39813F                           ; $399600 |
   LDA #$01                                  ; $399603 |
   STA $03BF                                 ; $399605 |
-  JSR $E1DD                                 ; $399608 |
+  JSR code_3FE1DD                           ; $399608 |
   LDA #$BC                                  ; $39960B |
-  JSR $8114                                 ; $39960D |
+  JSR code_398114                           ; $39960D |
   LDX #$11                                  ; $399610 |
-  JSR $C5C7                                 ; $399612 |
+  JSR code_3EC5C7                           ; $399612 |
   LDX $8F                                   ; $399615 |
   LDA #$20                                  ; $399617 |
   STA $03BF                                 ; $399619 |
@@ -6355,17 +6499,17 @@ loc_735C9:
 loc_73626:
   LDX #$08                                  ; $399626 |
   LDY #$04                                  ; $399628 |
-  JSR $E60E                                 ; $39962A |
-  JSR $E1DD                                 ; $39962D |
-  JSR $CF4A                                 ; $399630 |
-  JSR $C62B                                 ; $399633 |
+  JSR code_3FE60E                           ; $39962A |
+  JSR code_3FE1DD                           ; $39962D |
+  JSR code_3ECF4A                           ; $399630 |
+  JSR code_3EC62B                           ; $399633 |
   LDA $04D3                                 ; $399636 |
   CMP #$7F                                  ; $399639 |
   BCC loc_73626                             ; $39963B |
   LDX #$08                                  ; $39963D |
   LDY #$68                                  ; $39963F |
-  JSR $E522                                 ; $399641 |
-  JSR $EF29                                 ; $399644 |
+  JSR code_3FE522                           ; $399641 |
+  JSR code_3FEF29                           ; $399644 |
   LDA #$00                                  ; $399647 |
   STA $0678                                 ; $399649 |
   LDA #$FF                                  ; $39964C |
@@ -6376,7 +6520,8 @@ loc_73626:
   STA $0677                                 ; $399658 |
   LDA #$01                                  ; $39965B |
   STA $F4                                   ; $39965D |
-  JSR $EF60                                 ; $39965F |
+code_39965F:
+  JSR code_3FEF60                           ; $39965F |
   LDA $05F6,x                               ; $399662 |
   AND #$07                                  ; $399665 |
   INC $05F6,x                               ; $399667 |
@@ -6406,23 +6551,23 @@ loc_73697:
   STA $05B1,x                               ; $399699 |
 loc_7369C:
   LDY #$EA                                  ; $39969C |
-  JSR $E5AB                                 ; $39969E |
+  JSR code_3FE5AB                           ; $39969E |
   BCS loc_736B0                             ; $3996A1 |
   LDA $0615                                 ; $3996A3 |
   STA $03CE,x                               ; $3996A6 |
   LDY #$08                                  ; $3996A9 |
   LDA #$35                                  ; $3996AB |
-  JSR $E8FD                                 ; $3996AD |
+  JSR code_3FE8FD                           ; $3996AD |
 loc_736B0:
   LDA #$1E                                  ; $3996B0 |
   STA $05D0                                 ; $3996B2 |
 loc_736B5:
-  JSR $EF60                                 ; $3996B5 |
+  JSR code_3FEF60                           ; $3996B5 |
   DEC $05C8,x                               ; $3996B8 |
   BNE loc_736B5                             ; $3996BB |
   DEC $05B1,x                               ; $3996BD |
   BNE loc_7369C                             ; $3996C0 |
-  JSR $972C                                 ; $3996C2 |
+  JSR code_39972C                           ; $3996C2 |
   LDA $9720,y                               ; $3996C5 |
   STA $03CE,x                               ; $3996C8 |
   LDA #$01                                  ; $3996CB |
@@ -6430,16 +6575,16 @@ loc_736B5:
   LDA #$5A                                  ; $3996D0 |
   STA $05B1,x                               ; $3996D2 |
   BNE loc_736FC                             ; $3996D5 |
-  JSR $972C                                 ; $3996D7 |
+  JSR code_39972C                           ; $3996D7 |
   LDA $9720,y                               ; $3996DA |
   LDX $8F                                   ; $3996DD |
   STA $03CE,x                               ; $3996DF |
-  JSR $C88D                                 ; $3996E2 |
+  JSR code_3EC88D                           ; $3996E2 |
   LDA #$22                                  ; $3996E5 |
   STA $08                                   ; $3996E7 |
   LDA #$97                                  ; $3996E9 |
   STA $09                                   ; $3996EB |
-  JSR $CC54                                 ; $3996ED |
+  JSR code_3ECC54                           ; $3996ED |
   LDA $9729,y                               ; $3996F0 |
   STA $060D,x                               ; $3996F3 |
   LDA $9725,y                               ; $3996F6 |
@@ -6456,16 +6601,17 @@ loc_7370C:
   CPY #$BC                                  ; $39970C |
   BCS loc_7371B                             ; $39970E |
 loc_73710:
-  JSR $974C                                 ; $399710 |
-  JSR $EF60                                 ; $399713 |
+  JSR code_39974C                           ; $399710 |
+  JSR code_3FEF60                           ; $399713 |
   DEC $05B1,x                               ; $399716 |
   BNE loc_736FC                             ; $399719 |
 loc_7371B:
-  JMP $965F                                 ; $39971B |
+  JMP code_39965F                           ; $39971B |
 
   db $9F, $60, $0C, $04, $2F, $50, $80, $60 ; $39971E |
   db $50, $A0, $55, $01, $04, $06           ; $399726 |
 
+code_39972C:
   LDA $048E                                 ; $39972C |
   CMP #$BC                                  ; $39972F |
   BCC loc_73736                             ; $399731 |
@@ -6483,17 +6629,18 @@ loc_7373D:
   STA $08                                   ; $39973F |
   LDA #$97                                  ; $399741 |
   STA $09                                   ; $399743 |
-  JSR $CC54                                 ; $399745 |
+  JSR code_3ECC54                           ; $399745 |
   LDA $9720,y                               ; $399748 |
   RTS                                       ; $39974B |
 
+code_39974C:
   STA $03D6                                 ; $39974C |
   LDX #$0A                                  ; $39974F |
 loc_73751:
   LDA $03D6                                 ; $399751 |
   STA $03CE,x                               ; $399754 |
   LDY $0615                                 ; $399757 |
-  JSR $E60E                                 ; $39975A |
+  JSR code_3FE60E                           ; $39975A |
   DEX                                       ; $39975D |
   CPX #$07                                  ; $39975E |
   BNE loc_73751                             ; $399760 |
@@ -6509,34 +6656,35 @@ loc_73751:
   db $01, $00, $01, $66, $D1, $00, $02, $1B ; $399784 |
   db $E6                                    ; $39978C |
 
-  JSR $EBD1                                 ; $39978D |
+  JSR code_3FEBD1                           ; $39978D |
   LDA #$30                                  ; $399790 |
   STA $060D,x                               ; $399792 |
   LDA #$D2                                  ; $399795 |
   STA $0E                                   ; $399797 |
   LDA #$98                                  ; $399799 |
   STA $0F                                   ; $39979B |
-  JSR $813F                                 ; $39979D |
+  JSR code_39813F                           ; $39979D |
   LDA #$1D                                  ; $3997A0 |
   STA $05DE                                 ; $3997A2 |
   LDA #$08                                  ; $3997A5 |
   STA $F1                                   ; $3997A7 |
   LDA #$8E                                  ; $3997A9 |
   STA $0682                                 ; $3997AB |
-  JSR $CB28                                 ; $3997AE |
+  JSR code_3ECB28                           ; $3997AE |
 
   db $00                                    ; $3997B1 |
 
   LDA #$01                                  ; $3997B2 |
   STA $FA                                   ; $3997B4 |
-  JSR $9416                                 ; $3997B6 |
+  JSR code_399416                           ; $3997B6 |
   LDA #$BF                                  ; $3997B9 |
-  JSR $8110                                 ; $3997BB |
-  JSR $EF29                                 ; $3997BE |
+  JSR code_398110                           ; $3997BB |
+  JSR code_3FEF29                           ; $3997BE |
   LDA #$FF                                  ; $3997C1 |
   STA $03D6                                 ; $3997C3 |
-  JSR $EF60                                 ; $3997C6 |
-  JSR $983E                                 ; $3997C9 |
+code_3997C6:
+  JSR code_3FEF60                           ; $3997C6 |
+  JSR code_39983E                           ; $3997C9 |
   LDA $F3                                   ; $3997CC |
   AND #$07                                  ; $3997CE |
   BNE loc_737EB                             ; $3997D0 |
@@ -6551,7 +6699,7 @@ loc_73751:
   CLC                                       ; $3997E1 |
   ADC $9855,y                               ; $3997E2 |
   STA $0672                                 ; $3997E5 |
-  JMP $97F8                                 ; $3997E8 |
+  JMP code_3997F8                           ; $3997E8 |
 
 loc_737EB:
   AND #$03                                  ; $3997EB |
@@ -6561,6 +6709,7 @@ loc_737EB:
   LDA #$BF                                  ; $3997F3 |
   STA $0672                                 ; $3997F5 |
 loc_737F8:
+code_3997F8:
   LDA #$77                                  ; $3997F8 |
   SEC                                       ; $3997FA |
   SBC $04D3                                 ; $3997FB |
@@ -6568,7 +6717,7 @@ loc_737F8:
   LDA $F3                                   ; $399801 |
   AND #$3F                                  ; $399803 |
   BNE loc_73811                             ; $399805 |
-  JSR $98C2                                 ; $399807 |
+  JSR code_3998C2                           ; $399807 |
   BCS loc_73811                             ; $39980A |
   LDA #$FF                                  ; $39980C |
   STA $03CE,x                               ; $39980E |
@@ -6576,19 +6725,20 @@ loc_73811:
   LDA $0615                                 ; $399811 |
   CMP #$18                                  ; $399814 |
   BNE loc_7381B                             ; $399816 |
-  JSR $9832                                 ; $399818 |
+  JSR code_399832                           ; $399818 |
 loc_7381B:
   LDX $8F                                   ; $39981B |
   DEC $060D,x                               ; $39981D |
   BNE loc_7382F                             ; $399820 |
-  JSR $9832                                 ; $399822 |
+  JSR code_399832                           ; $399822 |
   LDA #$30                                  ; $399825 |
   STA $060D,x                               ; $399827 |
   LDY #$ED                                  ; $39982A |
-  JSR $E5AB                                 ; $39982C |
+  JSR code_3FE5AB                           ; $39982C |
 loc_7382F:
-  JMP $97C6                                 ; $39982F |
+  JMP code_3997C6                           ; $39982F |
 
+code_399832:
   LDA $DF                                   ; $399832 |
   AND #$01                                  ; $399834 |
   TAY                                       ; $399836 |
@@ -6596,6 +6746,7 @@ loc_7382F:
   STA $03D6                                 ; $39983A |
   RTS                                       ; $39983D |
 
+code_39983E:
   LDA $03D6                                 ; $39983E |
   CLC                                       ; $399841 |
   ADC $04D3                                 ; $399842 |
@@ -6613,41 +6764,43 @@ loc_73851:
   db $FF, $01, $FF, $01, $FF, $01, $67, $00 ; $399855 |
   db $00, $0B, $00, $42                     ; $39985D |
 
-  JSR $EBD1                                 ; $399861 |
+  JSR code_3FEBD1                           ; $399861 |
   LDA $03CE,x                               ; $399864 |
   BPL loc_738A5                             ; $399867 |
   LDY #$00                                  ; $399869 |
-  JSR $F8AE                                 ; $39986B |
+  JSR code_3FF8AE                           ; $39986B |
   LDA $11                                   ; $39986E |
   STA $03CE,x                               ; $399870 |
   LDA $DF                                   ; $399873 |
   AND #$01                                  ; $399875 |
   BEQ loc_7388E                             ; $399877 |
-  JSR $98B0                                 ; $399879 |
+  JSR code_3998B0                           ; $399879 |
   LDA $05                                   ; $39987C |
   STA $03CE,x                               ; $39987E |
-  JSR $98C2                                 ; $399881 |
+  JSR code_3998C2                           ; $399881 |
   BCS loc_738A5                             ; $399884 |
   LDA $06                                   ; $399886 |
   STA $03CE,x                               ; $399888 |
-  JMP $98A5                                 ; $39988B |
+  JMP code_3998A5                           ; $39988B |
 
 loc_7388E:
-  JSR $98B0                                 ; $39988E |
-  JSR $98C2                                 ; $399891 |
+  JSR code_3998B0                           ; $39988E |
+  JSR code_3998C2                           ; $399891 |
   BCS loc_738A5                             ; $399894 |
   LDA $05                                   ; $399896 |
   STA $03CE,x                               ; $399898 |
-  JSR $98C2                                 ; $39989B |
+  JSR code_3998C2                           ; $39989B |
   BCS loc_738A5                             ; $39989E |
   LDA $06                                   ; $3998A0 |
   STA $03CE,x                               ; $3998A2 |
 loc_738A5:
+code_3998A5:
   LDY #$07                                  ; $3998A5 |
-  JSR $E60E                                 ; $3998A7 |
-  JSR $EA6A                                 ; $3998AA |
-  JMP $98A5                                 ; $3998AD |
+  JSR code_3FE60E                           ; $3998A7 |
+  JSR code_3FEA6A                           ; $3998AA |
+  JMP code_3998A5                           ; $3998AD |
 
+code_3998B0:
   LDA $03CE,x                               ; $3998B0 |
   CLC                                       ; $3998B3 |
   ADC #$01                                  ; $3998B4 |
@@ -6659,12 +6812,13 @@ loc_738A5:
   STA $06                                   ; $3998BF |
   RTS                                       ; $3998C1 |
 
+code_3998C2:
   LDY #$EC                                  ; $3998C2 |
-  JSR $E5AB                                 ; $3998C4 |
+  JSR code_3FE5AB                           ; $3998C4 |
   BCS locret_738D1                          ; $3998C7 |
   LDY $8F                                   ; $3998C9 |
   LDA #$03                                  ; $3998CB |
-  JSR $E8FD                                 ; $3998CD |
+  JSR code_3FE8FD                           ; $3998CD |
   CLC                                       ; $3998D0 |
 locret_738D1:
   RTS                                       ; $3998D1 |
@@ -6672,7 +6826,7 @@ locret_738D1:
   db $01, $C8, $77, $05, $E8, $66, $00, $95 ; $3998D2 |
   db $D2, $00, $0C, $1B, $E6                ; $3998DA |
 
-  JSR $EBD1                                 ; $3998DF |
+  JSR code_3FEBD1                           ; $3998DF |
   LDA #$9D                                  ; $3998E2 |
   STA $05C8,x                               ; $3998E4 |
   LDA #$20                                  ; $3998E7 |
@@ -6683,7 +6837,7 @@ locret_738D1:
   STA $0E                                   ; $3998F3 |
   LDA #$99                                  ; $3998F5 |
   STA $0F                                   ; $3998F7 |
-  JSR $813F                                 ; $3998F9 |
+  JSR code_39813F                           ; $3998F9 |
   LDA #$AE                                  ; $3998FC |
   STA $0672                                 ; $3998FE |
   LDA #$16                                  ; $399901 |
@@ -6691,8 +6845,9 @@ locret_738D1:
   LDA #$01                                  ; $399906 |
   STA $F4                                   ; $399908 |
   LDA #$C9                                  ; $39990A |
-  JSR $8114                                 ; $39990C |
-  JSR $EF29                                 ; $39990F |
+  JSR code_398114                           ; $39990C |
+  JSR code_3FEF29                           ; $39990F |
+code_399912:
   LDA #$87                                  ; $399912 |
   STA $05BA                                 ; $399914 |
 loc_73917:
@@ -6704,7 +6859,7 @@ loc_73917:
   STA $0615                                 ; $399923 |
   INC $0615                                 ; $399926 |
 loc_73929:
-  JSR $EF60                                 ; $399929 |
+  JSR code_3FEF60                           ; $399929 |
   LDA $05F6,x                               ; $39992C |
   TAY                                       ; $39992F |
   LDA $9A04,y                               ; $399930 |
@@ -6731,9 +6886,9 @@ loc_73954:
   LDA #$41                                  ; $39995D |
 loc_7395F:
   STA $05F6,x                               ; $39995F |
-  JSR $99A2                                 ; $399962 |
+  JSR code_3999A2                           ; $399962 |
   LDY #$00                                  ; $399965 |
-  JSR $F8AE                                 ; $399967 |
+  JSR code_3FF8AE                           ; $399967 |
   LDA $11                                   ; $39996A |
   LSR                                       ; $39996C |
   TAY                                       ; $39996D |
@@ -6743,27 +6898,29 @@ loc_7395F:
   TAY                                       ; $399976 |
   LDX #$09                                  ; $399977 |
   TAY                                       ; $399979 |
-  JSR $E522                                 ; $39997A |
+  JSR code_3FE522                           ; $39997A |
 loc_7397D:
   DEC $05BA                                 ; $39997D |
   BNE loc_73917                             ; $399980 |
-  JSR $9988                                 ; $399982 |
-  JMP $9912                                 ; $399985 |
+  JSR code_399988                           ; $399982 |
+  JMP code_399912                           ; $399985 |
 
+code_399988:
   LDY #$D4                                  ; $399988 |
-  JSR $E5AB                                 ; $39998A |
+  JSR code_3FE5AB                           ; $39998A |
   BCS locret_7399B                          ; $39998D |
   LDA #$08                                  ; $39998F |
   STA $03CE,x                               ; $399991 |
   LDY #$08                                  ; $399994 |
   LDA #$03                                  ; $399996 |
-  JMP $E8FD                                 ; $399998 |
+  JMP code_3FE8FD                           ; $399998 |
 
 locret_7399B:
   RTS                                       ; $39999B |
 
   db $99, $99, $99, $57, $67, $77           ; $39999C |
 
+code_3999A2:
   LDX #$02                                  ; $3999A2 |
 loc_739A4:
   LDA #$80                                  ; $3999A4 |
@@ -6822,44 +6979,47 @@ loc_739A4:
   db $44, $34, $08, $14, $50, $DD, $65, $7D ; $399AAA |
   db $18, $2D, $00, $05                     ; $399AB2 |
 
+code_399AB6:
   LDA #$2A                                  ; $399AB6 |
-  JSR $CAA4                                 ; $399AB8 |
-  JSR $C62B                                 ; $399ABB |
-  JSR $E024                                 ; $399ABE |
-  JMP $CA3D                                 ; $399AC1 |
+  JSR code_3ECAA4                           ; $399AB8 |
+  JSR code_3EC62B                           ; $399ABB |
+  JSR code_3FE024                           ; $399ABE |
+  JMP code_3ECA3D                           ; $399AC1 |
 
+code_399AC4:
   LDY #$01                                  ; $399AC4 |
-  JSR $C5F0                                 ; $399AC6 |
+  JSR code_3EC5F0                           ; $399AC6 |
   LDA #$00                                  ; $399AC9 |
   STA $9E                                   ; $399ACB |
   LDX $9B                                   ; $399ACD |
   LDA $9AF2,x                               ; $399ACF |
-  JSR $CAA4                                 ; $399AD2 |
+  JSR code_3ECAA4                           ; $399AD2 |
   LDA $AE                                   ; $399AD5 |
-  JSR $C9EF                                 ; $399AD7 |
+  JSR code_3EC9EF                           ; $399AD7 |
   LDX $0699                                 ; $399ADA |
   BEQ locret_73AE5                          ; $399ADD |
   LDA $F708,x                               ; $399ADF |
-  JSR $CAA4                                 ; $399AE2 |
+  JSR code_3ECAA4                           ; $399AE2 |
 locret_73AE5:
   RTS                                       ; $399AE5 |
 
-  JSR $E01B                                 ; $399AE6 |
-  JSR $DC66                                 ; $399AE9 |
-  JSR $CA89                                 ; $399AEC |
-  JMP $E0BB                                 ; $399AEF |
+code_399AE6:
+  JSR code_3FE01B                           ; $399AE6 |
+  JSR code_3EDC66                           ; $399AE9 |
+  JSR code_3ECA89                           ; $399AEC |
+  JMP code_3FE0BB                           ; $399AEF |
 
   db $00, $02, $03, $00, $1B, $29, $71, $EC ; $399AF2 |
   db $00, $5C, $1B, $E6                     ; $399AFA |
 
-  JSR $EBD1                                 ; $399AFE |
+  JSR code_3FEBD1                           ; $399AFE |
   LDX #$14                                  ; $399B01 |
-  JSR $C5C7                                 ; $399B03 |
+  JSR code_3EC5C7                           ; $399B03 |
   LDA #$08                                  ; $399B06 |
   STA $F1                                   ; $399B08 |
   LDA #$8B                                  ; $399B0A |
   STA $0682                                 ; $399B0C |
-  JSR $CB28                                 ; $399B0F |
+  JSR code_3ECB28                           ; $399B0F |
 
   db $00                                    ; $399B12 |
 
@@ -6881,43 +7041,46 @@ locret_73AE5:
   STA $0E                                   ; $399B35 |
   LDA #$9D                                  ; $399B37 |
   STA $0F                                   ; $399B39 |
-  JSR $813F                                 ; $399B3B |
+  JSR code_39813F                           ; $399B3B |
   LDA #$CC                                  ; $399B3E |
   STA $062C                                 ; $399B40 |
-  JSR $8114                                 ; $399B43 |
-  JSR $EF29                                 ; $399B46 |
+  JSR code_398114                           ; $399B43 |
+  JSR code_3FEF29                           ; $399B46 |
   LDA #$01                                  ; $399B49 |
   STA $0679                                 ; $399B4B |
   LDA #$18                                  ; $399B4E |
-  JSR $9CCD                                 ; $399B50 |
-  JSR $9BB3                                 ; $399B53 |
-  JSR $9C9B                                 ; $399B56 |
+  JSR code_399CCD                           ; $399B50 |
+code_399B53:
+  JSR code_399BB3                           ; $399B53 |
+  JSR code_399C9B                           ; $399B56 |
   LDA #$18                                  ; $399B59 |
-  JSR $9CCD                                 ; $399B5B |
-  JSR $9D10                                 ; $399B5E |
-  JSR $9C21                                 ; $399B61 |
-  JSR $9C9B                                 ; $399B64 |
+  JSR code_399CCD                           ; $399B5B |
+  JSR code_399D10                           ; $399B5E |
+  JSR code_399C21                           ; $399B61 |
+  JSR code_399C9B                           ; $399B64 |
   LDA #$18                                  ; $399B67 |
-  JSR $9CCD                                 ; $399B69 |
-  JSR $9D10                                 ; $399B6C |
-  JMP $9B53                                 ; $399B6F |
+  JSR code_399CCD                           ; $399B69 |
+  JSR code_399D10                           ; $399B6C |
+  JMP code_399B53                           ; $399B6F |
 
+code_399B72:
   LDA #$FF                                  ; $399B72 |
   STA $0679                                 ; $399B74 |
   LDA #$97                                  ; $399B77 |
   STA $08                                   ; $399B79 |
   LDA #$9B                                  ; $399B7B |
   STA $09                                   ; $399B7D |
-  JSR $CC54                                 ; $399B7F |
+  JSR code_3ECC54                           ; $399B7F |
   LDA $9B91,y                               ; $399B82 |
   STA $05E8                                 ; $399B85 |
   LDA $9B94,y                               ; $399B88 |
   STA $05FF                                 ; $399B8B |
-  JMP $9BBD                                 ; $399B8E |
+  JMP code_399BBD                           ; $399B8E |
 
   db $00, $80, $80, $FE, $FE, $FF, $4F, $60 ; $399B91 |
   db $50                                    ; $399B99 |
 
+code_399B9A:
   LDA $04D3                                 ; $399B9A |
   CMP #$8F                                  ; $399B9D |
   BCS locret_73BB2                          ; $399B9F |
@@ -6926,25 +7089,29 @@ locret_73AE5:
   STA $05FF                                 ; $399BA6 |
   STA $0616                                 ; $399BA9 |
   STA $062D                                 ; $399BAC |
-  JMP $9BC0                                 ; $399BAF |
+  JMP code_399BC0                           ; $399BAF |
 
 locret_73BB2:
   RTS                                       ; $399BB2 |
 
+code_399BB3:
   LDA #$00                                  ; $399BB3 |
   STA $05E8                                 ; $399BB5 |
   LDA #$FE                                  ; $399BB8 |
   STA $05FF                                 ; $399BBA |
-  JSR $9C5B                                 ; $399BBD |
-  JSR $9D65                                 ; $399BC0 |
+code_399BBD:
+  JSR code_399C5B                           ; $399BBD |
+code_399BC0:
+  JSR code_399D65                           ; $399BC0 |
 loc_73BC3:
+code_399BC3:
   LDA $048E                                 ; $399BC3 |
   CMP #$3A                                  ; $399BC6 |
   BCC loc_73BD5                             ; $399BC8 |
-  JSR $9D93                                 ; $399BCA |
-  JSR $9C70                                 ; $399BCD |
+  JSR code_399D93                           ; $399BCA |
+  JSR code_399C70                           ; $399BCD |
   BCC loc_73BC3                             ; $399BD0 |
-  JMP $9D75                                 ; $399BD2 |
+  JMP code_399D75                           ; $399BD2 |
 
 loc_73BD5:
   LDA #$3A                                  ; $399BD5 |
@@ -6952,12 +7119,13 @@ loc_73BD5:
   LDA #$0A                                  ; $399BDA |
   STA $05B9                                 ; $399BDC |
 loc_73BDF:
-  JSR $9D93                                 ; $399BDF |
+  JSR code_399D93                           ; $399BDF |
   DEC $05B9                                 ; $399BE2 |
   BNE loc_73BDF                             ; $399BE5 |
-  JSR $9BED                                 ; $399BE7 |
-  JMP $9BC3                                 ; $399BEA |
+  JSR code_399BED                           ; $399BE7 |
+  JMP code_399BC3                           ; $399BEA |
 
+code_399BED:
   LDA #$00                                  ; $399BED |
   STA $05E8                                 ; $399BEF |
   STA $05FF                                 ; $399BF2 |
@@ -6965,35 +7133,39 @@ loc_73BDF:
   STA $062D                                 ; $399BF8 |
   RTS                                       ; $399BFB |
 
+code_399BFC:
   LDA #$01                                  ; $399BFC |
   STA $0679                                 ; $399BFE |
   LDA #$97                                  ; $399C01 |
   STA $08                                   ; $399C03 |
   LDA #$9B                                  ; $399C05 |
   STA $09                                   ; $399C07 |
-  JSR $CC54                                 ; $399C09 |
+  JSR code_3ECC54                           ; $399C09 |
   LDA $9C1B,y                               ; $399C0C |
   STA $05E8                                 ; $399C0F |
   LDA $9C1E,y                               ; $399C12 |
   STA $05FF                                 ; $399C15 |
-  JMP $9C2B                                 ; $399C18 |
+  JMP code_399C2B                           ; $399C18 |
 
   db $00, $80, $80, $02, $01, $00           ; $399C1B |
 
+code_399C21:
   LDA #$00                                  ; $399C21 |
   STA $05E8                                 ; $399C23 |
   LDA #$02                                  ; $399C26 |
   STA $05FF                                 ; $399C28 |
-  JSR $9D65                                 ; $399C2B |
-  JSR $9C5B                                 ; $399C2E |
+code_399C2B:
+  JSR code_399D65                           ; $399C2B |
+  JSR code_399C5B                           ; $399C2E |
 loc_73C31:
+code_399C31:
   LDA $048E                                 ; $399C31 |
   CMP #$CA                                  ; $399C34 |
   BCS loc_73C43                             ; $399C36 |
-  JSR $9D93                                 ; $399C38 |
-  JSR $9C70                                 ; $399C3B |
+  JSR code_399D93                           ; $399C38 |
+  JSR code_399C70                           ; $399C3B |
   BCC loc_73C31                             ; $399C3E |
-  JMP $9D75                                 ; $399C40 |
+  JMP code_399D75                           ; $399C40 |
 
 loc_73C43:
   LDA #$C9                                  ; $399C43 |
@@ -7001,12 +7173,13 @@ loc_73C43:
   LDA #$0A                                  ; $399C48 |
   STA $05B9                                 ; $399C4A |
 loc_73C4D:
-  JSR $9D93                                 ; $399C4D |
+  JSR code_399D93                           ; $399C4D |
   DEC $05B9                                 ; $399C50 |
   BNE loc_73C4D                             ; $399C53 |
-  JSR $9BED                                 ; $399C55 |
-  JMP $9C31                                 ; $399C58 |
+  JSR code_399BED                           ; $399C55 |
+  JMP code_399C31                           ; $399C58 |
 
+code_399C5B:
   LDX #$09                                  ; $399C5B |
   LDA #$D0                                  ; $399C5D |
   STA $060D,x                               ; $399C5F |
@@ -7017,6 +7190,7 @@ loc_73C4D:
   STA $04E2,x                               ; $399C6C |
   RTS                                       ; $399C6F |
 
+code_399C70:
   LDX #$09                                  ; $399C70 |
   LDA #$01                                  ; $399C72 |
   STA $03CE,x                               ; $399C74 |
@@ -7025,8 +7199,8 @@ loc_73C4D:
   LDA $05F6,x                               ; $399C7C |
   STA $ED                                   ; $399C7F |
   LDY #$03                                  ; $399C81 |
-  JSR $EE9A                                 ; $399C83 |
-  JSR $E4D1                                 ; $399C86 |
+  JSR code_3FEE9A                           ; $399C83 |
+  JSR code_3FE4D1                           ; $399C86 |
   LDA $04CB,x                               ; $399C89 |
   CMP #$8F                                  ; $399C8C |
   BCC locret_73C9A                          ; $399C8E |
@@ -7038,11 +7212,12 @@ loc_73C4D:
 locret_73C9A:
   RTS                                       ; $399C9A |
 
-  JSR $9D65                                 ; $399C9B |
+code_399C9B:
+  JSR code_399D65                           ; $399C9B |
   LDA #$40                                  ; $399C9E |
   STA $05B9                                 ; $399CA0 |
 loc_73CA3:
-  JSR $9D93                                 ; $399CA3 |
+  JSR code_399D93                           ; $399CA3 |
   LDA $F3                                   ; $399CA6 |
   AND #$07                                  ; $399CA8 |
   BNE loc_73CB3                             ; $399CAA |
@@ -7061,43 +7236,47 @@ loc_73CBC:
   STA $0672                                 ; $399CC3 |
   LDA #$00                                  ; $399CC6 |
   STA $F9                                   ; $399CC8 |
-  JMP $9D75                                 ; $399CCA |
+  JMP code_399D75                           ; $399CCA |
 
+code_399CCD:
   STA $05B9                                 ; $399CCD |
-  JSR $9D65                                 ; $399CD0 |
+  JSR code_399D65                           ; $399CD0 |
 loc_73CD3:
-  JSR $9D93                                 ; $399CD3 |
+  JSR code_399D93                           ; $399CD3 |
   DEC $05B9                                 ; $399CD6 |
   BNE loc_73CD3                             ; $399CD9 |
-  JMP $9D75                                 ; $399CDB |
+  JMP code_399D75                           ; $399CDB |
 
+code_399CDE:
   STA $05B9                                 ; $399CDE |
-  JSR $9D65                                 ; $399CE1 |
+  JSR code_399D65                           ; $399CE1 |
 loc_73CE4:
-  JSR $9D7E                                 ; $399CE4 |
+  JSR code_399D7E                           ; $399CE4 |
   DEC $05B9                                 ; $399CE7 |
   BNE loc_73CE4                             ; $399CEA |
-  JMP $9D75                                 ; $399CEC |
+  JMP code_399D75                           ; $399CEC |
 
-  JSR $9D65                                 ; $399CEF |
+code_399CEF:
+  JSR code_399D65                           ; $399CEF |
   LDY #$F0                                  ; $399CF2 |
-  JSR $E5AB                                 ; $399CF4 |
+  JSR code_3FE5AB                           ; $399CF4 |
   BCS loc_73D0A                             ; $399CF7 |
   LDY #$08                                  ; $399CF9 |
   LDA #$03                                  ; $399CFB |
-  JSR $E8FD                                 ; $399CFD |
+  JSR code_3FE8FD                           ; $399CFD |
   LDY #$00                                  ; $399D00 |
-  JSR $F8AE                                 ; $399D02 |
+  JSR code_3FF8AE                           ; $399D02 |
   LDA $11                                   ; $399D05 |
   STA $03CE,x                               ; $399D07 |
 loc_73D0A:
   STX $05E9                                 ; $399D0A |
-  JMP $9D57                                 ; $399D0D |
+  JMP code_399D57                           ; $399D0D |
 
-  JSR $9D65                                 ; $399D10 |
+code_399D10:
+  JSR code_399D65                           ; $399D10 |
   LDX #$08                                  ; $399D13 |
   LDY #$00                                  ; $399D15 |
-  JSR $F8AE                                 ; $399D17 |
+  JSR code_3FF8AE                           ; $399D17 |
   LDY $11                                   ; $399D1A |
   DEY                                       ; $399D1C |
   DEY                                       ; $399D1D |
@@ -7106,7 +7285,7 @@ loc_73D0A:
   STA $05D2                                 ; $399D23 |
 loc_73D26:
   LDY #$F0                                  ; $399D26 |
-  JSR $E5AB                                 ; $399D28 |
+  JSR code_3FE5AB                           ; $399D28 |
   BCS loc_73D42                             ; $399D2B |
   LDA $05BB                                 ; $399D2D |
   AND #$0F                                  ; $399D30 |
@@ -7115,24 +7294,26 @@ loc_73D26:
   INC $05BB                                 ; $399D38 |
   LDY #$08                                  ; $399D3B |
   LDA #$03                                  ; $399D3D |
-  JSR $E8FD                                 ; $399D3F |
+  JSR code_3FE8FD                           ; $399D3F |
 loc_73D42:
   STX $05E9                                 ; $399D42 |
   LDA #$18                                  ; $399D45 |
   STA $05B9                                 ; $399D47 |
 loc_73D4A:
-  JSR $9D93                                 ; $399D4A |
+  JSR code_399D93                           ; $399D4A |
   DEC $05B9                                 ; $399D4D |
   BNE loc_73D4A                             ; $399D50 |
   DEC $05D2                                 ; $399D52 |
   BNE loc_73D26                             ; $399D55 |
 loc_73D57:
-  JSR $9D93                                 ; $399D57 |
+code_399D57:
+  JSR code_399D93                           ; $399D57 |
   LDX $05E9                                 ; $399D5A |
   LDA $03A0,x                               ; $399D5D |
   BNE loc_73D57                             ; $399D60 |
-  JMP $9D75                                 ; $399D62 |
+  JMP code_399D75                           ; $399D62 |
 
+code_399D65:
   TSX                                       ; $399D65 |
   LDA $0104,x                               ; $399D66 |
   STA $0623                                 ; $399D69 |
@@ -7141,12 +7322,14 @@ loc_73D57:
   LDX #$09                                  ; $399D72 |
   RTS                                       ; $399D74 |
 
+code_399D75:
   LDA $0623                                 ; $399D75 |
   PHA                                       ; $399D78 |
   LDA $063A                                 ; $399D79 |
   PHA                                       ; $399D7C |
   RTS                                       ; $399D7D |
 
+code_399D7E:
   LDA #$80                                  ; $399D7E |
   SEC                                       ; $399D80 |
   SBC $048E                                 ; $399D81 |
@@ -7155,8 +7338,9 @@ loc_73D57:
   SEC                                       ; $399D89 |
   SBC $04D3                                 ; $399D8A |
   STA $069C                                 ; $399D8D |
-  JMP $EF60                                 ; $399D90 |
+  JMP code_3FEF60                           ; $399D90 |
 
+code_399D93:
   LDA #$BA                                  ; $399D93 |
   SEC                                       ; $399D95 |
   SBC $048E                                 ; $399D96 |
@@ -7181,7 +7365,7 @@ loc_73DB0:
   STA $04D4,x                               ; $399DC1 |
   DEX                                       ; $399DC4 |
   BPL loc_73DB0                             ; $399DC5 |
-  JMP $EF60                                 ; $399DC7 |
+  JMP code_3FEF60                           ; $399DC7 |
 
   db $D6, $26, $26, $D0, $2C, $D6, $F0, $F0 ; $399DCA |
   db $F0, $00, $00, $F0, $01, $BA, $8F, $5E ; $399DD2 |
@@ -7192,21 +7376,22 @@ loc_73DB0:
   db $E9, $90, $7F, $10, $00, $75, $00, $74 ; $399DFA |
   db $00, $00, $05, $00, $43                ; $399E02 |
 
-  JSR $EBD1                                 ; $399E07 |
+  JSR code_3FEBD1                           ; $399E07 |
+code_399E0A:
   LDY #$08                                  ; $399E0A |
-  JSR $E60E                                 ; $399E0C |
-  JSR $E9D3                                 ; $399E0F |
-  JMP $9E0A                                 ; $399E12 |
+  JSR code_3FE60E                           ; $399E0C |
+  JSR code_3FE9D3                           ; $399E0F |
+  JMP code_399E0A                           ; $399E12 |
 
   db $71, $00, $00, $5C, $1B, $E6           ; $399E15 |
 
-  JSR $EBD1                                 ; $399E1B |
+  JSR code_3FEBD1                           ; $399E1B |
   LDX $8F                                   ; $399E1E |
   LDA #$6A                                  ; $399E20 |
   STA $0E                                   ; $399E22 |
   LDA #$9E                                  ; $399E24 |
   STA $0F                                   ; $399E26 |
-  JSR $813F                                 ; $399E28 |
+  JSR code_39813F                           ; $399E28 |
   LDA #$BA                                  ; $399E2B |
   SEC                                       ; $399E2D |
   SBC $069D                                 ; $399E2E |
@@ -7217,36 +7402,37 @@ loc_73DB0:
   STA $04D3                                 ; $399E3A |
   LDA #$CC                                  ; $399E3D |
   STA $062C                                 ; $399E3F |
-  JSR $9D93                                 ; $399E42 |
-  JSR $EF29                                 ; $399E45 |
-  JSR $9B9A                                 ; $399E48 |
-  JSR $9B72                                 ; $399E4B |
-  JSR $9C9B                                 ; $399E4E |
+  JSR code_399D93                           ; $399E42 |
+  JSR code_3FEF29                           ; $399E45 |
+  JSR code_399B9A                           ; $399E48 |
+code_399E4B:
+  JSR code_399B72                           ; $399E4B |
+  JSR code_399C9B                           ; $399E4E |
   LDA #$18                                  ; $399E51 |
-  JSR $9CCD                                 ; $399E53 |
-  JSR $9CEF                                 ; $399E56 |
-  JSR $9BFC                                 ; $399E59 |
-  JSR $9C9B                                 ; $399E5C |
+  JSR code_399CCD                           ; $399E53 |
+  JSR code_399CEF                           ; $399E56 |
+  JSR code_399BFC                           ; $399E59 |
+  JSR code_399C9B                           ; $399E5C |
   LDA #$18                                  ; $399E5F |
-  JSR $9CCD                                 ; $399E61 |
-  JSR $9CEF                                 ; $399E64 |
-  JMP $9E4B                                 ; $399E67 |
+  JSR code_399CCD                           ; $399E61 |
+  JSR code_399CEF                           ; $399E64 |
+  JMP code_399E4B                           ; $399E67 |
 
   db $01, $BA, $8F, $5E, $E6, $72, $E9, $90 ; $399E6A |
   db $7F, $10, $00, $6F, $E9, $E0, $7F, $10 ; $399E72 |
   db $00, $70, $E9, $E0, $7F, $10, $00, $77 ; $399E7A |
   db $00, $73, $F4, $00, $5D, $0D, $A0      ; $399E82 |
 
-  JSR $EBD1                                 ; $399E89 |
+  JSR code_3FEBD1                           ; $399E89 |
   LDX $8F                                   ; $399E8C |
   LDA #$C6                                  ; $399E8E |
   STA $0E                                   ; $399E90 |
   LDA #$E1                                  ; $399E92 |
   STA $0F                                   ; $399E94 |
-  JSR $813F                                 ; $399E96 |
+  JSR code_39813F                           ; $399E96 |
   LDA #$01                                  ; $399E99 |
   STA $03BF                                 ; $399E9B |
-  JSR $EF29                                 ; $399E9E |
+  JSR code_3FEF29                           ; $399E9E |
   LDA #$00                                  ; $399EA1 |
   STA $FA                                   ; $399EA3 |
   LDA #$FF                                  ; $399EA5 |
@@ -7255,9 +7441,10 @@ loc_73DB0:
   LDA #$CC                                  ; $399EAD |
   STA $062C                                 ; $399EAF |
   LDA #$5A                                  ; $399EB2 |
-  JSR $9CDE                                 ; $399EB4 |
+  JSR code_399CDE                           ; $399EB4 |
   LDA #$F5                                  ; $399EB7 |
-  JSR $C9EF                                 ; $399EB9 |
+  JSR code_3EC9EF                           ; $399EB9 |
+code_399EBC:
   LDA $DF                                   ; $399EBC |
   AND #$0F                                  ; $399EBE |
   CMP $0615                                 ; $399EC0 |
@@ -7276,25 +7463,25 @@ loc_73EC9:
   LDA #$01                                  ; $399EDE |
   STA $FA                                   ; $399EE0 |
   LDX #$17                                  ; $399EE2 |
-  JSR $C5C7                                 ; $399EE4 |
+  JSR code_3EC5C7                           ; $399EE4 |
   LDA #$14                                  ; $399EE7 |
-  JSR $9CDE                                 ; $399EE9 |
+  JSR code_399CDE                           ; $399EE9 |
   LDA #$F4                                  ; $399EEC |
-  JSR $C9EF                                 ; $399EEE |
+  JSR code_3EC9EF                           ; $399EEE |
   LDA #$CC                                  ; $399EF1 |
-  JSR $C9EF                                 ; $399EF3 |
+  JSR code_3EC9EF                           ; $399EF3 |
   LDA $57                                   ; $399EF6 |
   STA $0477                                 ; $399EF8 |
   LDA #$37                                  ; $399EFB |
-  JSR $9CDE                                 ; $399EFD |
-  JSR $9F4B                                 ; $399F00 |
+  JSR code_399CDE                           ; $399EFD |
+  JSR code_399F4B                           ; $399F00 |
   LDA #$3C                                  ; $399F03 |
-  JSR $9CDE                                 ; $399F05 |
+  JSR code_399CDE                           ; $399F05 |
   DEC $0477                                 ; $399F08 |
   LDX #$18                                  ; $399F0B |
-  JSR $C5C7                                 ; $399F0D |
+  JSR code_3EC5C7                           ; $399F0D |
   LDA #$0F                                  ; $399F10 |
-  JSR $9CDE                                 ; $399F12 |
+  JSR code_399CDE                           ; $399F12 |
   LDA #$01                                  ; $399F15 |
   STA $03BF                                 ; $399F17 |
   LDA #$00                                  ; $399F1A |
@@ -7302,14 +7489,15 @@ loc_73EC9:
   LDA #$97                                  ; $399F1E |
   STA $04D3                                 ; $399F20 |
   LDA #$2D                                  ; $399F23 |
-  JSR $9CDE                                 ; $399F25 |
-  JMP $9EBC                                 ; $399F28 |
+  JSR code_399CDE                           ; $399F25 |
+  JMP code_399EBC                           ; $399F28 |
 
   db $20, $30, $20, $40, $50, $60, $70, $80 ; $399F2B |
   db $A0, $A0, $80, $C0, $C0, $D0, $E0, $E0 ; $399F33 |
   db $7F, $1F, $7F, $3F, $5F, $7F, $2F, $4F ; $399F3B |
   db $3F, $6F, $4F, $2F, $7F, $1F, $5F, $5F ; $399F43 |
 
+code_399F4B:
   LDA $03AC                                 ; $399F4B |
   ORA $03AD                                 ; $399F4E |
   ORA $03AE                                 ; $399F51 |
@@ -7317,7 +7505,7 @@ loc_73EC9:
   BNE locret_73F92                          ; $399F57 |
   LDX #$08                                  ; $399F59 |
   LDY #$00                                  ; $399F5B |
-  JSR $F8AE                                 ; $399F5D |
+  JSR code_3FF8AE                           ; $399F5D |
   LDY $11                                   ; $399F60 |
   LDA $E1B6,y                               ; $399F62 |
   TAX                                       ; $399F65 |
@@ -7333,7 +7521,7 @@ loc_73F70:
   CLC                                       ; $399F73 |
   ADC #$0C                                  ; $399F74 |
   TAX                                       ; $399F76 |
-  JSR $CB28                                 ; $399F77 |
+  JSR code_3ECB28                           ; $399F77 |
 
   db $41                                    ; $399F7A |
 
@@ -7342,7 +7530,7 @@ loc_73F70:
   CLC                                       ; $399F7F |
   ADC $00                                   ; $399F80 |
   LDY #$08                                  ; $399F82 |
-  JSR $E8FD                                 ; $399F84 |
+  JSR code_3FE8FD                           ; $399F84 |
   LDA $E1A6,x                               ; $399F87 |
   STA $03CE,x                               ; $399F8A |
   INX                                       ; $399F8D |
@@ -7352,10 +7540,10 @@ locret_73F92:
   RTS                                       ; $399F92 |
 
   LDA #$F4                                  ; $399F93 |
-  JSR $C9EF                                 ; $399F95 |
+  JSR code_3EC9EF                           ; $399F95 |
   LDA #$CC                                  ; $399F98 |
-  JSR $810C                                 ; $399F9A |
-  JMP $C5E6                                 ; $399F9D |
+  JSR code_39810C                           ; $399F9A |
+  JMP code_3EC5E6                           ; $399F9D |
 
   db $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF ; $399FA0 |
   db $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF ; $399FA8 |
@@ -7372,7 +7560,6 @@ locret_73F92:
 
 bank $3A
 org $8000
-
 
   PHA                                       ; $3A8000 |
   STX $16                                   ; $3A8001 |
@@ -7400,29 +7587,29 @@ org $8000
   LDA $80CF,y                               ; $3A803E |
   STA $77                                   ; $3A8041 |
   STA $09                                   ; $3A8043 |
-  JSR $80A3                                 ; $3A8045 |
+  JSR code_3A80A3                           ; $3A8045 |
   LDA $08                                   ; $3A8048 |
   STA $74                                   ; $3A804A |
   LDA $09                                   ; $3A804C |
   STA $75                                   ; $3A804E |
-  JSR $80B1                                 ; $3A8050 |
+  JSR code_3A80B1                           ; $3A8050 |
   LDA $08                                   ; $3A8053 |
   STA $7A                                   ; $3A8055 |
   LDA $09                                   ; $3A8057 |
   STA $7B                                   ; $3A8059 |
-  JSR $80A3                                 ; $3A805B |
+  JSR code_3A80A3                           ; $3A805B |
   LDA $08                                   ; $3A805E |
   STA $78                                   ; $3A8060 |
   LDA $09                                   ; $3A8062 |
   STA $79                                   ; $3A8064 |
-  JSR $80B1                                 ; $3A8066 |
-  JSR $80A3                                 ; $3A8069 |
+  JSR code_3A80B1                           ; $3A8066 |
+  JSR code_3A80A3                           ; $3A8069 |
   LDA $08                                   ; $3A806C |
   STA $7C                                   ; $3A806E |
   LDA $09                                   ; $3A8070 |
   STA $7D                                   ; $3A8072 |
-  JSR $80B1                                 ; $3A8074 |
-  JSR $80A3                                 ; $3A8077 |
+  JSR code_3A80B1                           ; $3A8074 |
+  JSR code_3A80A3                           ; $3A8077 |
   LDA $08                                   ; $3A807A |
   STA $7E                                   ; $3A807C |
   LDA $09                                   ; $3A807E |
@@ -7443,6 +7630,7 @@ loc_74084:
   STA $064A                                 ; $3A809F |
   RTS                                       ; $3A80A2 |
 
+code_3A80A3:
   LDA $08                                   ; $3A80A3 |
   CLC                                       ; $3A80A5 |
   ADC #$01                                  ; $3A80A6 |
@@ -7452,6 +7640,7 @@ loc_74084:
   STA $09                                   ; $3A80AE |
   RTS                                       ; $3A80B0 |
 
+code_3A80B1:
   LDA $08                                   ; $3A80B1 |
   CLC                                       ; $3A80B3 |
   ADC $00                                   ; $3A80B4 |
@@ -7502,7 +7691,7 @@ loc_74140:
   CMP ($78),y                               ; $3A814D |
   BCC loc_74159                             ; $3A814F |
 loc_74151:
-  JSR $81A7                                 ; $3A8151 |
+  JSR code_3A81A7                           ; $3A8151 |
   INC $0649                                 ; $3A8154 |
   BNE loc_74140                             ; $3A8157 |
 loc_74159:
@@ -7534,7 +7723,7 @@ loc_74171:
   BCC loc_7418D                             ; $3A8182 |
 loc_74184:
   DEY                                       ; $3A8184 |
-  JSR $81A7                                 ; $3A8185 |
+  JSR code_3A81A7                           ; $3A8185 |
   DEC $064A                                 ; $3A8188 |
   BNE loc_74171                             ; $3A818B |
 loc_7418D:
@@ -7555,6 +7744,7 @@ loc_741A3:
   STY $0649                                 ; $3A81A3 |
   RTS                                       ; $3A81A6 |
 
+code_3A81A7:
   TYA                                       ; $3A81A7 |
   AND #$07                                  ; $3A81A8 |
   TAX                                       ; $3A81AA |
@@ -7572,7 +7762,7 @@ loc_741A3:
   LDA ($7E),y                               ; $3A81BE |
   CMP #$80                                  ; $3A81C0 |
   BEQ loc_741C9                             ; $3A81C2 |
-  JSR $E590                                 ; $3A81C4 |
+  JSR code_3FE590                           ; $3A81C4 |
   BCS locret_741EF                          ; $3A81C7 |
 loc_741C9:
   LDA ($74),y                               ; $3A81C9 |
@@ -7588,12 +7778,13 @@ loc_741C9:
   LDA ($7E),y                               ; $3A81E1 |
   STA $03A0,x                               ; $3A81E3 |
   TAY                                       ; $3A81E6 |
-  JSR $81F0                                 ; $3A81E7 |
+  JSR code_3A81F0                           ; $3A81E7 |
   LDA #$00                                  ; $3A81EA |
   STA $04B4,x                               ; $3A81EC |
 locret_741EF:
   RTS                                       ; $3A81EF |
 
+code_3A81F0:
   TYA                                       ; $3A81F0 |
   STA $03A0,x                               ; $3A81F1 |
   LDA $82C9,y                               ; $3A81F4 |
@@ -7632,13 +7823,13 @@ locret_741EF:
   STY $0680                                 ; $3A823E |
   BCS loc_74248                             ; $3A8241 |
   INY                                       ; $3A8243 |
-  JSR $826F                                 ; $3A8244 |
+  JSR code_3A826F                           ; $3A8244 |
   RTS                                       ; $3A8247 |
 
 loc_74248:
   CMP #$F8                                  ; $3A8248 |
   BCC locret_7424F                          ; $3A824A |
-  JSR $826F                                 ; $3A824C |
+  JSR code_3A826F                           ; $3A824C |
 locret_7424F:
   RTS                                       ; $3A824F |
 
@@ -7662,6 +7853,7 @@ loc_7425E:
 loc_7426D:
   PLA                                       ; $3A826D |
   TAY                                       ; $3A826E |
+code_3A826F:
   LDA #$07                                  ; $3A826F |
   STA $12                                   ; $3A8271 |
   STY $11                                   ; $3A8273 |
@@ -7673,6 +7865,7 @@ loc_74277:
   BPL loc_74277                             ; $3A827E |
   LDY #$FF                                  ; $3A8280 |
 loc_74282:
+code_3A8282:
   INY                                       ; $3A8282 |
   LDA ($74),y                               ; $3A8283 |
   BMI locret_742C8                          ; $3A8285 |
@@ -7692,7 +7885,7 @@ loc_74282:
   PHA                                       ; $3A82A1 |
   LDY #$FC                                  ; $3A82A2 |
   LDA $84C9,x                               ; $3A82A4 |
-  JSR $CC67                                 ; $3A82A7 |
+  JSR code_3ECC67                           ; $3A82A7 |
   TAY                                       ; $3A82AA |
   BEQ loc_742C3                             ; $3A82AB |
   LDY #$07                                  ; $3A82AD |
@@ -7706,11 +7899,11 @@ loc_742AF:
   STA $07E8,x                               ; $3A82BB |
   DEC $12                                   ; $3A82BE |
 loc_742C0:
-  JSR $CAA4                                 ; $3A82C0 |
+  JSR code_3ECAA4                           ; $3A82C0 |
 loc_742C3:
   PLA                                       ; $3A82C3 |
   TAY                                       ; $3A82C4 |
-  JMP $8282                                 ; $3A82C5 |
+  JMP code_3A8282                           ; $3A82C5 |
 
 locret_742C8:
   RTS                                       ; $3A82C8 |
@@ -8656,27 +8849,28 @@ org $8000
 
   db $4B, $DF, $4A, $59, $0D, $F4           ; $3B8000 |
 
-  JSR $EBD1                                 ; $3B8006 |
+  JSR code_3FEBD1                           ; $3B8006 |
   LDA #$00                                  ; $3B8009 |
   STA $05DF,x                               ; $3B800B |
   STA $05F6,x                               ; $3B800E |
   LDA #$5A                                  ; $3B8011 |
   STA $060D,x                               ; $3B8013 |
   LDY #$B8                                  ; $3B8016 |
-  JSR $E5AB                                 ; $3B8018 |
+  JSR code_3FE5AB                           ; $3B8018 |
   LDY $8F                                   ; $3B801B |
   TYA                                       ; $3B801D |
   STA $05B1,x                               ; $3B801E |
   LDA #$03                                  ; $3B8021 |
-  JSR $E8FD                                 ; $3B8023 |
+  JSR code_3FE8FD                           ; $3B8023 |
 loc_76026:
-  JSR $EA6A                                 ; $3B8026 |
+  JSR code_3FEA6A                           ; $3B8026 |
   LDA $05B9                                 ; $3B8029 |
   BNE loc_76026                             ; $3B802C |
   LDA #$01                                  ; $3B802E |
   STA $05C8,x                               ; $3B8030 |
   LDA #$00                                  ; $3B8033 |
   STA $05B1,x                               ; $3B8035 |
+code_3B8038:
   LDY $0624,x                               ; $3B8038 |
   LDA $81BB,y                               ; $3B803B |
   STA $03CE,x                               ; $3B803E |
@@ -8686,7 +8880,7 @@ loc_76026:
   EOR #$08                                  ; $3B8049 |
   STA $03CE,x                               ; $3B804B |
 loc_7604E:
-  JSR $8270                                 ; $3B804E |
+  JSR code_3B8270                           ; $3B804E |
   LDA #$00                                  ; $3B8051 |
   STA $ED                                   ; $3B8053 |
   STA $EB                                   ; $3B8055 |
@@ -8697,9 +8891,9 @@ loc_7604E:
   BEQ loc_7606F                             ; $3B8060 |
   LDA #$02                                  ; $3B8062 |
   LDY #$01                                  ; $3B8064 |
-  JSR $EE19                                 ; $3B8066 |
-  JSR $E4D1                                 ; $3B8069 |
-  JMP $815B                                 ; $3B806C |
+  JSR code_3FEE19                           ; $3B8066 |
+  JSR code_3FE4D1                           ; $3B8069 |
+  JMP code_3B815B                           ; $3B806C |
 
 loc_7606F:
   LDA $05C8,x                               ; $3B806F |
@@ -8708,8 +8902,8 @@ loc_7606F:
   LDA $05B1,x                               ; $3B8076 |
   BMI loc_76081                             ; $3B8079 |
 loc_7607B:
-  JSR $810B                                 ; $3B807B |
-  JMP $8090                                 ; $3B807E |
+  JSR code_3B810B                           ; $3B807B |
+  JMP code_3B8090                           ; $3B807E |
 
 loc_76081:
   LDA #$02                                  ; $3B8081 |
@@ -8717,8 +8911,10 @@ loc_76081:
   LDA #$80                                  ; $3B8086 |
   STA $05B1,x                               ; $3B8088 |
   LDY #$0A                                  ; $3B808B |
-  JSR $E61A                                 ; $3B808D |
-  JSR $E4D1                                 ; $3B8090 |
+  JSR code_3FE61A                           ; $3B808D |
+code_3B8090:
+  JSR code_3FE4D1                           ; $3B8090 |
+code_3B8093:
   LDA $0486                                 ; $3B8093 |
   STA $02                                   ; $3B8096 |
   LDA $04CB                                 ; $3B8098 |
@@ -8735,14 +8931,14 @@ loc_76081:
   LDA #$02                                  ; $3B80B3 |
   STA $00                                   ; $3B80B5 |
   STA $01                                   ; $3B80B7 |
-  JSR $EDA8                                 ; $3B80B9 |
+  JSR code_3FEDA8                           ; $3B80B9 |
   LDA $02                                   ; $3B80BC |
   STA $0486                                 ; $3B80BE |
   LDA $03                                   ; $3B80C1 |
   STA $04CB                                 ; $3B80C3 |
   LDA $11                                   ; $3B80C6 |
   BNE loc_760CD                             ; $3B80C8 |
-  JMP $8038                                 ; $3B80CA |
+  JMP code_3B8038                           ; $3B80CA |
 
 loc_760CD:
   LDA $0624,x                               ; $3B80CD |
@@ -8757,10 +8953,11 @@ loc_760CD:
   LDA $05B9                                 ; $3B80E3 |
   BNE loc_760EE                             ; $3B80E6 |
   INC $0624,x                               ; $3B80E8 |
-  JMP $80F1                                 ; $3B80EB |
+  JMP code_3B80F1                           ; $3B80EB |
 
 loc_760EE:
   DEC $0624,x                               ; $3B80EE |
+code_3B80F1:
   LDA $0624,x                               ; $3B80F1 |
   AND #$0F                                  ; $3B80F4 |
   STA $0624,x                               ; $3B80F6 |
@@ -8768,11 +8965,12 @@ loc_760EE:
   AND #$04                                  ; $3B80FC |
   BNE loc_76105                             ; $3B80FE |
   LDY #$4B                                  ; $3B8100 |
-  JSR $E522                                 ; $3B8102 |
+  JSR code_3FE522                           ; $3B8102 |
 loc_76105:
-  JSR $8270                                 ; $3B8105 |
-  JMP $8038                                 ; $3B8108 |
+  JSR code_3B8270                           ; $3B8105 |
+  JMP code_3B8038                           ; $3B8108 |
 
+code_3B810B:
   CLC                                       ; $3B810B |
   LDA $05B1,x                               ; $3B810C |
   ADC #$08                                  ; $3B810F |
@@ -8796,6 +8994,7 @@ loc_76105:
 locret_76137:
   RTS                                       ; $3B8137 |
 
+code_3B8138:
   LDA $05B9                                 ; $3B8138 |
   EOR #$01                                  ; $3B813B |
   STA $05B9                                 ; $3B813D |
@@ -8811,18 +9010,19 @@ locret_76137:
   STA $062C                                 ; $3B8157 |
   RTS                                       ; $3B815A |
 
+code_3B815B:
   LDA $05DF,x                               ; $3B815B |
   BNE loc_76181                             ; $3B815E |
   LDY #$4C                                  ; $3B8160 |
-  JSR $E522                                 ; $3B8162 |
+  JSR code_3FE522                           ; $3B8162 |
   LDY #$B9                                  ; $3B8165 |
-  JSR $E5AB                                 ; $3B8167 |
+  JSR code_3FE5AB                           ; $3B8167 |
   BCS loc_76177                             ; $3B816A |
   LDY $8F                                   ; $3B816C |
   TYA                                       ; $3B816E |
   STA $05B1,x                               ; $3B816F |
   LDA #$41                                  ; $3B8172 |
-  JSR $E8BC                                 ; $3B8174 |
+  JSR code_3FE8BC                           ; $3B8174 |
 loc_76177:
   LDX $8F                                   ; $3B8177 |
   LDA #$10                                  ; $3B8179 |
@@ -8832,7 +9032,7 @@ loc_76181:
   DEC $05F6,x                               ; $3B8181 |
   BNE loc_7618B                             ; $3B8184 |
   LDY #$4B                                  ; $3B8186 |
-  JSR $E522                                 ; $3B8188 |
+  JSR code_3FE522                           ; $3B8188 |
 loc_7618B:
   DEC $060D,x                               ; $3B818B |
   BNE loc_76198                             ; $3B818E |
@@ -8840,7 +9040,7 @@ loc_7618B:
   LDA #$5A                                  ; $3B8193 |
   STA $060D,x                               ; $3B8195 |
 loc_76198:
-  JMP $8093                                 ; $3B8198 |
+  JMP code_3B8093                           ; $3B8198 |
 
   db $A8, $A8, $88, $88, $88, $68, $68, $28 ; $3B819B |
   db $28, $78, $78, $58, $58, $28, $28, $A8 ; $3B81A3 |
@@ -8851,12 +9051,12 @@ loc_76198:
   db $4C, $DF, $4A, $01, $13, $00           ; $3B81CB |
 
   LDA #$DF                                  ; $3B81D1 |
-  JSR $C9EF                                 ; $3B81D3 |
+  JSR code_3EC9EF                           ; $3B81D3 |
   LDA #$01                                  ; $3B81D6 |
   STA $03B7,x                               ; $3B81D8 |
   LDX #$09                                  ; $3B81DB |
   LDY #$B6                                  ; $3B81DD |
-  JSR $CB28                                 ; $3B81DF |
+  JSR code_3ECB28                           ; $3B81DF |
 
   db $41                                    ; $3B81E2 |
 
@@ -8870,7 +9070,7 @@ loc_76198:
   STA $0624,x                               ; $3B81F6 |
   LDX #$0A                                  ; $3B81F9 |
   LDY #$B6                                  ; $3B81FB |
-  JSR $CB28                                 ; $3B81FD |
+  JSR code_3ECB28                           ; $3B81FD |
 
   db $41                                    ; $3B8200 |
 
@@ -8889,7 +9089,7 @@ loc_76198:
   STA $0615                                 ; $3B8221 |
   LDA $8266                                 ; $3B8224 |
   STA $062C                                 ; $3B8227 |
-  JSR $EF29                                 ; $3B822A |
+  JSR code_3FEF29                           ; $3B822A |
   LDA #$00                                  ; $3B822D |
   STA $05B9                                 ; $3B822F |
   LDA #$02                                  ; $3B8232 |
@@ -8897,7 +9097,7 @@ loc_76198:
   LDA #$58                                  ; $3B8237 |
   STA $062C                                 ; $3B8239 |
 loc_7623C:
-  JSR $E468                                 ; $3B823C |
+  JSR code_3FE468                           ; $3B823C |
   LDA $03EE                                 ; $3B823F |
   CLC                                       ; $3B8242 |
   ADC $03EF                                 ; $3B8243 |
@@ -8909,14 +9109,15 @@ loc_7623C:
   BNE loc_7623C                             ; $3B8251 |
   DEC $0615                                 ; $3B8253 |
   BNE loc_7623C                             ; $3B8256 |
-  JSR $8138                                 ; $3B8258 |
+  JSR code_3B8138                           ; $3B8258 |
   BNE loc_7623C                             ; $3B825B |
 loc_7625D:
-  JMP $E456                                 ; $3B825D |
+  JMP code_3FE456                           ; $3B825D |
 
   db $40, $C0, $28, $A8, $6C, $68, $82, $82 ; $3B8260 |
   db $04, $00, $0C, $08, $0C, $00, $04, $08 ; $3B8268 |
 
+code_3B8270:
   LDX $8F                                   ; $3B8270 |
   LDA $03B7,x                               ; $3B8272 |
   AND #$FE                                  ; $3B8275 |
@@ -8936,7 +9137,7 @@ loc_7625D:
   LDA $056C,x                               ; $3B8295 |
   CMP #$14                                  ; $3B8298 |
   BNE loc_7629F                             ; $3B829A |
-  JSR $8138                                 ; $3B829C |
+  JSR code_3B8138                           ; $3B829C |
 loc_7629F:
   LDA $056C,x                               ; $3B829F |
   AND #$0F                                  ; $3B82A2 |
@@ -8956,30 +9157,31 @@ loc_7629F:
   LDA #$FF                                  ; $3B82C2 |
   STA $03E5,x                               ; $3B82C4 |
   LDY #$25                                  ; $3B82C7 |
-  JSR $CB28                                 ; $3B82C9 |
+  JSR code_3ECB28                           ; $3B82C9 |
 
   db $41                                    ; $3B82CC |
 
-  JMP $E477                                 ; $3B82CD |
+  JMP code_3FE477                           ; $3B82CD |
 
 loc_762D0:
-  JMP $E468                                 ; $3B82D0 |
+  JMP code_3FE468                           ; $3B82D0 |
 
-  JMP $E456                                 ; $3B82D3 |
+  JMP code_3FE456                           ; $3B82D3 |
 
   db $80, $C6, $62, $5F, $04, $14           ; $3B82D6 |
 
-  JSR $EBD1                                 ; $3B82DC |
+  JSR code_3FEBD1                           ; $3B82DC |
   LDA #$00                                  ; $3B82DF |
   STA $0624,x                               ; $3B82E1 |
+code_3B82E4:
   LDY $0624,x                               ; $3B82E4 |
   LDA $834C,y                               ; $3B82E7 |
   TAY                                       ; $3B82EA |
-  JSR $E522                                 ; $3B82EB |
+  JSR code_3FE522                           ; $3B82EB |
   LDA #$3C                                  ; $3B82EE |
   STA $05B1,x                               ; $3B82F0 |
 loc_762F3:
-  JSR $EA1C                                 ; $3B82F3 |
+  JSR code_3FEA1C                           ; $3B82F3 |
   LDY $0624,x                               ; $3B82F6 |
   LDA $8346,y                               ; $3B82F9 |
   STA $069B                                 ; $3B82FC |
@@ -8987,11 +9189,11 @@ loc_762F3:
   BNE loc_762F3                             ; $3B8302 |
   LDA $834E,y                               ; $3B8304 |
   TAY                                       ; $3B8307 |
-  JSR $E522                                 ; $3B8308 |
+  JSR code_3FE522                           ; $3B8308 |
   LDA #$44                                  ; $3B830B |
   STA $05B1,x                               ; $3B830D |
 loc_76310:
-  JSR $EA1C                                 ; $3B8310 |
+  JSR code_3FEA1C                           ; $3B8310 |
   LDY $0624,x                               ; $3B8313 |
   LDA $834A,y                               ; $3B8316 |
   STA $069B                                 ; $3B8319 |
@@ -9001,38 +9203,38 @@ loc_76310:
   BNE loc_76310                             ; $3B8325 |
   LDA $8350,y                               ; $3B8327 |
   TAY                                       ; $3B832A |
-  JSR $E522                                 ; $3B832B |
+  JSR code_3FE522                           ; $3B832B |
   LDA #$0E                                  ; $3B832E |
   STA $05B1,x                               ; $3B8330 |
 loc_76333:
-  JSR $EA1C                                 ; $3B8333 |
+  JSR code_3FEA1C                           ; $3B8333 |
   DEC $05B1,x                               ; $3B8336 |
   BNE loc_76333                             ; $3B8339 |
   LDA $0624,x                               ; $3B833B |
   EOR #$01                                  ; $3B833E |
   STA $0624,x                               ; $3B8340 |
-  JMP $82E4                                 ; $3B8343 |
+  JMP code_3B82E4                           ; $3B8343 |
 
   db $01, $FF, $80, $80, $00, $FF, $80, $83 ; $3B8346 |
   db $81, $84, $82, $85, $B9, $2C, $26, $1C ; $3B834E |
   db $02, $63                               ; $3B8356 |
 
-  JSR $EBD1                                 ; $3B8358 |
+  JSR code_3FEBD1                           ; $3B8358 |
   LDA #$80                                  ; $3B835B |
   STA $03B7,x                               ; $3B835D |
   LDA $51                                   ; $3B8360 |
   CMP #$06                                  ; $3B8362 |
   BNE loc_7636B                             ; $3B8364 |
   LDA #$EB                                  ; $3B8366 |
-  JSR $C9EF                                 ; $3B8368 |
+  JSR code_3EC9EF                           ; $3B8368 |
 loc_7636B:
-  JSR $E5B6                                 ; $3B836B |
+  JSR code_3FE5B6                           ; $3B836B |
   LDA $11                                   ; $3B836E |
   STA $03CE,x                               ; $3B8370 |
 loc_76373:
   LDA #$00                                  ; $3B8373 |
-  JSR $EAB3                                 ; $3B8375 |
-  JSR $852F                                 ; $3B8378 |
+  JSR code_3FEAB3                           ; $3B8375 |
+  JSR code_3B852F                           ; $3B8378 |
   LDA #$3E                                  ; $3B837B |
   STA $08                                   ; $3B837D |
   LDA #$85                                  ; $3B837F |
@@ -9043,52 +9245,53 @@ loc_76373:
   STA $EC                                   ; $3B8389 |
   STA $ED                                   ; $3B838B |
   STA $EB                                   ; $3B838D |
-  JSR $EC11                                 ; $3B838F |
+  JSR code_3FEC11                           ; $3B838F |
   LDA $11                                   ; $3B8392 |
   BEQ loc_76373                             ; $3B8394 |
   LDA #$00                                  ; $3B8396 |
   STA $05B1,x                               ; $3B8398 |
   STA $05C8,x                               ; $3B839B |
 loc_7639E:
+code_3B839E:
   LDA #$00                                  ; $3B839E |
-  JSR $EAB3                                 ; $3B83A0 |
-  JSR $852F                                 ; $3B83A3 |
+  JSR code_3FEAB3                           ; $3B83A0 |
+  JSR code_3B852F                           ; $3B83A3 |
   LDA $056C,x                               ; $3B83A6 |
   BEQ loc_763AE                             ; $3B83A9 |
 loc_763AB:
-  JMP $844B                                 ; $3B83AB |
+  JMP code_3B844B                           ; $3B83AB |
 
 loc_763AE:
   LDY #$04                                  ; $3B83AE |
-  JSR $E60E                                 ; $3B83B0 |
-  JSR $84ED                                 ; $3B83B3 |
+  JSR code_3FE60E                           ; $3B83B0 |
+  JSR code_3B84ED                           ; $3B83B3 |
   LDA $11                                   ; $3B83B6 |
   AND #$01                                  ; $3B83B8 |
   BNE loc_763BF                             ; $3B83BA |
-  JSR $8526                                 ; $3B83BC |
+  JSR code_3B8526                           ; $3B83BC |
 loc_763BF:
   LDA #$00                                  ; $3B83BF |
-  JSR $EAB3                                 ; $3B83C1 |
-  JSR $852F                                 ; $3B83C4 |
+  JSR code_3FEAB3                           ; $3B83C1 |
+  JSR code_3B852F                           ; $3B83C4 |
   LDA $056C,x                               ; $3B83C7 |
   BNE loc_763AB                             ; $3B83CA |
-  JSR $84D2                                 ; $3B83CC |
+  JSR code_3B84D2                           ; $3B83CC |
   LDA $11                                   ; $3B83CF |
   AND #$01                                  ; $3B83D1 |
   BEQ loc_763D8                             ; $3B83D3 |
-  JSR $8526                                 ; $3B83D5 |
+  JSR code_3B8526                           ; $3B83D5 |
 loc_763D8:
-  JSR $8508                                 ; $3B83D8 |
+  JSR code_3B8508                           ; $3B83D8 |
   LDA $11                                   ; $3B83DB |
   BEQ loc_7639E                             ; $3B83DD |
   LDY #$B8                                  ; $3B83DF |
-  JSR $E522                                 ; $3B83E1 |
+  JSR code_3FE522                           ; $3B83E1 |
 loc_763E4:
   LDA #$00                                  ; $3B83E4 |
-  JSR $EAB3                                 ; $3B83E6 |
-  JSR $852F                                 ; $3B83E9 |
+  JSR code_3FEAB3                           ; $3B83E6 |
+  JSR code_3B852F                           ; $3B83E9 |
   LDY #$3A                                  ; $3B83EC |
-  JSR $E5AB                                 ; $3B83EE |
+  JSR code_3FE5AB                           ; $3B83EE |
   BCS loc_763E4                             ; $3B83F1 |
   LDY $8F                                   ; $3B83F3 |
   TXA                                       ; $3B83F5 |
@@ -9102,34 +9305,36 @@ loc_763E4:
   STA $05C8,x                               ; $3B8407 |
   LDA #$00                                  ; $3B840A |
   STA $05B1,x                               ; $3B840C |
+code_3B840F:
   LDA #$00                                  ; $3B840F |
-  JSR $EAB3                                 ; $3B8411 |
-  JSR $852F                                 ; $3B8414 |
-  JSR $8508                                 ; $3B8417 |
+  JSR code_3FEAB3                           ; $3B8411 |
+  JSR code_3B852F                           ; $3B8414 |
+  JSR code_3B8508                           ; $3B8417 |
   LDA $11                                   ; $3B841A |
   BEQ loc_76482                             ; $3B841C |
   LDA $056C,x                               ; $3B841E |
   BNE loc_7643D                             ; $3B8421 |
   LDY #$00                                  ; $3B8423 |
-  JSR $E60E                                 ; $3B8425 |
-  JSR $84ED                                 ; $3B8428 |
+  JSR code_3FE60E                           ; $3B8425 |
+  JSR code_3B84ED                           ; $3B8428 |
   LDA $11                                   ; $3B842B |
   AND #$01                                  ; $3B842D |
   BEQ loc_7647F                             ; $3B842F |
-  JSR $84D2                                 ; $3B8431 |
+  JSR code_3B84D2                           ; $3B8431 |
   LDA $11                                   ; $3B8434 |
   AND #$01                                  ; $3B8436 |
   BNE loc_7647F                             ; $3B8438 |
-  JMP $840F                                 ; $3B843A |
+  JMP code_3B840F                           ; $3B843A |
 
 loc_7643D:
   LDY #$B9                                  ; $3B843D |
-  JSR $E522                                 ; $3B843F |
+  JSR code_3FE522                           ; $3B843F |
   LDA $05DF,x                               ; $3B8442 |
   TAY                                       ; $3B8445 |
   LDA #$00                                  ; $3B8446 |
   STA $03A0,y                               ; $3B8448 |
 loc_7644B:
+code_3B844B:
   CMP #$13                                  ; $3B844B |
   BNE loc_7645A                             ; $3B844D |
   LDA $9B                                   ; $3B844F |
@@ -9142,58 +9347,60 @@ loc_7645A:
   STA $05B1,x                               ; $3B845C |
 loc_7645F:
   LDA #$00                                  ; $3B845F |
-  JSR $EAB3                                 ; $3B8461 |
-  JSR $852F                                 ; $3B8464 |
+  JSR code_3FEAB3                           ; $3B8461 |
+  JSR code_3B852F                           ; $3B8464 |
   DEC $05B1,x                               ; $3B8467 |
   BNE loc_7645F                             ; $3B846A |
   LDA #$00                                  ; $3B846C |
   STA $056C,x                               ; $3B846E |
-  JMP $839E                                 ; $3B8471 |
+  JMP code_3B839E                           ; $3B8471 |
 
 loc_76474:
-  JSR $8526                                 ; $3B8474 |
+  JSR code_3B8526                           ; $3B8474 |
   LDY #$00                                  ; $3B8477 |
-  JSR $E60E                                 ; $3B8479 |
+  JSR code_3FE60E                           ; $3B8479 |
 loc_7647C:
-  JMP $839E                                 ; $3B847C |
+  JMP code_3B839E                           ; $3B847C |
 
 loc_7647F:
-  JSR $8526                                 ; $3B847F |
+  JSR code_3B8526                           ; $3B847F |
 loc_76482:
   LDA $05DF,x                               ; $3B8482 |
   TAY                                       ; $3B8485 |
   LDA #$00                                  ; $3B8486 |
   STA $03A0,y                               ; $3B8488 |
   LDY #$B9                                  ; $3B848B |
-  JSR $E522                                 ; $3B848D |
+  JSR code_3FE522                           ; $3B848D |
+code_3B8490:
   LDA #$00                                  ; $3B8490 |
-  JSR $EAB3                                 ; $3B8492 |
-  JSR $852F                                 ; $3B8495 |
+  JSR code_3FEAB3                           ; $3B8492 |
+  JSR code_3B852F                           ; $3B8495 |
   LDA $056C,x                               ; $3B8498 |
   BNE loc_7644B                             ; $3B849B |
   LDA $05C8,x                               ; $3B849D |
   BEQ loc_7647C                             ; $3B84A0 |
   LDY #$01                                  ; $3B84A2 |
-  JSR $EE69                                 ; $3B84A4 |
+  JSR code_3FEE69                           ; $3B84A4 |
   LDA #$00                                  ; $3B84A7 |
   STA $EE                                   ; $3B84A9 |
   STA $EC                                   ; $3B84AB |
-  JSR $E4D1                                 ; $3B84AD |
+  JSR code_3FE4D1                           ; $3B84AD |
   LDA #$00                                  ; $3B84B0 |
-  JSR $EAB3                                 ; $3B84B2 |
-  JSR $852F                                 ; $3B84B5 |
+  JSR code_3FEAB3                           ; $3B84B2 |
+  JSR code_3B852F                           ; $3B84B5 |
   LDA $056C,x                               ; $3B84B8 |
   BNE loc_7644B                             ; $3B84BB |
-  JSR $84ED                                 ; $3B84BD |
+  JSR code_3B84ED                           ; $3B84BD |
   LDA $11                                   ; $3B84C0 |
   AND #$01                                  ; $3B84C2 |
   BEQ loc_76474                             ; $3B84C4 |
-  JSR $84D2                                 ; $3B84C6 |
+  JSR code_3B84D2                           ; $3B84C6 |
   LDA $11                                   ; $3B84C9 |
   AND #$01                                  ; $3B84CB |
   BNE loc_76474                             ; $3B84CD |
-  JMP $8490                                 ; $3B84CF |
+  JMP code_3B8490                           ; $3B84CF |
 
+code_3B84D2:
   LDA #$00                                  ; $3B84D2 |
   STA $11                                   ; $3B84D4 |
   LDA $03CE,x                               ; $3B84D6 |
@@ -9206,9 +9413,10 @@ loc_76482:
   INY                                       ; $3B84E3 |
   LDA $8552,y                               ; $3B84E4 |
   STA $01                                   ; $3B84E7 |
-  JSR $D9CD                                 ; $3B84E9 |
+  JSR code_3ED9CD                           ; $3B84E9 |
   RTS                                       ; $3B84EC |
 
+code_3B84ED:
   LDA $03CE,x                               ; $3B84ED |
   LSR                                       ; $3B84F0 |
   LSR                                       ; $3B84F1 |
@@ -9221,9 +9429,10 @@ loc_76482:
   INY                                       ; $3B84FE |
   LDA $854E,y                               ; $3B84FF |
   STA $01                                   ; $3B8502 |
-  JSR $D9CD                                 ; $3B8504 |
+  JSR code_3ED9CD                           ; $3B8504 |
   RTS                                       ; $3B8507 |
 
+code_3B8508:
   LDA $04CB,x                               ; $3B8508 |
   STA $060D,x                               ; $3B850B |
   SEC                                       ; $3B850E |
@@ -9233,23 +9442,25 @@ loc_76482:
   STA $00                                   ; $3B8516 |
   LDA #$04                                  ; $3B8518 |
   STA $01                                   ; $3B851A |
-  JSR $EDA8                                 ; $3B851C |
+  JSR code_3FEDA8                           ; $3B851C |
   LDA $060D,x                               ; $3B851F |
   STA $04CB,x                               ; $3B8522 |
   RTS                                       ; $3B8525 |
 
+code_3B8526:
   LDA $03CE,x                               ; $3B8526 |
   EOR #$08                                  ; $3B8529 |
   STA $03CE,x                               ; $3B852B |
   RTS                                       ; $3B852E |
 
+code_3B852F:
   LDA $056C,x                               ; $3B852F |
   CMP #$14                                  ; $3B8532 |
   BEQ loc_76537                             ; $3B8534 |
   RTS                                       ; $3B8536 |
 
 loc_76537:
-  JMP $E9D3                                 ; $3B8537 |
+  JMP code_3FE9D3                           ; $3B8537 |
 
   db $02, $FE, $00, $00, $10, $08, $F0, $08 ; $3B853A |
   db $F8, $04, $F8, $FC, $F0, $F9, $F0, $F9 ; $3B8542 |
@@ -9257,11 +9468,11 @@ loc_76537:
   db $0A, $02, $F6, $02, $57, $A4, $51, $00 ; $3B8552 |
   db $04, $14                               ; $3B855A |
 
-  JSR $EBD1                                 ; $3B855C |
+  JSR code_3FEBD1                           ; $3B855C |
   LDA #$52                                  ; $3B855F |
-  JSR $CAA4                                 ; $3B8561 |
+  JSR code_3ECAA4                           ; $3B8561 |
   LDY #$CC                                  ; $3B8564 |
-  JSR $86E8                                 ; $3B8566 |
+  JSR code_3B86E8                           ; $3B8566 |
   BCS loc_765A4                             ; $3B8569 |
   LDY $8F                                   ; $3B856B |
   TXA                                       ; $3B856D |
@@ -9269,7 +9480,7 @@ loc_76537:
   TYA                                       ; $3B8571 |
   STA $05B1,x                               ; $3B8572 |
   LDA #$03                                  ; $3B8575 |
-  JSR $E8FD                                 ; $3B8577 |
+  JSR code_3FE8FD                           ; $3B8577 |
   LDX $8F                                   ; $3B857A |
   LDA #$00                                  ; $3B857C |
   STA $05C8,x                               ; $3B857E |
@@ -9278,25 +9489,27 @@ loc_76537:
   LDA #$1E                                  ; $3B8586 |
   STA $05B1,x                               ; $3B8588 |
 loc_7658B:
-  JSR $E9D3                                 ; $3B858B |
-  JSR $EF0C                                 ; $3B858E |
-  JSR $85A7                                 ; $3B8591 |
+code_3B858B:
+  JSR code_3FE9D3                           ; $3B858B |
+  JSR code_3FEF0C                           ; $3B858E |
+  JSR code_3B85A7                           ; $3B8591 |
   LDY $0624,x                               ; $3B8594 |
   LDA $056C,y                               ; $3B8597 |
   BNE loc_765E8                             ; $3B859A |
   DEC $05B1,x                               ; $3B859C |
   BNE loc_7658B                             ; $3B859F |
-  JMP $8667                                 ; $3B85A1 |
+  JMP code_3B8667                           ; $3B85A1 |
 
 loc_765A4:
-  JMP $E456                                 ; $3B85A4 |
+  JMP code_3FE456                           ; $3B85A4 |
 
+code_3B85A7:
   LDA #$00                                  ; $3B85A7 |
   STA $11                                   ; $3B85A9 |
   STA $00                                   ; $3B85AB |
   LDA #$F0                                  ; $3B85AD |
   STA $01                                   ; $3B85AF |
-  JSR $D9CD                                 ; $3B85B1 |
+  JSR code_3ED9CD                           ; $3B85B1 |
   LDA $11                                   ; $3B85B4 |
   CMP #$08                                  ; $3B85B6 |
   BNE loc_765DB                             ; $3B85B8 |
@@ -9304,14 +9517,14 @@ loc_765A4:
   BNE loc_765D8                             ; $3B85BD |
   INC $05C8,x                               ; $3B85BF |
   LDY #$72                                  ; $3B85C2 |
-  JSR $E5AB                                 ; $3B85C4 |
+  JSR code_3FE5AB                           ; $3B85C4 |
   BCS loc_765E0                             ; $3B85C7 |
   LDY $8F                                   ; $3B85C9 |
   LDA #$80                                  ; $3B85CB |
   STA $03B7,x                               ; $3B85CD |
   LDA #$03                                  ; $3B85D0 |
   STA $060D,y                               ; $3B85D2 |
-  JSR $E8FD                                 ; $3B85D5 |
+  JSR code_3FE8FD                           ; $3B85D5 |
 loc_765D8:
   LDX $8F                                   ; $3B85D8 |
   RTS                                       ; $3B85DA |
@@ -9327,15 +9540,15 @@ loc_765E0:
 
 loc_765E8:
   LDY #$59                                  ; $3B85E8 |
-  JSR $E522                                 ; $3B85EA |
+  JSR code_3FE522                           ; $3B85EA |
   LDA #$FC                                  ; $3B85ED |
   STA $05F6,x                               ; $3B85EF |
   LDA #$BC                                  ; $3B85F2 |
   STA $05DF,x                               ; $3B85F4 |
-  JSR $EF0C                                 ; $3B85F7 |
+  JSR code_3FEF0C                           ; $3B85F7 |
 loc_765FA:
-  JSR $E9D3                                 ; $3B85FA |
-  JSR $85A7                                 ; $3B85FD |
+  JSR code_3FE9D3                           ; $3B85FA |
+  JSR code_3B85A7                           ; $3B85FD |
   LDA $11                                   ; $3B8600 |
   CMP #$08                                  ; $3B8602 |
   BNE loc_76610                             ; $3B8604 |
@@ -9346,10 +9559,10 @@ loc_765FA:
 loc_76610:
   LDA #$2A                                  ; $3B8610 |
   STA $00                                   ; $3B8612 |
-  JSR $ECA4                                 ; $3B8614 |
+  JSR code_3FECA4                           ; $3B8614 |
 loc_76617:
   LDY #$04                                  ; $3B8617 |
-  JSR $E61A                                 ; $3B8619 |
+  JSR code_3FE61A                           ; $3B8619 |
   LDA $05DF,x                               ; $3B861C |
   STA $EC                                   ; $3B861F |
   LDA $05F6,x                               ; $3B8621 |
@@ -9358,7 +9571,7 @@ loc_76617:
   STA $08                                   ; $3B8628 |
   LDA #$86                                  ; $3B862A |
   STA $09                                   ; $3B862C |
-  JSR $EC11                                 ; $3B862E |
+  JSR code_3FEC11                           ; $3B862E |
   DEC $060D,x                               ; $3B8631 |
   LDA $04B4,x                               ; $3B8634 |
   BPL loc_76644                             ; $3B8637 |
@@ -9371,79 +9584,82 @@ loc_76644:
   AND #$01                                  ; $3B8646 |
   BEQ loc_765FA                             ; $3B8648 |
   LDY #$5A                                  ; $3B864A |
-  JSR $E522                                 ; $3B864C |
+  JSR code_3FE522                           ; $3B864C |
   LDA #$10                                  ; $3B864F |
   STA $05B1,x                               ; $3B8651 |
 loc_76654:
-  JSR $E9D3                                 ; $3B8654 |
+  JSR code_3FE9D3                           ; $3B8654 |
   LDY $0624,x                               ; $3B8657 |
   LDA $056C,y                               ; $3B865A |
   BNE loc_765E8                             ; $3B865D |
   DEC $05B1,x                               ; $3B865F |
   BNE loc_76654                             ; $3B8662 |
 loc_76664:
-  JMP $86DB                                 ; $3B8664 |
+  JMP code_3B86DB                           ; $3B8664 |
 
+code_3B8667:
   LDA #$03                                  ; $3B8667 |
   STA $05DF,x                               ; $3B8669 |
 loc_7666C:
   LDY #$58                                  ; $3B866C |
-  JSR $E522                                 ; $3B866E |
+  JSR code_3FE522                           ; $3B866E |
   LDA #$1C                                  ; $3B8671 |
   STA $05B1,x                               ; $3B8673 |
 loc_76676:
-  JSR $E9D3                                 ; $3B8676 |
-  JSR $85A7                                 ; $3B8679 |
+  JSR code_3FE9D3                           ; $3B8676 |
+  JSR code_3B85A7                           ; $3B8679 |
   DEC $05B1,x                               ; $3B867C |
   BNE loc_76676                             ; $3B867F |
-  JSR $E5B6                                 ; $3B8681 |
+  JSR code_3FE5B6                           ; $3B8681 |
   LDA $11                                   ; $3B8684 |
   CMP $03CE,x                               ; $3B8686 |
   BNE loc_766B4                             ; $3B8689 |
   LDY #$00                                  ; $3B868B |
-  JSR $F8AE                                 ; $3B868D |
+  JSR code_3FF8AE                           ; $3B868D |
   LDA $11                                   ; $3B8690 |
   AND #$07                                  ; $3B8692 |
   BEQ loc_766B4                             ; $3B8694 |
   LDA $11                                   ; $3B8696 |
   STA $060D,x                               ; $3B8698 |
   LDY #$14                                  ; $3B869B |
-  JSR $E5AB                                 ; $3B869D |
+  JSR code_3FE5AB                           ; $3B869D |
   BCS loc_766B4                             ; $3B86A0 |
   LDA #$06                                  ; $3B86A2 |
   STA $05C8,x                               ; $3B86A4 |
   LDY $8F                                   ; $3B86A7 |
   LDA #$3C                                  ; $3B86A9 |
-  JSR $E8BC                                 ; $3B86AB |
+  JSR code_3FE8BC                           ; $3B86AB |
   LDA $060D,y                               ; $3B86AE |
   STA $03CE,x                               ; $3B86B1 |
 loc_766B4:
   LDX $8F                                   ; $3B86B4 |
   LDY #$57                                  ; $3B86B6 |
-  JSR $E522                                 ; $3B86B8 |
+  JSR code_3FE522                           ; $3B86B8 |
   LDA #$28                                  ; $3B86BB |
   STA $05B1,x                               ; $3B86BD |
 loc_766C0:
-  JSR $E9D3                                 ; $3B86C0 |
-  JSR $85A7                                 ; $3B86C3 |
+  JSR code_3FE9D3                           ; $3B86C0 |
+  JSR code_3B85A7                           ; $3B86C3 |
   LDY $0624,x                               ; $3B86C6 |
   LDA $056C,y                               ; $3B86C9 |
   BNE loc_76664                             ; $3B86CC |
   DEC $05B1,x                               ; $3B86CE |
   BNE loc_766C0                             ; $3B86D1 |
-  JSR $EF0C                                 ; $3B86D3 |
+  JSR code_3FEF0C                           ; $3B86D3 |
   DEC $05DF,x                               ; $3B86D6 |
   BNE loc_7666C                             ; $3B86D9 |
+code_3B86DB:
   LDY #$57                                  ; $3B86DB |
-  JSR $E522                                 ; $3B86DD |
+  JSR code_3FE522                           ; $3B86DD |
   LDA #$78                                  ; $3B86E0 |
   STA $05B1,x                               ; $3B86E2 |
-  JMP $858B                                 ; $3B86E5 |
+  JMP code_3B858B                           ; $3B86E5 |
 
+code_3B86E8:
   DEX                                       ; $3B86E8 |
-  JSR $E59D                                 ; $3B86E9 |
+  JSR code_3FE59D                           ; $3B86E9 |
   BCS locret_766F3                          ; $3B86EC |
-  JSR $CB28                                 ; $3B86EE |
+  JSR code_3ECB28                           ; $3B86EE |
 
   db $41                                    ; $3B86F1 |
 
@@ -9455,45 +9671,46 @@ locret_766F3:
   db $F8, $0F, $08, $0F, $F8, $F1, $08, $F1 ; $3B86FC |
   db $4C, $0F, $09, $0A, $03, $34           ; $3B8704 |
 
-  JSR $EBD1                                 ; $3B870A |
+  JSR code_3FEBD1                           ; $3B870A |
   LDA $51                                   ; $3B870D |
   BEQ loc_76715                             ; $3B870F |
   CMP #$0D                                  ; $3B8711 |
   BNE loc_7671A                             ; $3B8713 |
 loc_76715:
   LDA #$D3                                  ; $3B8715 |
-  JSR $C9EF                                 ; $3B8717 |
+  JSR code_3EC9EF                           ; $3B8717 |
 loc_7671A:
-  JSR $EF0C                                 ; $3B871A |
+  JSR code_3FEF0C                           ; $3B871A |
+code_3B871D:
   LDA #$40                                  ; $3B871D |
   STA $05B1,x                               ; $3B871F |
 loc_76722:
-  JSR $E9D3                                 ; $3B8722 |
+  JSR code_3FE9D3                           ; $3B8722 |
   LDA #$5E                                  ; $3B8725 |
   STA $08                                   ; $3B8727 |
   LDA #$87                                  ; $3B8729 |
   STA $09                                   ; $3B872B |
   LDY #$00                                  ; $3B872D |
-  JSR $E61A                                 ; $3B872F |
-  JSR $EC11                                 ; $3B8732 |
+  JSR code_3FE61A                           ; $3B872F |
+  JSR code_3FEC11                           ; $3B8732 |
   LDA $12                                   ; $3B8735 |
   BNE loc_7673E                             ; $3B8737 |
   DEC $05B1,x                               ; $3B8739 |
   BNE loc_76722                             ; $3B873C |
 loc_7673E:
-  JSR $E9D3                                 ; $3B873E |
+  JSR code_3FE9D3                           ; $3B873E |
   LDY #$4D                                  ; $3B8741 |
-  JSR $E522                                 ; $3B8743 |
+  JSR code_3FE522                           ; $3B8743 |
   LDA #$14                                  ; $3B8746 |
   STA $05B1,x                               ; $3B8748 |
 loc_7674B:
-  JSR $E9D3                                 ; $3B874B |
+  JSR code_3FE9D3                           ; $3B874B |
   DEC $05B1,x                               ; $3B874E |
   BNE loc_7674B                             ; $3B8751 |
   LDY #$4C                                  ; $3B8753 |
-  JSR $E522                                 ; $3B8755 |
-  JSR $EF18                                 ; $3B8758 |
-  JMP $871D                                 ; $3B875B |
+  JSR code_3FE522                           ; $3B8755 |
+  JSR code_3FEF18                           ; $3B8758 |
+  JMP code_3B871D                           ; $3B875B |
 
   db $0A, $0A, $0A, $F6, $F6, $0A, $F6, $F6 ; $3B875E |
   db $0A, $0A, $0A, $0A, $F6, $F6, $F6, $F6 ; $3B8766 |
@@ -9516,33 +9733,33 @@ loc_76772:
   STA $069D                                 ; $3B878E |
   STA $069C                                 ; $3B8791 |
   STA $F1                                   ; $3B8794 |
-  JSR $C62B                                 ; $3B8796 |
-  JSR $C9BF                                 ; $3B8799 |
-  JSR $CA3D                                 ; $3B879C |
+  JSR code_3EC62B                           ; $3B8796 |
+  JSR code_3EC9BF                           ; $3B8799 |
+  JSR code_3ECA3D                           ; $3B879C |
   LDA #$01                                  ; $3B879F |
   STA $FB                                   ; $3B87A1 |
   LDA #$8F                                  ; $3B87A3 |
-  JSR $CB28                                 ; $3B87A5 |
+  JSR code_3ECB28                           ; $3B87A5 |
 
   db $00                                    ; $3B87A8 |
 
   LDA #$52                                  ; $3B87A9 |
-  JSR $C9EF                                 ; $3B87AB |
+  JSR code_3EC9EF                           ; $3B87AB |
   LDA #$9C                                  ; $3B87AE |
   STA $0C                                   ; $3B87B0 |
   LDA #$8D                                  ; $3B87B2 |
   STA $0D                                   ; $3B87B4 |
-  JSR $F254                                 ; $3B87B6 |
-  JSR $C62B                                 ; $3B87B9 |
-  JSR $E1DD                                 ; $3B87BC |
+  JSR code_3FF254                           ; $3B87B6 |
+  JSR code_3EC62B                           ; $3B87B9 |
+  JSR code_3FE1DD                           ; $3B87BC |
   LDA #$7B                                  ; $3B87BF |
-  JSR $CAA4                                 ; $3B87C1 |
+  JSR code_3ECAA4                           ; $3B87C1 |
   LDA #$DE                                  ; $3B87C4 |
-  JSR $CAA4                                 ; $3B87C6 |
-  JSR $CA89                                 ; $3B87C9 |
+  JSR code_3ECAA4                           ; $3B87C6 |
+  JSR code_3ECA89                           ; $3B87C9 |
   LDA #$B4                                  ; $3B87CC |
-  JSR $C5F6                                 ; $3B87CE |
-  JSR $CA3D                                 ; $3B87D1 |
+  JSR code_3EC5F6                           ; $3B87CE |
+  JSR code_3ECA3D                           ; $3B87D1 |
   LDA #$00                                  ; $3B87D4 |
   LDX #$16                                  ; $3B87D6 |
 loc_767D8:
@@ -9550,35 +9767,35 @@ loc_767D8:
   DEX                                       ; $3B87DB |
   BPL loc_767D8                             ; $3B87DC |
   LDA #$81                                  ; $3B87DE |
-  JSR $CAA4                                 ; $3B87E0 |
-  JSR $C9BF                                 ; $3B87E3 |
+  JSR code_3ECAA4                           ; $3B87E0 |
+  JSR code_3EC9BF                           ; $3B87E3 |
   LDA #$91                                  ; $3B87E6 |
-  JSR $CB28                                 ; $3B87E8 |
+  JSR code_3ECB28                           ; $3B87E8 |
 
   db $00                                    ; $3B87EB |
 
   LDA #$90                                  ; $3B87EC |
-  JSR $CB28                                 ; $3B87EE |
+  JSR code_3ECB28                           ; $3B87EE |
 
   db $00                                    ; $3B87F1 |
 
   LDA #$08                                  ; $3B87F2 |
   STA $F1                                   ; $3B87F4 |
   LDA #$90                                  ; $3B87F6 |
-  JSR $CB28                                 ; $3B87F8 |
+  JSR code_3ECB28                           ; $3B87F8 |
 
   db $00                                    ; $3B87FB |
 
   LDA #$D6                                  ; $3B87FC |
-  JSR $CAA4                                 ; $3B87FE |
+  JSR code_3ECAA4                           ; $3B87FE |
   LDA #$E4                                  ; $3B8801 |
-  JSR $C9EF                                 ; $3B8803 |
+  JSR code_3EC9EF                           ; $3B8803 |
   LDA #$02                                  ; $3B8806 |
   STA $06AC                                 ; $3B8808 |
   LDA #$F0                                  ; $3B880B |
-  JSR $C9EF                                 ; $3B880D |
+  JSR code_3EC9EF                           ; $3B880D |
   LDA #$74                                  ; $3B8810 |
-  JSR $CAA4                                 ; $3B8812 |
+  JSR code_3ECAA4                           ; $3B8812 |
   LDA #$24                                  ; $3B8815 |
   STA $0458                                 ; $3B8817 |
   LDA #$B0                                  ; $3B881A |
@@ -9589,85 +9806,85 @@ loc_767D8:
   LDX #$00                                  ; $3B8827 |
   STX $03B7                                 ; $3B8829 |
   LDY #$7E                                  ; $3B882C |
-  JSR $E522                                 ; $3B882E |
-  JSR $E1DD                                 ; $3B8831 |
-  JSR $CA89                                 ; $3B8834 |
+  JSR code_3FE522                           ; $3B882E |
+  JSR code_3FE1DD                           ; $3B8831 |
+  JSR code_3ECA89                           ; $3B8834 |
   LDA #$5E                                  ; $3B8837 |
   STA $05B1                                 ; $3B8839 |
 loc_7683C:
-  JSR $C62B                                 ; $3B883C |
-  JSR $E1DD                                 ; $3B883F |
+  JSR code_3EC62B                           ; $3B883C |
+  JSR code_3FE1DD                           ; $3B883F |
   DEC $05B1                                 ; $3B8842 |
   BNE loc_7683C                             ; $3B8845 |
   LDY #$7F                                  ; $3B8847 |
-  JSR $E522                                 ; $3B8849 |
+  JSR code_3FE522                           ; $3B8849 |
   LDA #$30                                  ; $3B884C |
   STA $05B1                                 ; $3B884E |
 loc_76851:
-  JSR $C62B                                 ; $3B8851 |
-  JSR $E1DD                                 ; $3B8854 |
+  JSR code_3EC62B                           ; $3B8851 |
+  JSR code_3FE1DD                           ; $3B8854 |
   DEC $05B1                                 ; $3B8857 |
   BNE loc_76851                             ; $3B885A |
   LDA #$EE                                  ; $3B885C |
-  JSR $C9EF                                 ; $3B885E |
+  JSR code_3EC9EF                           ; $3B885E |
   LDA #$00                                  ; $3B8861 |
   STA $03A0                                 ; $3B8863 |
   LDA #$57                                  ; $3B8866 |
   STA $DC                                   ; $3B8868 |
-  JSR $E1DD                                 ; $3B886A |
+  JSR code_3FE1DD                           ; $3B886A |
   LDA #$60                                  ; $3B886D |
-  JSR $C5F6                                 ; $3B886F |
+  JSR code_3EC5F6                           ; $3B886F |
   LDA #$F3                                  ; $3B8872 |
-  JSR $C9EF                                 ; $3B8874 |
+  JSR code_3EC9EF                           ; $3B8874 |
   LDA #$10                                  ; $3B8877 |
-  JSR $C5F6                                 ; $3B8879 |
+  JSR code_3EC5F6                           ; $3B8879 |
   LDA #$F2                                  ; $3B887C |
-  JSR $C9EF                                 ; $3B887E |
+  JSR code_3EC9EF                           ; $3B887E |
   LDA #$10                                  ; $3B8881 |
-  JSR $C5F6                                 ; $3B8883 |
+  JSR code_3EC5F6                           ; $3B8883 |
   LDA #$EF                                  ; $3B8886 |
-  JSR $C9EF                                 ; $3B8888 |
+  JSR code_3EC9EF                           ; $3B8888 |
   LDA #$40                                  ; $3B888B |
-  JSR $C5F6                                 ; $3B888D |
+  JSR code_3EC5F6                           ; $3B888D |
   LDA #$01                                  ; $3B8890 |
   STA $FA                                   ; $3B8892 |
-  JSR $C62B                                 ; $3B8894 |
+  JSR code_3EC62B                           ; $3B8894 |
   LDA #$27                                  ; $3B8897 |
   STA $06A6                                 ; $3B8899 |
   LDA #$08                                  ; $3B889C |
   STA $F1                                   ; $3B889E |
   STA $069F                                 ; $3B88A0 |
   LDA #$92                                  ; $3B88A3 |
-  JSR $CB28                                 ; $3B88A5 |
+  JSR code_3ECB28                           ; $3B88A5 |
 
   db $00                                    ; $3B88A8 |
 
   LDA #$93                                  ; $3B88A9 |
   STA $05B1                                 ; $3B88AB |
 loc_768AE:
-  JSR $8B94                                 ; $3B88AE |
+  JSR code_3B8B94                           ; $3B88AE |
   LDA #$08                                  ; $3B88B1 |
   STA $F1                                   ; $3B88B3 |
   LDA #$00                                  ; $3B88B5 |
   STA $069F                                 ; $3B88B7 |
   LDA #$97                                  ; $3B88BA |
-  JSR $CB28                                 ; $3B88BC |
+  JSR code_3ECB28                           ; $3B88BC |
 
   db $00                                    ; $3B88BF |
 
-  JSR $8B63                                 ; $3B88C0 |
+  JSR code_3B8B63                           ; $3B88C0 |
   LDA #$27                                  ; $3B88C3 |
   STA $06A6                                 ; $3B88C5 |
   LDA #$08                                  ; $3B88C8 |
   STA $F1                                   ; $3B88CA |
   STA $069F                                 ; $3B88CC |
   LDA $05B1                                 ; $3B88CF |
-  JSR $CB28                                 ; $3B88D2 |
+  JSR code_3ECB28                           ; $3B88D2 |
 
   db $00                                    ; $3B88D5 |
 
   LDA #$5A                                  ; $3B88D6 |
-  JSR $C5F6                                 ; $3B88D8 |
+  JSR code_3EC5F6                           ; $3B88D8 |
   INC $05B1                                 ; $3B88DB |
   LDA $05B1                                 ; $3B88DE |
   CMP #$97                                  ; $3B88E1 |
@@ -9675,59 +9892,60 @@ loc_768AE:
   LDA #$FF                                  ; $3B88E5 |
   STA $05B1                                 ; $3B88E7 |
 loc_768EA:
-  JSR $C62B                                 ; $3B88EA |
+  JSR code_3EC62B                           ; $3B88EA |
   DEC $05B1                                 ; $3B88ED |
   BNE loc_768EA                             ; $3B88F0 |
-  JSR $CA3D                                 ; $3B88F2 |
-  JSR $C9BF                                 ; $3B88F5 |
+  JSR code_3ECA3D                           ; $3B88F2 |
+  JSR code_3EC9BF                           ; $3B88F5 |
   LDA #$ED                                  ; $3B88F8 |
-  JSR $C9EF                                 ; $3B88FA |
+  JSR code_3EC9EF                           ; $3B88FA |
   LDA #$08                                  ; $3B88FD |
   STA $DC                                   ; $3B88FF |
   LDA #$D1                                  ; $3B8901 |
-  JSR $CAA4                                 ; $3B8903 |
+  JSR code_3ECAA4                           ; $3B8903 |
   LDA #$81                                  ; $3B8906 |
-  JSR $CAA4                                 ; $3B8908 |
-  JSR $C62B                                 ; $3B890B |
+  JSR code_3ECAA4                           ; $3B8908 |
+  JSR code_3EC62B                           ; $3B890B |
   LDA #$70                                  ; $3B890E |
-  JSR $CB28                                 ; $3B8910 |
+  JSR code_3ECB28                           ; $3B8910 |
 
   db $00                                    ; $3B8913 |
 
-  JSR $CA89                                 ; $3B8914 |
+  JSR code_3ECA89                           ; $3B8914 |
   LDA #$72                                  ; $3B8917 |
-  JSR $C5F6                                 ; $3B8919 |
+  JSR code_3EC5F6                           ; $3B8919 |
   LDA #$AD                                  ; $3B891C |
-  JSR $C5F6                                 ; $3B891E |
-  JSR $CA3D                                 ; $3B8921 |
+  JSR code_3EC5F6                           ; $3B891E |
+  JSR code_3ECA3D                           ; $3B8921 |
   LDA #$00                                  ; $3B8924 |
   STA $05B1                                 ; $3B8926 |
   STA $064F                                 ; $3B8929 |
   LDA #$71                                  ; $3B892C |
   STA $05C8                                 ; $3B892E |
   LDA #$01                                  ; $3B8931 |
-  JSR $C9EF                                 ; $3B8933 |
+  JSR code_3EC9EF                           ; $3B8933 |
+code_3B8936:
   LDY $05B1                                 ; $3B8936 |
   LDA $8BC2,y                               ; $3B8939 |
   STA $05B3                                 ; $3B893C |
-  JSR $C62B                                 ; $3B893F |
-  JSR $DBD7                                 ; $3B8942 |
+  JSR code_3EC62B                           ; $3B893F |
+  JSR code_3EDBD7                           ; $3B8942 |
   LDY $05B3                                 ; $3B8945 |
   LDA $8D10,y                               ; $3B8948 |
   STA $DC                                   ; $3B894B |
   LDA $8D28,y                               ; $3B894D |
   TAY                                       ; $3B8950 |
   LDX #$08                                  ; $3B8951 |
-  JSR $CB28                                 ; $3B8953 |
+  JSR code_3ECB28                           ; $3B8953 |
 
   db $41                                    ; $3B8956 |
 
-  JSR $C62B                                 ; $3B8957 |
+  JSR code_3EC62B                           ; $3B8957 |
   LDA #$01                                  ; $3B895A |
   STA $EF                                   ; $3B895C |
   LDY $05B3                                 ; $3B895E |
   LDA $8D40,y                               ; $3B8961 |
-  JSR $C9EF                                 ; $3B8964 |
+  JSR code_3EC9EF                           ; $3B8964 |
   LDY $05B3                                 ; $3B8967 |
   LDA $8D20,y                               ; $3B896A |
   STA $04CB                                 ; $3B896D |
@@ -9738,21 +9956,21 @@ loc_768EA:
   STA $0477                                 ; $3B897B |
   LDA #$B0                                  ; $3B897E |
   STA $048E                                 ; $3B8980 |
-  JSR $DC66                                 ; $3B8983 |
-  JSR $C62B                                 ; $3B8986 |
+  JSR code_3EDC66                           ; $3B8983 |
+  JSR code_3EC62B                           ; $3B8986 |
   LDY $05B3                                 ; $3B8989 |
   LDA $8D30,y                               ; $3B898C |
-  JSR $CAA4                                 ; $3B898F |
-  JSR $C62B                                 ; $3B8992 |
+  JSR code_3ECAA4                           ; $3B898F |
+  JSR code_3EC62B                           ; $3B8992 |
   LDA #$76                                  ; $3B8995 |
-  JSR $CAA4                                 ; $3B8997 |
-  JSR $C62B                                 ; $3B899A |
+  JSR code_3ECAA4                           ; $3B8997 |
+  JSR code_3EC62B                           ; $3B899A |
   LDY $05B3                                 ; $3B899D |
   LDA $8D38,y                               ; $3B89A0 |
-  JSR $CAA4                                 ; $3B89A3 |
+  JSR code_3ECAA4                           ; $3B89A3 |
   LDA #$08                                  ; $3B89A6 |
-  JSR $C5F6                                 ; $3B89A8 |
-  JSR $CA89                                 ; $3B89AB |
+  JSR code_3EC5F6                           ; $3B89A8 |
+  JSR code_3ECA89                           ; $3B89AB |
   LDY $05B3                                 ; $3B89AE |
   LDA $8D00,y                               ; $3B89B1 |
   STA $060D                                 ; $3B89B4 |
@@ -9771,14 +9989,14 @@ loc_769BD:
   LDA #$10                                  ; $3B89D0 |
   STA $0486                                 ; $3B89D2 |
 loc_769D5:
-  JSR $C62B                                 ; $3B89D5 |
-  JSR $E41C                                 ; $3B89D8 |
-  JSR $E1DD                                 ; $3B89DB |
+  JSR code_3EC62B                           ; $3B89D5 |
+  JSR code_3FE41C                           ; $3B89D8 |
+  JSR code_3FE1DD                           ; $3B89DB |
   DEC $060D                                 ; $3B89DE |
   BNE loc_769BD                             ; $3B89E1 |
   DEC $0624                                 ; $3B89E3 |
   BNE loc_769BD                             ; $3B89E6 |
-  JSR $CA3D                                 ; $3B89E8 |
+  JSR code_3ECA3D                           ; $3B89E8 |
   LDA #$64                                  ; $3B89EB |
   STA $DC                                   ; $3B89ED |
   LDA #$80                                  ; $3B89EF |
@@ -9796,46 +10014,46 @@ loc_76A02:
   LDA #$01                                  ; $3B8A08 |
   STA $03A0                                 ; $3B8A0A |
   LDA #$ED                                  ; $3B8A0D |
-  JSR $C9EF                                 ; $3B8A0F |
-  JSR $C9BF                                 ; $3B8A12 |
-  JSR $8CB1                                 ; $3B8A15 |
-  JSR $E1E1                                 ; $3B8A18 |
+  JSR code_3EC9EF                           ; $3B8A0F |
+  JSR code_3EC9BF                           ; $3B8A12 |
+  JSR code_3B8CB1                           ; $3B8A15 |
+  JSR code_3FE1E1                           ; $3B8A18 |
   LDA #$00                                  ; $3B8A1B |
   STA $069F                                 ; $3B8A1D |
   LDA #$00                                  ; $3B8A20 |
   STA $F1                                   ; $3B8A22 |
   LDA #$A7                                  ; $3B8A24 |
-  JSR $CB28                                 ; $3B8A26 |
+  JSR code_3ECB28                           ; $3B8A26 |
 
   db $00                                    ; $3B8A29 |
 
   LDX #$19                                  ; $3B8A2A |
-  JSR $C5C7                                 ; $3B8A2C |
+  JSR code_3EC5C7                           ; $3B8A2C |
   LDA #$8A                                  ; $3B8A2F |
-  JSR $CAA4                                 ; $3B8A31 |
-  JSR $CA89                                 ; $3B8A34 |
+  JSR code_3ECAA4                           ; $3B8A31 |
+  JSR code_3ECA89                           ; $3B8A34 |
   LDA #$70                                  ; $3B8A37 |
   STA $0624                                 ; $3B8A39 |
 loc_76A3C:
-  JSR $C62B                                 ; $3B8A3C |
+  JSR code_3EC62B                           ; $3B8A3C |
   DEC $0624                                 ; $3B8A3F |
   BNE loc_76A3C                             ; $3B8A42 |
   LDX #$00                                  ; $3B8A44 |
   LDY $05B3                                 ; $3B8A46 |
   LDA $F1FC,y                               ; $3B8A49 |
   TAY                                       ; $3B8A4C |
-  JSR $E522                                 ; $3B8A4D |
+  JSR code_3FE522                           ; $3B8A4D |
   LDA #$01                                  ; $3B8A50 |
   STA $069F                                 ; $3B8A52 |
   LDA $05C8                                 ; $3B8A55 |
-  JSR $CB28                                 ; $3B8A58 |
+  JSR code_3ECB28                           ; $3B8A58 |
 
   db $00                                    ; $3B8A5B |
 
   INC $05C8                                 ; $3B8A5C |
   LDA $05C8                                 ; $3B8A5F |
   STA $069F                                 ; $3B8A62 |
-  JSR $CB28                                 ; $3B8A65 |
+  JSR code_3ECB28                           ; $3B8A65 |
 
   db $00                                    ; $3B8A68 |
 
@@ -9843,61 +10061,61 @@ loc_76A3C:
   LDA #$B4                                  ; $3B8A6C |
   STA $0624                                 ; $3B8A6E |
 loc_76A71:
-  JSR $C62B                                 ; $3B8A71 |
+  JSR code_3EC62B                           ; $3B8A71 |
   DEC $0624                                 ; $3B8A74 |
   BNE loc_76A71                             ; $3B8A77 |
-  JSR $CA3D                                 ; $3B8A79 |
+  JSR code_3ECA3D                           ; $3B8A79 |
   LDY #$02                                  ; $3B8A7C |
-  JSR $C5F0                                 ; $3B8A7E |
+  JSR code_3EC5F0                           ; $3B8A7E |
   INC $05B1                                 ; $3B8A81 |
   LDA $05B1                                 ; $3B8A84 |
   AND #$07                                  ; $3B8A87 |
   STA $05B1                                 ; $3B8A89 |
   BEQ loc_76A91                             ; $3B8A8C |
-  JMP $8936                                 ; $3B8A8E |
+  JMP code_3B8936                           ; $3B8A8E |
 
 loc_76A91:
-  JSR $C9BF                                 ; $3B8A91 |
+  JSR code_3EC9BF                           ; $3B8A91 |
   LDA #$00                                  ; $3B8A94 |
   STA $F1                                   ; $3B8A96 |
   STA $03A0                                 ; $3B8A98 |
   LDA #$01                                  ; $3B8A9B |
   STA $FB                                   ; $3B8A9D |
-  JSR $E1DD                                 ; $3B8A9F |
-  JSR $C62B                                 ; $3B8AA2 |
+  JSR code_3FE1DD                           ; $3B8A9F |
+  JSR code_3EC62B                           ; $3B8AA2 |
   LDX #$00                                  ; $3B8AA5 |
   STX $00                                   ; $3B8AA7 |
   LDY #$17                                  ; $3B8AA9 |
   LDA #$07                                  ; $3B8AAB |
   STA $01                                   ; $3B8AAD |
-  JSR $8C91                                 ; $3B8AAF |
+  JSR code_3B8C91                           ; $3B8AAF |
   LDA #$07                                  ; $3B8AB2 |
   STA $01                                   ; $3B8AB4 |
-  JSR $8C91                                 ; $3B8AB6 |
+  JSR code_3B8C91                           ; $3B8AB6 |
   LDA #$01                                  ; $3B8AB9 |
   STA $00                                   ; $3B8ABB |
   LDA #$07                                  ; $3B8ABD |
   STA $01                                   ; $3B8ABF |
-  JSR $8C91                                 ; $3B8AC1 |
-  JSR $C62B                                 ; $3B8AC4 |
+  JSR code_3B8C91                           ; $3B8AC1 |
+  JSR code_3EC62B                           ; $3B8AC4 |
   LDA #$08                                  ; $3B8AC7 |
   STA $F1                                   ; $3B8AC9 |
   LDA #$81                                  ; $3B8ACB |
   STA $05B1                                 ; $3B8ACD |
-  JSR $CB28                                 ; $3B8AD0 |
+  JSR code_3ECB28                           ; $3B8AD0 |
 
   db $00                                    ; $3B8AD3 |
 
   LDA #$20                                  ; $3B8AD4 |
-  JSR $C5F6                                 ; $3B8AD6 |
+  JSR code_3EC5F6                           ; $3B8AD6 |
   LDA #$0A                                  ; $3B8AD9 |
   STA $DC                                   ; $3B8ADB |
   LDA #$81                                  ; $3B8ADD |
-  JSR $CAA4                                 ; $3B8ADF |
+  JSR code_3ECAA4                           ; $3B8ADF |
   LDA #$D1                                  ; $3B8AE2 |
-  JSR $CAA4                                 ; $3B8AE4 |
+  JSR code_3ECAA4                           ; $3B8AE4 |
   LDX #$15                                  ; $3B8AE7 |
-  JSR $C5C7                                 ; $3B8AE9 |
+  JSR code_3EC5C7                           ; $3B8AE9 |
   LDA #$00                                  ; $3B8AEC |
   STA $F7                                   ; $3B8AEE |
   STA $F7                                   ; $3B8AF0 |
@@ -9905,18 +10123,19 @@ loc_76A91:
   STA $FA                                   ; $3B8AF4 |
   STA $05C8                                 ; $3B8AF6 |
   STA $069F                                 ; $3B8AF9 |
-  JSR $CA89                                 ; $3B8AFC |
+  JSR code_3ECA89                           ; $3B8AFC |
   LDA #$ED                                  ; $3B8AFF |
-  JSR $C9EF                                 ; $3B8B01 |
-  JSR $C62B                                 ; $3B8B04 |
+  JSR code_3EC9EF                           ; $3B8B01 |
+  JSR code_3EC62B                           ; $3B8B04 |
   LDA #$00                                  ; $3B8B07 |
   STA $0624                                 ; $3B8B09 |
 loc_76B0C:
-  JSR $C62B                                 ; $3B8B0C |
+code_3B8B0C:
+  JSR code_3EC62B                           ; $3B8B0C |
   LDA $FA                                   ; $3B8B0F |
   CMP $05C8                                 ; $3B8B11 |
   BEQ loc_76B0C                             ; $3B8B14 |
-  JSR $C62B                                 ; $3B8B16 |
+  JSR code_3EC62B                           ; $3B8B16 |
   LDA $F1                                   ; $3B8B19 |
   EOR #$08                                  ; $3B8B1B |
   STA $F1                                   ; $3B8B1D |
@@ -9925,11 +10144,11 @@ loc_76B0C:
   LDA $05B1                                 ; $3B8B25 |
   CMP #$88                                  ; $3B8B28 |
   BEQ loc_76B33                             ; $3B8B2A |
-  JSR $CB28                                 ; $3B8B2C |
+  JSR code_3ECB28                           ; $3B8B2C |
 
   db $00                                    ; $3B8B2F |
 
-  JMP $8B0C                                 ; $3B8B30 |
+  JMP code_3B8B0C                           ; $3B8B30 |
 
 loc_76B33:
   LDA $F1                                   ; $3B8B33 |
@@ -9937,68 +10156,71 @@ loc_76B33:
   STA $F1                                   ; $3B8B37 |
   INC $0624                                 ; $3B8B39 |
   LDA #$F6                                  ; $3B8B3C |
-  JSR $C9EF                                 ; $3B8B3E |
+  JSR code_3EC9EF                           ; $3B8B3E |
   LDA #$3C                                  ; $3B8B41 |
-  JSR $C5F6                                 ; $3B8B43 |
+  JSR code_3EC5F6                           ; $3B8B43 |
   LDA #$04                                  ; $3B8B46 |
   STA $06AC                                 ; $3B8B48 |
   LDA #$88                                  ; $3B8B4B |
   STA $069F                                 ; $3B8B4D |
-  JSR $CB28                                 ; $3B8B50 |
+  JSR code_3ECB28                           ; $3B8B50 |
 
   db $00                                    ; $3B8B53 |
 
-  JSR $C62B                                 ; $3B8B54 |
+  JSR code_3EC62B                           ; $3B8B54 |
 loc_76B57:
-  JSR $C62B                                 ; $3B8B57 |
+  JSR code_3EC62B                           ; $3B8B57 |
   LDA $40                                   ; $3B8B5A |
   AND #$10                                  ; $3B8B5C |
   BEQ loc_76B57                             ; $3B8B5E |
-  JMP $FF70                                 ; $3B8B60 |
+  JMP code_3FFF70                           ; $3B8B60 |
 
+code_3B8B63:
   LDA #$30                                  ; $3B8B63 |
   STA $49                                   ; $3B8B65 |
   LDA #$F1                                  ; $3B8B67 |
-  JSR $C9EF                                 ; $3B8B69 |
-  JSR $DEA3                                 ; $3B8B6C |
-  JSR $E0D6                                 ; $3B8B6F |
+  JSR code_3EC9EF                           ; $3B8B69 |
+  JSR code_3EDEA3                           ; $3B8B6C |
+  JSR code_3FE0D6                           ; $3B8B6F |
   LDA #$F1                                  ; $3B8B72 |
-  JSR $C9EF                                 ; $3B8B74 |
-  JSR $DEA3                                 ; $3B8B77 |
-  JSR $E0D6                                 ; $3B8B7A |
+  JSR code_3EC9EF                           ; $3B8B74 |
+  JSR code_3EDEA3                           ; $3B8B77 |
+  JSR code_3FE0D6                           ; $3B8B7A |
   LDA #$F1                                  ; $3B8B7D |
-  JSR $C9EF                                 ; $3B8B7F |
-  JSR $DEA3                                 ; $3B8B82 |
-  JSR $E0D6                                 ; $3B8B85 |
+  JSR code_3EC9EF                           ; $3B8B7F |
+  JSR code_3EDEA3                           ; $3B8B82 |
+  JSR code_3FE0D6                           ; $3B8B85 |
   LDA #$F1                                  ; $3B8B88 |
-  JSR $C9EF                                 ; $3B8B8A |
-  JSR $DEA3                                 ; $3B8B8D |
-  JSR $E0D6                                 ; $3B8B90 |
+  JSR code_3EC9EF                           ; $3B8B8A |
+  JSR code_3EDEA3                           ; $3B8B8D |
+  JSR code_3FE0D6                           ; $3B8B90 |
   RTS                                       ; $3B8B93 |
 
+code_3B8B94:
   LDA #$3C                                  ; $3B8B94 |
-  JSR $C5F6                                 ; $3B8B96 |
+  JSR code_3EC5F6                           ; $3B8B96 |
   LDX #$03                                  ; $3B8B99 |
-  JSR $CA59                                 ; $3B8B9B |
+  JSR code_3ECA59                           ; $3B8B9B |
   LDA #$10                                  ; $3B8B9E |
-  JSR $C5F6                                 ; $3B8BA0 |
+  JSR code_3EC5F6                           ; $3B8BA0 |
   LDX #$03                                  ; $3B8BA3 |
-  JSR $CA59                                 ; $3B8BA5 |
+  JSR code_3ECA59                           ; $3B8BA5 |
   LDA #$10                                  ; $3B8BA8 |
-  JSR $C5F6                                 ; $3B8BAA |
+  JSR code_3EC5F6                           ; $3B8BAA |
   LDX #$03                                  ; $3B8BAD |
-  JSR $CA59                                 ; $3B8BAF |
+  JSR code_3ECA59                           ; $3B8BAF |
   LDA #$10                                  ; $3B8BB2 |
-  JSR $C5F6                                 ; $3B8BB4 |
+  JSR code_3EC5F6                           ; $3B8BB4 |
   LDX #$03                                  ; $3B8BB7 |
-  JSR $CA59                                 ; $3B8BB9 |
+  JSR code_3ECA59                           ; $3B8BB9 |
   LDA #$10                                  ; $3B8BBC |
-  JSR $C5F6                                 ; $3B8BBE |
+  JSR code_3EC5F6                           ; $3B8BBE |
   RTS                                       ; $3B8BC1 |
 
   db $00, $07, $03, $06, $02, $05, $01, $04 ; $3B8BC2 |
 
-  JSR $C62B                                 ; $3B8BCA |
+code_3B8BCA:
+  JSR code_3EC62B                           ; $3B8BCA |
   LDA $0624                                 ; $3B8BCD |
   BNE loc_76BE9                             ; $3B8BD0 |
   LDA $F3                                   ; $3B8BD2 |
@@ -10016,17 +10238,18 @@ loc_76B57:
 loc_76BE9:
   LDX #$00                                  ; $3B8BE9 |
   LDA #$01                                  ; $3B8BEB |
-  JSR $8C7C                                 ; $3B8BED |
+  JSR code_3B8C7C                           ; $3B8BED |
   LDA #$02                                  ; $3B8BF0 |
-  JSR $8C7C                                 ; $3B8BF2 |
+  JSR code_3B8C7C                           ; $3B8BF2 |
   LDA #$03                                  ; $3B8BF5 |
-  JSR $8C7C                                 ; $3B8BF7 |
+  JSR code_3B8C7C                           ; $3B8BF7 |
   STX $8C                                   ; $3B8BFA |
-  JSR $E1E1                                 ; $3B8BFC |
-  JSR $E41C                                 ; $3B8BFF |
-  JMP $8BCA                                 ; $3B8C02 |
+  JSR code_3FE1E1                           ; $3B8BFC |
+  JSR code_3FE41C                           ; $3B8BFF |
+  JMP code_3B8BCA                           ; $3B8C02 |
 
-  JSR $C62B                                 ; $3B8C05 |
+code_3B8C05:
+  JSR code_3EC62B                           ; $3B8C05 |
   LDX #$00                                  ; $3B8C08 |
   LDY #$08                                  ; $3B8C0A |
 loc_76C0C:
@@ -10067,7 +10290,7 @@ loc_76C1E:
   STA $05C9                                 ; $3B8C4B |
   LDA $0B                                   ; $3B8C4E |
   STA $05E0                                 ; $3B8C50 |
-  JSR $E1E1                                 ; $3B8C53 |
+  JSR code_3FE1E1                           ; $3B8C53 |
   LDA $05DF                                 ; $3B8C56 |
   STA $00                                   ; $3B8C59 |
   LDA $05F6                                 ; $3B8C5B |
@@ -10082,8 +10305,9 @@ loc_76C1E:
   STA $0A                                   ; $3B8C72 |
   LDA $05E0                                 ; $3B8C74 |
   STA $0B                                   ; $3B8C77 |
-  JMP $8C05                                 ; $3B8C79 |
+  JMP code_3B8C05                           ; $3B8C79 |
 
+code_3B8C7C:
   STA $00                                   ; $3B8C7C |
   LDY #$07                                  ; $3B8C7E |
 loc_76C80:
@@ -10100,6 +10324,7 @@ loc_76C80:
   RTS                                       ; $3B8C90 |
 
 loc_76C91:
+code_3B8C91:
   LDA $8D84,y                               ; $3B8C91 |
   STA $0200,x                               ; $3B8C94 |
   LDA $00                                   ; $3B8C97 |
@@ -10117,6 +10342,7 @@ loc_76C91:
   BPL loc_76C91                             ; $3B8CAE |
   RTS                                       ; $3B8CB0 |
 
+code_3B8CB1:
   LDX #$00                                  ; $3B8CB1 |
   LDY #$08                                  ; $3B8CB3 |
 loc_76CB5:
@@ -10155,7 +10381,7 @@ loc_76CD4:
   LDY $05B3                                 ; $3B8CF5 |
   LDA $F204,y                               ; $3B8CF8 |
   TAY                                       ; $3B8CFB |
-  JSR $E522                                 ; $3B8CFC |
+  JSR code_3FE522                           ; $3B8CFC |
   RTS                                       ; $3B8CFF |
 
   db $27, $B3, $B6, $09, $27, $2B, $99, $C4 ; $3B8D00 |
@@ -10181,11 +10407,11 @@ loc_76CD4:
   db $96, $C6, $89, $6F, $C7, $85, $87, $C8 ; $3B8DA0 |
   db $00, $64, $00, $00, $01, $00, $00      ; $3B8DA8 |
 
-  JSR $EBD1                                 ; $3B8DAF |
+  JSR code_3FEBD1                           ; $3B8DAF |
   LDA $05C8,x                               ; $3B8DB2 |
   BMI loc_76DBC                             ; $3B8DB5 |
   LDY #$65                                  ; $3B8DB7 |
-  JSR $E522                                 ; $3B8DB9 |
+  JSR code_3FE522                           ; $3B8DB9 |
 loc_76DBC:
   LDA #$00                                  ; $3B8DBC |
   STA $060D,x                               ; $3B8DBE |
@@ -10193,70 +10419,72 @@ loc_76DBC:
   STA $0624,x                               ; $3B8DC3 |
   LDA #$0C                                  ; $3B8DC6 |
   STA $03CE,x                               ; $3B8DC8 |
+code_3B8DCB:
   LDA $05C8,x                               ; $3B8DCB |
   STA $ED                                   ; $3B8DCE |
   LDA #$00                                  ; $3B8DD0 |
   STA $EB                                   ; $3B8DD2 |
   LDY #$03                                  ; $3B8DD4 |
-  JSR $EE9A                                 ; $3B8DD6 |
-  JSR $E4D1                                 ; $3B8DD9 |
-  JSR $EA6A                                 ; $3B8DDC |
-  JMP $8DCB                                 ; $3B8DDF |
+  JSR code_3FEE9A                           ; $3B8DD6 |
+  JSR code_3FE4D1                           ; $3B8DD9 |
+  JSR code_3FEA6A                           ; $3B8DDC |
+  JMP code_3B8DCB                           ; $3B8DDF |
 
   LDA #$01                                  ; $3B8DE2 |
   STA $70                                   ; $3B8DE4 |
   LDY #$17                                  ; $3B8DE6 |
-  JSR $E522                                 ; $3B8DE8 |
+  JSR code_3FE522                           ; $3B8DE8 |
   LDY #$00                                  ; $3B8DEB |
-  JSR $E4A7                                 ; $3B8DED |
+  JSR code_3FE4A7                           ; $3B8DED |
   LDA $57                                   ; $3B8DF0 |
   STA $046F                                 ; $3B8DF2 |
   LDA #$34                                  ; $3B8DF5 |
   STA $05B1,x                               ; $3B8DF7 |
 loc_76DFA:
-  JSR $E468                                 ; $3B8DFA |
+  JSR code_3FE468                           ; $3B8DFA |
   DEC $05B1,x                               ; $3B8DFD |
   BNE loc_76DFA                             ; $3B8E00 |
   LDA #$10                                  ; $3B8E02 |
   STA $04CB                                 ; $3B8E04 |
-  JSR $E468                                 ; $3B8E07 |
-  JMP $E037                                 ; $3B8E0A |
+  JSR code_3FE468                           ; $3B8E07 |
+  JMP code_3FE037                           ; $3B8E0A |
 
   LDA #$03                                  ; $3B8E0D |
   LDY #$00                                  ; $3B8E0F |
-  JSR $E8FD                                 ; $3B8E11 |
+  JSR code_3FE8FD                           ; $3B8E11 |
   LDY #$0B                                  ; $3B8E14 |
-  JSR $E522                                 ; $3B8E16 |
+  JSR code_3FE522                           ; $3B8E16 |
   LDA #$18                                  ; $3B8E19 |
   STA $05B1,x                               ; $3B8E1B |
 loc_76E1E:
-  JSR $E468                                 ; $3B8E1E |
+  JSR code_3FE468                           ; $3B8E1E |
   DEC $05B1,x                               ; $3B8E21 |
   BNE loc_76E1E                             ; $3B8E24 |
-  JMP $E456                                 ; $3B8E26 |
+  JMP code_3FE456                           ; $3B8E26 |
 
   LDA $F3                                   ; $3B8E29 |
   CMP $05DF,x                               ; $3B8E2B |
   BNE loc_76E33                             ; $3B8E2E |
-  JSR $E468                                 ; $3B8E30 |
+  JSR code_3FE468                           ; $3B8E30 |
 loc_76E33:
   LDY #$09                                  ; $3B8E33 |
-  JSR $E522                                 ; $3B8E35 |
+  JSR code_3FE522                           ; $3B8E35 |
   LDA #$80                                  ; $3B8E38 |
   STA $05B1,x                               ; $3B8E3A |
+code_3B8E3D:
   LDA $05C8,x                               ; $3B8E3D |
   TAY                                       ; $3B8E40 |
-  JSR $E60E                                 ; $3B8E41 |
-  JSR $E485                                 ; $3B8E44 |
+  JSR code_3FE60E                           ; $3B8E41 |
+  JSR code_3FE485                           ; $3B8E44 |
   BCS loc_76E4F                             ; $3B8E47 |
-  JSR $E468                                 ; $3B8E49 |
-  JMP $8E3D                                 ; $3B8E4C |
+  JSR code_3FE468                           ; $3B8E49 |
+  JMP code_3B8E3D                           ; $3B8E4C |
 
 loc_76E4F:
-  JMP $E456                                 ; $3B8E4F |
+  JMP code_3FE456                           ; $3B8E4F |
 
   LDY #$0D                                  ; $3B8E52 |
-  JSR $E522                                 ; $3B8E54 |
+  JSR code_3FE522                           ; $3B8E54 |
   LDA $94                                   ; $3B8E57 |
   CMP #$03                                  ; $3B8E59 |
   BNE loc_76E79                             ; $3B8E5B |
@@ -10267,9 +10495,9 @@ loc_76E4F:
   STA $05B1,x                               ; $3B8E67 |
   LDY #$00                                  ; $3B8E6A |
   LDA #$03                                  ; $3B8E6C |
-  JSR $E8FD                                 ; $3B8E6E |
+  JSR code_3FE8FD                           ; $3B8E6E |
 loc_76E71:
-  JSR $E468                                 ; $3B8E71 |
+  JSR code_3FE468                           ; $3B8E71 |
   DEC $05B1,x                               ; $3B8E74 |
   BNE loc_76E71                             ; $3B8E77 |
 loc_76E79:
@@ -10279,12 +10507,12 @@ loc_76E79:
 
   db $63, $00, $00, $05, $00, $14           ; $3B8E7F |
 
-  JSR $EBD1                                 ; $3B8E85 |
+  JSR code_3FEBD1                           ; $3B8E85 |
   LDA #$05                                  ; $3B8E88 |
   STA $08                                   ; $3B8E8A |
   LDA #$8F                                  ; $3B8E8C |
   STA $09                                   ; $3B8E8E |
-  JSR $CC54                                 ; $3B8E90 |
+  JSR code_3ECC54                           ; $3B8E90 |
   CPY $05FE                                 ; $3B8E93 |
   BNE loc_76E9D                             ; $3B8E96 |
   INY                                       ; $3B8E98 |
@@ -10300,7 +10528,7 @@ loc_76E9D:
   LDA $57                                   ; $3B8EAB |
   STA $046F,x                               ; $3B8EAD |
 loc_76EB0:
-  JSR $E468                                 ; $3B8EB0 |
+  JSR code_3FE468                           ; $3B8EB0 |
   LDA $056C,x                               ; $3B8EB3 |
   BNE loc_76ECF                             ; $3B8EB6 |
   LDA #$7A                                  ; $3B8EB8 |
@@ -10310,44 +10538,44 @@ loc_76EB0:
   LDA #$00                                  ; $3B8EC0 |
   STA $ED                                   ; $3B8EC2 |
   STA $EB                                   ; $3B8EC4 |
-  JSR $EC0A                                 ; $3B8EC6 |
+  JSR code_3FEC0A                           ; $3B8EC6 |
   LDA $11                                   ; $3B8EC9 |
   AND #$01                                  ; $3B8ECB |
   BEQ loc_76EB0                             ; $3B8ECD |
 loc_76ECF:
   LDY #$EE                                  ; $3B8ECF |
-  JSR $E5AB                                 ; $3B8ED1 |
+  JSR code_3FE5AB                           ; $3B8ED1 |
   BCS loc_76EF5                             ; $3B8ED4 |
   LDY $8F                                   ; $3B8ED6 |
   LDA #$03                                  ; $3B8ED8 |
-  JSR $E8FD                                 ; $3B8EDA |
+  JSR code_3FE8FD                           ; $3B8EDA |
   LDA #$01                                  ; $3B8EDD |
   STA $05C8,x                               ; $3B8EDF |
   LDY #$EE                                  ; $3B8EE2 |
-  JSR $E5AB                                 ; $3B8EE4 |
+  JSR code_3FE5AB                           ; $3B8EE4 |
   BCS loc_76EF5                             ; $3B8EE7 |
   LDY $8F                                   ; $3B8EE9 |
   LDA #$03                                  ; $3B8EEB |
-  JSR $E8FD                                 ; $3B8EED |
+  JSR code_3FE8FD                           ; $3B8EED |
   LDA #$FF                                  ; $3B8EF0 |
   STA $05C8,x                               ; $3B8EF2 |
 loc_76EF5:
   LDX $8F                                   ; $3B8EF5 |
   LDY #$25                                  ; $3B8EF7 |
-  JSR $CB28                                 ; $3B8EF9 |
+  JSR code_3ECB28                           ; $3B8EF9 |
 
   db $41                                    ; $3B8EFC |
 
   LDA #$42                                  ; $3B8EFD |
   STA $05DF,x                               ; $3B8EFF |
-  JMP $E477                                 ; $3B8F02 |
+  JMP code_3FE477                           ; $3B8F02 |
 
   db $2F, $38, $38, $30, $30, $30, $50, $70 ; $3B8F05 |
   db $90, $B0, $54, $00, $00, $05, $00, $43 ; $3B8F0D |
 
-  JSR $EBD1                                 ; $3B8F15 |
+  JSR code_3FEBD1                           ; $3B8F15 |
   LDY #$00                                  ; $3B8F18 |
-  JSR $F8AE                                 ; $3B8F1A |
+  JSR code_3FF8AE                           ; $3B8F1A |
   LDA $11                                   ; $3B8F1D |
   STA $03CE,x                               ; $3B8F1F |
   LDA $9B                                   ; $3B8F22 |
@@ -10357,119 +10585,121 @@ loc_76EF5:
   STA $08                                   ; $3B8F2A |
   LDA #$8F                                  ; $3B8F2C |
   STA $09                                   ; $3B8F2E |
-  JSR $CC54                                 ; $3B8F30 |
+  JSR code_3ECC54                           ; $3B8F30 |
   LDA $8F77,y                               ; $3B8F33 |
   CLC                                       ; $3B8F36 |
   ADC $03CE,x                               ; $3B8F37 |
   AND #$0F                                  ; $3B8F3A |
   STA $03CE,x                               ; $3B8F3C |
 loc_76F3F:
+code_3B8F3F:
   LDA #$7A                                  ; $3B8F3F |
   STA $08                                   ; $3B8F41 |
   LDA #$8F                                  ; $3B8F43 |
   STA $09                                   ; $3B8F45 |
   LDY #$08                                  ; $3B8F47 |
-  JSR $E614                                 ; $3B8F49 |
+  JSR code_3FE614                           ; $3B8F49 |
   LDA $11                                   ; $3B8F4C |
   BNE loc_76F5A                             ; $3B8F4E |
   LDA $12                                   ; $3B8F50 |
   BNE loc_76F71                             ; $3B8F52 |
-  JSR $E9D3                                 ; $3B8F54 |
-  JMP $8F3F                                 ; $3B8F57 |
+  JSR code_3FE9D3                           ; $3B8F54 |
+  JMP code_3B8F3F                           ; $3B8F57 |
 
 loc_76F5A:
   LDA $04CB,x                               ; $3B8F5A |
   BPL loc_76F71                             ; $3B8F5D |
   LDY #$55                                  ; $3B8F5F |
-  JSR $E522                                 ; $3B8F61 |
+  JSR code_3FE522                           ; $3B8F61 |
   LDA #$27                                  ; $3B8F64 |
   STA $05B1,x                               ; $3B8F66 |
 loc_76F69:
-  JSR $E9D3                                 ; $3B8F69 |
+  JSR code_3FE9D3                           ; $3B8F69 |
   DEC $05B1,x                               ; $3B8F6C |
   BNE loc_76F69                             ; $3B8F6F |
 loc_76F71:
-  JMP $E456                                 ; $3B8F71 |
+  JMP code_3FE456                           ; $3B8F71 |
 
   db $6F, $48, $48, $00, $01, $FF, $08, $00 ; $3B8F74 |
   db $08, $00, $F9, $00, $F9, $00, $F9, $08 ; $3B8F7C |
   db $08, $08, $F9, $F8, $08, $F8, $61, $00 ; $3B8F84 |
   db $00, $05, $00, $13                     ; $3B8F8C |
 
-  JSR $EBD1                                 ; $3B8F90 |
+  JSR code_3FEBD1                           ; $3B8F90 |
   LDA #$0C                                  ; $3B8F93 |
   STA $03CE,x                               ; $3B8F95 |
   LDA #$00                                  ; $3B8F98 |
   STA $060D,x                               ; $3B8F9A |
   STA $0624,x                               ; $3B8F9D |
 loc_76FA0:
-  JSR $E9D3                                 ; $3B8FA0 |
+  JSR code_3FE9D3                           ; $3B8FA0 |
   LDA #$FE                                  ; $3B8FA3 |
   STA $ED                                   ; $3B8FA5 |
   LDA #$80                                  ; $3B8FA7 |
   STA $EB                                   ; $3B8FA9 |
   LDY #$00                                  ; $3B8FAB |
-  JSR $EE9A                                 ; $3B8FAD |
-  JSR $E4D1                                 ; $3B8FB0 |
+  JSR code_3FEE9A                           ; $3B8FAD |
+  JSR code_3FE4D1                           ; $3B8FB0 |
   LDA $04CB,x                               ; $3B8FB3 |
   CMP #$B8                                  ; $3B8FB6 |
   BCC loc_76FA0                             ; $3B8FB8 |
   LDY #$25                                  ; $3B8FBA |
-  JSR $CB28                                 ; $3B8FBC |
+  JSR code_3ECB28                           ; $3B8FBC |
 
   db $41                                    ; $3B8FBF |
 
   LDA #$43                                  ; $3B8FC0 |
   STA $05DF,x                               ; $3B8FC2 |
-  JMP $E477                                 ; $3B8FC5 |
+  JMP code_3FE477                           ; $3B8FC5 |
 
   db $99, $00, $00, $0B, $1B, $42           ; $3B8FC8 |
 
-  JSR $EBD1                                 ; $3B8FCE |
+  JSR code_3FEBD1                           ; $3B8FCE |
   LDA $03CE,x                               ; $3B8FD1 |
   CMP #$08                                  ; $3B8FD4 |
   BNE loc_77009                             ; $3B8FD6 |
 loc_76FD8:
-  JSR $E468                                 ; $3B8FD8 |
+  JSR code_3FE468                           ; $3B8FD8 |
   LDY #$00                                  ; $3B8FDB |
-  JSR $E60E                                 ; $3B8FDD |
+  JSR code_3FE60E                           ; $3B8FDD |
   LDA #$00                                  ; $3B8FE0 |
   STA $11                                   ; $3B8FE2 |
   STA $00                                   ; $3B8FE4 |
   LDA #$0A                                  ; $3B8FE6 |
   STA $01                                   ; $3B8FE8 |
-  JSR $D9CD                                 ; $3B8FEA |
+  JSR code_3ED9CD                           ; $3B8FEA |
   LDA $11                                   ; $3B8FED |
   BEQ loc_76FD8                             ; $3B8FEF |
   LDA #$0C                                  ; $3B8FF1 |
   STA $03CE,x                               ; $3B8FF3 |
   LDY #$D4                                  ; $3B8FF6 |
-  JSR $E5AB                                 ; $3B8FF8 |
+  JSR code_3FE5AB                           ; $3B8FF8 |
   BCS loc_77009                             ; $3B8FFB |
   LDA #$04                                  ; $3B8FFD |
   STA $03CE,x                               ; $3B8FFF |
   LDY $8F                                   ; $3B9002 |
   LDA #$03                                  ; $3B9004 |
-  JSR $E8FD                                 ; $3B9006 |
+  JSR code_3FE8FD                           ; $3B9006 |
 loc_77009:
-  JSR $E468                                 ; $3B9009 |
+  JSR code_3FE468                           ; $3B9009 |
   LDY #$08                                  ; $3B900C |
-  JSR $E60E                                 ; $3B900E |
-  JSR $E485                                 ; $3B9011 |
+  JSR code_3FE60E                           ; $3B900E |
+  JSR code_3FE485                           ; $3B9011 |
   BCC loc_77009                             ; $3B9014 |
-  JMP $E456                                 ; $3B9016 |
+  JMP code_3FE456                           ; $3B9016 |
 
   db $6C, $00, $00, $0B, $00, $44           ; $3B9019 |
 
-  JSR $EBD1                                 ; $3B901F |
+  JSR code_3FEBD1                           ; $3B901F |
   LDA $03CE,x                               ; $3B9022 |
   BNE loc_77037                             ; $3B9025 |
   LDA #$0C                                  ; $3B9027 |
   STA $03CE,x                               ; $3B9029 |
+code_3B902C:
   LDY #$07                                  ; $3B902C |
-  JSR $E60E                                 ; $3B902E |
-  JSR $EA6A                                 ; $3B9031 |
-  JMP $902C                                 ; $3B9034 |
+  JSR code_3FE60E                           ; $3B902E |
+  JSR code_3FEA6A                           ; $3B9031 |
+  JMP code_3B902C                           ; $3B9034 |
 
 loc_77037:
   LDA #$00                                  ; $3B9037 |
@@ -10480,6 +10710,7 @@ loc_77037:
   LDA #$FF                                  ; $3B9044 |
   STA $05F6,x                               ; $3B9046 |
 loc_77049:
+code_3B9049:
   LDA $05DF,x                               ; $3B9049 |
   STA $EB                                   ; $3B904C |
   CLC                                       ; $3B904E |
@@ -10490,27 +10721,27 @@ loc_77049:
   ADC #$FF                                  ; $3B9059 |
   STA $05F6,x                               ; $3B905B |
   LDY #$03                                  ; $3B905E |
-  JSR $EE9A                                 ; $3B9060 |
-  JSR $E4D1                                 ; $3B9063 |
-  JSR $EA6A                                 ; $3B9066 |
+  JSR code_3FEE9A                           ; $3B9060 |
+  JSR code_3FE4D1                           ; $3B9063 |
+  JSR code_3FEA6A                           ; $3B9066 |
   LDA #$00                                  ; $3B9069 |
   STA $00                                   ; $3B906B |
   STA $11                                   ; $3B906D |
   LDA #$08                                  ; $3B906F |
   STA $01                                   ; $3B9071 |
-  JSR $D9CD                                 ; $3B9073 |
+  JSR code_3ED9CD                           ; $3B9073 |
   LDA $11                                   ; $3B9076 |
   BEQ loc_77049                             ; $3B9078 |
-  JSR $DB6D                                 ; $3B907A |
+  JSR code_3EDB6D                           ; $3B907A |
   LDA #$00                                  ; $3B907D |
   STA $060D,x                               ; $3B907F |
   LDA #$FC                                  ; $3B9082 |
   STA $0624,x                               ; $3B9084 |
-  JMP $9049                                 ; $3B9087 |
+  JMP code_3B9049                           ; $3B9087 |
 
   db $74, $00, $00, $05, $00, $43           ; $3B908A |
 
-  JSR $EBD1                                 ; $3B9090 |
+  JSR code_3FEBD1                           ; $3B9090 |
   LDA #$04                                  ; $3B9093 |
   STA $05C8,x                               ; $3B9095 |
 loc_77098:
@@ -10518,13 +10749,13 @@ loc_77098:
   STA $05B1,x                               ; $3B909A |
 loc_7709D:
   LDY #$08                                  ; $3B909D |
-  JSR $E60E                                 ; $3B909F |
-  JSR $E9D3                                 ; $3B90A2 |
+  JSR code_3FE60E                           ; $3B909F |
+  JSR code_3FE9D3                           ; $3B90A2 |
   DEC $05B1,x                               ; $3B90A5 |
   BNE loc_7709D                             ; $3B90A8 |
   LDA $03CE,x                               ; $3B90AA |
   STA $07                                   ; $3B90AD |
-  JSR $ECFC                                 ; $3B90AF |
+  JSR code_3FECFC                           ; $3B90AF |
   LDA $03CE,x                               ; $3B90B2 |
   SEC                                       ; $3B90B5 |
   SBC $07                                   ; $3B90B6 |
@@ -10545,22 +10776,23 @@ loc_770CB:
   LDX $8F                                   ; $3B90D0 |
   DEC $05C8,x                               ; $3B90D2 |
   BNE loc_77098                             ; $3B90D5 |
+code_3B90D7:
   LDY #$08                                  ; $3B90D7 |
-  JSR $E60E                                 ; $3B90D9 |
-  JSR $E9D3                                 ; $3B90DC |
-  JMP $90D7                                 ; $3B90DF |
+  JSR code_3FE60E                           ; $3B90D9 |
+  JSR code_3FE9D3                           ; $3B90DC |
+  JMP code_3B90D7                           ; $3B90DF |
 
   LDA #$29                                  ; $3B90E2 |
   STA $DC                                   ; $3B90E4 |
   LDA $9B                                   ; $3B90E6 |
   BNE loc_770F3                             ; $3B90E8 |
   LDY #$00                                  ; $3B90EA |
-  JSR $911C                                 ; $3B90EC |
+  JSR code_3B911C                           ; $3B90EC |
   LDY #$1E                                  ; $3B90EF |
   BNE loc_7711C                             ; $3B90F1 |
 loc_770F3:
   LDY #$2D                                  ; $3B90F3 |
-  JSR $911C                                 ; $3B90F5 |
+  JSR code_3B911C                           ; $3B90F5 |
   LDY #$23                                  ; $3B90F8 |
   BNE loc_7711C                             ; $3B90FA |
   LDY #$28                                  ; $3B90FC |
@@ -10580,6 +10812,7 @@ loc_770F3:
   LDY #$57                                  ; $3B9118 |
   BNE loc_7711C                             ; $3B911A |
 loc_7711C:
+code_3B911C:
   LDX $33                                   ; $3B911C |
   LDA $9143,y                               ; $3B911E |
   STA $E7,x                                 ; $3B9121 |
@@ -10588,18 +10821,19 @@ loc_7711C:
 loc_77126:
   LDA $E3,x                                 ; $3B9126 |
   TAY                                       ; $3B9128 |
+code_3B9129:
   LDA $8F                                   ; $3B9129 |
   BPL loc_7713A                             ; $3B912B |
   LDA $9143,y                               ; $3B912D |
   BEQ loc_77126                             ; $3B9130 |
   CMP #$FF                                  ; $3B9132 |
   BEQ locret_77142                          ; $3B9134 |
-  JSR $C9EF                                 ; $3B9136 |
+  JSR code_3EC9EF                           ; $3B9136 |
   INY                                       ; $3B9139 |
 loc_7713A:
   LDA $E7,x                                 ; $3B913A |
-  JSR $C5F6                                 ; $3B913C |
-  JMP $9129                                 ; $3B913F |
+  JSR code_3EC5F6                           ; $3B913C |
+  JMP code_3B9129                           ; $3B913F |
 
 locret_77142:
   RTS                                       ; $3B9142 |
@@ -10619,26 +10853,27 @@ locret_77142:
   db $97, $98, $99, $CB, $00                ; $3B91A3 |
 
   LDY #$00                                  ; $3B91A8 |
-  JMP $91CB                                 ; $3B91AA |
+  JMP code_3B91CB                           ; $3B91AA |
 
   LDY #$24                                  ; $3B91AD |
-  JMP $91CB                                 ; $3B91AF |
+  JMP code_3B91CB                           ; $3B91AF |
 
   LDY #$05                                  ; $3B91B2 |
-  JMP $91CB                                 ; $3B91B4 |
+  JMP code_3B91CB                           ; $3B91B4 |
 
   LDY #$0A                                  ; $3B91B7 |
-  JMP $91CB                                 ; $3B91B9 |
+  JMP code_3B91CB                           ; $3B91B9 |
 
   LDY #$0F                                  ; $3B91BC |
-  JMP $91CB                                 ; $3B91BE |
+  JMP code_3B91CB                           ; $3B91BE |
 
   LDY #$15                                  ; $3B91C1 |
-  JMP $91CB                                 ; $3B91C3 |
+  JMP code_3B91CB                           ; $3B91C3 |
 
   LDY #$1E                                  ; $3B91C6 |
-  JMP $91CB                                 ; $3B91C8 |
+  JMP code_3B91CB                           ; $3B91C8 |
 
+code_3B91CB:
   LDX $33                                   ; $3B91CB |
   LDA $91F6,y                               ; $3B91CD |
   STA $E7,x                                 ; $3B91D0 |
@@ -10648,19 +10883,20 @@ loc_771D5:
   LDY $33                                   ; $3B91D5 |
   LDA $00E3,y                               ; $3B91D7 |
   TAX                                       ; $3B91DA |
+code_3B91DB:
   LDA $8F                                   ; $3B91DB |
   BPL loc_771EB                             ; $3B91DD |
   LDA $91F6,x                               ; $3B91DF |
   BEQ loc_771D5                             ; $3B91E2 |
   CLC                                       ; $3B91E4 |
   ADC #$80                                  ; $3B91E5 |
-  JSR $CAA4                                 ; $3B91E7 |
+  JSR code_3ECAA4                           ; $3B91E7 |
   INX                                       ; $3B91EA |
 loc_771EB:
   LDY $33                                   ; $3B91EB |
   LDA $00E7,y                               ; $3B91ED |
-  JSR $C5F6                                 ; $3B91F0 |
-  JMP $91DB                                 ; $3B91F3 |
+  JSR code_3EC5F6                           ; $3B91F0 |
+  JMP code_3B91DB                           ; $3B91F3 |
 
   db $0C, $25, $26, $27, $00, $0C, $2B, $2C ; $3B91F6 |
   db $2D, $00, $0C, $2E, $2F, $30, $00, $08 ; $3B91FE |
@@ -10669,21 +10905,22 @@ loc_771EB:
   db $40, $41, $42, $00, $17, $58, $59, $5A ; $3B9216 |
   db $5B, $00, $12, $00, $00, $0B, $7F, $70 ; $3B921E |
 
-  JSR $9245                                 ; $3B9226 |
+  JSR code_3B9245                           ; $3B9226 |
 loc_77229:
   LDA #$97                                  ; $3B9229 |
   STA $08                                   ; $3B922B |
   LDA #$93                                  ; $3B922D |
   STA $09                                   ; $3B922F |
-  JSR $92A9                                 ; $3B9231 |
+  JSR code_3B92A9                           ; $3B9231 |
   LDA $056C,x                               ; $3B9234 |
   BEQ loc_77229                             ; $3B9237 |
-  JSR $ED21                                 ; $3B9239 |
-  JSR $94CA                                 ; $3B923C |
-  JSR $94CA                                 ; $3B923F |
+  JSR code_3FED21                           ; $3B9239 |
+  JSR code_3B94CA                           ; $3B923C |
+  JSR code_3B94CA                           ; $3B923F |
 loc_77242:
-  JMP $E456                                 ; $3B9242 |
+  JMP code_3FE456                           ; $3B9242 |
 
+code_3B9245:
   LDA #$F0                                  ; $3B9245 |
   STA $05B1,x                               ; $3B9247 |
   LDA #$1E                                  ; $3B924A |
@@ -10698,13 +10935,13 @@ loc_77242:
   STA $11                                   ; $3B9260 |
   STA $00                                   ; $3B9262 |
   STA $01                                   ; $3B9264 |
-  JSR $D9CD                                 ; $3B9266 |
+  JSR code_3ED9CD                           ; $3B9266 |
   LDA $11                                   ; $3B9269 |
   CMP #$06                                  ; $3B926B |
   BNE loc_77277                             ; $3B926D |
   LDA #$20                                  ; $3B926F |
   STA $03B7,x                               ; $3B9271 |
-  JMP $EBD1                                 ; $3B9274 |
+  JMP code_3FEBD1                           ; $3B9274 |
 
 loc_77277:
   AND #$01                                  ; $3B9277 |
@@ -10713,7 +10950,7 @@ loc_77277:
   STA $0A                                   ; $3B927C |
   PLA                                       ; $3B927E |
   STA $0B                                   ; $3B927F |
-  JSR $EBDB                                 ; $3B9281 |
+  JSR code_3FEBDB                           ; $3B9281 |
   LDA #$01                                  ; $3B9284 |
   STA $03B7,x                               ; $3B9286 |
   INC $0B                                   ; $3B9289 |
@@ -10728,15 +10965,16 @@ loc_77292:
   STA $11                                   ; $3B9294 |
   STA $00                                   ; $3B9296 |
   STA $01                                   ; $3B9298 |
-  JSR $D9CD                                 ; $3B929A |
+  JSR code_3ED9CD                           ; $3B929A |
   LDA $11                                   ; $3B929D |
   AND #$01                                  ; $3B929F |
   BNE loc_772A6                             ; $3B92A1 |
-  JMP $EBD1                                 ; $3B92A3 |
+  JMP code_3FEBD1                           ; $3B92A3 |
 
 loc_772A6:
-  JMP $E456                                 ; $3B92A6 |
+  JMP code_3FE456                           ; $3B92A6 |
 
+code_3B92A9:
   LDA $03FC,x                               ; $3B92A9 |
   BPL loc_772E8                             ; $3B92AC |
   DEC $05B1,x                               ; $3B92AE |
@@ -10756,13 +10994,13 @@ loc_772CE:
   STA $ED                                   ; $3B92D1 |
   LDA #$00                                  ; $3B92D3 |
   STA $EB                                   ; $3B92D5 |
-  JSR $931C                                 ; $3B92D7 |
+  JSR code_3B931C                           ; $3B92D7 |
   LDA $11                                   ; $3B92DA |
   AND #$01                                  ; $3B92DC |
   BEQ loc_77311                             ; $3B92DE |
   LDA #$00                                  ; $3B92E0 |
   STA $0624,x                               ; $3B92E2 |
-  JMP $9311                                 ; $3B92E5 |
+  JMP code_3B9311                           ; $3B92E5 |
 
 loc_772E8:
   LDA $F3                                   ; $3B92E8 |
@@ -10772,7 +11010,7 @@ loc_772E8:
   STA $11                                   ; $3B92F0 |
   STA $00                                   ; $3B92F2 |
   STA $01                                   ; $3B92F4 |
-  JSR $D9CD                                 ; $3B92F6 |
+  JSR code_3ED9CD                           ; $3B92F6 |
   LDA $11                                   ; $3B92F9 |
   AND #$01                                  ; $3B92FB |
   BNE loc_77307                             ; $3B92FD |
@@ -10785,17 +11023,19 @@ loc_77307:
   ADC $04CB,x                               ; $3B930B |
   STA $04CB,x                               ; $3B930E |
 loc_77311:
-  JSR $E485                                 ; $3B9311 |
+code_3B9311:
+  JSR code_3FE485                           ; $3B9311 |
   BCS loc_77319                             ; $3B9314 |
-  JMP $E468                                 ; $3B9316 |
+  JMP code_3FE468                           ; $3B9316 |
 
 loc_77319:
-  JMP $E456                                 ; $3B9319 |
+  JMP code_3FE456                           ; $3B9319 |
 
+code_3B931C:
   LDA #$2A                                  ; $3B931C |
   STA $00                                   ; $3B931E |
-  JSR $ECA4                                 ; $3B9320 |
-  JSR $E4D1                                 ; $3B9323 |
+  JSR code_3FECA4                           ; $3B9320 |
+  JSR code_3FE4D1                           ; $3B9323 |
   LDY #$08                                  ; $3B9326 |
   LDA $EE                                   ; $3B9328 |
   BPL loc_7732E                             ; $3B932A |
@@ -10814,14 +11054,14 @@ loc_77338:
   STA $01                                   ; $3B933F |
   LDA #$00                                  ; $3B9341 |
   STA $11                                   ; $3B9343 |
-  JSR $D9CD                                 ; $3B9345 |
+  JSR code_3ED9CD                           ; $3B9345 |
   LDA $11                                   ; $3B9348 |
   AND #$01                                  ; $3B934A |
   BEQ loc_77359                             ; $3B934C |
   LDA #$00                                  ; $3B934E |
   STA $0624,x                               ; $3B9350 |
-  JSR $DB4F                                 ; $3B9353 |
-  JSR $E4CB                                 ; $3B9356 |
+  JSR code_3EDB4F                           ; $3B9353 |
+  JSR code_3FE4CB                           ; $3B9356 |
 loc_77359:
   LDY $07                                   ; $3B9359 |
   LDA ($08),y                               ; $3B935B |
@@ -10831,7 +11071,7 @@ loc_77359:
   STA $01                                   ; $3B9362 |
   LDA #$00                                  ; $3B9364 |
   STA $11                                   ; $3B9366 |
-  JSR $D9CD                                 ; $3B9368 |
+  JSR code_3ED9CD                           ; $3B9368 |
   LDA $11                                   ; $3B936B |
   AND #$01                                  ; $3B936D |
   BNE loc_7738B                             ; $3B936F |
@@ -10845,13 +11085,13 @@ loc_77359:
   STA $01                                   ; $3B937C |
   LDA #$00                                  ; $3B937E |
   STA $11                                   ; $3B9380 |
-  JSR $D9CD                                 ; $3B9382 |
+  JSR code_3ED9CD                           ; $3B9382 |
   LDA $11                                   ; $3B9385 |
   AND #$01                                  ; $3B9387 |
   BEQ locret_77396                          ; $3B9389 |
 loc_7738B:
-  JSR $DB6D                                 ; $3B938B |
-  JSR $E4CB                                 ; $3B938E |
+  JSR code_3EDB6D                           ; $3B938B |
+  JSR code_3FE4CB                           ; $3B938E |
   LDA #$00                                  ; $3B9391 |
   STA $05F6,x                               ; $3B9393 |
 locret_77396:
@@ -10863,57 +11103,57 @@ locret_77396:
   db $F9, $08, $08, $08, $F9, $F8, $08, $F8 ; $3B93AF |
   db $11, $00, $00, $0B, $7F, $70           ; $3B93B7 |
 
-  JSR $9245                                 ; $3B93BD |
+  JSR code_3B9245                           ; $3B93BD |
 loc_773C0:
   LDA #$A7                                  ; $3B93C0 |
   STA $08                                   ; $3B93C2 |
   LDA #$93                                  ; $3B93C4 |
   STA $09                                   ; $3B93C6 |
-  JSR $92A9                                 ; $3B93C8 |
+  JSR code_3B92A9                           ; $3B93C8 |
   LDA $056C,x                               ; $3B93CB |
   BEQ loc_773C0                             ; $3B93CE |
   LDA #$2F                                  ; $3B93D0 |
   STA $DC                                   ; $3B93D2 |
-  JSR $ED21                                 ; $3B93D4 |
+  JSR code_3FED21                           ; $3B93D4 |
   LDA $06A1                                 ; $3B93D7 |
   CMP #$09                                  ; $3B93DA |
   BEQ loc_773E1                             ; $3B93DC |
   INC $06A1                                 ; $3B93DE |
 loc_773E1:
-  JMP $E456                                 ; $3B93E1 |
+  JMP code_3FE456                           ; $3B93E1 |
 
   db $13, $00, $00, $0B, $FF, $70           ; $3B93E4 |
 
-  JSR $9245                                 ; $3B93EA |
+  JSR code_3B9245                           ; $3B93EA |
 loc_773ED:
   LDA #$A7                                  ; $3B93ED |
   STA $08                                   ; $3B93EF |
   LDA #$93                                  ; $3B93F1 |
   STA $09                                   ; $3B93F3 |
-  JSR $92A9                                 ; $3B93F5 |
+  JSR code_3B92A9                           ; $3B93F5 |
   LDA $056C,x                               ; $3B93F8 |
   BEQ loc_773ED                             ; $3B93FB |
-  JSR $ED21                                 ; $3B93FD |
+  JSR code_3FED21                           ; $3B93FD |
   LDA #$0A                                  ; $3B9400 |
   STA $05B1,x                               ; $3B9402 |
 loc_77405:
-  JSR $94CA                                 ; $3B9405 |
+  JSR code_3B94CA                           ; $3B9405 |
   DEC $05B1,x                               ; $3B9408 |
   BNE loc_77405                             ; $3B940B |
-  JMP $E456                                 ; $3B940D |
+  JMP code_3FE456                           ; $3B940D |
 
   db $16, $00, $00, $0B, $7F, $70           ; $3B9410 |
 
-  JSR $9245                                 ; $3B9416 |
+  JSR code_3B9245                           ; $3B9416 |
 loc_77419:
   LDA #$A7                                  ; $3B9419 |
   STA $08                                   ; $3B941B |
   LDA #$93                                  ; $3B941D |
   STA $09                                   ; $3B941F |
-  JSR $92A9                                 ; $3B9421 |
+  JSR code_3B92A9                           ; $3B9421 |
   LDA $056C,x                               ; $3B9424 |
   BEQ loc_77419                             ; $3B9427 |
-  JSR $ED21                                 ; $3B9429 |
+  JSR code_3FED21                           ; $3B9429 |
   LDA #$00                                  ; $3B942C |
   STA $056C,x                               ; $3B942E |
   LDA #$2F                                  ; $3B9431 |
@@ -10926,46 +11166,47 @@ loc_77419:
   LDA #$09                                  ; $3B943E |
 loc_77440:
   STA $A9                                   ; $3B9440 |
-  JMP $E456                                 ; $3B9442 |
+  JMP code_3FE456                           ; $3B9442 |
 
   db $14, $00, $00, $0B, $7F, $70           ; $3B9445 |
 
-  JSR $9245                                 ; $3B944B |
+  JSR code_3B9245                           ; $3B944B |
 loc_7744E:
   LDA #$97                                  ; $3B944E |
   STA $08                                   ; $3B9450 |
   LDA #$93                                  ; $3B9452 |
   STA $09                                   ; $3B9454 |
-  JSR $92A9                                 ; $3B9456 |
+  JSR code_3B92A9                           ; $3B9456 |
   LDA $056C,x                               ; $3B9459 |
   BEQ loc_7744E                             ; $3B945C |
-  JSR $949C                                 ; $3B945E |
-  JSR $ED21                                 ; $3B9461 |
-  JSR $94F6                                 ; $3B9464 |
-  JSR $94F6                                 ; $3B9467 |
-  JMP $E456                                 ; $3B946A |
+  JSR code_3B949C                           ; $3B945E |
+  JSR code_3FED21                           ; $3B9461 |
+  JSR code_3B94F6                           ; $3B9464 |
+  JSR code_3B94F6                           ; $3B9467 |
+  JMP code_3FE456                           ; $3B946A |
 
   db $15, $00, $00, $0B, $7F, $70           ; $3B946D |
 
-  JSR $9245                                 ; $3B9473 |
+  JSR code_3B9245                           ; $3B9473 |
 loc_77476:
   LDA #$A7                                  ; $3B9476 |
   STA $08                                   ; $3B9478 |
   LDA #$93                                  ; $3B947A |
   STA $09                                   ; $3B947C |
-  JSR $92A9                                 ; $3B947E |
+  JSR code_3B92A9                           ; $3B947E |
   LDA $056C,x                               ; $3B9481 |
   BEQ loc_77476                             ; $3B9484 |
-  JSR $949C                                 ; $3B9486 |
-  JSR $ED21                                 ; $3B9489 |
+  JSR code_3B949C                           ; $3B9486 |
+  JSR code_3FED21                           ; $3B9489 |
   LDA #$0A                                  ; $3B948C |
   STA $05B1,x                               ; $3B948E |
 loc_77491:
-  JSR $94F6                                 ; $3B9491 |
+  JSR code_3B94F6                           ; $3B9491 |
   DEC $05B1,x                               ; $3B9494 |
   BNE loc_77491                             ; $3B9497 |
-  JMP $E456                                 ; $3B9499 |
+  JMP code_3FE456                           ; $3B9499 |
 
+code_3B949C:
   LDA $0699                                 ; $3B949C |
   STA $05C8,x                               ; $3B949F |
   BNE locret_774C9                          ; $3B94A2 |
@@ -10992,6 +11233,7 @@ loc_774C1:
 locret_774C9:
   RTS                                       ; $3B94C9 |
 
+code_3B94CA:
   LDA #$00                                  ; $3B94CA |
   STA $056C,x                               ; $3B94CC |
   LDA #$01                                  ; $3B94CF |
@@ -11004,16 +11246,17 @@ locret_774C9:
   STA $03E5                                 ; $3B94DE |
   LDA #$31                                  ; $3B94E1 |
   STA $DC                                   ; $3B94E3 |
-  JSR $E1DD                                 ; $3B94E5 |
-  JSR $CF4A                                 ; $3B94E8 |
+  JSR code_3FE1DD                           ; $3B94E5 |
+  JSR code_3ECF4A                           ; $3B94E8 |
   LDA #$04                                  ; $3B94EB |
-  JSR $C5F6                                 ; $3B94ED |
+  JSR code_3EC5F6                           ; $3B94ED |
   LDX $8F                                   ; $3B94F0 |
   RTS                                       ; $3B94F2 |
 
 loc_774F3:
-  JMP $E456                                 ; $3B94F3 |
+  JMP code_3FE456                           ; $3B94F3 |
 
+code_3B94F6:
   LDA #$00                                  ; $3B94F6 |
   STA $056C,x                               ; $3B94F8 |
   LDA #$01                                  ; $3B94FB |
@@ -11028,15 +11271,15 @@ loc_774F3:
   STA $0688,y                               ; $3B950F |
   LDA #$31                                  ; $3B9512 |
   STA $DC                                   ; $3B9514 |
-  JSR $E1DD                                 ; $3B9516 |
-  JSR $CF4A                                 ; $3B9519 |
+  JSR code_3FE1DD                           ; $3B9516 |
+  JSR code_3ECF4A                           ; $3B9519 |
   LDA #$04                                  ; $3B951C |
-  JSR $C5F6                                 ; $3B951E |
+  JSR code_3EC5F6                           ; $3B951E |
   LDX $8F                                   ; $3B9521 |
   RTS                                       ; $3B9523 |
 
 loc_77524:
-  JMP $E456                                 ; $3B9524 |
+  JMP code_3FE456                           ; $3B9524 |
 
   db $04, $14, $FC, $24, $24, $F4, $28, $E0 ; $3B9527 |
   db $08, $F0, $20, $E0, $05, $00, $00, $0B ; $3B952F |
@@ -11044,27 +11287,27 @@ loc_77524:
 
   LDA #$05                                  ; $3B9539 |
   STA $05DF,x                               ; $3B953B |
-  JSR $95E1                                 ; $3B953E |
-  JSR $95AF                                 ; $3B9541 |
-  JSR $9591                                 ; $3B9544 |
-  JSR $95AF                                 ; $3B9547 |
-  JSR $9591                                 ; $3B954A |
-  JSR $95E1                                 ; $3B954D |
-  JSR $95AF                                 ; $3B9550 |
-  JSR $9591                                 ; $3B9553 |
-  JSR $95AF                                 ; $3B9556 |
-  JSR $9591                                 ; $3B9559 |
-  JSR $95E1                                 ; $3B955C |
-  JSR $95AF                                 ; $3B955F |
-  JSR $9591                                 ; $3B9562 |
-  JSR $95AF                                 ; $3B9565 |
-  JSR $9591                                 ; $3B9568 |
-  JSR $95E1                                 ; $3B956B |
-  JSR $9591                                 ; $3B956E |
+  JSR code_3B95E1                           ; $3B953E |
+  JSR code_3B95AF                           ; $3B9541 |
+  JSR code_3B9591                           ; $3B9544 |
+  JSR code_3B95AF                           ; $3B9547 |
+  JSR code_3B9591                           ; $3B954A |
+  JSR code_3B95E1                           ; $3B954D |
+  JSR code_3B95AF                           ; $3B9550 |
+  JSR code_3B9591                           ; $3B9553 |
+  JSR code_3B95AF                           ; $3B9556 |
+  JSR code_3B9591                           ; $3B9559 |
+  JSR code_3B95E1                           ; $3B955C |
+  JSR code_3B95AF                           ; $3B955F |
+  JSR code_3B9591                           ; $3B9562 |
+  JSR code_3B95AF                           ; $3B9565 |
+  JSR code_3B9591                           ; $3B9568 |
+  JSR code_3B95E1                           ; $3B956B |
+  JSR code_3B9591                           ; $3B956E |
   LDA $05C8,x                               ; $3B9571 |
   BEQ loc_7757D                             ; $3B9574 |
   STA $0682                                 ; $3B9576 |
-  JSR $CB28                                 ; $3B9579 |
+  JSR code_3ECB28                           ; $3B9579 |
 
   db $00                                    ; $3B957C |
 
@@ -11079,8 +11322,9 @@ loc_77588:
   CMP #$0F                                  ; $3B958A |
   BEQ loc_7758E                             ; $3B958C |
 loc_7758E:
-  JMP $E456                                 ; $3B958E |
+  JMP code_3FE456                           ; $3B958E |
 
+code_3B9591:
   PLA                                       ; $3B9591 |
   STA $060D,x                               ; $3B9592 |
   PLA                                       ; $3B9595 |
@@ -11088,7 +11332,7 @@ loc_7758E:
   LDA #$10                                  ; $3B9599 |
   STA $05F6,x                               ; $3B959B |
 loc_7759E:
-  JSR $E468                                 ; $3B959E |
+  JSR code_3FE468                           ; $3B959E |
   DEC $05F6,x                               ; $3B95A1 |
   BPL loc_7759E                             ; $3B95A4 |
   LDA $0624,x                               ; $3B95A6 |
@@ -11097,6 +11341,7 @@ loc_7759E:
   PHA                                       ; $3B95AD |
   RTS                                       ; $3B95AE |
 
+code_3B95AF:
   LDA $05DF,x                               ; $3B95AF |
   DEC $05DF,x                               ; $3B95B2 |
   TAY                                       ; $3B95B5 |
@@ -11109,7 +11354,7 @@ loc_7759E:
   ADC $952D,y                               ; $3B95C3 |
   STA $05                                   ; $3B95C6 |
   LDY #$25                                  ; $3B95C8 |
-  JSR $E5AB                                 ; $3B95CA |
+  JSR code_3FE5AB                           ; $3B95CA |
   BCS loc_775DE                             ; $3B95CD |
   LDA $57                                   ; $3B95CF |
   STA $046F,x                               ; $3B95D1 |
@@ -11121,6 +11366,7 @@ loc_775DE:
   LDX $8F                                   ; $3B95DE |
   RTS                                       ; $3B95E0 |
 
+code_3B95E1:
   LDA $05B1,x                               ; $3B95E1 |
   STA $04                                   ; $3B95E4 |
   LDA #$03                                  ; $3B95E6 |
@@ -11131,7 +11377,7 @@ loc_775EA:
   LDY $05                                   ; $3B95EE |
   LDA $95FE,y                               ; $3B95F0 |
   TAX                                       ; $3B95F3 |
-  JSR $CA59                                 ; $3B95F4 |
+  JSR code_3ECA59                           ; $3B95F4 |
 loc_775F7:
   DEC $05                                   ; $3B95F7 |
   BPL loc_775EA                             ; $3B95F9 |
@@ -11141,21 +11387,22 @@ loc_775F7:
   db $0F, $0B, $07, $03, $3A, $8C, $4C, $00 ; $3B95FE |
   db $00, $00                               ; $3B9606 |
 
-  JSR $EBD1                                 ; $3B9608 |
-  JMP $9623                                 ; $3B960B |
+  JSR code_3FEBD1                           ; $3B9608 |
+  JMP code_3B9623                           ; $3B960B |
 
   db $3A, $8C, $4C, $00, $00, $00           ; $3B960E |
 
-  JSR $EBD1                                 ; $3B9614 |
-  JMP $9623                                 ; $3B9617 |
+  JSR code_3FEBD1                           ; $3B9614 |
+  JMP code_3B9623                           ; $3B9617 |
 
   db $0E, $4C, $30, $00, $00, $00           ; $3B961A |
 
-  JSR $EBD1                                 ; $3B9620 |
+  JSR code_3FEBD1                           ; $3B9620 |
+code_3B9623:
   LDA #$18                                  ; $3B9623 |
   STA $05B1,x                               ; $3B9625 |
 loc_77628:
-  JSR $E468                                 ; $3B9628 |
+  JSR code_3FE468                           ; $3B9628 |
   LDA $0486,x                               ; $3B962B |
   SEC                                       ; $3B962E |
   SBC $F7                                   ; $3B962F |
@@ -11166,11 +11413,11 @@ loc_77628:
   DEC $05B1,x                               ; $3B9639 |
   BNE loc_77628                             ; $3B963C |
 loc_7763E:
-  JMP $E456                                 ; $3B963E |
+  JMP code_3FE456                           ; $3B963E |
 
   db $7A, $00, $00, $00, $00, $00           ; $3B9641 |
 
-  JSR $EBD1                                 ; $3B9647 |
+  JSR code_3FEBD1                           ; $3B9647 |
   LDA $046F                                 ; $3B964A |
   STA $046F,x                               ; $3B964D |
   LDA $0486                                 ; $3B9650 |
@@ -11178,25 +11425,25 @@ loc_7763E:
   LDA $04CB                                 ; $3B9656 |
   STA $04CB,x                               ; $3B9659 |
 loc_7765C:
-  JSR $E468                                 ; $3B965C |
+  JSR code_3FE468                           ; $3B965C |
   DEC $04CB,x                               ; $3B965F |
   LDA #$00                                  ; $3B9662 |
   STA $00                                   ; $3B9664 |
   STA $01                                   ; $3B9666 |
   STA $11                                   ; $3B9668 |
-  JSR $D9CD                                 ; $3B966A |
+  JSR code_3ED9CD                           ; $3B966A |
   LDA $11                                   ; $3B966D |
   CMP #$08                                  ; $3B966F |
   BEQ loc_7765C                             ; $3B9671 |
-  JMP $E456                                 ; $3B9673 |
+  JMP code_3FE456                           ; $3B9673 |
 
   db $04, $40, $2B, $00, $18, $00           ; $3B9676 |
 
-  JMP $E456                                 ; $3B967C |
+  JMP code_3FE456                           ; $3B967C |
 
   db $04, $40, $2B, $00, $18, $00           ; $3B967F |
 
-  JSR $EBD1                                 ; $3B9685 |
+  JSR code_3FEBD1                           ; $3B9685 |
   LDA $57                                   ; $3B9688 |
   STA $0477                                 ; $3B968A |
   STA $0478                                 ; $3B968D |
@@ -11208,7 +11455,7 @@ loc_7765C:
   STA $04CB,x                               ; $3B969D |
   INX                                       ; $3B96A0 |
   LDY #$51                                  ; $3B96A1 |
-  JSR $CB28                                 ; $3B96A3 |
+  JSR code_3ECB28                           ; $3B96A3 |
 
   db $41                                    ; $3B96A6 |
 
@@ -11218,7 +11465,7 @@ loc_7765C:
   STA $03C0                                 ; $3B96AE |
   INX                                       ; $3B96B1 |
   LDY #$52                                  ; $3B96B2 |
-  JSR $CB28                                 ; $3B96B4 |
+  JSR code_3ECB28                           ; $3B96B4 |
 
   db $41                                    ; $3B96B7 |
 
@@ -11226,7 +11473,7 @@ loc_7765C:
   STA $04CB,x                               ; $3B96BA |
   INX                                       ; $3B96BD |
   LDY #$53                                  ; $3B96BE |
-  JSR $CB28                                 ; $3B96C0 |
+  JSR code_3ECB28                           ; $3B96C0 |
 
   db $41                                    ; $3B96C3 |
 
@@ -11234,11 +11481,11 @@ loc_7765C:
   STA $04CB,x                               ; $3B96C6 |
   LDA #$00                                  ; $3B96C9 |
   STA $05BC                                 ; $3B96CB |
-  JSR $979B                                 ; $3B96CE |
+  JSR code_3B979B                           ; $3B96CE |
 loc_776D1:
   LDA #$00                                  ; $3B96D1 |
-  JSR $D430                                 ; $3B96D3 |
-  JSR $E468                                 ; $3B96D6 |
+  JSR code_3ED430                           ; $3B96D3 |
+  JSR code_3FE468                           ; $3B96D6 |
   LDA $05B1                                 ; $3B96D9 |
   BNE loc_776D1                             ; $3B96DC |
   LDA #$41                                  ; $3B96DE |
@@ -11254,19 +11501,20 @@ loc_776E8:
   STA $060D,x                               ; $3B96F2 |
 loc_776F5:
   LDA #$04                                  ; $3B96F5 |
-  JSR $C5F6                                 ; $3B96F7 |
+  JSR code_3EC5F6                           ; $3B96F7 |
   LDA $05B1,x                               ; $3B96FA |
-  JSR $C9EF                                 ; $3B96FD |
+  JSR code_3EC9EF                           ; $3B96FD |
   LDA $05C8,x                               ; $3B9700 |
-  JSR $C9EF                                 ; $3B9703 |
+  JSR code_3EC9EF                           ; $3B9703 |
   INC $05B1,x                               ; $3B9706 |
   INC $05C8,x                               ; $3B9709 |
   DEC $060D,x                               ; $3B970C |
   BNE loc_776F5                             ; $3B970F |
+code_3B9711:
   LDX #$09                                  ; $3B9711 |
   LDY #$00                                  ; $3B9713 |
   STY $03C0                                 ; $3B9715 |
-  JSR $E522                                 ; $3B9718 |
+  JSR code_3FE522                           ; $3B9718 |
   LDA #$5A                                  ; $3B971B |
   STA $05B9                                 ; $3B971D |
 loc_77720:
@@ -11281,11 +11529,11 @@ loc_77720:
   ADC $069D                                 ; $3B9732 |
   STA $069D                                 ; $3B9735 |
 loc_77738:
-  JSR $979B                                 ; $3B9738 |
-  JSR $E468                                 ; $3B973B |
+  JSR code_3B979B                           ; $3B9738 |
+  JSR code_3FE468                           ; $3B973B |
   DEC $05B9                                 ; $3B973E |
   BNE loc_77746                             ; $3B9741 |
-  JMP $9783                                 ; $3B9743 |
+  JMP code_3B9783                           ; $3B9743 |
 
 loc_77746:
   LDA $048E                                 ; $3B9746 |
@@ -11293,7 +11541,7 @@ loc_77746:
   BCS loc_77720                             ; $3B974C |
   LDX #$09                                  ; $3B974E |
   LDY #$01                                  ; $3B9750 |
-  JSR $E522                                 ; $3B9752 |
+  JSR code_3FE522                           ; $3B9752 |
   LDA #$00                                  ; $3B9755 |
   STA $03C0                                 ; $3B9757 |
 loc_7775A:
@@ -11308,24 +11556,26 @@ loc_7775A:
   ADC $069D                                 ; $3B976C |
   STA $069D                                 ; $3B976F |
 loc_77772:
-  JSR $979B                                 ; $3B9772 |
-  JSR $E468                                 ; $3B9775 |
+  JSR code_3B979B                           ; $3B9772 |
+  JSR code_3FE468                           ; $3B9775 |
   LDA $048E                                 ; $3B9778 |
   CMP $0486                                 ; $3B977B |
   BCC loc_7775A                             ; $3B977E |
-  JMP $9711                                 ; $3B9780 |
+  JMP code_3B9711                           ; $3B9780 |
 
+code_3B9783:
   LDA $DF                                   ; $3B9783 |
   AND #$01                                  ; $3B9785 |
   STA $05BC                                 ; $3B9787 |
   INC $05BC                                 ; $3B978A |
 loc_7778D:
-  JSR $979B                                 ; $3B978D |
-  JSR $E468                                 ; $3B9790 |
+  JSR code_3B979B                           ; $3B978D |
+  JSR code_3FE468                           ; $3B9790 |
   LDA $05BC                                 ; $3B9793 |
   BNE loc_7778D                             ; $3B9796 |
-  JMP $9711                                 ; $3B9798 |
+  JMP code_3B9711                           ; $3B9798 |
 
+code_3B979B:
   LDA #$AC                                  ; $3B979B |
   SEC                                       ; $3B979D |
   SBC $069D                                 ; $3B979E |
@@ -11350,11 +11600,12 @@ locret_777C6:
 
   db $01, $00, $00, $22, $00, $86           ; $3B97C7 |
 
-  JSR $EBD1                                 ; $3B97CD |
+  JSR code_3FEBD1                           ; $3B97CD |
   LDA #$01                                  ; $3B97D0 |
   STA $03B7,x                               ; $3B97D2 |
 loc_777D5:
-  JSR $E468                                 ; $3B97D5 |
+code_3B97D5:
+  JSR code_3FE468                           ; $3B97D5 |
   LDA $056C,x                               ; $3B97D8 |
   BEQ loc_777D5                             ; $3B97DB |
   LDY #$00                                  ; $3B97DD |
@@ -11372,7 +11623,7 @@ loc_777D5:
   INC $069D                                 ; $3B97FA |
   INC $069D                                 ; $3B97FD |
   INC $069D                                 ; $3B9800 |
-  JMP $97D5                                 ; $3B9803 |
+  JMP code_3B97D5                           ; $3B9803 |
 
 loc_77806:
   LDA $048E                                 ; $3B9806 |
@@ -11382,13 +11633,14 @@ loc_77806:
   DEC $069D                                 ; $3B9810 |
   DEC $069D                                 ; $3B9813 |
   DEC $069D                                 ; $3B9816 |
-  JMP $97D5                                 ; $3B9819 |
+  JMP code_3B97D5                           ; $3B9819 |
 
   db $05, $00, $00, $00, $17, $E6           ; $3B981C |
 
-  JSR $EBD1                                 ; $3B9822 |
+  JSR code_3FEBD1                           ; $3B9822 |
   LDA #$00                                  ; $3B9825 |
   STA $05B1,x                               ; $3B9827 |
+code_3B982A:
   LDA $056C,x                               ; $3B982A |
   BEQ loc_77851                             ; $3B982D |
   AND #$0F                                  ; $3B982F |
@@ -11405,17 +11657,17 @@ loc_77806:
   LDA #$04                                  ; $3B9847 |
   STA $05B1,x                               ; $3B9849 |
   LDA #$37                                  ; $3B984C |
-  JSR $C9EF                                 ; $3B984E |
+  JSR code_3EC9EF                           ; $3B984E |
 loc_77851:
   LDA $05B1,x                               ; $3B9851 |
   BEQ loc_77860                             ; $3B9854 |
   DEC $05B1,x                               ; $3B9856 |
   BNE loc_77860                             ; $3B9859 |
   LDA #$38                                  ; $3B985B |
-  JSR $C9EF                                 ; $3B985D |
+  JSR code_3EC9EF                           ; $3B985D |
 loc_77860:
-  JSR $E468                                 ; $3B9860 |
-  JMP $982A                                 ; $3B9863 |
+  JSR code_3FE468                           ; $3B9860 |
+  JMP code_3B982A                           ; $3B9863 |
 
 loc_77866:
   LDA #$00                                  ; $3B9866 |
@@ -11426,10 +11678,10 @@ loc_77866:
   LDA #$01                                  ; $3B9874 |
   STA $03C1                                 ; $3B9876 |
   LDA #$38                                  ; $3B9879 |
-  JSR $C9EF                                 ; $3B987B |
+  JSR code_3EC9EF                           ; $3B987B |
   LDY #$7F                                  ; $3B987E |
   LDX $8F                                   ; $3B9880 |
-  JSR $CB28                                 ; $3B9882 |
+  JSR code_3ECB28                           ; $3B9882 |
 
   db $41                                    ; $3B9885 |
 
@@ -11442,43 +11694,44 @@ loc_77890:
   STA $05B1,x                               ; $3B9890 |
   LDA #$15                                  ; $3B9893 |
   STA $05C8,x                               ; $3B9895 |
-  JMP $E477                                 ; $3B9898 |
+  JMP code_3FE477                           ; $3B9898 |
 
   db $02, $00, $00, $05, $00, $64           ; $3B989B |
 
-  JSR $EBD1                                 ; $3B98A1 |
+  JSR code_3FEBD1                           ; $3B98A1 |
+code_3B98A4:
   LDX $8F                                   ; $3B98A4 |
   LDY #$02                                  ; $3B98A6 |
-  JSR $E522                                 ; $3B98A8 |
+  JSR code_3FE522                           ; $3B98A8 |
   LDA #$00                                  ; $3B98AB |
   STA $05B1,x                               ; $3B98AD |
 loc_778B0:
-  JSR $E468                                 ; $3B98B0 |
+  JSR code_3FE468                           ; $3B98B0 |
   LDA $05B1,x                               ; $3B98B3 |
   BEQ loc_778B0                             ; $3B98B6 |
   CMP #$01                                  ; $3B98B8 |
   BEQ loc_77909                             ; $3B98BA |
   LDY #$06                                  ; $3B98BC |
   LDX #$0A                                  ; $3B98BE |
-  JSR $E522                                 ; $3B98C0 |
+  JSR code_3FE522                           ; $3B98C0 |
   LDX #$0A                                  ; $3B98C3 |
   STX $063E                                 ; $3B98C5 |
   LDA #$0A                                  ; $3B98C8 |
   STA $03CE,x                               ; $3B98CA |
 loc_778CD:
   LDY #$14                                  ; $3B98CD |
-  JSR $E5AB                                 ; $3B98CF |
+  JSR code_3FE5AB                           ; $3B98CF |
   LDA #$07                                  ; $3B98D2 |
   STA $05C8,x                               ; $3B98D4 |
   LDY $063E                                 ; $3B98D7 |
   LDA #$03                                  ; $3B98DA |
-  JSR $E8CC                                 ; $3B98DC |
+  JSR code_3FE8CC                           ; $3B98DC |
   LDA $03CE,y                               ; $3B98DF |
   STA $03CE,x                               ; $3B98E2 |
   LDA #$08                                  ; $3B98E5 |
   STA $063C                                 ; $3B98E7 |
 loc_778EA:
-  JSR $E468                                 ; $3B98EA |
+  JSR code_3FE468                           ; $3B98EA |
   DEC $063C                                 ; $3B98ED |
   BNE loc_778EA                             ; $3B98F0 |
   LDX $063E                                 ; $3B98F2 |
@@ -11488,13 +11741,13 @@ loc_778EA:
   BNE loc_778CD                             ; $3B98FD |
   LDY #$05                                  ; $3B98FF |
   LDX #$0A                                  ; $3B9901 |
-  JSR $E522                                 ; $3B9903 |
-  JMP $98A4                                 ; $3B9906 |
+  JSR code_3FE522                           ; $3B9903 |
+  JMP code_3B98A4                           ; $3B9906 |
 
 loc_77909:
   LDX $8F                                   ; $3B9909 |
   LDY #$03                                  ; $3B990B |
-  JSR $E522                                 ; $3B990D |
+  JSR code_3FE522                           ; $3B990D |
   LDA #$0C                                  ; $3B9910 |
   STA $03CE,x                               ; $3B9912 |
   LDA $048E                                 ; $3B9915 |
@@ -11512,8 +11765,8 @@ loc_77923:
   STA $05C8,x                               ; $3B9932 |
 loc_77935:
   LDY #$07                                  ; $3B9935 |
-  JSR $E60E                                 ; $3B9937 |
-  JSR $E468                                 ; $3B993A |
+  JSR code_3FE60E                           ; $3B9937 |
+  JSR code_3FE468                           ; $3B993A |
   LDA $0486,x                               ; $3B993D |
   CMP $05C8,x                               ; $3B9940 |
   BCS loc_77935                             ; $3B9943 |
@@ -11524,8 +11777,8 @@ loc_77935:
   STA $03CE,x                               ; $3B994D |
 loc_77950:
   LDY #$00                                  ; $3B9950 |
-  JSR $E60E                                 ; $3B9952 |
-  JSR $E468                                 ; $3B9955 |
+  JSR code_3FE60E                           ; $3B9952 |
+  JSR code_3FE468                           ; $3B9955 |
   LDA $0486,x                               ; $3B9958 |
   CMP $05DF,x                               ; $3B995B |
   BCC loc_77950                             ; $3B995E |
@@ -11533,12 +11786,13 @@ loc_77950:
   STA $0486,x                               ; $3B9963 |
   LDA $05F6,x                               ; $3B9966 |
   STA $04CB,x                               ; $3B9969 |
-  JMP $98A4                                 ; $3B996C |
+  JMP code_3B98A4                           ; $3B996C |
 
   db $B0, $C0, $A8, $D0, $D0, $A0, $B8, $70 ; $3B996F |
   db $98, $80, $B0, $70, $00, $00, $00, $00 ; $3B9977 |
   db $00, $00                               ; $3B997F |
 
+code_3B9981:
   LDA $05B1,x                               ; $3B9981 |
   STA $EB                                   ; $3B9984 |
   LDA $05C8,x                               ; $3B9986 |
@@ -11547,8 +11801,8 @@ loc_77950:
   STA $EC                                   ; $3B998E |
   LDA $05F6,x                               ; $3B9990 |
   STA $EE                                   ; $3B9993 |
-  JSR $E4D3                                 ; $3B9995 |
-  JSR $E468                                 ; $3B9998 |
+  JSR code_3FE4D3                           ; $3B9995 |
+  JSR code_3FE468                           ; $3B9998 |
   LDA $0486,x                               ; $3B999B |
   SEC                                       ; $3B999E |
   SBC $0486                                 ; $3B999F |
@@ -11593,24 +11847,24 @@ loc_779E2:
   LDA $ED                                   ; $3B99EB |
   ADC $05F6,x                               ; $3B99ED |
   STA $05F6,x                               ; $3B99F0 |
-  JMP $9981                                 ; $3B99F3 |
+  JMP code_3B9981                           ; $3B99F3 |
 
   db $7D, $00, $12, $00, $00, $00           ; $3B99F6 |
 
-  JSR $EBD1                                 ; $3B99FC |
+  JSR code_3FEBD1                           ; $3B99FC |
   LDA #$1E                                  ; $3B99FF |
   STA $05B1,x                               ; $3B9A01 |
   LDA #$60                                  ; $3B9A04 |
   STA $03B7,x                               ; $3B9A06 |
 loc_77A09:
-  JSR $E468                                 ; $3B9A09 |
+  JSR code_3FE468                           ; $3B9A09 |
   DEC $05B1,x                               ; $3B9A0C |
   BNE loc_77A09                             ; $3B9A0F |
-  JMP $E456                                 ; $3B9A11 |
+  JMP code_3FE456                           ; $3B9A11 |
 
   db $A9, $00, $71, $00, $00, $00           ; $3B9A14 |
 
-  JSR $EBD1                                 ; $3B9A1A |
+  JSR code_3FEBD1                           ; $3B9A1A |
   LDA $57                                   ; $3B9A1D |
   CMP #$08                                  ; $3B9A1F |
   BNE loc_77A36                             ; $3B9A21 |
@@ -11619,17 +11873,19 @@ loc_77A09:
   STA $00                                   ; $3B9A27 |
   LDA #$10                                  ; $3B9A29 |
   STA $01                                   ; $3B9A2B |
-  JSR $D9CD                                 ; $3B9A2D |
+  JSR code_3ED9CD                           ; $3B9A2D |
   LDA $11                                   ; $3B9A30 |
   CMP #$10                                  ; $3B9A32 |
   BNE loc_77A3C                             ; $3B9A34 |
 loc_77A36:
-  JSR $E468                                 ; $3B9A36 |
-  JMP $9A36                                 ; $3B9A39 |
+code_3B9A36:
+  JSR code_3FE468                           ; $3B9A36 |
+  JMP code_3B9A36                           ; $3B9A39 |
 
 loc_77A3C:
-  JMP $E456                                 ; $3B9A3C |
+  JMP code_3FE456                           ; $3B9A3C |
 
+org $BA3F
   LDA $51                                   ; $3BBA3F |
   CMP #$09                                  ; $3BBA41 |
   BCS locret_77A78                          ; $3BBA43 |
@@ -11668,29 +11924,29 @@ locret_77A78:
 
   LDA #$12                                  ; $3BBA9D |
   STA $DC                                   ; $3BBA9F |
-  JSR $C9BF                                 ; $3BBAA1 |
-  JSR $CB28                                 ; $3BBAA4 |
+  JSR code_3EC9BF                           ; $3BBAA1 |
+  JSR code_3ECB28                           ; $3BBAA4 |
 
   db $42                                    ; $3BBAA7 |
 
   LDA #$41                                  ; $3BBAA8 |
-  JSR $CB28                                 ; $3BBAAA |
+  JSR code_3ECB28                           ; $3BBAAA |
 
   db $00                                    ; $3BBAAD |
 
   LDA #$C7                                  ; $3BBAAE |
-  JSR $CAA4                                 ; $3BBAB0 |
+  JSR code_3ECAA4                           ; $3BBAB0 |
   LDA #$6D                                  ; $3BBAB3 |
-  JSR $CAA4                                 ; $3BBAB5 |
+  JSR code_3ECAA4                           ; $3BBAB5 |
   LDA #$DA                                  ; $3BBAB8 |
   STA $06A9                                 ; $3BBABA |
-  JSR $C9EF                                 ; $3BBABD |
+  JSR code_3EC9EF                           ; $3BBABD |
   LDA #$E6                                  ; $3BBAC0 |
   STA $0C                                   ; $3BBAC2 |
   LDA #$BA                                  ; $3BBAC4 |
   STA $0D                                   ; $3BBAC6 |
-  JSR $F254                                 ; $3BBAC8 |
-  JSR $E1DD                                 ; $3BBACB |
+  JSR code_3FF254                           ; $3BBAC8 |
+  JSR code_3FE1DD                           ; $3BBACB |
   LDA #$F6                                  ; $3BBACE |
   STA $0C                                   ; $3BBAD0 |
   LDA #$BA                                  ; $3BBAD2 |
@@ -11701,7 +11957,7 @@ locret_77A78:
   STA $05                                   ; $3BBADC |
   LDA #$94                                  ; $3BBADE |
   STA $05DF                                 ; $3BBAE0 |
-  JMP $BB4C                                 ; $3BBAE3 |
+  JMP code_3BBB4C                           ; $3BBAE3 |
 
   db $70, $3F, $AC, $98, $5F, $AD, $68, $77 ; $3BBAE6 |
   db $AB, $98, $7F, $AE, $D8, $C7, $AF, $00 ; $3BBAEE |
@@ -11710,29 +11966,29 @@ locret_77A78:
 
   LDA #$11                                  ; $3BBB06 |
   STA $DC                                   ; $3BBB08 |
-  JSR $C9BF                                 ; $3BBB0A |
-  JSR $CB28                                 ; $3BBB0D |
+  JSR code_3EC9BF                           ; $3BBB0A |
+  JSR code_3ECB28                           ; $3BBB0D |
 
   db $42                                    ; $3BBB10 |
 
   LDA #$42                                  ; $3BBB11 |
-  JSR $CB28                                 ; $3BBB13 |
+  JSR code_3ECB28                           ; $3BBB13 |
 
   db $00                                    ; $3BBB16 |
 
   LDA #$C9                                  ; $3BBB17 |
-  JSR $CAA4                                 ; $3BBB19 |
+  JSR code_3ECAA4                           ; $3BBB19 |
   LDA #$6F                                  ; $3BBB1C |
-  JSR $CAA4                                 ; $3BBB1E |
+  JSR code_3ECAA4                           ; $3BBB1E |
   LDA #$DB                                  ; $3BBB21 |
   STA $06A9                                 ; $3BBB23 |
-  JSR $C9EF                                 ; $3BBB26 |
+  JSR code_3EC9EF                           ; $3BBB26 |
   LDA #$9F                                  ; $3BBB29 |
   STA $0C                                   ; $3BBB2B |
   LDA #$BB                                  ; $3BBB2D |
   STA $0D                                   ; $3BBB2F |
-  JSR $F254                                 ; $3BBB31 |
-  JSR $E1DD                                 ; $3BBB34 |
+  JSR code_3FF254                           ; $3BBB31 |
+  JSR code_3FE1DD                           ; $3BBB34 |
   LDA #$AF                                  ; $3BBB37 |
   STA $0C                                   ; $3BBB39 |
   LDA #$BB                                  ; $3BBB3B |
@@ -11743,27 +11999,28 @@ locret_77A78:
   STA $05                                   ; $3BBB45 |
   LDA #$B0                                  ; $3BBB47 |
   STA $05DF                                 ; $3BBB49 |
-  JSR $CA89                                 ; $3BBB4C |
+code_3BBB4C:
+  JSR code_3ECA89                           ; $3BBB4C |
   LDA #$F0                                  ; $3BBB4F |
-  JSR $C5F6                                 ; $3BBB51 |
+  JSR code_3EC5F6                           ; $3BBB51 |
   LDA #$B4                                  ; $3BBB54 |
-  JSR $C5F6                                 ; $3BBB56 |
-  JSR $BCDE                                 ; $3BBB59 |
+  JSR code_3EC5F6                           ; $3BBB56 |
+  JSR code_3BBCDE                           ; $3BBB59 |
   LDA #$01                                  ; $3BBB5C |
   STA $06A0                                 ; $3BBB5E |
   LDA $06A9                                 ; $3BBB61 |
-  JSR $C9EF                                 ; $3BBB64 |
+  JSR code_3EC9EF                           ; $3BBB64 |
   LDA #$00                                  ; $3BBB67 |
   STA $06A0                                 ; $3BBB69 |
   LDA #$1E                                  ; $3BBB6C |
-  JSR $C5F6                                 ; $3BBB6E |
-  JSR $F254                                 ; $3BBB71 |
+  JSR code_3EC5F6                           ; $3BBB6E |
+  JSR code_3FF254                           ; $3BBB71 |
   LDA $51                                   ; $3BBB74 |
   ORA #$08                                  ; $3BBB76 |
   STA $51                                   ; $3BBB78 |
-  JSR $BBD6                                 ; $3BBB7A |
+  JSR code_3BBBD6                           ; $3BBB7A |
   LDA #$3C                                  ; $3BBB7D |
-  JSR $BC46                                 ; $3BBB7F |
+  JSR code_3BBC46                           ; $3BBB7F |
   LDA $51                                   ; $3BBB82 |
   AND #$03                                  ; $3BBB84 |
   STA $00                                   ; $3BBB86 |
@@ -11772,11 +12029,11 @@ locret_77A78:
   ADC $00                                   ; $3BBB8B |
   TAX                                       ; $3BBB8D |
   LDY #$A5                                  ; $3BBB8E |
-  JSR $E522                                 ; $3BBB90 |
-  JSR $BBBF                                 ; $3BBB93 |
+  JSR code_3FE522                           ; $3BBB90 |
+  JSR code_3BBBBF                           ; $3BBB93 |
   LDA #$78                                  ; $3BBB96 |
-  JSR $BC46                                 ; $3BBB98 |
-  JSR $CA3D                                 ; $3BBB9B |
+  JSR code_3BBC46                           ; $3BBB98 |
+  JSR code_3ECA3D                           ; $3BBB9B |
   RTS                                       ; $3BBB9E |
 
   db $38, $CB, $B7, $2C, $A3, $B8, $64, $9B ; $3BBB9F |
@@ -11784,6 +12041,7 @@ locret_77A78:
   db $E4, $5B, $B6, $C4, $8B, $A6, $8C, $A4 ; $3BBBAF |
   db $A6, $4C, $AB, $A6, $14, $C3, $A6, $00 ; $3BBBB7 |
 
+code_3BBBBF:
   LDX $063C                                 ; $3BBBBF |
   LDA $51                                   ; $3BBBC2 |
   SEC                                       ; $3BBBC4 |
@@ -11795,6 +12053,7 @@ locret_77A78:
   LDA #$01                                  ; $3BBBCF |
   STA $063B                                 ; $3BBBD1 |
   BNE loc_77BF0                             ; $3BBBD4 |
+code_3BBBD6:
   LDA $51                                   ; $3BBBD6 |
   AND #$04                                  ; $3BBBD8 |
   TAY                                       ; $3BBBDA |
@@ -11845,27 +12104,29 @@ loc_77C1B:
   LDA #$62                                  ; $3BBC30 |
   STA $DC                                   ; $3BBC32 |
   LDA #$03                                  ; $3BBC34 |
-  JSR $BC46                                 ; $3BBC36 |
+  JSR code_3BBC46                           ; $3BBC36 |
 loc_77C39:
   LDY $06                                   ; $3BBC39 |
   BNE loc_77BF0                             ; $3BBC3B |
 loc_77C3D:
   STX $063C                                 ; $3BBC3D |
   STY $06                                   ; $3BBC40 |
-  JSR $BC55                                 ; $3BBC42 |
+  JSR code_3BBC55                           ; $3BBC42 |
   RTS                                       ; $3BBC45 |
 
+code_3BBC46:
   STA $05B1                                 ; $3BBC46 |
 loc_77C49:
-  JSR $BC55                                 ; $3BBC49 |
-  JSR $C62B                                 ; $3BBC4C |
+  JSR code_3BBC55                           ; $3BBC49 |
+  JSR code_3EC62B                           ; $3BBC4C |
   DEC $05B1                                 ; $3BBC4F |
   BPL loc_77C49                             ; $3BBC52 |
   RTS                                       ; $3BBC54 |
 
+code_3BBC55:
   LDA $05DF                                 ; $3BBC55 |
   STA $8C                                   ; $3BBC58 |
-  JMP $E1E1                                 ; $3BBC5A |
+  JMP code_3FE1E1                           ; $3BBC5A |
 
   db $00, $10, $19, $25, $2F, $3C, $48, $4F ; $3BBC5D |
   db $58, $00, $08, $00, $08, $00, $08, $00 ; $3BBC65 |
@@ -11885,30 +12146,32 @@ loc_77C49:
   db $81, $01, $04, $07, $07, $05, $01, $01 ; $3BBCD5 |
   db $01                                    ; $3BBCDD |
 
-  JSR $F6D9                                 ; $3BBCDE |
+code_3BBCDE:
+  JSR code_3FF6D9                           ; $3BBCDE |
   LDA #$3C                                  ; $3BBCE1 |
-  JSR $C5F6                                 ; $3BBCE3 |
+  JSR code_3EC5F6                           ; $3BBCE3 |
   LDY #$02                                  ; $3BBCE6 |
-  JMP $F6D9                                 ; $3BBCE8 |
+  JMP code_3FF6D9                           ; $3BBCE8 |
 
   LDA #$CC                                  ; $3BBCEB |
-  JSR $C9EF                                 ; $3BBCED |
+  JSR code_3EC9EF                           ; $3BBCED |
   LDA #$00                                  ; $3BBCF0 |
   STA $05E7                                 ; $3BBCF2 |
-  JSR $BD04                                 ; $3BBCF5 |
-  JSR $BD04                                 ; $3BBCF8 |
-  JSR $BD04                                 ; $3BBCFB |
-  JSR $BD04                                 ; $3BBCFE |
-  JMP $C5E6                                 ; $3BBD01 |
+  JSR code_3BBD04                           ; $3BBCF5 |
+  JSR code_3BBD04                           ; $3BBCF8 |
+  JSR code_3BBD04                           ; $3BBCFB |
+  JSR code_3BBD04                           ; $3BBCFE |
+  JMP code_3EC5E6                           ; $3BBD01 |
 
+code_3BBD04:
   LDX #$1F                                  ; $3BBD04 |
-  JSR $CA59                                 ; $3BBD06 |
+  JSR code_3ECA59                           ; $3BBD06 |
   LDX #$0B                                  ; $3BBD09 |
-  JSR $CA59                                 ; $3BBD0B |
-  JSR $CA59                                 ; $3BBD0E |
-  JSR $CA59                                 ; $3BBD11 |
+  JSR code_3ECA59                           ; $3BBD0B |
+  JSR code_3ECA59                           ; $3BBD0E |
+  JSR code_3ECA59                           ; $3BBD11 |
   LDA #$05                                  ; $3BBD14 |
-  JSR $C5F6                                 ; $3BBD16 |
+  JSR code_3EC5F6                           ; $3BBD16 |
   RTS                                       ; $3BBD19 |
 
 locret_77D1A:
@@ -11919,7 +12182,7 @@ locret_77D1A:
   LDA $51                                   ; $3BBD20 |
   PHA                                       ; $3BBD22 |
   LDA #$05                                  ; $3BBD23 |
-  JSR $DBD7                                 ; $3BBD25 |
+  JSR code_3EDBD7                           ; $3BBD25 |
   LDA #$07                                  ; $3BBD28 |
   STA $57                                   ; $3BBD2A |
   PLA                                       ; $3BBD2C |
@@ -11928,25 +12191,25 @@ locret_77D1A:
   STA $71                                   ; $3BBD31 |
   LDA #$16                                  ; $3BBD33 |
   STA $DC                                   ; $3BBD35 |
-  JSR $C62B                                 ; $3BBD37 |
-  JSR $C9BF                                 ; $3BBD3A |
-  JSR $CB28                                 ; $3BBD3D |
+  JSR code_3EC62B                           ; $3BBD37 |
+  JSR code_3EC9BF                           ; $3BBD3A |
+  JSR code_3ECB28                           ; $3BBD3D |
 
   db $42                                    ; $3BBD40 |
 
   LDA #$43                                  ; $3BBD41 |
-  JSR $CB28                                 ; $3BBD43 |
+  JSR code_3ECB28                           ; $3BBD43 |
 
   db $00                                    ; $3BBD46 |
 
   LDA #$8F                                  ; $3BBD47 |
-  JSR $CAA4                                 ; $3BBD49 |
+  JSR code_3ECAA4                           ; $3BBD49 |
   LDA #$C8                                  ; $3BBD4C |
-  JSR $CAA4                                 ; $3BBD4E |
+  JSR code_3ECAA4                           ; $3BBD4E |
   LDA #$6C                                  ; $3BBD51 |
-  JSR $CAA4                                 ; $3BBD53 |
+  JSR code_3ECAA4                           ; $3BBD53 |
   LDA #$DC                                  ; $3BBD56 |
-  JSR $C9EF                                 ; $3BBD58 |
+  JSR code_3EC9EF                           ; $3BBD58 |
   LDA #$50                                  ; $3BBD5B |
   STA $0678                                 ; $3BBD5D |
   LDA #$40                                  ; $3BBD60 |
@@ -11957,51 +12220,51 @@ locret_77D1A:
   STA $F4                                   ; $3BBD6C |
   LDY #$90                                  ; $3BBD6E |
   LDX #$08                                  ; $3BBD70 |
-  JSR $CB28                                 ; $3BBD72 |
+  JSR code_3ECB28                           ; $3BBD72 |
 
   db $41                                    ; $3BBD75 |
 
   LDY #$78                                  ; $3BBD76 |
-  JSR $E522                                 ; $3BBD78 |
+  JSR code_3FE522                           ; $3BBD78 |
   LDY #$00                                  ; $3BBD7B |
-  JSR $E4A7                                 ; $3BBD7D |
-  JSR $E1DD                                 ; $3BBD80 |
-  JSR $CA89                                 ; $3BBD83 |
+  JSR code_3FE4A7                           ; $3BBD7D |
+  JSR code_3FE1DD                           ; $3BBD80 |
+  JSR code_3ECA89                           ; $3BBD83 |
   LDA #$40                                  ; $3BBD86 |
-  JSR $BF57                                 ; $3BBD88 |
+  JSR code_3BBF57                           ; $3BBD88 |
   LDY #$90                                  ; $3BBD8B |
   LDX #$09                                  ; $3BBD8D |
-  JSR $CB28                                 ; $3BBD8F |
+  JSR code_3ECB28                           ; $3BBD8F |
 
   db $41                                    ; $3BBD92 |
 
   LDY #$79                                  ; $3BBD93 |
-  JSR $E522                                 ; $3BBD95 |
+  JSR code_3FE522                           ; $3BBD95 |
   LDY #$00                                  ; $3BBD98 |
-  JSR $E4A7                                 ; $3BBD9A |
+  JSR code_3FE4A7                           ; $3BBD9A |
   LDA #$65                                  ; $3BBD9D |
   STA $DC                                   ; $3BBD9F |
   LDA #$08                                  ; $3BBDA1 |
-  JSR $BF57                                 ; $3BBDA3 |
+  JSR code_3BBF57                           ; $3BBDA3 |
   LDA #$00                                  ; $3BBDA6 |
   STA $03A9                                 ; $3BBDA8 |
   LDY #$7A                                  ; $3BBDAB |
   LDX #$08                                  ; $3BBDAD |
-  JSR $E522                                 ; $3BBDAF |
-  JSR $E1DD                                 ; $3BBDB2 |
-  JSR $BECB                                 ; $3BBDB5 |
+  JSR code_3FE522                           ; $3BBDAF |
+  JSR code_3FE1DD                           ; $3BBDB2 |
+  JSR code_3BBECB                           ; $3BBDB5 |
   LDY $51                                   ; $3BBDB8 |
   LDA $F700,y                               ; $3BBDBA |
   STA $0699                                 ; $3BBDBD |
   CLC                                       ; $3BBDC0 |
   ADC #$F7                                  ; $3BBDC1 |
-  JSR $C9EF                                 ; $3BBDC3 |
-  JSR $BEB2                                 ; $3BBDC6 |
+  JSR code_3EC9EF                           ; $3BBDC3 |
+  JSR code_3BBEB2                           ; $3BBDC6 |
 loc_77DC9:
   INC $048E                                 ; $3BBDC9 |
   INC $048E                                 ; $3BBDCC |
-  JSR $E1DD                                 ; $3BBDCF |
-  JSR $C62B                                 ; $3BBDD2 |
+  JSR code_3FE1DD                           ; $3BBDCF |
+  JSR code_3EC62B                           ; $3BBDD2 |
   DEC $0678                                 ; $3BBDD5 |
   DEC $0678                                 ; $3BBDD8 |
   BNE loc_77DC9                             ; $3BBDDB |
@@ -12017,7 +12280,7 @@ loc_77DC9:
   CLC                                       ; $3BBDF2 |
   ADC #$60                                  ; $3BBDF3 |
   ADC $06A5                                 ; $3BBDF5 |
-  JSR $CB28                                 ; $3BBDF8 |
+  JSR code_3ECB28                           ; $3BBDF8 |
 
   db $00                                    ; $3BBDFB |
 
@@ -12026,35 +12289,35 @@ loc_77DC9:
   LDA #$00                                  ; $3BBE01 |
   STA $069F                                 ; $3BBE03 |
   LDA #$5A                                  ; $3BBE06 |
-  JSR $C5F6                                 ; $3BBE08 |
-  JSR $BF10                                 ; $3BBE0B |
+  JSR code_3EC5F6                           ; $3BBE08 |
+  JSR code_3BBF10                           ; $3BBE0B |
   LDA #$47                                  ; $3BBE0E |
-  JSR $CB28                                 ; $3BBE10 |
+  JSR code_3ECB28                           ; $3BBE10 |
 
   db $00                                    ; $3BBE13 |
 
   LDA #$00                                  ; $3BBE14 |
   STA $03A8                                 ; $3BBE16 |
-  JSR $E1DD                                 ; $3BBE19 |
+  JSR code_3FE1DD                           ; $3BBE19 |
   LDA #$00                                  ; $3BBE1C |
-  JSR $CAA4                                 ; $3BBE1E |
+  JSR code_3ECAA4                           ; $3BBE1E |
   LDA #$01                                  ; $3BBE21 |
-  JSR $CAA4                                 ; $3BBE23 |
+  JSR code_3ECAA4                           ; $3BBE23 |
   LDA #$09                                  ; $3BBE26 |
-  JSR $C9EF                                 ; $3BBE28 |
+  JSR code_3EC9EF                           ; $3BBE28 |
   LDA $0699                                 ; $3BBE2B |
   CLC                                       ; $3BBE2E |
   ADC #$AF                                  ; $3BBE2F |
-  JSR $C9EF                                 ; $3BBE31 |
+  JSR code_3EC9EF                           ; $3BBE31 |
   LDY $0699                                 ; $3BBE34 |
   LDA #$1B                                  ; $3BBE37 |
   STA $0688,y                               ; $3BBE39 |
   LDA $F708,y                               ; $3BBE3C |
-  JSR $CAA4                                 ; $3BBE3F |
+  JSR code_3ECAA4                           ; $3BBE3F |
   LDX #$00                                  ; $3BBE42 |
   STX $98                                   ; $3BBE44 |
   LDY #$04                                  ; $3BBE46 |
-  JSR $CB28                                 ; $3BBE48 |
+  JSR code_3ECB28                           ; $3BBE48 |
 
   db $41                                    ; $3BBE4B |
 
@@ -12065,15 +12328,15 @@ loc_77DC9:
   LDA #$07                                  ; $3BBE56 |
   STA $046F                                 ; $3BBE58 |
   LDA #$1E                                  ; $3BBE5B |
-  JSR $C5F6                                 ; $3BBE5D |
+  JSR code_3EC5F6                           ; $3BBE5D |
   LDA #$00                                  ; $3BBE60 |
   STA $40                                   ; $3BBE62 |
   STA $42                                   ; $3BBE64 |
-  JSR $E41C                                 ; $3BBE66 |
-  JSR $E1DD                                 ; $3BBE69 |
-  JSR $BF2F                                 ; $3BBE6C |
+  JSR code_3FE41C                           ; $3BBE66 |
+  JSR code_3FE1DD                           ; $3BBE69 |
+  JSR code_3BBF2F                           ; $3BBE6C |
   LDA #$0A                                  ; $3BBE6F |
-  JSR $C5F6                                 ; $3BBE71 |
+  JSR code_3EC5F6                           ; $3BBE71 |
   LDA #$F0                                  ; $3BBE74 |
   STA $05B9                                 ; $3BBE76 |
 loc_77E79:
@@ -12088,49 +12351,52 @@ loc_77E79:
 loc_77E8A:
   STY $40                                   ; $3BBE8A |
   STY $42                                   ; $3BBE8C |
-  JSR $E41C                                 ; $3BBE8E |
-  JSR $E1DD                                 ; $3BBE91 |
-  JSR $C62B                                 ; $3BBE94 |
+  JSR code_3FE41C                           ; $3BBE8E |
+  JSR code_3FE1DD                           ; $3BBE91 |
+  JSR code_3EC62B                           ; $3BBE94 |
   DEC $05B9                                 ; $3BBE97 |
   BNE loc_77E79                             ; $3BBE9A |
   LDA #$00                                  ; $3BBE9C |
   STA $03A0                                 ; $3BBE9E |
   LDA #$5A                                  ; $3BBEA1 |
-  JSR $C5F6                                 ; $3BBEA3 |
-  JSR $CA3D                                 ; $3BBEA6 |
+  JSR code_3EC5F6                           ; $3BBEA3 |
+  JSR code_3ECA3D                           ; $3BBEA6 |
   RTS                                       ; $3BBEA9 |
 
   db $24, $35, $0C, $27, $38, $36, $38, $38 ; $3BBEAA |
 
-  JSR $DEA3                                 ; $3BBEB2 |
+code_3BBEB2:
+  JSR code_3EDEA3                           ; $3BBEB2 |
   LDA #$40                                  ; $3BBEB5 |
   STA $49                                   ; $3BBEB7 |
 loc_77EB9:
-  JSR $BEE6                                 ; $3BBEB9 |
+  JSR code_3BBEE6                           ; $3BBEB9 |
   LDA $49                                   ; $3BBEBC |
   SEC                                       ; $3BBEBE |
   SBC #$10                                  ; $3BBEBF |
   STA $49                                   ; $3BBEC1 |
   BPL loc_77EB9                             ; $3BBEC3 |
-  JSR $DEAF                                 ; $3BBEC5 |
+  JSR code_3EDEAF                           ; $3BBEC5 |
   INC $46                                   ; $3BBEC8 |
   RTS                                       ; $3BBECA |
 
-  JSR $DEA3                                 ; $3BBECB |
+code_3BBECB:
+  JSR code_3EDEA3                           ; $3BBECB |
   LDA #$00                                  ; $3BBECE |
   STA $49                                   ; $3BBED0 |
 loc_77ED2:
-  JSR $BEE6                                 ; $3BBED2 |
+  JSR code_3BBEE6                           ; $3BBED2 |
   LDA $49                                   ; $3BBED5 |
   CLC                                       ; $3BBED7 |
   ADC #$10                                  ; $3BBED8 |
   STA $49                                   ; $3BBEDA |
   CMP #$50                                  ; $3BBEDC |
   BNE loc_77ED2                             ; $3BBEDE |
-  JSR $DEAF                                 ; $3BBEE0 |
+  JSR code_3EDEAF                           ; $3BBEE0 |
   INC $46                                   ; $3BBEE3 |
   RTS                                       ; $3BBEE5 |
 
+code_3BBEE6:
   LDX #$1F                                  ; $3BBEE6 |
 loc_77EE8:
   LDA $0380,x                               ; $3BBEE8 |
@@ -12152,36 +12418,38 @@ loc_77F05:
   BPL loc_77EE8                             ; $3BBF06 |
   INC $46                                   ; $3BBF08 |
   LDA #$05                                  ; $3BBF0A |
-  JSR $C5F6                                 ; $3BBF0C |
+  JSR code_3EC5F6                           ; $3BBF0C |
   RTS                                       ; $3BBF0F |
 
+code_3BBF10:
   LDA #$04                                  ; $3BBF10 |
   STA $05C8                                 ; $3BBF12 |
 loc_77F15:
   LDX #$1B                                  ; $3BBF15 |
-  JSR $CA59                                 ; $3BBF17 |
+  JSR code_3ECA59                           ; $3BBF17 |
   LDX #$17                                  ; $3BBF1A |
-  JSR $CA59                                 ; $3BBF1C |
+  JSR code_3ECA59                           ; $3BBF1C |
   LDX #$07                                  ; $3BBF1F |
-  JSR $CA59                                 ; $3BBF21 |
+  JSR code_3ECA59                           ; $3BBF21 |
   LDA #$05                                  ; $3BBF24 |
-  JSR $C5F6                                 ; $3BBF26 |
+  JSR code_3EC5F6                           ; $3BBF26 |
   DEC $05C8                                 ; $3BBF29 |
   BNE loc_77F15                             ; $3BBF2C |
   RTS                                       ; $3BBF2E |
 
-  JSR $DEA3                                 ; $3BBF2F |
+code_3BBF2F:
+  JSR code_3EDEA3                           ; $3BBF2F |
   LDA #$40                                  ; $3BBF32 |
   STA $49                                   ; $3BBF34 |
   LDA #$05                                  ; $3BBF36 |
   STA $05C8                                 ; $3BBF38 |
 loc_77F3B:
   LDX #$17                                  ; $3BBF3B |
-  JSR $CA71                                 ; $3BBF3D |
+  JSR code_3ECA71                           ; $3BBF3D |
   LDX #$13                                  ; $3BBF40 |
-  JSR $CA71                                 ; $3BBF42 |
+  JSR code_3ECA71                           ; $3BBF42 |
   LDA #$05                                  ; $3BBF45 |
-  JSR $C5F6                                 ; $3BBF47 |
+  JSR code_3EC5F6                           ; $3BBF47 |
   LDA $49                                   ; $3BBF4A |
   SEC                                       ; $3BBF4C |
   SBC #$10                                  ; $3BBF4D |
@@ -12190,10 +12458,11 @@ loc_77F3B:
   BNE loc_77F3B                             ; $3BBF54 |
   RTS                                       ; $3BBF56 |
 
+code_3BBF57:
   STA $05C8                                 ; $3BBF57 |
 loc_77F5A:
-  JSR $E1DD                                 ; $3BBF5A |
-  JSR $C62B                                 ; $3BBF5D |
+  JSR code_3FE1DD                           ; $3BBF5A |
+  JSR code_3EC62B                           ; $3BBF5D |
   DEC $05C8                                 ; $3BBF60 |
   BNE loc_77F5A                             ; $3BBF63 |
   RTS                                       ; $3BBF65 |
@@ -12209,25 +12478,25 @@ loc_77F6A:
   STA $F4                                   ; $3BBF74 |
   STA $FA                                   ; $3BBF76 |
   LDY #$01                                  ; $3BBF78 |
-  JSR $C5F0                                 ; $3BBF7A |
+  JSR code_3EC5F0                           ; $3BBF7A |
   LDY #$02                                  ; $3BBF7D |
-  JSR $C5F0                                 ; $3BBF7F |
-  JSR $C9BF                                 ; $3BBF82 |
+  JSR code_3EC5F0                           ; $3BBF7F |
+  JSR code_3EC9BF                           ; $3BBF82 |
   LDA #$3F                                  ; $3BBF85 |
-  JSR $C9EF                                 ; $3BBF87 |
+  JSR code_3EC9EF                           ; $3BBF87 |
   LDA #$14                                  ; $3BBF8A |
-  JSR $CB28                                 ; $3BBF8C |
+  JSR code_3ECB28                           ; $3BBF8C |
 
   db $00                                    ; $3BBF8F |
 
   LDA #$81                                  ; $3BBF90 |
-  JSR $CAA4                                 ; $3BBF92 |
-  JSR $E1DD                                 ; $3BBF95 |
+  JSR code_3ECAA4                           ; $3BBF92 |
+  JSR code_3FE1DD                           ; $3BBF95 |
   LDA #$2D                                  ; $3BBF98 |
-  JSR $CAA4                                 ; $3BBF9A |
+  JSR code_3ECAA4                           ; $3BBF9A |
   LDA #$1E                                  ; $3BBF9D |
-  JSR $CAA4                                 ; $3BBF9F |
-  JSR $CA89                                 ; $3BBFA2 |
+  JSR code_3ECAA4                           ; $3BBF9F |
+  JSR code_3ECA89                           ; $3BBFA2 |
   RTS                                       ; $3BBFA5 |
 
   db $00, $00, $00, $00, $00, $00, $00, $00 ; $3BBFA6 |
@@ -12244,8 +12513,7 @@ loc_77F6A:
   db $00, $00                               ; $3BBFFE |
 
 bank $3C
-org $A000
-
+org $8000
 
   PHA                                       ; $3CA000 |
   STX $16                                   ; $3CA001 |
@@ -12264,48 +12532,49 @@ org $A000
   STA $DC                                   ; $3C801F |
   LDA $A9                                   ; $3C8021 |
   BPL loc_78047                             ; $3C8023 |
-  JSR $CB28                                 ; $3C8025 |
+  JSR code_3ECB28                           ; $3C8025 |
 
   db $4B                                    ; $3C8028 |
 
   LDA #$14                                  ; $3C8029 |
   STA $DC                                   ; $3C802B |
   LDA #$18                                  ; $3C802D |
-  JSR $CB28                                 ; $3C802F |
+  JSR code_3ECB28                           ; $3C802F |
 
   db $00                                    ; $3C8032 |
 
   LDA #$00                                  ; $3C8033 |
   STA $05B1                                 ; $3C8035 |
+code_3C8038:
   DEC $05B1                                 ; $3C8038 |
   BEQ loc_78043                             ; $3C803B |
-  JSR $C62B                                 ; $3C803D |
-  JMP $8038                                 ; $3C8040 |
+  JSR code_3EC62B                           ; $3C803D |
+  JMP code_3C8038                           ; $3C8040 |
 
 loc_78043:
   LDA #$15                                  ; $3C8043 |
   STA $DC                                   ; $3C8045 |
 loc_78047:
   LDA #$17                                  ; $3C8047 |
-  JSR $CB28                                 ; $3C8049 |
+  JSR code_3ECB28                           ; $3C8049 |
 
   db $00                                    ; $3C804C |
 
   LDX #$00                                  ; $3C804D |
   LDY #$10                                  ; $3C804F |
-  JSR $CB28                                 ; $3C8051 |
+  JSR code_3ECB28                           ; $3C8051 |
 
   db $41                                    ; $3C8054 |
 
   LDY #$9B                                  ; $3C8055 |
-  JSR $E522                                 ; $3C8057 |
+  JSR code_3FE522                           ; $3C8057 |
   LDA #$50                                  ; $3C805A |
   STA $0486                                 ; $3C805C |
   LDA $51                                   ; $3C805F |
   AND #$08                                  ; $3C8061 |
   BNE loc_780A8                             ; $3C8063 |
   LDA #$19                                  ; $3C8065 |
-  JSR $CB28                                 ; $3C8067 |
+  JSR code_3ECB28                           ; $3C8067 |
 
   db $00                                    ; $3C806A |
 
@@ -12315,9 +12584,9 @@ loc_78070:
   LDY $05B1                                 ; $3C8070 |
   LDA $80A6,y                               ; $3C8073 |
   STA $04CB                                 ; $3C8076 |
-  JSR $E1DD                                 ; $3C8079 |
+  JSR code_3FE1DD                           ; $3C8079 |
 loc_7807C:
-  JSR $C62B                                 ; $3C807C |
+  JSR code_3EC62B                           ; $3C807C |
   LDA $42                                   ; $3C807F |
   AND #$90                                  ; $3C8081 |
   BNE loc_78099                             ; $3C8083 |
@@ -12336,7 +12605,7 @@ loc_78099:
 loc_7809E:
   LDA #$33                                  ; $3C809E |
   STA $DC                                   ; $3C80A0 |
-  JSR $CA3D                                 ; $3C80A2 |
+  JSR code_3ECA3D                           ; $3C80A2 |
   RTS                                       ; $3C80A5 |
 
   db $BA, $CA                               ; $3C80A6 |
@@ -12345,13 +12614,13 @@ loc_780A8:
   LDA #$C3                                  ; $3C80A8 |
   STA $04CB                                 ; $3C80AA |
   LDA #$1A                                  ; $3C80AD |
-  JSR $CB28                                 ; $3C80AF |
+  JSR code_3ECB28                           ; $3C80AF |
 
   db $00                                    ; $3C80B2 |
 
-  JSR $E1DD                                 ; $3C80B3 |
+  JSR code_3FE1DD                           ; $3C80B3 |
 loc_780B6:
-  JSR $C62B                                 ; $3C80B6 |
+  JSR code_3EC62B                           ; $3C80B6 |
   LDA $42                                   ; $3C80B9 |
   AND #$90                                  ; $3C80BB |
   BEQ loc_780B6                             ; $3C80BD |
@@ -12359,28 +12628,28 @@ loc_780B6:
   STA $11                                   ; $3C80C1 |
   BNE loc_7809E                             ; $3C80C3 |
   LDA #$01                                  ; $3C80C5 |
-  JSR $CAA4                                 ; $3C80C7 |
+  JSR code_3ECAA4                           ; $3C80C7 |
   LDA #$39                                  ; $3C80CA |
-  JSR $C9EF                                 ; $3C80CC |
-  JSR $CB28                                 ; $3C80CF |
+  JSR code_3EC9EF                           ; $3C80CC |
+  JSR code_3ECB28                           ; $3C80CF |
 
   db $42                                    ; $3C80D2 |
 
-  JSR $E1DD                                 ; $3C80D3 |
+  JSR code_3FE1DD                           ; $3C80D3 |
   LDY $51                                   ; $3C80D6 |
   LDA $F20C,y                               ; $3C80D8 |
-  JSR $CAA4                                 ; $3C80DB |
+  JSR code_3ECAA4                           ; $3C80DB |
   LDA #$10                                  ; $3C80DE |
-  JSR $C5F6                                 ; $3C80E0 |
+  JSR code_3EC5F6                           ; $3C80E0 |
   LDA #$10                                  ; $3C80E3 |
   STA $DC                                   ; $3C80E5 |
   LDA #$01                                  ; $3C80E7 |
-  JSR $C9EF                                 ; $3C80E9 |
-  JSR $CA89                                 ; $3C80EC |
+  JSR code_3EC9EF                           ; $3C80E9 |
+  JSR code_3ECA89                           ; $3C80EC |
   LDX #$0F                                  ; $3C80EF |
 loc_780F1:
   LDY #$4C                                  ; $3C80F1 |
-  JSR $CB28                                 ; $3C80F3 |
+  JSR code_3ECB28                           ; $3C80F3 |
 
   db $41                                    ; $3C80F6 |
 
@@ -12403,9 +12672,9 @@ loc_780FC:
   LDA #$1E                                  ; $3C811D |
   STA $07                                   ; $3C811F |
 loc_78121:
-  JSR $C62B                                 ; $3C8121 |
-  JSR $E41C                                 ; $3C8124 |
-  JSR $E1DD                                 ; $3C8127 |
+  JSR code_3EC62B                           ; $3C8121 |
+  JSR code_3FE41C                           ; $3C8124 |
+  JSR code_3FE1DD                           ; $3C8127 |
   DEC $07                                   ; $3C812A |
   BNE loc_78121                             ; $3C812C |
   LDX #$0F                                  ; $3C812E |
@@ -12423,49 +12692,49 @@ loc_78132:
   LDY $51                                   ; $3C8147 |
   LDA $F1FC,y                               ; $3C8149 |
   TAY                                       ; $3C814C |
-  JSR $E522                                 ; $3C814D |
-  JSR $E1DD                                 ; $3C8150 |
+  JSR code_3FE522                           ; $3C814D |
+  JSR code_3FE1DD                           ; $3C8150 |
   LDA #$8A                                  ; $3C8153 |
-  JSR $C9EF                                 ; $3C8155 |
+  JSR code_3EC9EF                           ; $3C8155 |
   LDA #$01                                  ; $3C8158 |
-  JSR $C5F6                                 ; $3C815A |
+  JSR code_3EC5F6                           ; $3C815A |
   LDA #$61                                  ; $3C815D |
   STA $DC                                   ; $3C815F |
-  JSR $8276                                 ; $3C8161 |
+  JSR code_3C8276                           ; $3C8161 |
   LDA #$61                                  ; $3C8164 |
   STA $DC                                   ; $3C8166 |
   LDA #$08                                  ; $3C8168 |
-  JSR $C5F6                                 ; $3C816A |
-  JSR $82B2                                 ; $3C816D |
+  JSR code_3EC5F6                           ; $3C816A |
+  JSR code_3C82B2                           ; $3C816D |
   LDA #$01                                  ; $3C8170 |
-  JSR $C5F6                                 ; $3C8172 |
-  JSR $CA3D                                 ; $3C8175 |
+  JSR code_3EC5F6                           ; $3C8172 |
+  JSR code_3ECA3D                           ; $3C8175 |
   LDY $51                                   ; $3C8178 |
   LDA $F214,y                               ; $3C817A |
-  JSR $C9EF                                 ; $3C817D |
+  JSR code_3EC9EF                           ; $3C817D |
   LDA #$01                                  ; $3C8180 |
-  JSR $C5F6                                 ; $3C8182 |
+  JSR code_3EC5F6                           ; $3C8182 |
   LDA $51                                   ; $3C8185 |
   TAY                                       ; $3C8187 |
   LDA $F204,y                               ; $3C8188 |
   TAY                                       ; $3C818B |
   LDX #$00                                  ; $3C818C |
-  JSR $E522                                 ; $3C818E |
+  JSR code_3FE522                           ; $3C818E |
   LDX #$05                                  ; $3C8191 |
-  JSR $C5C7                                 ; $3C8193 |
+  JSR code_3EC5C7                           ; $3C8193 |
   LDX #$08                                  ; $3C8196 |
-  JSR $C5C7                                 ; $3C8198 |
+  JSR code_3EC5C7                           ; $3C8198 |
   LDA #$39                                  ; $3C819B |
-  JSR $C9EF                                 ; $3C819D |
+  JSR code_3EC9EF                           ; $3C819D |
   LDA #$13                                  ; $3C81A0 |
-  JSR $CB28                                 ; $3C81A2 |
+  JSR code_3ECB28                           ; $3C81A2 |
 
   db $00                                    ; $3C81A5 |
 
   LDA #$8F                                  ; $3C81A6 |
-  JSR $CAA4                                 ; $3C81A8 |
-  JSR $E1DD                                 ; $3C81AB |
-  JSR $CA89                                 ; $3C81AE |
+  JSR code_3ECAA4                           ; $3C81A8 |
+  JSR code_3FE1DD                           ; $3C81AB |
+  JSR code_3ECA89                           ; $3C81AE |
   LDA $51                                   ; $3C81B1 |
   TAY                                       ; $3C81B3 |
   LDA $8606,y                               ; $3C81B4 |
@@ -12483,6 +12752,7 @@ loc_78132:
   LDA #$01                                  ; $3C81D4 |
   STA $060D                                 ; $3C81D6 |
   STA $05F6                                 ; $3C81D9 |
+code_3C81DC:
   LDA $05B1                                 ; $3C81DC |
   STA $00                                   ; $3C81DF |
   LDA $05B2                                 ; $3C81E1 |
@@ -12502,7 +12772,7 @@ loc_78132:
   STA $060D                                 ; $3C8205 |
   STA $05F6                                 ; $3C8208 |
   INC $03CE                                 ; $3C820B |
-  JMP $81DC                                 ; $3C820E |
+  JMP code_3C81DC                           ; $3C820E |
 
 loc_78211:
   PHA                                       ; $3C8211 |
@@ -12528,32 +12798,33 @@ loc_7821D:
   INX                                       ; $3C823A |
   STX $47                                   ; $3C823B |
 loc_7823D:
-  JSR $E1DD                                 ; $3C823D |
+  JSR code_3FE1DD                           ; $3C823D |
   LDA #$01                                  ; $3C8240 |
-  JSR $C5F6                                 ; $3C8242 |
+  JSR code_3EC5F6                           ; $3C8242 |
   DEC $05F6                                 ; $3C8245 |
   BNE loc_7823D                             ; $3C8248 |
   LDA $060D                                 ; $3C824A |
   STA $05F6                                 ; $3C824D |
   INC $03CE                                 ; $3C8250 |
-  JMP $81DC                                 ; $3C8253 |
+  JMP code_3C81DC                           ; $3C8253 |
 
 loc_78256:
   LDA #$3C                                  ; $3C8256 |
   STA $05B1                                 ; $3C8258 |
 loc_7825B:
-  JSR $E1DD                                 ; $3C825B |
+  JSR code_3FE1DD                           ; $3C825B |
   LDA #$01                                  ; $3C825E |
-  JSR $C5F6                                 ; $3C8260 |
+  JSR code_3EC5F6                           ; $3C8260 |
   DEC $05B1                                 ; $3C8263 |
   BNE loc_7825B                             ; $3C8266 |
-  JSR $CA3D                                 ; $3C8268 |
+  JSR code_3ECA3D                           ; $3C8268 |
   LDY #$01                                  ; $3C826B |
-  JSR $C5F0                                 ; $3C826D |
+  JSR code_3EC5F0                           ; $3C826D |
   LDY #$02                                  ; $3C8270 |
-  JSR $C5F0                                 ; $3C8272 |
+  JSR code_3EC5F0                           ; $3C8272 |
   RTS                                       ; $3C8275 |
 
+code_3C8276:
   LDA #$00                                  ; $3C8276 |
   STA $0370                                 ; $3C8278 |
   STA $0374                                 ; $3C827B |
@@ -12562,7 +12833,7 @@ loc_7825B:
 loc_78284:
   INC $46                                   ; $3C8284 |
   LDA #$04                                  ; $3C8286 |
-  JSR $C5F6                                 ; $3C8288 |
+  JSR code_3EC5F6                           ; $3C8288 |
   LDA $0370                                 ; $3C828B |
   CLC                                       ; $3C828E |
   ADC #$10                                  ; $3C828F |
@@ -12581,9 +12852,10 @@ loc_78284:
   RTS                                       ; $3C82B1 |
 
 loc_782B2:
+code_3C82B2:
   INC $46                                   ; $3C82B2 |
   LDA #$04                                  ; $3C82B4 |
-  JSR $C5F6                                 ; $3C82B6 |
+  JSR code_3EC5F6                           ; $3C82B6 |
   LDA $0370                                 ; $3C82B9 |
   SEC                                       ; $3C82BC |
   SBC #$10                                  ; $3C82BD |
@@ -12708,13 +12980,14 @@ loc_78616:
   STX $47                                   ; $3C8616 |
   LDA $069F                                 ; $3C8618 |
   BEQ loc_78620                             ; $3C861B |
-  JSR $8723                                 ; $3C861D |
+  JSR code_3C8723                           ; $3C861D |
 loc_78620:
+code_3C8620:
   LDA $47                                   ; $3C8620 |
   CMP #$31                                  ; $3C8622 |
   BCC loc_7862C                             ; $3C8624 |
-  JSR $C62B                                 ; $3C8626 |
-  JMP $8620                                 ; $3C8629 |
+  JSR code_3EC62B                           ; $3C8626 |
+  JMP code_3C8620                           ; $3C8629 |
 
 loc_7862C:
   LDX $03                                   ; $3C862C |
@@ -12731,6 +13004,7 @@ loc_7862C:
   LDA $8787,x                               ; $3C863B |
   STA $92                                   ; $3C863E |
   LDY #$00                                  ; $3C8640 |
+code_3C8642:
   LDX $47                                   ; $3C8642 |
   STY $00                                   ; $3C8644 |
   LDA $92                                   ; $3C8646 |
@@ -12842,21 +13116,22 @@ loc_786FC:
   LDA $FD                                   ; $3C8702 |
   BNE loc_78715                             ; $3C8704 |
   STY $00                                   ; $3C8706 |
-  JSR $C6D7                                 ; $3C8708 |
+  JSR code_3EC6D7                           ; $3C8708 |
   LDA $FC                                   ; $3C870B |
   STA {PPU_CTRL}                            ; $3C870D |
   LDY $00                                   ; $3C8710 |
-  JMP $8642                                 ; $3C8712 |
+  JMP code_3C8642                           ; $3C8712 |
 
 loc_78715:
   LDA $069F                                 ; $3C8715 |
   BEQ loc_7871D                             ; $3C8718 |
-  JSR $8723                                 ; $3C871A |
+  JSR code_3C8723                           ; $3C871A |
 loc_7871D:
-  JSR $C62B                                 ; $3C871D |
+  JSR code_3EC62B                           ; $3C871D |
 loc_78720:
-  JMP $8642                                 ; $3C8720 |
+  JMP code_3C8642                           ; $3C8720 |
 
+code_3C8723:
   LDX $47                                   ; $3C8723 |
   BEQ loc_78781                             ; $3C8725 |
   STX $00                                   ; $3C8727 |
@@ -12874,7 +13149,7 @@ loc_78730:
   STA $DC                                   ; $3C873E |
 loc_78740:
   LDA $06AC                                 ; $3C8740 |
-  JSR $C5F6                                 ; $3C8743 |
+  JSR code_3EC5F6                           ; $3C8743 |
   LDA $0780,x                               ; $3C8746 |
   STA $0783                                 ; $3C8749 |
   INX                                       ; $3C874C |
@@ -13691,7 +13966,7 @@ loc_78781:
   db $F1                                    ; $3C9FFF |
 
 bank $3D
-org $8000
+org $A000
 
   db $08, $20, $00, $EC, $ED, $D8, $D9, $D9 ; $3D8000 |
   db $DA, $EC, $ED, $04, $C0, $DE, $48, $EC ; $3DA008 |
@@ -14625,34 +14900,36 @@ org $8000
   TSX                                       ; $3DBD00 |
   STX $90                                   ; $3DBD01 |
   LDY #$02                                  ; $3DBD03 |
-  JSR $C5F0                                 ; $3DBD05 |
+  JSR code_3EC5F0                           ; $3DBD05 |
   LDA #$00                                  ; $3DBD08 |
   STA $F7                                   ; $3DBD0A |
   STA $F9                                   ; $3DBD0C |
   STA $069D                                 ; $3DBD0E |
   STA $069C                                 ; $3DBD11 |
   STA $F4                                   ; $3DBD14 |
-  JSR $CB28                                 ; $3DBD16 |
+  JSR code_3ECB28                           ; $3DBD16 |
 
   db $42                                    ; $3DBD19 |
 
-  JSR $E1DD                                 ; $3DBD1A |
+  JSR code_3FE1DD                           ; $3DBD1A |
   LDA #$0D                                  ; $3DBD1D |
   STA $DC                                   ; $3DBD1F |
   LDA #$7C                                  ; $3DBD21 |
   STA $52                                   ; $3DBD23 |
   LDA #$BD                                  ; $3DBD25 |
   STA $53                                   ; $3DBD27 |
-  JSR $BD31                                 ; $3DBD29 |
-  JSR $CB28                                 ; $3DBD2C |
+  JSR code_3DBD31                           ; $3DBD29 |
+  JSR code_3ECB28                           ; $3DBD2C |
 
   db $42                                    ; $3DBD2F |
 
   RTS                                       ; $3DBD30 |
 
+code_3DBD31:
   LDY #$00                                  ; $3DBD31 |
   STY $05F6                                 ; $3DBD33 |
   STY $0624                                 ; $3DBD36 |
+code_3DBD39:
   LDY $05F6                                 ; $3DBD39 |
   LDA ($52),y                               ; $3DBD3C |
   BMI locret_7BD5A                          ; $3DBD3E |
@@ -14667,12 +14944,13 @@ org $8000
   LDA $BD6D,x                               ; $3DBD4E |
   STA $09                                   ; $3DBD51 |
   PLA                                       ; $3DBD53 |
-  JSR $BD5B                                 ; $3DBD54 |
-  JMP $BD39                                 ; $3DBD57 |
+  JSR code_3DBD5B                           ; $3DBD54 |
+  JMP code_3DBD39                           ; $3DBD57 |
 
 locret_7BD5A:
   RTS                                       ; $3DBD5A |
 
+code_3DBD5B:
   JMP ($0008)                               ; $3DBD5B |
 
   db $BF, $EF, $31, $A4, $89, $41, $39, $A3 ; $3DBD5E |
@@ -14704,8 +14982,8 @@ locret_7BD5A:
   db $0D, $49, $0D, $4A, $05, $B4, $05, $2D ; $3DBE2E |
   db $06, $00, $FF                          ; $3DBE36 |
 
-  JSR $CA3D                                 ; $3DBE39 |
-  JSR $CB28                                 ; $3DBE3C |
+  JSR code_3ECA3D                           ; $3DBE39 |
+  JSR code_3ECB28                           ; $3DBE3C |
 
   db $42                                    ; $3DBE3F |
 
@@ -14713,7 +14991,7 @@ locret_7BD5A:
 
   STA $05C8                                 ; $3DBE41 |
 loc_7BE44:
-  JSR $C62B                                 ; $3DBE44 |
+  JSR code_3EC62B                           ; $3DBE44 |
   LDA $40                                   ; $3DBE47 |
   BNE loc_7BE51                             ; $3DBE49 |
   DEC $05C8                                 ; $3DBE4B |
@@ -14721,7 +14999,7 @@ loc_7BE44:
   RTS                                       ; $3DBE50 |
 
 loc_7BE51:
-  JSR $CA3D                                 ; $3DBE51 |
+  JSR code_3ECA3D                           ; $3DBE51 |
   LDA #$F0                                  ; $3DBE54 |
   STA $DC                                   ; $3DBE56 |
   LDX $90                                   ; $3DBE58 |
@@ -14739,8 +15017,8 @@ loc_7BE51:
   STA $0C                                   ; $3DBE6C |
   LDA #$BE                                  ; $3DBE6E |
   STA $0D                                   ; $3DBE70 |
-  JSR $F254                                 ; $3DBE72 |
-  JMP $E1DD                                 ; $3DBE75 |
+  JSR code_3FF254                           ; $3DBE72 |
+  JMP code_3FE1DD                           ; $3DBE75 |
 
   db $58, $77, $7B, $A4, $7B, $7C, $00, $80 ; $3DBE78 |
   db $77, $7D, $00, $A8, $77, $C0, $80, $87 ; $3DBE80 |
@@ -14753,47 +15031,48 @@ loc_7BE51:
   STA $0C                                   ; $3DBE9A |
   LDA #$BE                                  ; $3DBE9C |
   STA $0D                                   ; $3DBE9E |
-  JMP $BEAB                                 ; $3DBEA0 |
+  JMP code_3DBEAB                           ; $3DBEA0 |
 
 loc_7BEA3:
   LDA #$78                                  ; $3DBEA3 |
   STA $0C                                   ; $3DBEA5 |
   LDA #$BE                                  ; $3DBEA7 |
   STA $0D                                   ; $3DBEA9 |
-  JSR $F258                                 ; $3DBEAB |
-  JSR $E1DD                                 ; $3DBEAE |
+code_3DBEAB:
+  JSR code_3FF258                           ; $3DBEAB |
+  JSR code_3FE1DD                           ; $3DBEAE |
   INC $0624                                 ; $3DBEB1 |
   LDX #$16                                  ; $3DBEB4 |
-  JMP $C5C7                                 ; $3DBEB6 |
+  JMP code_3EC5C7                           ; $3DBEB6 |
 
   LDA #$42                                  ; $3DBEB9 |
-  JSR $C5F6                                 ; $3DBEBB |
+  JSR code_3EC5F6                           ; $3DBEBB |
   LDA #$30                                  ; $3DBEBE |
   STA $49                                   ; $3DBEC0 |
   LDA #$04                                  ; $3DBEC2 |
   STA $05B1                                 ; $3DBEC4 |
 loc_7BEC7:
   LDX #$0F                                  ; $3DBEC7 |
-  JSR $CA71                                 ; $3DBEC9 |
+  JSR code_3ECA71                           ; $3DBEC9 |
   LDX #$0B                                  ; $3DBECC |
-  JSR $CA71                                 ; $3DBECE |
+  JSR code_3ECA71                           ; $3DBECE |
   LDX #$07                                  ; $3DBED1 |
-  JSR $CA71                                 ; $3DBED3 |
+  JSR code_3ECA71                           ; $3DBED3 |
   LDX #$1F                                  ; $3DBED6 |
-  JSR $CA71                                 ; $3DBED8 |
+  JSR code_3ECA71                           ; $3DBED8 |
   LDX #$1B                                  ; $3DBEDB |
-  JSR $CA71                                 ; $3DBEDD |
+  JSR code_3ECA71                           ; $3DBEDD |
   LDX #$17                                  ; $3DBEE0 |
-  JSR $CA71                                 ; $3DBEE2 |
+  JSR code_3ECA71                           ; $3DBEE2 |
   LDA #$0C                                  ; $3DBEE5 |
-  JSR $C5F6                                 ; $3DBEE7 |
+  JSR code_3EC5F6                           ; $3DBEE7 |
   LDA $49                                   ; $3DBEEA |
   SEC                                       ; $3DBEEC |
   SBC #$10                                  ; $3DBEED |
   STA $49                                   ; $3DBEEF |
   DEC $05B1                                 ; $3DBEF1 |
   BNE loc_7BEC7                             ; $3DBEF4 |
-  JMP $C5E6                                 ; $3DBEF6 |
+  JMP code_3EC5E6                           ; $3DBEF6 |
 
   LDA #$07                                  ; $3DBEF9 |
   STA $05DF                                 ; $3DBEFB |
@@ -14809,9 +15088,9 @@ loc_7BF05:
   STA $05B1                                 ; $3DBF10 |
 loc_7BF13:
   LDX $05DF                                 ; $3DBF13 |
-  JSR $CA71                                 ; $3DBF16 |
+  JSR code_3ECA71                           ; $3DBF16 |
   LDA $060D                                 ; $3DBF19 |
-  JSR $C5F6                                 ; $3DBF1C |
+  JSR code_3EC5F6                           ; $3DBF1C |
   LDA $49                                   ; $3DBF1F |
   SEC                                       ; $3DBF21 |
   SBC #$10                                  ; $3DBF22 |
@@ -14830,9 +15109,9 @@ loc_7BF38:
   STA $05B1                                 ; $3DBF3A |
 loc_7BF3D:
   LDX $05DF                                 ; $3DBF3D |
-  JSR $CA59                                 ; $3DBF40 |
+  JSR code_3ECA59                           ; $3DBF40 |
   LDA #$05                                  ; $3DBF43 |
-  JSR $C5F6                                 ; $3DBF45 |
+  JSR code_3EC5F6                           ; $3DBF45 |
   DEC $05B1                                 ; $3DBF48 |
   BNE loc_7BF3D                             ; $3DBF4B |
   RTS                                       ; $3DBF4D |
@@ -14862,8 +15141,7 @@ loc_7BF3D:
   db $FF, $FF                               ; $3DBFFE |
 
 bank $3E
-org $A000
-
+org $C000
 
   PHA                                       ; $3EA000 |
   TXA                                       ; $3EA001 |
@@ -14874,10 +15152,10 @@ org $A000
   BEQ loc_7C013                             ; $3EC007 |
   LDA $FD                                   ; $3EC009 |
   BNE loc_7C010                             ; $3EC00B |
-  JMP $C0A9                                 ; $3EC00D |
+  JMP code_3EC0A9                           ; $3EC00D |
 
 loc_7C010:
-  JMP $C0C0                                 ; $3EC010 |
+  JMP code_3EC0C0                           ; $3EC010 |
 
 loc_7C013:
   LDA $FC                                   ; $3EC013 |
@@ -14897,15 +15175,16 @@ loc_7C013:
   BNE loc_7C043                             ; $3EC034 |
   LDA $46                                   ; $3EC036 |
   BNE loc_7C040                             ; $3EC038 |
-  JSR $C79C                                 ; $3EC03A |
-  JMP $C049                                 ; $3EC03D |
+  JSR code_3EC79C                           ; $3EC03A |
+  JMP code_3EC049                           ; $3EC03D |
 
 loc_7C040:
-  JSR $C69E                                 ; $3EC040 |
+  JSR code_3EC69E                           ; $3EC040 |
 loc_7C043:
-  JSR $C6D7                                 ; $3EC043 |
+  JSR code_3EC6D7                           ; $3EC043 |
 loc_7C046:
-  JSR $C7DE                                 ; $3EC046 |
+  JSR code_3EC7DE                           ; $3EC046 |
+code_3EC049:
   LDA {PPU_STATUS}                          ; $3EC049 |
   LDA $F7                                   ; $3EC04C |
   CLC                                       ; $3EC04E |
@@ -14949,16 +15228,17 @@ loc_7C09F:
   BPL loc_7C091                             ; $3EC0A0 |
   LDA #$88                                  ; $3EC0A2 |
   STA $F2                                   ; $3EC0A4 |
-  JSR $C711                                 ; $3EC0A6 |
+  JSR code_3EC711                           ; $3EC0A6 |
+code_3EC0A9:
   LDA $F4                                   ; $3EC0A9 |
   BEQ loc_7C0B4                             ; $3EC0AB |
   LDA $0672                                 ; $3EC0AD |
   CMP #$70                                  ; $3EC0B0 |
   BCC loc_7C0B7                             ; $3EC0B2 |
 loc_7C0B4:
-  JSR $C8C1                                 ; $3EC0B4 |
+  JSR code_3EC8C1                           ; $3EC0B4 |
 loc_7C0B7:
-  JSR $C88D                                 ; $3EC0B7 |
+  JSR code_3EC88D                           ; $3EC0B7 |
   PLA                                       ; $3EC0BA |
   TAY                                       ; $3EC0BB |
   PLA                                       ; $3EC0BC |
@@ -14966,6 +15246,7 @@ loc_7C0B7:
   PLA                                       ; $3EC0BE |
   RTI                                       ; $3EC0BF |
 
+code_3EC0C0:
   LDA $F4                                   ; $3EC0C0 |
   BEQ loc_7C0F5                             ; $3EC0C2 |
   LDA $0677                                 ; $3EC0C4 |
@@ -14994,8 +15275,9 @@ loc_7C0F5:
   ORA $FC                                   ; $3EC0FA |
   ORA $F8                                   ; $3EC0FC |
   STA {PPU_CTRL}                            ; $3EC0FE |
-  JMP $C0A9                                 ; $3EC101 |
+  JMP code_3EC0A9                           ; $3EC101 |
 
+code_3EC104:
   LDA $0676                                 ; $3EC104 |
   ASL                                       ; $3EC107 |
   TAX                                       ; $3EC108 |
@@ -15040,7 +15322,7 @@ loc_7C0F5:
   PHA                                       ; $3EC150 |
   STA $E000                                 ; $3EC151 |
   STA $E001                                 ; $3EC154 |
-  JSR $C104                                 ; $3EC157 |
+  JSR code_3EC104                           ; $3EC157 |
   INC $0676                                 ; $3EC15A |
   PLA                                       ; $3EC15D |
   TAY                                       ; $3EC15E |
@@ -15050,6 +15332,7 @@ loc_7C0F5:
   RTI                                       ; $3EC162 |
 
 loc_7C163:
+code_3EC163:
   DEX                                       ; $3EC163 |
   BNE loc_7C163                             ; $3EC164 |
   RTS                                       ; $3EC166 |
@@ -15074,7 +15357,7 @@ loc_7C169:
   RTS                                       ; $3EC18B |
 
   LDX #$04                                  ; $3EC18C |
-  JSR $C163                                 ; $3EC18E |
+  JSR code_3EC163                           ; $3EC18E |
   LDA $0673                                 ; $3EC191 |
   STA $C000                                 ; $3EC194 |
   LDA #$28                                  ; $3EC197 |
@@ -15116,11 +15399,12 @@ loc_7C169:
   LDA $F7                                   ; $3EC1CF |
   STA {PPU_SCROLL}                          ; $3EC1D1 |
   STA {PPU_SCROLL}                          ; $3EC1D4 |
-  JSR $C8C1                                 ; $3EC1D7 |
+code_3EC1D7:
+  JSR code_3EC8C1                           ; $3EC1D7 |
   RTS                                       ; $3EC1DA |
 
   LDX #$03                                  ; $3EC1DB |
-  JSR $C163                                 ; $3EC1DD |
+  JSR code_3EC163                           ; $3EC1DD |
   NOP                                       ; $3EC1E0 |
   NOP                                       ; $3EC1E1 |
   NOP                                       ; $3EC1E2 |
@@ -15147,7 +15431,7 @@ loc_7C169:
   EOR #$01                                  ; $3EC20D |
   ORA $FC                                   ; $3EC20F |
   STA {PPU_CTRL}                            ; $3EC211 |
-  JSR $C8C1                                 ; $3EC214 |
+  JSR code_3EC8C1                           ; $3EC214 |
   RTS                                       ; $3EC217 |
 
   LDA $F7                                   ; $3EC218 |
@@ -15163,10 +15447,10 @@ loc_7C169:
   LDA $0675                                 ; $3EC22E |
   STA {PPU_SCROLL}                          ; $3EC231 |
   STA {PPU_SCROLL}                          ; $3EC234 |
-  JMP $C1D7                                 ; $3EC237 |
+  JMP code_3EC1D7                           ; $3EC237 |
 
   LDX #$03                                  ; $3EC23A |
-  JSR $C163                                 ; $3EC23C |
+  JSR code_3EC163                           ; $3EC23C |
   NOP                                       ; $3EC23F |
   NOP                                       ; $3EC240 |
   NOP                                       ; $3EC241 |
@@ -15261,7 +15545,7 @@ loc_7C2A4:
   STA {PPU_SCROLL}                          ; $3EC2F3 |
   STA {PPU_SCROLL}                          ; $3EC2F6 |
   STA $E000                                 ; $3EC2F9 |
-  JMP $C1D7                                 ; $3EC2FC |
+  JMP code_3EC1D7                           ; $3EC2FC |
 
   LDA #$01                                  ; $3EC2FF |
   STA $C000                                 ; $3EC301 |
@@ -15356,7 +15640,7 @@ loc_7C3AE:
   RTS                                       ; $3EC3B7 |
 
   LDX #$03                                  ; $3EC3B8 |
-  JSR $C163                                 ; $3EC3BA |
+  JSR code_3EC163                           ; $3EC3BA |
   NOP                                       ; $3EC3BD |
   NOP                                       ; $3EC3BE |
   NOP                                       ; $3EC3BF |
@@ -15437,7 +15721,7 @@ loc_7C44D:
   RTS                                       ; $3EC452 |
 
   LDX #$03                                  ; $3EC453 |
-  JSR $C163                                 ; $3EC455 |
+  JSR code_3EC163                           ; $3EC455 |
   NOP                                       ; $3EC458 |
   NOP                                       ; $3EC459 |
   NOP                                       ; $3EC45A |
@@ -15451,12 +15735,12 @@ loc_7C44D:
   STA {PPU_SCROLL}                          ; $3EC469 |
   STA {PPU_SCROLL}                          ; $3EC46C |
   STA $E000                                 ; $3EC46F |
-  JMP $C1D7                                 ; $3EC472 |
+  JMP code_3EC1D7                           ; $3EC472 |
 
   LDA #$0B                                  ; $3EC475 |
   STA $C000                                 ; $3EC477 |
   LDX #$02                                  ; $3EC47A |
-  JSR $C163                                 ; $3EC47C |
+  JSR code_3EC163                           ; $3EC47C |
   LDA #$20                                  ; $3EC47F |
   STA {PPU_ADDR}                            ; $3EC481 |
   LDA #$00                                  ; $3EC484 |
@@ -15471,7 +15755,7 @@ loc_7C44D:
   LDA $0678                                 ; $3EC497 |
   STA {PPU_SCROLL}                          ; $3EC49A |
   STA {PPU_SCROLL}                          ; $3EC49D |
-  JMP $C1D7                                 ; $3EC4A0 |
+  JMP code_3EC1D7                           ; $3EC4A0 |
 
   LDA {PPU_STATUS}                          ; $3EC4A3 |
   LDA #$00                                  ; $3EC4A6 |
@@ -15481,7 +15765,7 @@ loc_7C44D:
   RTS                                       ; $3EC4B1 |
 
   LDX #$03                                  ; $3EC4B2 |
-  JSR $C163                                 ; $3EC4B4 |
+  JSR code_3EC163                           ; $3EC4B4 |
   NOP                                       ; $3EC4B7 |
   NOP                                       ; $3EC4B8 |
   NOP                                       ; $3EC4B9 |
@@ -15513,7 +15797,7 @@ loc_7C4EE:
   RTS                                       ; $3EC4F1 |
 
   LDX #$03                                  ; $3EC4F2 |
-  JSR $C163                                 ; $3EC4F4 |
+  JSR code_3EC163                           ; $3EC4F4 |
   NOP                                       ; $3EC4F7 |
   NOP                                       ; $3EC4F8 |
   NOP                                       ; $3EC4F9 |
@@ -15535,6 +15819,7 @@ loc_7C4EE:
 locret_7C51D:
   RTS                                       ; $3EC51D |
 
+code_3EC51E:
   SEI                                       ; $3EC51E |
   CLD                                       ; $3EC51F |
   LDX #$0F                                  ; $3EC520 |
@@ -15568,12 +15853,14 @@ loc_7C54E:
   STA $FD                                   ; $3EC55B |
   CLI                                       ; $3EC55D |
   LDX #$00                                  ; $3EC55E |
-  JSR $C5C7                                 ; $3EC560 |
+  JSR code_3EC5C7                           ; $3EC560 |
   LDX #$01                                  ; $3EC563 |
-  JSR $C5C7                                 ; $3EC565 |
+  JSR code_3EC5C7                           ; $3EC565 |
+code_3EC568:
   LDX #$FF                                  ; $3EC568 |
   TXS                                       ; $3EC56A |
   STX $33                                   ; $3EC56B |
+code_3EC56D:
   LDY #$00                                  ; $3EC56D |
 loc_7C56F:
   LDA $0021,y                               ; $3EC56F |
@@ -15589,14 +15876,14 @@ loc_7C578:
 loc_7C581:
   LDA $F2                                   ; $3EC581 |
   BEQ loc_7C581                             ; $3EC583 |
-  JMP $C56D                                 ; $3EC585 |
+  JMP code_3EC56D                           ; $3EC585 |
 
 loc_7C588:
   STY $33                                   ; $3EC588 |
   LDA $0034,y                               ; $3EC58A |
-  JSR $CB91                                 ; $3EC58D |
+  JSR code_3ECB91                           ; $3EC58D |
   LDA $0038,y                               ; $3EC590 |
-  JSR $CBDA                                 ; $3EC593 |
+  JSR code_3ECBDA                           ; $3EC593 |
   LDA $0021,y                               ; $3EC596 |
   LDX #$02                                  ; $3EC599 |
   STX $21,y                                 ; $3EC59B |
@@ -15626,6 +15913,7 @@ loc_7C5AF:
 
   db $3F, $5F, $7F, $9F                     ; $3EC5C3 |
 
+code_3EC5C7:
   LDA $C632,x                               ; $3EC5C7 |
   TAY                                       ; $3EC5CA |
   LDA #$08                                  ; $3EC5CB |
@@ -15639,15 +15927,18 @@ loc_7C5AF:
   STA $0038,y                               ; $3EC5E2 |
   RTS                                       ; $3EC5E5 |
 
+code_3EC5E6:
   LDY $33                                   ; $3EC5E6 |
   LDA #$00                                  ; $3EC5E8 |
   STA $0021,y                               ; $3EC5EA |
-  JMP $C568                                 ; $3EC5ED |
+  JMP code_3EC568                           ; $3EC5ED |
 
+code_3EC5F0:
   LDA #$00                                  ; $3EC5F0 |
   STA $0021,y                               ; $3EC5F2 |
   RTS                                       ; $3EC5F5 |
 
+code_3EC5F6:
   STA $31                                   ; $3EC5F6 |
   PHA                                       ; $3EC5F8 |
 loc_7C5F9:
@@ -15659,6 +15950,7 @@ loc_7C5F9:
   LDA $10                                   ; $3EC5FF |
   STA $003C,y                               ; $3EC601 |
   LDA $4A                                   ; $3EC604 |
+code_3EC606:
   STA $0034,y                               ; $3EC606 |
   LDA $4B                                   ; $3EC609 |
   STA $0038,y                               ; $3EC60B |
@@ -15671,12 +15963,13 @@ loc_7C5F9:
   LDA $DC                                   ; $3EC61B |
   CMP #$FF                                  ; $3EC61D |
   BEQ loc_7C628                             ; $3EC61F |
-  JSR $C8B2                                 ; $3EC621 |
+  JSR code_3EC8B2                           ; $3EC621 |
   LDA #$FF                                  ; $3EC624 |
   STA $DC                                   ; $3EC626 |
 loc_7C628:
-  JMP $C568                                 ; $3EC628 |
+  JMP code_3EC568                           ; $3EC628 |
 
+code_3EC62B:
   PHA                                       ; $3EC62B |
   LDA #$01                                  ; $3EC62C |
   STA $31                                   ; $3EC62E |
@@ -15697,6 +15990,7 @@ loc_7C628:
   db $3B, $3B, $3B, $3B, $3B, $3B, $3B, $3D ; $3EC692 |
   db $39, $3B, $3B, $3B                     ; $3EC69A |
 
+code_3EC69E:
   LDX $46                                   ; $3EC69E |
   BEQ locret_7C6D6                          ; $3EC6A0 |
   LDX #$00                                  ; $3EC6A2 |
@@ -15727,6 +16021,7 @@ loc_7C6BD:
 locret_7C6D6:
   RTS                                       ; $3EC6D6 |
 
+code_3EC6D7:
   LDA $47                                   ; $3EC6D7 |
   BEQ locret_7C710                          ; $3EC6D9 |
   LDX #$00                                  ; $3EC6DB |
@@ -15760,6 +16055,7 @@ loc_7C6FE:
 locret_7C710:
   RTS                                       ; $3EC710 |
 
+code_3EC711:
   LDX #$01                                  ; $3EC711 |
   STX {PAD0_REG}                            ; $3EC713 |
   DEX                                       ; $3EC716 |
@@ -15827,6 +16123,7 @@ loc_7C779:
   db $7F, $01, $1C, $81, $78, $00, $1E, $01 ; $3EC78F |
   db $1C, $81, $78, $00, $00                ; $3EC797 |
 
+code_3EC79C:
   LDX $84                                   ; $3EC79C |
   BEQ locret_7C7D5                          ; $3EC79E |
   LDA {PPU_STATUS}                          ; $3EC7A0 |
@@ -15859,6 +16156,7 @@ locret_7C7D5:
 
   db $40, $10, $20, $30, $04, $01, $02, $03 ; $3EC7D6 |
 
+code_3EC7DE:
   LDA $60                                   ; $3EC7DE |
   BEQ locret_7C82C                          ; $3EC7E0 |
   LDX #$00                                  ; $3EC7E2 |
@@ -15954,6 +16252,7 @@ loc_7C868:
   STA {PPU_CTRL}                            ; $3EC889 |
   RTS                                       ; $3EC88C |
 
+code_3EC88D:
   TXA                                       ; $3EC88D |
   PHA                                       ; $3EC88E |
   LDX #$00                                  ; $3EC88F |
@@ -15979,6 +16278,7 @@ loc_7C8A3:
   TAX                                       ; $3EC8B0 |
   RTS                                       ; $3EC8B1 |
 
+code_3EC8B2:
   STX $DA                                   ; $3EC8B2 |
   LDX $D9                                   ; $3EC8B4 |
   STA $B0,x                                 ; $3EC8B6 |
@@ -15989,6 +16289,7 @@ loc_7C8A3:
   LDX $DA                                   ; $3EC8BE |
   RTS                                       ; $3EC8C0 |
 
+code_3EC8C1:
   LDA #$06                                  ; $3EC8C1 |
   STA $8000                                 ; $3EC8C3 |
   LDA #$34                                  ; $3EC8C6 |
@@ -16021,7 +16322,8 @@ loc_7C8E8:
   RTS                                       ; $3EC904 |
 
 loc_7C905:
-  JSR $C62B                                 ; $3EC905 |
+  JSR code_3EC62B                           ; $3EC905 |
+code_3EC908:
   LDA $07F8                                 ; $3EC908 |
   AND #$07                                  ; $3EC90B |
   STA $07F8                                 ; $3EC90D |
@@ -16029,19 +16331,20 @@ loc_7C905:
   BEQ loc_7C905                             ; $3EC913 |
   TAX                                       ; $3EC915 |
   LDA $07F0,x                               ; $3EC916 |
-  JSR $C95C                                 ; $3EC919 |
-  JSR $C92D                                 ; $3EC91C |
+  JSR code_3EC95C                           ; $3EC919 |
+  JSR code_3EC92D                           ; $3EC91C |
   LDX $07F8                                 ; $3EC91F |
   LDA #$00                                  ; $3EC922 |
   STA $07F0,x                               ; $3EC924 |
   INC $07F8                                 ; $3EC927 |
-  JMP $C908                                 ; $3EC92A |
+  JMP code_3EC908                           ; $3EC92A |
 
 loc_7C92D:
+code_3EC92D:
   LDA #$00                                  ; $3EC92D |
   STA $89                                   ; $3EC92F |
 loc_7C931:
-  JSR $C62B                                 ; $3EC931 |
+  JSR code_3EC62B                           ; $3EC931 |
   LDA $89                                   ; $3EC934 |
   BEQ loc_7C931                             ; $3EC936 |
   CLC                                       ; $3EC938 |
@@ -16065,6 +16368,7 @@ loc_7C931:
   STA $84                                   ; $3EC959 |
   RTS                                       ; $3EC95B |
 
+code_3EC95C:
   LDY #$00                                  ; $3EC95C |
   STY $82                                   ; $3EC95E |
   ASL                                       ; $3EC960 |
@@ -16078,7 +16382,7 @@ loc_7C931:
   ADC #$80                                  ; $3EC96D |
   STA $82                                   ; $3EC96F |
   LDA #$37                                  ; $3EC971 |
-  JSR $CB91                                 ; $3EC973 |
+  JSR code_3ECB91                           ; $3EC973 |
   LDA ($81),y                               ; $3EC976 |
   STA $87                                   ; $3EC978 |
   LDA #$00                                  ; $3EC97A |
@@ -16121,9 +16425,10 @@ loc_7C931:
   AND #$7E                                  ; $3EC9B6 |
   LSR                                       ; $3EC9B8 |
   STA $8A                                   ; $3EC9B9 |
-  JSR $CBE9                                 ; $3EC9BB |
+  JSR code_3ECBE9                           ; $3EC9BB |
   RTS                                       ; $3EC9BE |
 
+code_3EC9BF:
   LDA $FD                                   ; $3EC9BF |
   PHA                                       ; $3EC9C1 |
   LDA #$00                                  ; $3EC9C2 |
@@ -16150,6 +16455,7 @@ loc_7C9E2:
   STA $FD                                   ; $3EC9EC |
   RTS                                       ; $3EC9EE |
 
+code_3EC9EF:
   STX $01                                   ; $3EC9EF |
   STY $02                                   ; $3EC9F1 |
   PHA                                       ; $3EC9F3 |
@@ -16159,7 +16465,7 @@ loc_7C9E2:
   BEQ loc_7C9FE                             ; $3EC9FA |
   LDA #$28                                  ; $3EC9FC |
 loc_7C9FE:
-  JSR $CB91                                 ; $3EC9FE |
+  JSR code_3ECB91                           ; $3EC9FE |
   LDA $9000,x                               ; $3ECA01 |
   STA $08                                   ; $3ECA04 |
   LDA $9100,x                               ; $3ECA06 |
@@ -16188,17 +16494,18 @@ loc_7CA29:
   INY                                       ; $3ECA2F |
   BNE loc_7CA11                             ; $3ECA30 |
   INC $46                                   ; $3ECA32 |
-  JSR $CBE9                                 ; $3ECA34 |
+  JSR code_3ECBE9                           ; $3ECA34 |
   PLA                                       ; $3ECA37 |
   LDX $01                                   ; $3ECA38 |
   LDY $02                                   ; $3ECA3A |
   RTS                                       ; $3ECA3C |
 
+code_3ECA3D:
   PHA                                       ; $3ECA3D |
 loc_7CA3E:
   INC $46                                   ; $3ECA3E |
   LDA #$04                                  ; $3ECA40 |
-  JSR $C5F6                                 ; $3ECA42 |
+  JSR code_3EC5F6                           ; $3ECA42 |
   LDA $48                                   ; $3ECA45 |
   CLC                                       ; $3ECA47 |
   ADC #$10                                  ; $3ECA48 |
@@ -16211,6 +16518,7 @@ loc_7CA3E:
   PLA                                       ; $3ECA57 |
   RTS                                       ; $3ECA58 |
 
+code_3ECA59:
   LDY #$03                                  ; $3ECA59 |
 loc_7CA5B:
   LDA $0360,x                               ; $3ECA5B |
@@ -16227,6 +16535,7 @@ loc_7CA65:
   STA $46                                   ; $3ECA6E |
   RTS                                       ; $3ECA70 |
 
+code_3ECA71:
   LDY #$03                                  ; $3ECA71 |
 loc_7CA73:
   LDA $0380,x                               ; $3ECA73 |
@@ -16243,13 +16552,14 @@ loc_7CA7D:
   STA $46                                   ; $3ECA86 |
   RTS                                       ; $3ECA88 |
 
+code_3ECA89:
   PHA                                       ; $3ECA89 |
   LDA #$1E                                  ; $3ECA8A |
   STA $FD                                   ; $3ECA8C |
 loc_7CA8E:
   INC $46                                   ; $3ECA8E |
   LDA #$04                                  ; $3ECA90 |
-  JSR $C5F6                                 ; $3ECA92 |
+  JSR code_3EC5F6                           ; $3ECA92 |
   LDA $48                                   ; $3ECA95 |
   SEC                                       ; $3ECA97 |
   SBC #$10                                  ; $3ECA98 |
@@ -16260,18 +16570,21 @@ loc_7CA8E:
   PLA                                       ; $3ECAA2 |
   RTS                                       ; $3ECAA3 |
 
+code_3ECAA4:
   STX $00                                   ; $3ECAA4 |
   LDX $FD                                   ; $3ECAA6 |
   BEQ loc_7CACA                             ; $3ECAA8 |
+code_3ECAAA:
   PHA                                       ; $3ECAAA |
+code_3ECAAB:
   LDX $07F9                                 ; $3ECAAB |
   INX                                       ; $3ECAAE |
   TXA                                       ; $3ECAAF |
   AND #$07                                  ; $3ECAB0 |
   CMP $07F8                                 ; $3ECAB2 |
   BNE loc_7CABD                             ; $3ECAB5 |
-  JSR $C62B                                 ; $3ECAB7 |
-  JMP $CAAB                                 ; $3ECABA |
+  JSR code_3EC62B                           ; $3ECAB7 |
+  JMP code_3ECAAB                           ; $3ECABA |
 
 loc_7CABD:
   LDX $07F9                                 ; $3ECABD |
@@ -16283,15 +16596,16 @@ loc_7CABD:
 
 loc_7CACA:
   PHA                                       ; $3ECACA |
+code_3ECACB:
   LDA $84                                   ; $3ECACB |
   BEQ loc_7CAD5                             ; $3ECACD |
-  JSR $C62B                                 ; $3ECACF |
-  JMP $CACB                                 ; $3ECAD2 |
+  JSR code_3EC62B                           ; $3ECACF |
+  JMP code_3ECACB                           ; $3ECAD2 |
 
 loc_7CAD5:
   PLA                                       ; $3ECAD5 |
   PHA                                       ; $3ECAD6 |
-  JSR $C95C                                 ; $3ECAD7 |
+  JSR code_3EC95C                           ; $3ECAD7 |
   LDA #$00                                  ; $3ECADA |
   STA $FD                                   ; $3ECADC |
   STA {PPU_MASK}                            ; $3ECADE |
@@ -16299,7 +16613,7 @@ loc_7CAD5:
   AND #$FB                                  ; $3ECAE3 |
   STA {PPU_CTRL}                            ; $3ECAE5 |
   LDA $8A                                   ; $3ECAE8 |
-  JSR $CB91                                 ; $3ECAEA |
+  JSR code_3ECB91                           ; $3ECAEA |
   LDA {PPU_STATUS}                          ; $3ECAED |
   LDA $86                                   ; $3ECAF0 |
   STA {PPU_ADDR}                            ; $3ECAF2 |
@@ -16323,7 +16637,7 @@ loc_7CAFE:
   STA $84                                   ; $3ECB12 |
   DEC $87                                   ; $3ECB14 |
   BNE loc_7CAFA                             ; $3ECB16 |
-  JSR $CBE9                                 ; $3ECB18 |
+  JSR code_3ECBE9                           ; $3ECB18 |
   LDA #$00                                  ; $3ECB1B |
   STA $84                                   ; $3ECB1D |
   LDA $FC                                   ; $3ECB1F |
@@ -16332,29 +16646,31 @@ loc_7CAFE:
   LDX $00                                   ; $3ECB25 |
   RTS                                       ; $3ECB27 |
 
+code_3ECB28:
   STA $15                                   ; $3ECB28 |
   STX $16                                   ; $3ECB2A |
   LDA $10                                   ; $3ECB2C |
   PHA                                       ; $3ECB2E |
   TSX                                       ; $3ECB2F |
   STX $10                                   ; $3ECB30 |
-  JSR $CB63                                 ; $3ECB32 |
+  JSR code_3ECB63                           ; $3ECB32 |
   LDA $11                                   ; $3ECB35 |
   ASL                                       ; $3ECB37 |
+code_3ECB38:
   ROL                                       ; $3ECB38 |
   ROL                                       ; $3ECB39 |
   AND #$03                                  ; $3ECB3A |
   TAX                                       ; $3ECB3C |
   LDA $CB5F,x                               ; $3ECB3D |
   TAX                                       ; $3ECB40 |
-  JSR $CB91                                 ; $3ECB41 |
+  JSR code_3ECB91                           ; $3ECB41 |
   INX                                       ; $3ECB44 |
   TXA                                       ; $3ECB45 |
-  JSR $CBDA                                 ; $3ECB46 |
+  JSR code_3ECBDA                           ; $3ECB46 |
   LDA $15                                   ; $3ECB49 |
   LDX $16                                   ; $3ECB4B |
   JSR $8000                                 ; $3ECB4D |
-  JSR $CBE9                                 ; $3ECB50 |
+  JSR code_3ECBE9                           ; $3ECB50 |
   STA $15                                   ; $3ECB53 |
   STX $16                                   ; $3ECB55 |
   PLA                                       ; $3ECB57 |
@@ -16365,6 +16681,7 @@ loc_7CAFE:
 
   db $3C, $3A, $38, $36                     ; $3ECB5F |
 
+code_3ECB63:
   STA $00                                   ; $3ECB63 |
   STX $01                                   ; $3ECB65 |
   STY $02                                   ; $3ECB67 |
@@ -16388,6 +16705,7 @@ loc_7CAFE:
   LDY $02                                   ; $3ECB8E |
   RTS                                       ; $3ECB90 |
 
+code_3ECB91:
   STA $17                                   ; $3ECB91 |
   STX $18                                   ; $3ECB93 |
   TSX                                       ; $3ECB95 |
@@ -16411,6 +16729,7 @@ loc_7CAFE:
   LDX $18                                   ; $3ECBBD |
   RTS                                       ; $3ECBBF |
 
+code_3ECBC0:
   LDA #$06                                  ; $3ECBC0 |
   STA $4C                                   ; $3ECBC2 |
   STA $8000                                 ; $3ECBC4 |
@@ -16424,6 +16743,7 @@ loc_7CAFE:
   STY $8001                                 ; $3ECBD6 |
   RTS                                       ; $3ECBD9 |
 
+code_3ECBDA:
   PHA                                       ; $3ECBDA |
   STA $4B                                   ; $3ECBDB |
   LDA #$07                                  ; $3ECBDD |
@@ -16433,6 +16753,7 @@ loc_7CAFE:
   STA $8001                                 ; $3ECBE5 |
   RTS                                       ; $3ECBE8 |
 
+code_3ECBE9:
   STA $17                                   ; $3ECBE9 |
   STX $18                                   ; $3ECBEB |
   TSX                                       ; $3ECBED |
@@ -16459,6 +16780,7 @@ loc_7CAFE:
   LDX $18                                   ; $3ECC1D |
   RTS                                       ; $3ECC1F |
 
+code_3ECC20:
   PLA                                       ; $3ECC20 |
   CLC                                       ; $3ECC21 |
   ADC #$01                                  ; $3ECC22 |
@@ -16476,6 +16798,7 @@ loc_7CAFE:
   PHA                                       ; $3ECC36 |
   JMP ($0015)                               ; $3ECC37 |
 
+code_3ECC3A:
   PLA                                       ; $3ECC3A |
   CLC                                       ; $3ECC3B |
   ADC #$01                                  ; $3ECC3C |
@@ -16493,6 +16816,7 @@ loc_7CAFE:
   STA $04                                   ; $3ECC4F |
   JMP ($0015)                               ; $3ECC51 |
 
+code_3ECC54:
   LDA #$00                                  ; $3ECC54 |
   STA $00                                   ; $3ECC56 |
   LDY #$FF                                  ; $3ECC58 |
@@ -16506,11 +16830,13 @@ loc_7CC5A:
   BCC loc_7CC5A                             ; $3ECC64 |
   RTS                                       ; $3ECC66 |
 
-  JSR $CB91                                 ; $3ECC67 |
+code_3ECC67:
+  JSR code_3ECB91                           ; $3ECC67 |
   LDA ($08),y                               ; $3ECC6A |
-  JSR $CBE9                                 ; $3ECC6C |
+  JSR code_3ECBE9                           ; $3ECC6C |
   RTS                                       ; $3ECC6F |
 
+code_3ECC70:
   LDA #$00                                  ; $3ECC70 |
   STA $06                                   ; $3ECC72 |
   STA $07                                   ; $3ECC74 |
@@ -16558,57 +16884,57 @@ loc_7CCA3:
   LDA #$01                                  ; $3ECCBA |
   STA $E0                                   ; $3ECCBC |
   LDA #$4B                                  ; $3ECCBE |
-  JSR $C9EF                                 ; $3ECCC0 |
-  JSR $CA3D                                 ; $3ECCC3 |
-  JSR $C9BF                                 ; $3ECCC6 |
+  JSR code_3EC9EF                           ; $3ECCC0 |
+  JSR code_3ECA3D                           ; $3ECCC3 |
+  JSR code_3EC9BF                           ; $3ECCC6 |
   LDA #$00                                  ; $3ECCC9 |
-  JSR $C9EF                                 ; $3ECCCB |
+  JSR code_3EC9EF                           ; $3ECCCB |
   LDA #$1F                                  ; $3ECCCE |
-  JSR $CB28                                 ; $3ECCD0 |
+  JSR code_3ECB28                           ; $3ECCD0 |
 
   db $00                                    ; $3ECCD3 |
 
   LDA #$81                                  ; $3ECCD4 |
-  JSR $CAA4                                 ; $3ECCD6 |
-  JSR $CA89                                 ; $3ECCD9 |
+  JSR code_3ECAA4                           ; $3ECCD6 |
+  JSR code_3ECA89                           ; $3ECCD9 |
   LDA #$78                                  ; $3ECCDC |
-  JSR $C5F6                                 ; $3ECCDE |
-  JSR $D04E                                 ; $3ECCE1 |
-  JSR $F2AA                                 ; $3ECCE4 |
+  JSR code_3EC5F6                           ; $3ECCDE |
+  JSR code_3ED04E                           ; $3ECCE1 |
+  JSR code_3FF2AA                           ; $3ECCE4 |
 loc_7CCE7:
-  JSR $CB28                                 ; $3ECCE7 |
+  JSR code_3ECB28                           ; $3ECCE7 |
 
   db $01                                    ; $3ECCEA |
 
   LDY #$02                                  ; $3ECCEB |
-  JSR $C5F0                                 ; $3ECCED |
-  JSR $D0A6                                 ; $3ECCF0 |
+  JSR code_3EC5F0                           ; $3ECCED |
+  JSR code_3ED0A6                           ; $3ECCF0 |
   LDA #$00                                  ; $3ECCF3 |
   STA $03A0                                 ; $3ECCF5 |
   STA $03A1                                 ; $3ECCF8 |
   STA $03A2                                 ; $3ECCFB |
-  JSR $E1DD                                 ; $3ECCFE |
+  JSR code_3FE1DD                           ; $3ECCFE |
   LDA #$01                                  ; $3ECD01 |
   STA $03A1                                 ; $3ECD03 |
-  JSR $CA89                                 ; $3ECD06 |
+  JSR code_3ECA89                           ; $3ECD06 |
   LDA #$01                                  ; $3ECD09 |
   STA $03A2                                 ; $3ECD0B |
   LDA #$19                                  ; $3ECD0E |
   STA $DC                                   ; $3ECD10 |
-  JSR $CE76                                 ; $3ECD12 |
+  JSR code_3ECE76                           ; $3ECD12 |
   LDA $11                                   ; $3ECD15 |
   BNE loc_7CCE7                             ; $3ECD17 |
   LDA $05B1                                 ; $3ECD19 |
   BEQ loc_7CD24                             ; $3ECD1C |
-  JSR $CA3D                                 ; $3ECD1E |
-  JSR $F2C2                                 ; $3ECD21 |
+  JSR code_3ECA3D                           ; $3ECD1E |
+  JSR code_3FF2C2                           ; $3ECD21 |
 loc_7CD24:
-  JSR $CB28                                 ; $3ECD24 |
+  JSR code_3ECB28                           ; $3ECD24 |
 
   db $42                                    ; $3ECD27 |
 
-  JSR $CA3D                                 ; $3ECD28 |
-  JSR $E1DD                                 ; $3ECD2B |
+  JSR code_3ECA3D                           ; $3ECD28 |
+  JSR code_3FE1DD                           ; $3ECD2B |
   LDX #$09                                  ; $3ECD2E |
   LDA #$80                                  ; $3ECD30 |
 loc_7CD32:
@@ -16620,30 +16946,33 @@ loc_7CD32:
   LDA #$02                                  ; $3ECD3D |
   STA $A9                                   ; $3ECD3F |
 loc_7CD41:
+code_3ECD41:
   LDY #$02                                  ; $3ECD41 |
-  JSR $C5F0                                 ; $3ECD43 |
-  JSR $F05E                                 ; $3ECD46 |
+  JSR code_3EC5F0                           ; $3ECD43 |
+  JSR code_3FF05E                           ; $3ECD46 |
 loc_7CD49:
-  JSR $CE58                                 ; $3ECD49 |
-  JSR $CDC3                                 ; $3ECD4C |
-  JSR $CA89                                 ; $3ECD4F |
+code_3ECD49:
+  JSR code_3ECE58                           ; $3ECD49 |
+code_3ECD4C:
+  JSR code_3ECDC3                           ; $3ECD4C |
+  JSR code_3ECA89                           ; $3ECD4F |
 loc_7CD52:
-  JSR $CB28                                 ; $3ECD52 |
+  JSR code_3ECB28                           ; $3ECD52 |
 
   db $40                                    ; $3ECD55 |
 
-  JSR $E41C                                 ; $3ECD56 |
-  JSR $D1D4                                 ; $3ECD59 |
-  JSR $CB28                                 ; $3ECD5C |
+  JSR code_3FE41C                           ; $3ECD56 |
+  JSR code_3ED1D4                           ; $3ECD59 |
+  JSR code_3ECB28                           ; $3ECD5C |
 
   db $44                                    ; $3ECD5F |
 
-  JSR $C62B                                 ; $3ECD60 |
+  JSR code_3EC62B                           ; $3ECD60 |
   LDA $F0                                   ; $3ECD63 |
   BEQ loc_7CD52                             ; $3ECD65 |
   LDA #$F0                                  ; $3ECD67 |
   STA $DC                                   ; $3ECD69 |
-  JSR $CA3D                                 ; $3ECD6B |
+  JSR code_3ECA3D                           ; $3ECD6B |
   LDY #$00                                  ; $3ECD6E |
   STY $F4                                   ; $3ECD70 |
   STY $F1                                   ; $3ECD72 |
@@ -16652,11 +16981,11 @@ loc_7CD52:
   STY $069D                                 ; $3ECD7A |
   STY $57                                   ; $3ECD7D |
   LDY #$02                                  ; $3ECD7F |
-  JSR $C5F0                                 ; $3ECD81 |
+  JSR code_3EC5F0                           ; $3ECD81 |
   LDA $F0                                   ; $3ECD84 |
   CMP #$03                                  ; $3ECD86 |
   BNE loc_7CD97                             ; $3ECD88 |
-  JSR $F2B4                                 ; $3ECD8A |
+  JSR code_3FF2B4                           ; $3ECD8A |
   LDA #$02                                  ; $3ECD8D |
   STA $A9                                   ; $3ECD8F |
   LDA $11                                   ; $3ECD91 |
@@ -16670,41 +16999,43 @@ loc_7CD97:
   BIT $FF5C                                 ; $3ECD9F |
   BNE loc_7CDB3                             ; $3ECDA2 |
   DEC $51                                   ; $3ECDA4 |
-  JSR $F6FB                                 ; $3ECDA6 |
-  JSR $F2B4                                 ; $3ECDA9 |
+  JSR code_3FF6FB                           ; $3ECDA6 |
+  JSR code_3FF2B4                           ; $3ECDA9 |
   LDA $11                                   ; $3ECDAC |
   BEQ loc_7CDB3                             ; $3ECDAE |
-  JMP $CD49                                 ; $3ECDB0 |
+  JMP code_3ECD49                           ; $3ECDB0 |
 
 loc_7CDB3:
-  JMP $CD41                                 ; $3ECDB3 |
+  JMP code_3ECD41                           ; $3ECDB3 |
 
 loc_7CDB6:
   CMP #$02                                  ; $3ECDB6 |
   BNE loc_7CDBD                             ; $3ECDB8 |
-  JMP $CD4C                                 ; $3ECDBA |
+  JMP code_3ECD4C                           ; $3ECDBA |
 
 loc_7CDBD:
-  JSR $F6CF                                 ; $3ECDBD |
-  JMP $CD49                                 ; $3ECDC0 |
+  JSR code_3FF6CF                           ; $3ECDBD |
+  JMP code_3ECD49                           ; $3ECDC0 |
 
+code_3ECDC3:
   LDA $51                                   ; $3ECDC3 |
   CMP #$07                                  ; $3ECDC5 |
   BNE loc_7CDCE                             ; $3ECDC7 |
   LDA #$00                                  ; $3ECDC9 |
   STA $0358                                 ; $3ECDCB |
 loc_7CDCE:
+code_3ECDCE:
   LDA $07F8                                 ; $3ECDCE |
   CMP $07F9                                 ; $3ECDD1 |
   BEQ loc_7CDDC                             ; $3ECDD4 |
-  JSR $C62B                                 ; $3ECDD6 |
-  JMP $CDCE                                 ; $3ECDD9 |
+  JSR code_3EC62B                           ; $3ECDD6 |
+  JMP code_3ECDCE                           ; $3ECDD9 |
 
 loc_7CDDC:
   LDA #$00                                  ; $3ECDDC |
-  JSR $CAA4                                 ; $3ECDDE |
+  JSR code_3ECAA4                           ; $3ECDDE |
   LDA #$01                                  ; $3ECDE1 |
-  JSR $CAA4                                 ; $3ECDE3 |
+  JSR code_3ECAA4                           ; $3ECDE3 |
   LDA $0642                                 ; $3ECDE6 |
   STA $EF                                   ; $3ECDE9 |
   LDA $51                                   ; $3ECDEB |
@@ -16715,19 +17046,19 @@ loc_7CDDC:
   STA $EF                                   ; $3ECDF6 |
 loc_7CDF8:
   LDY $51                                   ; $3ECDF8 |
-  JSR $F52F                                 ; $3ECDFA |
+  JSR code_3FF52F                           ; $3ECDFA |
   BCC loc_7CE04                             ; $3ECDFD |
   LDA #$01                                  ; $3ECDFF |
   STA $06A0                                 ; $3ECE01 |
 loc_7CE04:
   LDA $0685                                 ; $3ECE04 |
   STA $064F                                 ; $3ECE07 |
-  JSR $C9BF                                 ; $3ECE0A |
+  JSR code_3EC9BF                           ; $3ECE0A |
   LDA $51                                   ; $3ECE0D |
-  JSR $DBD7                                 ; $3ECE0F |
+  JSR code_3EDBD7                           ; $3ECE0F |
   LDY #$03                                  ; $3ECE12 |
   LDX #$00                                  ; $3ECE14 |
-  JSR $CB28                                 ; $3ECE16 |
+  JSR code_3ECB28                           ; $3ECE16 |
 
   db $41                                    ; $3ECE19 |
 
@@ -16736,11 +17067,11 @@ loc_7CE04:
   STA $0486                                 ; $3ECE1E |
   LDA $0686                                 ; $3ECE21 |
   BEQ loc_7CE29                             ; $3ECE24 |
-  JSR $C9EF                                 ; $3ECE26 |
+  JSR code_3EC9EF                           ; $3ECE26 |
 loc_7CE29:
   LDA #$09                                  ; $3ECE29 |
   STA $AE                                   ; $3ECE2B |
-  JSR $C9EF                                 ; $3ECE2D |
+  JSR code_3EC9EF                           ; $3ECE2D |
   LDA #$00                                  ; $3ECE30 |
   STA $0699                                 ; $3ECE32 |
   STA $0642                                 ; $3ECE35 |
@@ -16752,6 +17083,7 @@ loc_7CE29:
   STA $06AB                                 ; $3ECE46 |
   RTS                                       ; $3ECE49 |
 
+code_3ECE4A:
   LDA #$00                                  ; $3ECE4A |
   LDX #$1F                                  ; $3ECE4C |
 loc_7CE4E:
@@ -16761,6 +17093,7 @@ loc_7CE4E:
   BPL loc_7CE4E                             ; $3ECE55 |
   RTS                                       ; $3ECE57 |
 
+code_3ECE58:
   LDA #$00                                  ; $3ECE58 |
   STA $0642                                 ; $3ECE5A |
   STA $EF                                   ; $3ECE5D |
@@ -16769,13 +17102,14 @@ loc_7CE4E:
   STA $06A0                                 ; $3ECE65 |
   STA $0685                                 ; $3ECE68 |
   STA $069E                                 ; $3ECE6B |
-  JSR $CE4A                                 ; $3ECE6E |
-  JSR $CB28                                 ; $3ECE71 |
+  JSR code_3ECE4A                           ; $3ECE6E |
+  JSR code_3ECB28                           ; $3ECE71 |
 
   db $47                                    ; $3ECE74 |
 
   RTS                                       ; $3ECE75 |
 
+code_3ECE76:
   LDA #$00                                  ; $3ECE76 |
   STA $11                                   ; $3ECE78 |
   STA $05B1                                 ; $3ECE7A |
@@ -16784,30 +17118,31 @@ loc_7CE4E:
   LDA #$40                                  ; $3ECE82 |
   STA $05F6                                 ; $3ECE84 |
 loc_7CE87:
+code_3ECE87:
   DEC $05F6                                 ; $3ECE87 |
   BNE loc_7CEB3                             ; $3ECE8A |
   DEC $05DF                                 ; $3ECE8C |
   BNE loc_7CEB3                             ; $3ECE8F |
   LDA #$F0                                  ; $3ECE91 |
   STA $DC                                   ; $3ECE93 |
-  JSR $CA3D                                 ; $3ECE95 |
-  JSR $CEEA                                 ; $3ECE98 |
-  JSR $CA3D                                 ; $3ECE9B |
+  JSR code_3ECA3D                           ; $3ECE95 |
+  JSR code_3ECEEA                           ; $3ECE98 |
+  JSR code_3ECA3D                           ; $3ECE9B |
   LDA $11                                   ; $3ECE9E |
   BNE loc_7CEAC                             ; $3ECEA0 |
   LDA $0681                                 ; $3ECEA2 |
   CMP #$08                                  ; $3ECEA5 |
   BNE loc_7CEAC                             ; $3ECEA7 |
-  JMP $FF70                                 ; $3ECEA9 |
+  JMP code_3FFF70                           ; $3ECEA9 |
 
 loc_7CEAC:
   LDA #$01                                  ; $3ECEAC |
   STA $11                                   ; $3ECEAE |
-  JMP $CEE7                                 ; $3ECEB0 |
+  JMP code_3ECEE7                           ; $3ECEB0 |
 
 loc_7CEB3:
-  JSR $C62B                                 ; $3ECEB3 |
-  JSR $E1DD                                 ; $3ECEB6 |
+  JSR code_3EC62B                           ; $3ECEB3 |
+  JSR code_3FE1DD                           ; $3ECEB6 |
   LDA $42                                   ; $3ECEB9 |
   AND #$10                                  ; $3ECEBB |
   BNE loc_7CEE3                             ; $3ECEBD |
@@ -16826,31 +17161,33 @@ loc_7CEB3:
   LDA $CEE8,y                               ; $3ECED8 |
   STA $04CD                                 ; $3ECEDB |
   BEQ loc_7CEE3                             ; $3ECEDE |
-  JMP $CE87                                 ; $3ECEE0 |
+  JMP code_3ECE87                           ; $3ECEE0 |
 
 loc_7CEE3:
   LDA #$33                                  ; $3ECEE3 |
   STA $DC                                   ; $3ECEE5 |
+code_3ECEE7:
   RTS                                       ; $3ECEE7 |
 
   db $AB, $BB                               ; $3ECEE8 |
 
-  JSR $CB28                                 ; $3ECEEA |
+code_3ECEEA:
+  JSR code_3ECB28                           ; $3ECEEA |
 
   db $42                                    ; $3ECEED |
 
-  JSR $E1DD                                 ; $3ECEEE |
+  JSR code_3FE1DD                           ; $3ECEEE |
   LDA $0681                                 ; $3ECEF1 |
   AND #$07                                  ; $3ECEF4 |
   STA $0681                                 ; $3ECEF6 |
   STA $51                                   ; $3ECEF9 |
   LDA #$02                                  ; $3ECEFB |
   STA $A9                                   ; $3ECEFD |
-  JSR $CE58                                 ; $3ECEFF |
-  JSR $CDC3                                 ; $3ECF02 |
+  JSR code_3ECE58                           ; $3ECEFF |
+  JSR code_3ECDC3                           ; $3ECF02 |
   LDA #$F0                                  ; $3ECF05 |
   STA $DC                                   ; $3ECF07 |
-  JSR $CA89                                 ; $3ECF09 |
+  JSR code_3ECA89                           ; $3ECF09 |
   LDA #$01                                  ; $3ECF0C |
   STA $067E                                 ; $3ECF0E |
   STA $067F                                 ; $3ECF11 |
@@ -16858,18 +17195,18 @@ loc_7CEE3:
 loc_7CF17:
   LDA $067D                                 ; $3ECF17 |
   BEQ loc_7CF3E                             ; $3ECF1A |
-  JSR $CB28                                 ; $3ECF1C |
+  JSR code_3ECB28                           ; $3ECF1C |
 
   db $40                                    ; $3ECF1F |
 
-  JSR $E41C                                 ; $3ECF20 |
-  JSR $D1D4                                 ; $3ECF23 |
-  JSR $CF4A                                 ; $3ECF26 |
-  JSR $CB28                                 ; $3ECF29 |
+  JSR code_3FE41C                           ; $3ECF20 |
+  JSR code_3ED1D4                           ; $3ECF23 |
+  JSR code_3ECF4A                           ; $3ECF26 |
+  JSR code_3ECB28                           ; $3ECF29 |
 
   db $44                                    ; $3ECF2C |
 
-  JSR $C62B                                 ; $3ECF2D |
+  JSR code_3EC62B                           ; $3ECF2D |
   LDA $F0                                   ; $3ECF30 |
   BEQ loc_7CF17                             ; $3ECF32 |
   LDA #$00                                  ; $3ECF34 |
@@ -16886,6 +17223,7 @@ loc_7CF3E:
   STA $067D                                 ; $3ECF46 |
   RTS                                       ; $3ECF49 |
 
+code_3ECF4A:
   LDY $8C                                   ; $3ECF4A |
   LDA #$FF                                  ; $3ECF4C |
   STA $05                                   ; $3ECF4E |
@@ -16899,7 +17237,7 @@ loc_7CF3E:
   STA $03                                   ; $3ECF60 |
   LDA #$03                                  ; $3ECF62 |
   STA $04                                   ; $3ECF64 |
-  JSR $CFCA                                 ; $3ECF66 |
+  JSR code_3ECFCA                           ; $3ECF66 |
 loc_7CF69:
   LDA $03E5                                 ; $3ECF69 |
   STA $01                                   ; $3ECF6C |
@@ -16909,7 +17247,7 @@ loc_7CF69:
   STA $03                                   ; $3ECF74 |
   LDA #$01                                  ; $3ECF76 |
   STA $04                                   ; $3ECF78 |
-  JSR $CFCA                                 ; $3ECF7A |
+  JSR code_3ECFCA                           ; $3ECF7A |
   LDX $0699                                 ; $3ECF7D |
   BEQ loc_7CF92                             ; $3ECF80 |
   LDA $0688,x                               ; $3ECF82 |
@@ -16918,7 +17256,7 @@ loc_7CF69:
   STA $02                                   ; $3ECF89 |
   LDA #$00                                  ; $3ECF8B |
   STA $04                                   ; $3ECF8D |
-  JMP $CFCA                                 ; $3ECF8F |
+  JMP code_3ECFCA                           ; $3ECF8F |
 
 loc_7CF92:
   LDA #$28                                  ; $3ECF92 |
@@ -16948,7 +17286,7 @@ loc_7CFB9:
   STA $02                                   ; $3ECFBD |
   LDA #$00                                  ; $3ECFBF |
   STA $04                                   ; $3ECFC1 |
-  JSR $CFCA                                 ; $3ECFC3 |
+  JSR code_3ECFCA                           ; $3ECFC3 |
 loc_7CFC6:
   LDX $8F                                   ; $3ECFC6 |
   RTS                                       ; $3ECFC8 |
@@ -16956,6 +17294,7 @@ loc_7CFC6:
 locret_7CFC9:
   RTS                                       ; $3ECFC9 |
 
+code_3ECFCA:
   TYA                                       ; $3ECFCA |
   LSR                                       ; $3ECFCB |
   BCS locret_7CFC9                          ; $3ECFCC |
@@ -17035,105 +17374,107 @@ loc_7D04B:
   INC $8C                                   ; $3ED04B |
   RTS                                       ; $3ED04D |
 
-  JSR $CA3D                                 ; $3ED04E |
+code_3ED04E:
+  JSR code_3ECA3D                           ; $3ED04E |
   LDA #$77                                  ; $3ED051 |
-  JSR $CAA4                                 ; $3ED053 |
+  JSR code_3ECAA4                           ; $3ED053 |
   LDA #$00                                  ; $3ED056 |
-  JSR $C9EF                                 ; $3ED058 |
-  JSR $C9BF                                 ; $3ED05B |
+  JSR code_3EC9EF                           ; $3ED058 |
+  JSR code_3EC9BF                           ; $3ED05B |
   LDA #$01                                  ; $3ED05E |
-  JSR $CB28                                 ; $3ED060 |
+  JSR code_3ECB28                           ; $3ED060 |
 
   db $00                                    ; $3ED063 |
 
   LDA #$81                                  ; $3ED064 |
-  JSR $CAA4                                 ; $3ED066 |
+  JSR code_3ECAA4                           ; $3ED066 |
   LDA #$0E                                  ; $3ED069 |
   STA $DC                                   ; $3ED06B |
-  JSR $CA89                                 ; $3ED06D |
+  JSR code_3ECA89                           ; $3ED06D |
   LDA #$10                                  ; $3ED070 |
-  JSR $C5F6                                 ; $3ED072 |
+  JSR code_3EC5F6                           ; $3ED072 |
   LDA #$02                                  ; $3ED075 |
   STA $0624                                 ; $3ED077 |
 loc_7D07A:
   LDY #$CD                                  ; $3ED07A |
   LDX #$01                                  ; $3ED07C |
-  JSR $CB28                                 ; $3ED07E |
+  JSR code_3ECB28                           ; $3ED07E |
 
   db $41                                    ; $3ED081 |
 
   LDA #$2E                                  ; $3ED082 |
   STA $9B                                   ; $3ED084 |
 loc_7D086:
-  JSR $C62B                                 ; $3ED086 |
-  JSR $E41C                                 ; $3ED089 |
-  JSR $E1DD                                 ; $3ED08C |
+  JSR code_3EC62B                           ; $3ED086 |
+  JSR code_3FE41C                           ; $3ED089 |
+  JSR code_3FE1DD                           ; $3ED08C |
   DEC $9B                                   ; $3ED08F |
   BNE loc_7D086                             ; $3ED091 |
   DEC $0624                                 ; $3ED093 |
   BNE loc_7D07A                             ; $3ED096 |
   LDA #$40                                  ; $3ED098 |
-  JSR $C5F6                                 ; $3ED09A |
-  JSR $CA3D                                 ; $3ED09D |
+  JSR code_3EC5F6                           ; $3ED09A |
+  JSR code_3ECA3D                           ; $3ED09D |
   LDA #$00                                  ; $3ED0A0 |
   STA $03A0                                 ; $3ED0A2 |
   RTS                                       ; $3ED0A5 |
 
+code_3ED0A6:
   LDA #$00                                  ; $3ED0A6 |
   STA $F7                                   ; $3ED0A8 |
   STA $F9                                   ; $3ED0AA |
-  JSR $CB28                                 ; $3ED0AC |
+  JSR code_3ECB28                           ; $3ED0AC |
 
   db $42                                    ; $3ED0AF |
 
-  JSR $C9BF                                 ; $3ED0B0 |
+  JSR code_3EC9BF                           ; $3ED0B0 |
   LDA #$0C                                  ; $3ED0B3 |
-  JSR $CAA4                                 ; $3ED0B5 |
+  JSR code_3ECAA4                           ; $3ED0B5 |
   LDA #$2D                                  ; $3ED0B8 |
-  JSR $CAA4                                 ; $3ED0BA |
+  JSR code_3ECAA4                           ; $3ED0BA |
   LDX #$02                                  ; $3ED0BD |
   LDY #$10                                  ; $3ED0BF |
-  JSR $CB28                                 ; $3ED0C1 |
+  JSR code_3ECB28                           ; $3ED0C1 |
 
   db $41                                    ; $3ED0C4 |
 
   LDY #$9B                                  ; $3ED0C5 |
-  JSR $E522                                 ; $3ED0C7 |
+  JSR code_3FE522                           ; $3ED0C7 |
   LDX #$02                                  ; $3ED0CA |
   LDY #$05                                  ; $3ED0CC |
-  JSR $E4A7                                 ; $3ED0CE |
+  JSR code_3FE4A7                           ; $3ED0CE |
   LDA #$80                                  ; $3ED0D1 |
-  JSR $CAA4                                 ; $3ED0D3 |
+  JSR code_3ECAA4                           ; $3ED0D3 |
   LDA #$20                                  ; $3ED0D6 |
-  JSR $C9EF                                 ; $3ED0D8 |
+  JSR code_3EC9EF                           ; $3ED0D8 |
   LDA #$00                                  ; $3ED0DB |
-  JSR $CB28                                 ; $3ED0DD |
+  JSR code_3ECB28                           ; $3ED0DD |
 
   db $00                                    ; $3ED0E0 |
 
   LDX #$00                                  ; $3ED0E1 |
   LDY #$10                                  ; $3ED0E3 |
-  JSR $CB28                                 ; $3ED0E5 |
+  JSR code_3ECB28                           ; $3ED0E5 |
 
   db $41                                    ; $3ED0E8 |
 
   LDY #$57                                  ; $3ED0E9 |
-  JSR $E522                                 ; $3ED0EB |
+  JSR code_3FE522                           ; $3ED0EB |
   INX                                       ; $3ED0EE |
   LDY #$10                                  ; $3ED0EF |
-  JSR $CB28                                 ; $3ED0F1 |
+  JSR code_3ECB28                           ; $3ED0F1 |
 
   db $41                                    ; $3ED0F4 |
 
   LDY #$C8                                  ; $3ED0F5 |
-  JSR $E522                                 ; $3ED0F7 |
+  JSR code_3FE522                           ; $3ED0F7 |
   LDX #$00                                  ; $3ED0FA |
   LDY #$02                                  ; $3ED0FC |
-  JSR $E4A7                                 ; $3ED0FE |
+  JSR code_3FE4A7                           ; $3ED0FE |
   INX                                       ; $3ED101 |
   LDY #$03                                  ; $3ED102 |
-  JSR $E4A7                                 ; $3ED104 |
-  JSR $E1DD                                 ; $3ED107 |
+  JSR code_3FE4A7                           ; $3ED104 |
+  JSR code_3FE1DD                           ; $3ED107 |
   RTS                                       ; $3ED10A |
 
 loc_7D10B:
@@ -17182,7 +17523,7 @@ loc_7D164:
   CMP #$2C                                  ; $3ED167 |
   BNE loc_7D171                             ; $3ED169 |
   STA $03A0                                 ; $3ED16B |
-  JSR $E1DD                                 ; $3ED16E |
+  JSR code_3FE1DD                           ; $3ED16E |
 loc_7D171:
   LDA $0677                                 ; $3ED171 |
   CMP #$0A                                  ; $3ED174 |
@@ -17236,36 +17577,40 @@ loc_7D1CF:
   STA $F4                                   ; $3ED1D1 |
   RTS                                       ; $3ED1D3 |
 
+code_3ED1D4:
   LDA #$00                                  ; $3ED1D4 |
   STA $8C                                   ; $3ED1D6 |
   LDA $F3                                   ; $3ED1D8 |
   AND #$01                                  ; $3ED1DA |
   BEQ loc_7D1EC                             ; $3ED1DC |
-  JSR $E1E1                                 ; $3ED1DE |
+  JSR code_3FE1E1                           ; $3ED1DE |
   LDA $8C                                   ; $3ED1E1 |
   LSR                                       ; $3ED1E3 |
   BCS locret_7D1F2                          ; $3ED1E4 |
-  JSR $CF4A                                 ; $3ED1E6 |
-  JMP $D1F2                                 ; $3ED1E9 |
+  JSR code_3ECF4A                           ; $3ED1E6 |
+  JMP code_3ED1F2                           ; $3ED1E9 |
 
 loc_7D1EC:
-  JSR $CF4A                                 ; $3ED1EC |
-  JSR $E1E1                                 ; $3ED1EF |
+  JSR code_3ECF4A                           ; $3ED1EC |
+  JSR code_3FE1E1                           ; $3ED1EF |
 locret_7D1F2:
+code_3ED1F2:
   RTS                                       ; $3ED1F2 |
 
+code_3ED1F3:
   LDA #$3B ; '                              ; $3ED1F3 |
-  JSR $CB91                                 ; $3ED1F5 |
+  JSR code_3ECB91                           ; $3ED1F5 |
   JMP $876E                                 ; $3ED1F8 |
 
+code_3ED1FB:
   LDA #$00                                  ; $3ED1FB |
   STA $FB                                   ; $3ED1FD |
   LDA #$68                                  ; $3ED1FF |
   STA $60                                   ; $3ED201 |
   LDA $6E                                   ; $3ED203 |
-  JSR $CB91                                 ; $3ED205 |
+  JSR code_3ECB91                           ; $3ED205 |
   LDA $6F                                   ; $3ED208 |
-  JSR $CBDA                                 ; $3ED20A |
+  JSR code_3ECBDA                           ; $3ED20A |
   LDA $5A                                   ; $3ED20D |
   AND #$03                                  ; $3ED20F |
   ORA #$20                                  ; $3ED211 |
@@ -17332,6 +17677,7 @@ loc_7D25F:
   STA $0C                                   ; $3ED27E |
   LDA #$FF                                  ; $3ED280 |
   STA $0D                                   ; $3ED282 |
+code_3ED284:
   LDY #$00                                  ; $3ED284 |
   STY $69                                   ; $3ED286 |
   LDA ($54),y                               ; $3ED288 |
@@ -17345,6 +17691,7 @@ loc_7D25F:
   LDA $67                                   ; $3ED295 |
   ADC $69                                   ; $3ED297 |
   STA $69                                   ; $3ED299 |
+code_3ED29B:
   LDA $63                                   ; $3ED29B |
   STA $65                                   ; $3ED29D |
   LDY #$00                                  ; $3ED29F |
@@ -17366,10 +17713,11 @@ loc_7D25F:
   LDA $8D                                   ; $3ED2BA |
   STA $65                                   ; $3ED2BC |
   LDA $9F00,y                               ; $3ED2BE |
-  JMP $D2C6                                 ; $3ED2C1 |
+  JMP code_3ED2C6                           ; $3ED2C1 |
 
 loc_7D2C4:
   LDA ($08),y                               ; $3ED2C4 |
+code_3ED2C6:
   STA $06                                   ; $3ED2C6 |
   AND #$03                                  ; $3ED2C8 |
   TAY                                       ; $3ED2CA |
@@ -17403,13 +17751,13 @@ loc_7D2DF:
   AND #$07                                  ; $3ED2FB |
   STA $03                                   ; $3ED2FD |
   INC $54                                   ; $3ED2FF |
-  JMP $D284                                 ; $3ED301 |
+  JMP code_3ED284                           ; $3ED301 |
 
 loc_7D304:
   AND #$01                                  ; $3ED304 |
   BNE loc_7D30D                             ; $3ED306 |
   INC $68                                   ; $3ED308 |
-  JMP $D29B                                 ; $3ED30A |
+  JMP code_3ED29B                           ; $3ED30A |
 
 loc_7D30D:
   INC $65                                   ; $3ED30D |
@@ -17420,15 +17768,16 @@ loc_7D311:
   LDA $66                                   ; $3ED314 |
   AND #$FC                                  ; $3ED316 |
   STA $66                                   ; $3ED318 |
-  JSR $CBE9                                 ; $3ED31A |
+  JSR code_3ECBE9                           ; $3ED31A |
   RTS                                       ; $3ED31D |
 
+code_3ED31E:
   LDA #$01                                  ; $3ED31E |
   STA $FB                                   ; $3ED320 |
   LDA $6E                                   ; $3ED322 |
-  JSR $CB91                                 ; $3ED324 |
+  JSR code_3ECB91                           ; $3ED324 |
   LDA $6F                                   ; $3ED327 |
-  JSR $CBDA                                 ; $3ED329 |
+  JSR code_3ECBDA                           ; $3ED329 |
   LDA $5B                                   ; $3ED32C |
   AND #$03                                  ; $3ED32E |
   CLC                                       ; $3ED330 |
@@ -17484,6 +17833,7 @@ loc_7D37C:
   TAY                                       ; $3ED38A |
   DEX                                       ; $3ED38B |
   BNE loc_7D37C                             ; $3ED38C |
+code_3ED38E:
   LDY #$00                                  ; $3ED38E |
   STY $69                                   ; $3ED390 |
   LDA ($54),y                               ; $3ED392 |
@@ -17497,6 +17847,7 @@ loc_7D37C:
   LDA $67                                   ; $3ED39F |
   ADC $69                                   ; $3ED3A1 |
   STA $69                                   ; $3ED3A3 |
+code_3ED3A5:
   LDA $63                                   ; $3ED3A5 |
   STA $65                                   ; $3ED3A7 |
   LDY #$00                                  ; $3ED3A9 |
@@ -17518,10 +17869,11 @@ loc_7D37C:
   LDA $8D                                   ; $3ED3C4 |
   STA $65                                   ; $3ED3C6 |
   LDA $9F00,y                               ; $3ED3C8 |
-  JMP $D3D0                                 ; $3ED3CB |
+  JMP code_3ED3D0                           ; $3ED3CB |
 
 loc_7D3CE:
   LDA ($08),y                               ; $3ED3CE |
+code_3ED3D0:
   STA $06                                   ; $3ED3D0 |
   AND #$03                                  ; $3ED3D2 |
   TAY                                       ; $3ED3D4 |
@@ -17550,14 +17902,14 @@ loc_7D3E5:
   AND #$7F                                  ; $3ED3FF |
   STA $03                                   ; $3ED401 |
   INC $55                                   ; $3ED403 |
-  JMP $D38E                                 ; $3ED405 |
+  JMP code_3ED38E                           ; $3ED405 |
 
 loc_7D408:
   AND #$01                                  ; $3ED408 |
   BNE loc_7D413                             ; $3ED40A |
   INC $68                                   ; $3ED40C |
   INC $68                                   ; $3ED40E |
-  JMP $D3A5                                 ; $3ED410 |
+  JMP code_3ED3A5                           ; $3ED410 |
 
 loc_7D413:
   INC $65                                   ; $3ED413 |
@@ -17571,13 +17923,15 @@ loc_7D419:
   LDA $66                                   ; $3ED420 |
   AND #$FC                                  ; $3ED422 |
   STA $66                                   ; $3ED424 |
-  JSR $CBE9                                 ; $3ED426 |
+  JSR code_3ECBE9                           ; $3ED426 |
   RTS                                       ; $3ED429 |
 
+code_3ED42A:
   PHA                                       ; $3ED42A |
   LDA #$00                                  ; $3ED42B |
   STA $40                                   ; $3ED42D |
   PLA                                       ; $3ED42F |
+code_3ED430:
   STA $99                                   ; $3ED430 |
   LDA $40                                   ; $3ED432 |
   AND #$40                                  ; $3ED434 |
@@ -17588,6 +17942,7 @@ loc_7D419:
   STA $9A                                   ; $3ED43E |
   RTS                                       ; $3ED440 |
 
+code_3ED441:
   LDA $0486                                 ; $3ED441 |
   CMP #$F0                                  ; $3ED444 |
   BCC locret_7D4BA                          ; $3ED446 |
@@ -17612,15 +17967,15 @@ loc_7D461:
   STA $07                                   ; $3ED468 |
   LDA #$F0                                  ; $3ED46A |
   STA $4D                                   ; $3ED46C |
-  JSR $D8AB                                 ; $3ED46E |
-  JSR $D92E                                 ; $3ED471 |
+  JSR code_3ED8AB                           ; $3ED46E |
+  JSR code_3ED92E                           ; $3ED471 |
   LDA #$08                                  ; $3ED474 |
-  JSR $C5F6                                 ; $3ED476 |
+  JSR code_3EC5F6                           ; $3ED476 |
   DEC $06                                   ; $3ED479 |
   BNE loc_7D461                             ; $3ED47B |
   LDA #$01                                  ; $3ED47D |
   STA $70                                   ; $3ED47F |
-  JSR $D71C                                 ; $3ED481 |
+  JSR code_3ED71C                           ; $3ED481 |
   PLP                                       ; $3ED484 |
   BCS loc_7D4B5                             ; $3ED485 |
   LDA #$60                                  ; $3ED487 |
@@ -17640,15 +17995,15 @@ loc_7D495:
   STA $07                                   ; $3ED4A0 |
   LDA #$00                                  ; $3ED4A2 |
   STA $4D                                   ; $3ED4A4 |
-  JSR $D8AB                                 ; $3ED4A6 |
-  JSR $D92E                                 ; $3ED4A9 |
+  JSR code_3ED8AB                           ; $3ED4A6 |
+  JSR code_3ED92E                           ; $3ED4A9 |
   LDA #$08                                  ; $3ED4AC |
-  JSR $C5F6                                 ; $3ED4AE |
+  JSR code_3EC5F6                           ; $3ED4AE |
   DEC $06                                   ; $3ED4B1 |
   BNE loc_7D495                             ; $3ED4B3 |
 loc_7D4B5:
   LDA #$01                                  ; $3ED4B5 |
-  JSR $D430                                 ; $3ED4B7 |
+  JSR code_3ED430                           ; $3ED4B7 |
 locret_7D4BA:
   RTS                                       ; $3ED4BA |
 
@@ -17665,6 +18020,7 @@ locret_7D4BA:
   LDA #$01                                  ; $3ED4D3 |
   STA $0678                                 ; $3ED4D5 |
   INC $F4                                   ; $3ED4D8 |
+code_3ED4DA:
   LDA #$00                                  ; $3ED4DA |
   STA $067A                                 ; $3ED4DC |
   LDA $03E5                                 ; $3ED4DF |
@@ -17710,8 +18066,8 @@ loc_7D52D:
   SBC #$0A                                  ; $3ED531 |
   STA $067B                                 ; $3ED533 |
 loc_7D536:
-  JSR $C62B                                 ; $3ED536 |
-  JMP $D4DA                                 ; $3ED539 |
+  JSR code_3EC62B                           ; $3ED536 |
+  JMP code_3ED4DA                           ; $3ED539 |
 
   LDA $04CB                                 ; $3ED53C |
   CMP #$E3                                  ; $3ED53F |
@@ -17722,23 +18078,23 @@ loc_7D536:
   LDA $73                                   ; $3ED54A |
   BEQ loc_7D554                             ; $3ED54C |
   STA $064F                                 ; $3ED54E |
-  JSR $CAAA                                 ; $3ED551 |
+  JSR code_3ECAAA                           ; $3ED551 |
 loc_7D554:
   LDA $72                                   ; $3ED554 |
   BEQ loc_7D560                             ; $3ED556 |
   BPL loc_7D560                             ; $3ED558 |
   STA $069E                                 ; $3ED55A |
-  JSR $C9EF                                 ; $3ED55D |
+  JSR code_3EC9EF                           ; $3ED55D |
 loc_7D560:
   LDA $0697                                 ; $3ED560 |
   STA $57                                   ; $3ED563 |
   STA $046F                                 ; $3ED565 |
   INC $04CA                                 ; $3ED568 |
-  JSR $D7EC                                 ; $3ED56B |
+  JSR code_3ED7EC                           ; $3ED56B |
   LDA $72                                   ; $3ED56E |
   BEQ loc_7D578                             ; $3ED570 |
   STA $069E                                 ; $3ED572 |
-  JSR $C9EF                                 ; $3ED575 |
+  JSR code_3EC9EF                           ; $3ED575 |
 loc_7D578:
   SEC                                       ; $3ED578 |
   BCS loc_7D57C                             ; $3ED579 |
@@ -17750,33 +18106,34 @@ loc_7D57C:
   STA $73                                   ; $3ED580 |
   RTS                                       ; $3ED582 |
 
+code_3ED583:
   LDA $04CB                                 ; $3ED583 |
   CMP #$E3                                  ; $3ED586 |
   BCC loc_7D5C5                             ; $3ED588 |
   LDA #$00                                  ; $3ED58A |
   STA $F4                                   ; $3ED58C |
   STA $067B                                 ; $3ED58E |
-  JSR $C62B                                 ; $3ED591 |
+  JSR code_3EC62B                           ; $3ED591 |
   LDA $72                                   ; $3ED594 |
   BEQ loc_7D5A0                             ; $3ED596 |
   BPL loc_7D5A0                             ; $3ED598 |
   STA $069E                                 ; $3ED59A |
-  JSR $C9EF                                 ; $3ED59D |
+  JSR code_3EC9EF                           ; $3ED59D |
 loc_7D5A0:
   LDA $73                                   ; $3ED5A0 |
   BEQ loc_7D5AA                             ; $3ED5A2 |
   STA $064F                                 ; $3ED5A4 |
-  JSR $CAAA                                 ; $3ED5A7 |
+  JSR code_3ECAAA                           ; $3ED5A7 |
 loc_7D5AA:
   LDA $0697                                 ; $3ED5AA |
   STA $57                                   ; $3ED5AD |
   STA $046F                                 ; $3ED5AF |
   INC $04CA                                 ; $3ED5B2 |
-  JSR $D7AF                                 ; $3ED5B5 |
+  JSR code_3ED7AF                           ; $3ED5B5 |
   LDA $72                                   ; $3ED5B8 |
   BEQ loc_7D5C2                             ; $3ED5BA |
   STA $069E                                 ; $3ED5BC |
-  JSR $C9EF                                 ; $3ED5BF |
+  JSR code_3EC9EF                           ; $3ED5BF |
 loc_7D5C2:
   SEC                                       ; $3ED5C2 |
   BCS loc_7D5C6                             ; $3ED5C3 |
@@ -17797,12 +18154,12 @@ loc_7D5C6:
   LDA $73                                   ; $3ED5DA |
   BEQ loc_7D5E4                             ; $3ED5DC |
   STA $064F                                 ; $3ED5DE |
-  JSR $CAAA                                 ; $3ED5E1 |
+  JSR code_3ECAAA                           ; $3ED5E1 |
 loc_7D5E4:
   LDA $72                                   ; $3ED5E4 |
   BEQ loc_7D5EE                             ; $3ED5E6 |
   STA $069E                                 ; $3ED5E8 |
-  JSR $C9EF                                 ; $3ED5EB |
+  JSR code_3EC9EF                           ; $3ED5EB |
 loc_7D5EE:
   LDA #$00                                  ; $3ED5EE |
   STA $F4                                   ; $3ED5F0 |
@@ -17811,7 +18168,7 @@ loc_7D5EE:
   STA $57                                   ; $3ED5F8 |
   STA $046F                                 ; $3ED5FA |
   INC $04CA                                 ; $3ED5FD |
-  JSR $D86E                                 ; $3ED600 |
+  JSR code_3ED86E                           ; $3ED600 |
   SEC                                       ; $3ED603 |
   BCS loc_7D607                             ; $3ED604 |
 loc_7D606:
@@ -17831,12 +18188,12 @@ loc_7D607:
   LDA $73                                   ; $3ED61B |
   BEQ loc_7D625                             ; $3ED61D |
   STA $064F                                 ; $3ED61F |
-  JSR $CAAA                                 ; $3ED622 |
+  JSR code_3ECAAA                           ; $3ED622 |
 loc_7D625:
   LDA $72                                   ; $3ED625 |
   BEQ loc_7D62F                             ; $3ED627 |
   STA $069E                                 ; $3ED629 |
-  JSR $C9EF                                 ; $3ED62C |
+  JSR code_3EC9EF                           ; $3ED62C |
 loc_7D62F:
   LDA #$00                                  ; $3ED62F |
   STA $F4                                   ; $3ED631 |
@@ -17845,7 +18202,7 @@ loc_7D62F:
   STA $57                                   ; $3ED639 |
   STA $046F                                 ; $3ED63B |
   INC $04CA                                 ; $3ED63E |
-  JSR $D829                                 ; $3ED641 |
+  JSR code_3ED829                           ; $3ED641 |
   SEC                                       ; $3ED644 |
   BCS loc_7D648                             ; $3ED645 |
 loc_7D647:
@@ -17864,19 +18221,19 @@ loc_7D648:
   BPL loc_7D65F                             ; $3ED65A |
   STA $064F                                 ; $3ED65C |
 loc_7D65F:
-  JSR $CAAA                                 ; $3ED65F |
+  JSR code_3ECAAA                           ; $3ED65F |
 loc_7D662:
   LDA $72                                   ; $3ED662 |
   BEQ loc_7D66E                             ; $3ED664 |
   BMI loc_7D66E                             ; $3ED666 |
   STA $069E                                 ; $3ED668 |
-  JSR $C9EF                                 ; $3ED66B |
+  JSR code_3EC9EF                           ; $3ED66B |
 loc_7D66E:
   LDA #$00                                  ; $3ED66E |
   STA $F4                                   ; $3ED670 |
   STA $067B                                 ; $3ED672 |
   STA $069C                                 ; $3ED675 |
-  JSR $C62B                                 ; $3ED678 |
+  JSR code_3EC62B                           ; $3ED678 |
   LDA #$00                                  ; $3ED67B |
   STA $069C                                 ; $3ED67D |
   STA $0682                                 ; $3ED680 |
@@ -17889,12 +18246,12 @@ loc_7D68E:
   STY $70                                   ; $3ED68E |
   STA $57                                   ; $3ED690 |
   STA $046F                                 ; $3ED692 |
-  JSR $D71C                                 ; $3ED695 |
+  JSR code_3ED71C                           ; $3ED695 |
   LDA $72                                   ; $3ED698 |
   BEQ loc_7D6A4                             ; $3ED69A |
   BPL loc_7D6A4                             ; $3ED69C |
   STA $069E                                 ; $3ED69E |
-  JSR $C9EF                                 ; $3ED6A1 |
+  JSR code_3EC9EF                           ; $3ED6A1 |
 loc_7D6A4:
   SEC                                       ; $3ED6A4 |
   BCS loc_7D6A8                             ; $3ED6A5 |
@@ -17912,12 +18269,12 @@ loc_7D6A8:
   LDA $73                                   ; $3ED6B6 |
   BEQ loc_7D6C0                             ; $3ED6B8 |
   STA $064F                                 ; $3ED6BA |
-  JSR $CAAA                                 ; $3ED6BD |
+  JSR code_3ECAAA                           ; $3ED6BD |
 loc_7D6C0:
   LDA $72                                   ; $3ED6C0 |
   BEQ loc_7D6CA                             ; $3ED6C2 |
   STA $069E                                 ; $3ED6C4 |
-  JSR $C9EF                                 ; $3ED6C7 |
+  JSR code_3EC9EF                           ; $3ED6C7 |
 loc_7D6CA:
   LDA #$00                                  ; $3ED6CA |
   STA $F4                                   ; $3ED6CC |
@@ -17931,7 +18288,7 @@ loc_7D6DC:
   STY $70                                   ; $3ED6DC |
   STA $57                                   ; $3ED6DE |
   STA $046F                                 ; $3ED6E0 |
-  JSR $D75B                                 ; $3ED6E3 |
+  JSR code_3ED75B                           ; $3ED6E3 |
   SEC                                       ; $3ED6E6 |
   BCS loc_7D6EA                             ; $3ED6E7 |
 loc_7D6E9:
@@ -17942,6 +18299,7 @@ loc_7D6EA:
   STA $73                                   ; $3ED6EE |
   RTS                                       ; $3ED6F0 |
 
+code_3ED6F1:
   LDX #$15                                  ; $3ED6F1 |
 loc_7D6F3:
   LDA #$00                                  ; $3ED6F3 |
@@ -17952,42 +18310,46 @@ loc_7D6F3:
   BNE loc_7D6F3                             ; $3ED6FE |
   RTS                                       ; $3ED700 |
 
-  JSR $DBAD                                 ; $3ED701 |
-  JSR $E1DD                                 ; $3ED704 |
+code_3ED701:
+  JSR code_3EDBAD                           ; $3ED701 |
+code_3ED704:
+  JSR code_3FE1DD                           ; $3ED704 |
   TXA                                       ; $3ED707 |
   PHA                                       ; $3ED708 |
-  JSR $CF4A                                 ; $3ED709 |
+  JSR code_3ECF4A                           ; $3ED709 |
   PLA                                       ; $3ED70C |
   TAX                                       ; $3ED70D |
-  JSR $C62B                                 ; $3ED70E |
+  JSR code_3EC62B                           ; $3ED70E |
   RTS                                       ; $3ED711 |
 
+code_3ED712:
   LDA #$FF                                  ; $3ED712 |
   STA $0680                                 ; $3ED714 |
-  JSR $CB28                                 ; $3ED717 |
+  JSR code_3ECB28                           ; $3ED717 |
 
   db $46                                    ; $3ED71A |
 
   RTS                                       ; $3ED71B |
 
+code_3ED71C:
   LDA $70                                   ; $3ED71C |
   PHA                                       ; $3ED71E |
   LDA #$01                                  ; $3ED71F |
   STA $71                                   ; $3ED721 |
-  JSR $D6F1                                 ; $3ED723 |
-  JSR $E1DD                                 ; $3ED726 |
-  JSR $CF4A                                 ; $3ED729 |
-  JSR $C62B                                 ; $3ED72C |
+  JSR code_3ED6F1                           ; $3ED723 |
+  JSR code_3FE1DD                           ; $3ED726 |
+  JSR code_3ECF4A                           ; $3ED729 |
+  JSR code_3EC62B                           ; $3ED72C |
   LDA #$02                                  ; $3ED72F |
   STA $6D                                   ; $3ED731 |
   LDY $57                                   ; $3ED733 |
   INY                                       ; $3ED735 |
-  JSR $D712                                 ; $3ED736 |
+  JSR code_3ED712                           ; $3ED736 |
   LDY #$80                                  ; $3ED739 |
   STY $07                                   ; $3ED73B |
 loc_7D73D:
   LDA #$01                                  ; $3ED73D |
-  JSR $D701                                 ; $3ED73F |
+  JSR code_3ED701                           ; $3ED73F |
   LDA #$42                                  ; $3ED742 |
   STA $EB                                   ; $3ED744 |
   LDA #$00                                  ; $3ED746 |
@@ -17995,24 +18357,25 @@ loc_7D73D:
   STA $EE                                   ; $3ED74A |
   STA $EC                                   ; $3ED74C |
   LDX #$00                                  ; $3ED74E |
-  JSR $E4D3                                 ; $3ED750 |
+  JSR code_3FE4D3                           ; $3ED750 |
   DEC $07                                   ; $3ED753 |
   BNE loc_7D73D                             ; $3ED755 |
   PLA                                       ; $3ED757 |
   STA $70                                   ; $3ED758 |
   RTS                                       ; $3ED75A |
 
+code_3ED75B:
   LDA $70                                   ; $3ED75B |
   PHA                                       ; $3ED75D |
   LDA #$02                                  ; $3ED75E |
   STA $71                                   ; $3ED760 |
-  JSR $D6F1                                 ; $3ED762 |
+  JSR code_3ED6F1                           ; $3ED762 |
   LDA #$02                                  ; $3ED765 |
   STA $6D                                   ; $3ED767 |
   LDY $57                                   ; $3ED769 |
   DEY                                       ; $3ED76B |
   STY $57                                   ; $3ED76C |
-  JSR $D712                                 ; $3ED76E |
+  JSR code_3ED712                           ; $3ED76E |
   LDA #$FE                                  ; $3ED771 |
   STA $56                                   ; $3ED773 |
   LDA #$01                                  ; $3ED775 |
@@ -18027,12 +18390,13 @@ loc_7D77D:
   DEC $56                                   ; $3ED785 |
   DEC $F7                                   ; $3ED787 |
   DEC $F7                                   ; $3ED789 |
-  JSR $D704                                 ; $3ED78B |
-  JMP $D796                                 ; $3ED78E |
+  JSR code_3ED704                           ; $3ED78B |
+  JMP code_3ED796                           ; $3ED78E |
 
 loc_7D791:
   LDA #$02                                  ; $3ED791 |
-  JSR $D701                                 ; $3ED793 |
+  JSR code_3ED701                           ; $3ED793 |
+code_3ED796:
   LDA #$B0                                  ; $3ED796 |
   STA $EB                                   ; $3ED798 |
   LDA #$FF                                  ; $3ED79A |
@@ -18040,20 +18404,21 @@ loc_7D791:
   STA $EE                                   ; $3ED79E |
   STA $EC                                   ; $3ED7A0 |
   LDX #$00                                  ; $3ED7A2 |
-  JSR $E4D3                                 ; $3ED7A4 |
+  JSR code_3FE4D3                           ; $3ED7A4 |
   DEC $07                                   ; $3ED7A7 |
   BNE loc_7D77D                             ; $3ED7A9 |
   PLA                                       ; $3ED7AB |
   STA $70                                   ; $3ED7AC |
   RTS                                       ; $3ED7AE |
 
-  JSR $D6F1                                 ; $3ED7AF |
+code_3ED7AF:
+  JSR code_3ED6F1                           ; $3ED7AF |
   INC $57                                   ; $3ED7B2 |
   INC $046F                                 ; $3ED7B4 |
   LDA #$01                                  ; $3ED7B7 |
   STA $70                                   ; $3ED7B9 |
   LDY $57                                   ; $3ED7BB |
-  JSR $D712                                 ; $3ED7BD |
+  JSR code_3ED712                           ; $3ED7BD |
   LDA #$EF                                  ; $3ED7C0 |
   STA $58                                   ; $3ED7C2 |
   LDX #$78                                  ; $3ED7C4 |
@@ -18061,7 +18426,7 @@ loc_7D791:
   STA $6D                                   ; $3ED7C8 |
 loc_7D7CA:
   LDA #$03                                  ; $3ED7CA |
-  JSR $D701                                 ; $3ED7CC |
+  JSR code_3ED701                           ; $3ED7CC |
   TXA                                       ; $3ED7CF |
   AND #$03                                  ; $3ED7D0 |
   BNE loc_7D7D7                             ; $3ED7D2 |
@@ -18079,13 +18444,14 @@ loc_7D7D7:
   STA $FB                                   ; $3ED7E9 |
   RTS                                       ; $3ED7EB |
 
-  JSR $D6F1                                 ; $3ED7EC |
+code_3ED7EC:
+  JSR code_3ED6F1                           ; $3ED7EC |
   DEC $57                                   ; $3ED7EF |
   DEC $046F                                 ; $3ED7F1 |
   LDA #$02                                  ; $3ED7F4 |
   STA $70                                   ; $3ED7F6 |
   LDY $57                                   ; $3ED7F8 |
-  JSR $D712                                 ; $3ED7FA |
+  JSR code_3ED712                           ; $3ED7FA |
   LDA #$EF                                  ; $3ED7FD |
   STA $58                                   ; $3ED7FF |
   LDX #$78                                  ; $3ED801 |
@@ -18093,7 +18459,7 @@ loc_7D7D7:
   STA $6D                                   ; $3ED805 |
 loc_7D807:
   LDA #$03                                  ; $3ED807 |
-  JSR $D701                                 ; $3ED809 |
+  JSR code_3ED701                           ; $3ED809 |
   TXA                                       ; $3ED80C |
   AND #$03                                  ; $3ED80D |
   BNE loc_7D814                             ; $3ED80F |
@@ -18111,7 +18477,8 @@ loc_7D814:
   STA $FB                                   ; $3ED826 |
   RTS                                       ; $3ED828 |
 
-  JSR $D6F1                                 ; $3ED829 |
+code_3ED829:
+  JSR code_3ED6F1                           ; $3ED829 |
   INC $57                                   ; $3ED82C |
   LDA $03B7                                 ; $3ED82E |
   AND #$FE                                  ; $3ED831 |
@@ -18119,7 +18486,7 @@ loc_7D814:
   LDA #$01                                  ; $3ED836 |
   STA $70                                   ; $3ED838 |
   LDY $57                                   ; $3ED83A |
-  JSR $D712                                 ; $3ED83C |
+  JSR code_3ED712                           ; $3ED83C |
   LDA #$00                                  ; $3ED83F |
   STA $58                                   ; $3ED841 |
   INC $046F                                 ; $3ED843 |
@@ -18132,7 +18499,7 @@ loc_7D814:
   STA $6D                                   ; $3ED853 |
 loc_7D855:
   LDA #$04                                  ; $3ED855 |
-  JSR $D701                                 ; $3ED857 |
+  JSR code_3ED701                           ; $3ED857 |
   TXA                                       ; $3ED85A |
   AND #$03                                  ; $3ED85B |
   BNE loc_7D862                             ; $3ED85D |
@@ -18146,12 +18513,13 @@ loc_7D862:
   STA $FB                                   ; $3ED86B |
   RTS                                       ; $3ED86D |
 
-  JSR $D6F1                                 ; $3ED86E |
+code_3ED86E:
+  JSR code_3ED6F1                           ; $3ED86E |
   DEC $57                                   ; $3ED871 |
   LDY $57                                   ; $3ED873 |
   LDA #$02                                  ; $3ED875 |
   STA $70                                   ; $3ED877 |
-  JSR $D712                                 ; $3ED879 |
+  JSR code_3ED712                           ; $3ED879 |
   LDA #$00                                  ; $3ED87C |
   STA $58                                   ; $3ED87E |
   DEC $046F                                 ; $3ED880 |
@@ -18164,7 +18532,7 @@ loc_7D862:
   STA $6D                                   ; $3ED890 |
 loc_7D892:
   LDA #$04                                  ; $3ED892 |
-  JSR $D701                                 ; $3ED894 |
+  JSR code_3ED701                           ; $3ED894 |
   TXA                                       ; $3ED897 |
   AND #$03                                  ; $3ED898 |
   BNE loc_7D89F                             ; $3ED89A |
@@ -18178,6 +18546,7 @@ loc_7D89F:
   STA $FB                                   ; $3ED8A8 |
   RTS                                       ; $3ED8AA |
 
+code_3ED8AB:
   LDA #$08                                  ; $3ED8AB |
   STA $5D                                   ; $3ED8AD |
   LDA $4E                                   ; $3ED8AF |
@@ -18229,6 +18598,7 @@ loc_7D89F:
   STA $5F                                   ; $3ED8FD |
   RTS                                       ; $3ED8FF |
 
+code_3ED900:
   LDA $4D                                   ; $3ED900 |
   STA $54                                   ; $3ED902 |
   LDA $4F                                   ; $3ED904 |
@@ -18259,8 +18629,9 @@ loc_7D89F:
   STA $55                                   ; $3ED92B |
   RTS                                       ; $3ED92D |
 
+code_3ED92E:
   LDA $6E                                   ; $3ED92E |
-  JSR $CB91                                 ; $3ED930 |
+  JSR code_3ECB91                           ; $3ED930 |
   LDA #$9B                                  ; $3ED933 |
   STA $65                                   ; $3ED935 |
   LDA #$00                                  ; $3ED937 |
@@ -18314,7 +18685,7 @@ loc_7D89F:
   CLC                                       ; $3ED9A4 |
   ADC #$0E                                  ; $3ED9A5 |
   STA $47                                   ; $3ED9A7 |
-  JSR $CBE9                                 ; $3ED9A9 |
+  JSR code_3ECBE9                           ; $3ED9A9 |
   RTS                                       ; $3ED9AC |
 
   db $FC, $FC, $FC, $FC, $CF, $CF, $CF, $CF ; $3ED9AD |
@@ -18322,7 +18693,9 @@ loc_7D89F:
   db $00, $01, $02, $03, $00, $10, $20, $30 ; $3ED9BD |
   db $00, $04, $08, $0C, $00, $40, $80, $C0 ; $3ED9C5 |
 
+code_3ED9CD:
   LDX $8F                                   ; $3ED9CD |
+code_3ED9CF:
   LDA $046F,x                               ; $3ED9CF |
   STA $4F                                   ; $3ED9D2 |
   LDA $00                                   ; $3ED9D4 |
@@ -18363,7 +18736,7 @@ loc_7DA0D:
 loc_7DA11:
   LDA $F4                                   ; $3EDA11 |
   BNE loc_7DA18                             ; $3EDA13 |
-  JMP $DA68                                 ; $3EDA15 |
+  JMP code_3EDA68                           ; $3EDA15 |
 
 loc_7DA18:
   LDA $51                                   ; $3EDA18 |
@@ -18386,7 +18759,7 @@ loc_7DA33:
   SBC $067B                                 ; $3EDA34 |
   STA $4E                                   ; $3EDA37 |
 loc_7DA39:
-  JMP $DA68                                 ; $3EDA39 |
+  JMP code_3EDA68                           ; $3EDA39 |
 
 loc_7DA3C:
   CMP #$06                                  ; $3EDA3C |
@@ -18417,10 +18790,11 @@ loc_7DA62:
   ADC $069C                                 ; $3EDA63 |
   STA $4E                                   ; $3EDA66 |
 loc_7DA68:
+code_3EDA68:
   LDA $6E                                   ; $3EDA68 |
-  JSR $CB91                                 ; $3EDA6A |
+  JSR code_3ECB91                           ; $3EDA6A |
   LDA $6F                                   ; $3EDA6D |
-  JSR $CBDA                                 ; $3EDA6F |
+  JSR code_3ECBDA                           ; $3EDA6F |
   LDA #$00                                  ; $3EDA72 |
   STA $03                                   ; $3EDA74 |
   STA $64                                   ; $3EDA76 |
@@ -18510,7 +18884,7 @@ loc_7DADA:
   LDA $DB0F,y                               ; $3EDAF6 |
   STA $11                                   ; $3EDAF9 |
 loc_7DAFB:
-  JSR $CBE9                                 ; $3EDAFB |
+  JSR code_3ECBE9                           ; $3EDAFB |
   RTS                                       ; $3EDAFE |
 
   db $00, $00, $01, $00, $02, $00, $02, $00 ; $3EDAFF |
@@ -18524,6 +18898,7 @@ loc_7DAFB:
   db $00, $01, $02, $03, $04, $1D, $06, $07 ; $3EDB3F |
   db $08, $01, $0A, $0B, $0C, $1B, $0E, $0F ; $3EDB47 |
 
+code_3EDB4F:
   LDA #$00                                  ; $3EDB4F |
   STA $EE                                   ; $3EDB51 |
   LDA $4D                                   ; $3EDB53 |
@@ -18533,6 +18908,7 @@ loc_7DAFB:
   STA $ED                                   ; $3EDB5B |
   RTS                                       ; $3EDB5D |
 
+code_3EDB5E:
   LDA #$00                                  ; $3EDB5E |
   STA $EE                                   ; $3EDB60 |
   LDA $4D                                   ; $3EDB62 |
@@ -18542,6 +18918,7 @@ loc_7DAFB:
   STA $ED                                   ; $3EDB6A |
   RTS                                       ; $3EDB6C |
 
+code_3EDB6D:
   LDA #$00                                  ; $3EDB6D |
   STA $ED                                   ; $3EDB6F |
   LDA $4E                                   ; $3EDB71 |
@@ -18555,6 +18932,7 @@ loc_7DAFB:
   db $08, $07, $06, $05, $04, $03, $02, $01 ; $3EDB84 |
   db $FF, $FE, $FD, $FC, $FB, $FA, $F9, $F8 ; $3EDB8C |
 
+code_3EDB94:
   LDA $80                                   ; $3EDB94 |
   AND #$07                                  ; $3EDB96 |
   TAY                                       ; $3EDB98 |
@@ -18570,6 +18948,7 @@ loc_7DAFB:
   STA $0340,y                               ; $3EDBA9 |
   RTS                                       ; $3EDBAC |
 
+code_3EDBAD:
   ORA #$00                                  ; $3EDBAD |
   BEQ locret_7DBCE                          ; $3EDBAF |
   ASL                                       ; $3EDBB1 |
@@ -18593,6 +18972,7 @@ locret_7DBCE:
 
   db $DE, $DC, $3E, $DD, $8E, $DD, $CE, $DD ; $3EDBCF |
 
+code_3EDBD7:
   PHA                                       ; $3EDBD7 |
   TAY                                       ; $3EDBD8 |
   STA $51                                   ; $3EDBD9 |
@@ -18600,12 +18980,12 @@ locret_7DBCE:
   STA $063D                                 ; $3EDBDD |
   LDA $FD                                   ; $3EDBE0 |
   PHA                                       ; $3EDBE2 |
-  JSR $CB28                                 ; $3EDBE3 |
+  JSR code_3ECB28                           ; $3EDBE3 |
 
   db $42                                    ; $3EDBE6 |
 
   LDA $DF91,y                               ; $3EDBE7 |
-  JSR $C9EF                                 ; $3EDBEA |
+  JSR code_3EC9EF                           ; $3EDBEA |
   LDA $DFA1,y                               ; $3EDBED |
   STA $DC                                   ; $3EDBF0 |
   LDA #$1B                                  ; $3EDBF2 |
@@ -18625,9 +19005,9 @@ locret_7DBCE:
   LDA $DF81,y                               ; $3EDC15 |
   STA $064E                                 ; $3EDC18 |
   LDY #$01                                  ; $3EDC1B |
-  JSR $C5F0                                 ; $3EDC1D |
+  JSR code_3EC5F0                           ; $3EDC1D |
   LDY #$02                                  ; $3EDC20 |
-  JSR $C5F0                                 ; $3EDC22 |
+  JSR code_3EC5F0                           ; $3EDC22 |
   LDA #$00                                  ; $3EDC25 |
   STA $FD                                   ; $3EDC27 |
   STA {PPU_MASK}                            ; $3EDC29 |
@@ -18647,14 +19027,14 @@ locret_7DBCE:
   LDA $0684                                 ; $3EDC48 |
   STA $57                                   ; $3EDC4B |
   TAY                                       ; $3EDC4D |
-  JSR $CB28                                 ; $3EDC4E |
+  JSR code_3ECB28                           ; $3EDC4E |
 
   db $46                                    ; $3EDC51 |
 
   LDA #$FF                                  ; $3EDC52 |
   STA $0680                                 ; $3EDC54 |
-  JSR $DC66                                 ; $3EDC57 |
-  JSR $E1DD                                 ; $3EDC5A |
+  JSR code_3EDC66                           ; $3EDC57 |
+  JSR code_3FE1DD                           ; $3EDC5A |
   PLA                                       ; $3EDC5D |
   STA $FD                                   ; $3EDC5E |
   LDA #$01                                  ; $3EDC60 |
@@ -18662,11 +19042,12 @@ locret_7DBCE:
   PLA                                       ; $3EDC64 |
   RTS                                       ; $3EDC65 |
 
+code_3EDC66:
   LDA $064E                                 ; $3EDC66 |
-  JSR $CAA4                                 ; $3EDC69 |
+  JSR code_3ECAA4                           ; $3EDC69 |
   LDA $064F                                 ; $3EDC6C |
   BEQ loc_7DC74                             ; $3EDC6F |
-  JSR $CAA4                                 ; $3EDC71 |
+  JSR code_3ECAA4                           ; $3EDC71 |
 loc_7DC74:
   LDA $56                                   ; $3EDC74 |
   STA $F7                                   ; $3EDC76 |
@@ -18684,9 +19065,9 @@ loc_7DC74:
   LDA #$1E                                  ; $3EDC8D |
   STA $07                                   ; $3EDC8F |
 loc_7DC91:
-  JSR $D8AB                                 ; $3EDC91 |
-  JSR $D900                                 ; $3EDC94 |
-  JSR $D1FB                                 ; $3EDC97 |
+  JSR code_3ED8AB                           ; $3EDC91 |
+  JSR code_3ED900                           ; $3EDC94 |
+  JSR code_3ED1FB                           ; $3EDC97 |
   LDA $4E                                   ; $3EDC9A |
   CLC                                       ; $3EDC9C |
   ADC #$08                                  ; $3EDC9D |
@@ -18697,15 +19078,16 @@ loc_7DC91:
   STA $4E                                   ; $3EDCA7 |
   INC $50                                   ; $3EDCA9 |
 loc_7DCAB:
-  JSR $C7DE                                 ; $3EDCAB |
+  JSR code_3EC7DE                           ; $3EDCAB |
   DEC $07                                   ; $3EDCAE |
   BNE loc_7DC91                             ; $3EDCB0 |
   LDA $EF                                   ; $3EDCB2 |
   BEQ locret_7DCB9                          ; $3EDCB4 |
-  JSR $DCBA                                 ; $3EDCB6 |
+  JSR code_3EDCBA                           ; $3EDCB6 |
 locret_7DCB9:
   RTS                                       ; $3EDCB9 |
 
+code_3EDCBA:
   LDA #$60                                  ; $3EDCBA |
   STA $07                                   ; $3EDCBC |
   LDA #$04                                  ; $3EDCBE |
@@ -18720,8 +19102,8 @@ loc_7DCC2:
   STA $07                                   ; $3EDCCD |
   LDA #$00                                  ; $3EDCCF |
   STA $4D                                   ; $3EDCD1 |
-  JSR $D8AB                                 ; $3EDCD3 |
-  JSR $D92E                                 ; $3EDCD6 |
+  JSR code_3ED8AB                           ; $3EDCD3 |
+  JSR code_3ED92E                           ; $3EDCD6 |
   DEC $06                                   ; $3EDCD9 |
   BNE loc_7DCC2                             ; $3EDCDB |
   RTS                                       ; $3EDCDD |
@@ -18769,13 +19151,14 @@ loc_7DD10:
   LDA $57                                   ; $3EDD24 |
   ADC #$00                                  ; $3EDD26 |
   STA $4F                                   ; $3EDD28 |
+code_3EDD2A:
   LDA $59                                   ; $3EDD2A |
   STA $50                                   ; $3EDD2C |
   LDA $58                                   ; $3EDD2E |
   STA $4E                                   ; $3EDD30 |
-  JSR $D8AB                                 ; $3EDD32 |
-  JSR $D900                                 ; $3EDD35 |
-  JSR $D31E                                 ; $3EDD38 |
+  JSR code_3ED8AB                           ; $3EDD32 |
+  JSR code_3ED900                           ; $3EDD35 |
+  JSR code_3ED31E                           ; $3EDD38 |
 loc_7DD3B:
   PLA                                       ; $3EDD3B |
   TAX                                       ; $3EDD3C |
@@ -18826,7 +19209,7 @@ loc_7DD6D:
   LDA $57                                   ; $3EDD85 |
   ADC #$00                                  ; $3EDD87 |
   STA $4F                                   ; $3EDD89 |
-  JMP $DD2A                                 ; $3EDD8B |
+  JMP code_3EDD2A                           ; $3EDD8B |
 
   TXA                                       ; $3EDD8E |
   PHA                                       ; $3EDD8F |
@@ -18849,6 +19232,7 @@ loc_7DDA1:
   BEQ loc_7DDCB                             ; $3EDDAD |
   LDX $59                                   ; $3EDDAF |
   STX $50                                   ; $3EDDB1 |
+code_3EDDB3:
   LDA $56                                   ; $3EDDB3 |
   CLC                                       ; $3EDDB5 |
   ADC #$07                                  ; $3EDDB6 |
@@ -18857,9 +19241,9 @@ loc_7DDA1:
   LDA $57                                   ; $3EDDBC |
   ADC #$00                                  ; $3EDDBE |
   STA $4F                                   ; $3EDDC0 |
-  JSR $D8AB                                 ; $3EDDC2 |
-  JSR $D900                                 ; $3EDDC5 |
-  JSR $D1FB                                 ; $3EDDC8 |
+  JSR code_3ED8AB                           ; $3EDDC2 |
+  JSR code_3ED900                           ; $3EDDC5 |
+  JSR code_3ED1FB                           ; $3EDDC8 |
 loc_7DDCB:
   PLA                                       ; $3EDDCB |
   TAX                                       ; $3EDDCC |
@@ -18887,11 +19271,12 @@ loc_7DDE3:
   BEQ loc_7DDCB                             ; $3EDDEF |
   LDX $59                                   ; $3EDDF1 |
   STX $50                                   ; $3EDDF3 |
-  JMP $DDB3                                 ; $3EDDF5 |
+  JMP code_3EDDB3                           ; $3EDDF5 |
 
+code_3EDDF8:
   LDA $13                                   ; $3EDDF8 |
   STA $80                                   ; $3EDDFA |
-  JSR $DB94                                 ; $3EDDFC |
+  JSR code_3EDB94                           ; $3EDDFC |
   LDA $56                                   ; $3EDDFF |
   CLC                                       ; $3EDE01 |
   ADC #$04                                  ; $3EDE02 |
@@ -18905,13 +19290,13 @@ loc_7DDE3:
   LDA $59                                   ; $3EDE13 |
   STA $50                                   ; $3EDE15 |
   LDX #$04                                  ; $3EDE17 |
-  JSR $C5C7                                 ; $3EDE19 |
-  JSR $D8AB                                 ; $3EDE1C |
-  JSR $D900                                 ; $3EDE1F |
-  JSR $D1FB                                 ; $3EDE22 |
+  JSR code_3EC5C7                           ; $3EDE19 |
+  JSR code_3ED8AB                           ; $3EDE1C |
+  JSR code_3ED900                           ; $3EDE1F |
+  JSR code_3ED1FB                           ; $3EDE22 |
   LDA #$01                                  ; $3EDE25 |
   STA $FB                                   ; $3EDE27 |
-  JSR $C62B                                 ; $3EDE29 |
+  JSR code_3EC62B                           ; $3EDE29 |
   LDA $56                                   ; $3EDE2C |
   CLC                                       ; $3EDE2E |
   ADC #$04                                  ; $3EDE2F |
@@ -18926,41 +19311,43 @@ loc_7DDE3:
   STA $4E                                   ; $3EDE42 |
   LDA $59                                   ; $3EDE44 |
   STA $50                                   ; $3EDE46 |
-  JSR $D8AB                                 ; $3EDE48 |
-  JSR $D900                                 ; $3EDE4B |
-  JSR $D1FB                                 ; $3EDE4E |
+  JSR code_3ED8AB                           ; $3EDE48 |
+  JSR code_3ED900                           ; $3EDE4B |
+  JSR code_3ED1FB                           ; $3EDE4E |
   LDA #$01                                  ; $3EDE51 |
   STA $FB                                   ; $3EDE53 |
-  JSR $C62B                                 ; $3EDE55 |
+  JSR code_3EC62B                           ; $3EDE55 |
   RTS                                       ; $3EDE58 |
 
-  JSR $DEA3                                 ; $3EDE59 |
+code_3EDE59:
+  JSR code_3EDEA3                           ; $3EDE59 |
   LDA #$02                                  ; $3EDE5C |
   STA $06AD                                 ; $3EDE5E |
 loc_7DE61:
   LDX #$0F                                  ; $3EDE61 |
-  JSR $CA59                                 ; $3EDE63 |
-  JSR $CA59                                 ; $3EDE66 |
-  JSR $CA59                                 ; $3EDE69 |
-  JSR $CA59                                 ; $3EDE6C |
+  JSR code_3ECA59                           ; $3EDE63 |
+  JSR code_3ECA59                           ; $3EDE66 |
+  JSR code_3ECA59                           ; $3EDE69 |
+  JSR code_3ECA59                           ; $3EDE6C |
   LDA #$08                                  ; $3EDE6F |
-  JSR $C5F6                                 ; $3EDE71 |
+  JSR code_3EC5F6                           ; $3EDE71 |
   DEC $06AD                                 ; $3EDE74 |
   BNE loc_7DE61                             ; $3EDE77 |
   RTS                                       ; $3EDE79 |
 
+code_3EDE7A:
   LDA #$30                                  ; $3EDE7A |
   STA $49                                   ; $3EDE7C |
   LDA #$04                                  ; $3EDE7E |
   STA $06AD                                 ; $3EDE80 |
 loc_7DE83:
   LDX #$0F                                  ; $3EDE83 |
-  JSR $CA71                                 ; $3EDE85 |
-  JSR $CA71                                 ; $3EDE88 |
-  JSR $CA71                                 ; $3EDE8B |
-  JSR $CA71                                 ; $3EDE8E |
+  JSR code_3ECA71                           ; $3EDE85 |
+  JSR code_3ECA71                           ; $3EDE88 |
+  JSR code_3ECA71                           ; $3EDE8B |
+  JSR code_3ECA71                           ; $3EDE8E |
   LDA #$08                                  ; $3EDE91 |
-  JSR $C5F6                                 ; $3EDE93 |
+  JSR code_3EC5F6                           ; $3EDE93 |
   LDA $49                                   ; $3EDE96 |
   SEC                                       ; $3EDE98 |
   SBC #$10                                  ; $3EDE99 |
@@ -18969,6 +19356,7 @@ loc_7DE83:
   BNE loc_7DE83                             ; $3EDEA0 |
   RTS                                       ; $3EDEA2 |
 
+code_3EDEA3:
   LDX #$1F                                  ; $3EDEA3 |
 loc_7DEA5:
   LDA $0360,x                               ; $3EDEA5 |
@@ -18977,6 +19365,7 @@ loc_7DEA5:
   BPL loc_7DEA5                             ; $3EDEAC |
   RTS                                       ; $3EDEAE |
 
+code_3EDEAF:
   LDX #$1F                                  ; $3EDEAF |
 loc_7DEB1:
   LDA $0380,x                               ; $3EDEB1 |
@@ -18986,6 +19375,7 @@ loc_7DEB1:
   INC $46                                   ; $3EDEBA |
   RTS                                       ; $3EDEBC |
 
+code_3EDEBD:
   LDX #$02                                  ; $3EDEBD |
 loc_7DEBF:
   LDA $21,x                                 ; $3EDEBF |
@@ -18995,22 +19385,24 @@ loc_7DEBF:
   BNE loc_7DEBF                             ; $3EDEC6 |
   RTS                                       ; $3EDEC8 |
 
+code_3EDEC9:
   LDA $42                                   ; $3EDEC9 |
   PHA                                       ; $3EDECB |
-  JSR $DEBD                                 ; $3EDECC |
+  JSR code_3EDEBD                           ; $3EDECC |
   LDA #$58                                  ; $3EDECF |
   STA $DC                                   ; $3EDED1 |
-  JSR $DEA3                                 ; $3EDED3 |
-  JSR $DEEE                                 ; $3EDED6 |
-  JSR $DEEE                                 ; $3EDED9 |
-  JSR $DEEE                                 ; $3EDEDC |
-  JSR $DEEE                                 ; $3EDEDF |
-  JSR $DEEE                                 ; $3EDEE2 |
-  JSR $DEEE                                 ; $3EDEE5 |
+  JSR code_3EDEA3                           ; $3EDED3 |
+  JSR code_3EDEEE                           ; $3EDED6 |
+  JSR code_3EDEEE                           ; $3EDED9 |
+  JSR code_3EDEEE                           ; $3EDEDC |
+  JSR code_3EDEEE                           ; $3EDEDF |
+  JSR code_3EDEEE                           ; $3EDEE2 |
+  JSR code_3EDEEE                           ; $3EDEE5 |
   PLA                                       ; $3EDEE8 |
   STA $42                                   ; $3EDEE9 |
-  JMP $DF11                                 ; $3EDEEB |
+  JMP code_3EDF11                           ; $3EDEEB |
 
+code_3EDEEE:
   LDY #$0F                                  ; $3EDEEE |
 loc_7DEF0:
   LDA $0360,y                               ; $3EDEF0 |
@@ -19023,13 +19415,14 @@ loc_7DEFC:
   BPL loc_7DEF0                             ; $3EDEFD |
   INC $46                                   ; $3EDEFF |
   LDA #$02                                  ; $3EDF01 |
-  JSR $C5F6                                 ; $3EDF03 |
-  JSR $DEAF                                 ; $3EDF06 |
+  JSR code_3EC5F6                           ; $3EDF03 |
+  JSR code_3EDEAF                           ; $3EDF06 |
   INC $46                                   ; $3EDF09 |
   LDA #$02                                  ; $3EDF0B |
-  JSR $C5F6                                 ; $3EDF0D |
+  JSR code_3EC5F6                           ; $3EDF0D |
   RTS                                       ; $3EDF10 |
 
+code_3EDF11:
   LDX #$03                                  ; $3EDF11 |
 loc_7DF13:
   LDA $21,x                                 ; $3EDF13 |
@@ -19060,34 +19453,35 @@ loc_7DF13:
   db $0B, $0B, $0B, $0B, $01, $02, $04, $08 ; $3EDFAD |
   db $10, $20, $40, $80                     ; $3EDFB5 |
 
+code_3EDFB9:
   LDA #$2A                                  ; $3EDFB9 |
-  JSR $CAA4                                 ; $3EDFBB |
-  JSR $C62B                                 ; $3EDFBE |
+  JSR code_3ECAA4                           ; $3EDFBB |
+  JSR code_3EC62B                           ; $3EDFBE |
   LDA #$3A                                  ; $3EDFC1 |
   STA $DC                                   ; $3EDFC3 |
-  JSR $E024                                 ; $3EDFC5 |
+  JSR code_3FE024                           ; $3EDFC5 |
   LDX #$00                                  ; $3EDFC8 |
   LDY #$66                                  ; $3EDFCA |
-  JSR $E522                                 ; $3EDFCC |
+  JSR code_3FE522                           ; $3EDFCC |
   LDA #$00                                  ; $3EDFCF |
   STA $060D,x                               ; $3EDFD1 |
   LDA #$FE                                  ; $3EDFD4 |
   STA $0624,x                               ; $3EDFD6 |
 loc_7DFD9:
-  JSR $E005                                 ; $3EDFD9 |
+  JSR code_3FE005                           ; $3EDFD9 |
   LDA #$00                                  ; $3EDFDC |
   STA $EB                                   ; $3EDFDE |
   STA $ED                                   ; $3EDFE0 |
   LDX #$00                                  ; $3EDFE2 |
   LDY #$02                                  ; $3EDFE4 |
-  JSR $EEC9                                 ; $3EDFE6 |
-  JSR $E4D3                                 ; $3EDFE9 |
+  JSR code_3FEEC9                           ; $3EDFE6 |
+  JSR code_3FE4D3                           ; $3EDFE9 |
   LDA $04CB                                 ; $3EDFEC |
   CMP #$08                                  ; $3EDFEF |
   BCS loc_7DFD9                             ; $3EDFF1 |
-  JSR $E01B                                 ; $3EDFF3 |
-  JSR $E005                                 ; $3EDFF6 |
-  JSR $E012                                 ; $3EDFF9 |
+  JSR code_3FE01B                           ; $3EDFF3 |
+  JSR code_3FE005                           ; $3EDFF6 |
+  JSR code_3FE012                           ; $3EDFF9 |
   LDA #$00                                  ; $3EDFFC |
   STA $05B1                                 ; $3EDFFE |
 
@@ -19097,40 +19491,45 @@ org $E000
 ; last bank "continues" into this, write leftover byte
   db $05                                    ; $3FE000 |
 
-  STA $05C8                                 ; $3FE001 |
+  STA $05C8                                 ; $3FC001 |
   RTS                                       ; $3FE004 |
 
+code_3FE005:
   TXA                                       ; $3FE005 |
   PHA                                       ; $3FE006 |
-  JSR $E1DD                                 ; $3FE007 |
-  JSR $CF4A                                 ; $3FE00A |
+  JSR code_3FE1DD                           ; $3FE007 |
+  JSR code_3ECF4A                           ; $3FE00A |
   PLA                                       ; $3FE00D |
   TAX                                       ; $3FE00E |
-  JMP $C62B                                 ; $3FE00F |
+  JMP code_3EC62B                           ; $3FE00F |
 
+code_3FE012:
   LDA $03B7                                 ; $3FE012 |
   AND #$FE                                  ; $3FE015 |
   STA $03B7                                 ; $3FE017 |
   RTS                                       ; $3FE01A |
 
+code_3FE01B:
   LDA $03B7                                 ; $3FE01B |
   ORA #$01                                  ; $3FE01E |
   STA $03B7                                 ; $3FE020 |
   RTS                                       ; $3FE023 |
 
-  JSR $E012                                 ; $3FE024 |
+code_3FE024:
+  JSR code_3FE012                           ; $3FE024 |
   LDX #$00                                  ; $3FE027 |
   LDY #$06                                  ; $3FE029 |
-  JSR $E522                                 ; $3FE02B |
+  JSR code_3FE522                           ; $3FE02B |
   LDX #$08                                  ; $3FE02E |
 loc_7E030:
-  JSR $E005                                 ; $3FE030 |
+  JSR code_3FE005                           ; $3FE030 |
   DEX                                       ; $3FE033 |
   BNE loc_7E030                             ; $3FE034 |
   RTS                                       ; $3FE036 |
 
+code_3FE037:
   LDA #$2A                                  ; $3FE037 |
-  JSR $CAA4                                 ; $3FE039 |
+  JSR code_3ECAA4                           ; $3FE039 |
   LDA $03B7                                 ; $3FE03C |
   AND #$DF                                  ; $3FE03F |
   ORA #$40                                  ; $3FE041 |
@@ -19144,24 +19543,24 @@ loc_7E030:
   STA $98                                   ; $3FE054 |
   STA $060D                                 ; $3FE056 |
   LDY #$66                                  ; $3FE059 |
-  JSR $E522                                 ; $3FE05B |
+  JSR code_3FE522                           ; $3FE05B |
   LDA #$04                                  ; $3FE05E |
   STA $0624                                 ; $3FE060 |
 loc_7E063:
-  JSR $E005                                 ; $3FE063 |
+  JSR code_3FE005                           ; $3FE063 |
   LDA #$00                                  ; $3FE066 |
   STA $ED                                   ; $3FE068 |
   STA $EB                                   ; $3FE06A |
   LDX #$00                                  ; $3FE06C |
   LDY #$02                                  ; $3FE06E |
-  JSR $EE9A                                 ; $3FE070 |
+  JSR code_3FEE9A                           ; $3FE070 |
   LDA $EE                                   ; $3FE073 |
   CMP #$08                                  ; $3FE075 |
   BCC loc_7E07D                             ; $3FE077 |
   LDA #$07                                  ; $3FE079 |
   STA $EE                                   ; $3FE07B |
 loc_7E07D:
-  JSR $E4D3                                 ; $3FE07D |
+  JSR code_3FE4D3                           ; $3FE07D |
   LDA $04CB                                 ; $3FE080 |
   CMP #$20                                  ; $3FE083 |
   BCC loc_7E063                             ; $3FE085 |
@@ -19177,54 +19576,57 @@ loc_7E095:
   STA $11                                   ; $3FE099 |
   LDA #$0B                                  ; $3FE09B |
   STA $01                                   ; $3FE09D |
-  JSR $D9CF                                 ; $3FE09F |
+  JSR code_3ED9CF                           ; $3FE09F |
   LDA $11                                   ; $3FE0A2 |
   STA $064B                                 ; $3FE0A4 |
   AND #$01                                  ; $3FE0A7 |
   BEQ loc_7E063                             ; $3FE0A9 |
   LDA #$37                                  ; $3FE0AB |
   STA $DC                                   ; $3FE0AD |
-  JSR $DB6D                                 ; $3FE0AF |
+  JSR code_3EDB6D                           ; $3FE0AF |
   LDA #$00                                  ; $3FE0B2 |
   STA $EB                                   ; $3FE0B4 |
   STA $ED                                   ; $3FE0B6 |
-  JSR $E4D3                                 ; $3FE0B8 |
+  JSR code_3FE4D3                           ; $3FE0B8 |
+code_3FE0BB:
   LDX #$00                                  ; $3FE0BB |
   LDY #$05                                  ; $3FE0BD |
-  JSR $E522                                 ; $3FE0BF |
+  JSR code_3FE522                           ; $3FE0BF |
   LDA #$08                                  ; $3FE0C2 |
   STA $05B1                                 ; $3FE0C4 |
 loc_7E0C7:
-  JSR $E005                                 ; $3FE0C7 |
+  JSR code_3FE005                           ; $3FE0C7 |
   DEC $05B1                                 ; $3FE0CA |
   BNE loc_7E0C7                             ; $3FE0CD |
   LDY #$04                                  ; $3FE0CF |
-  JSR $CB28                                 ; $3FE0D1 |
+  JSR code_3ECB28                           ; $3FE0D1 |
 
   db $41                                    ; $3FE0D4 |
 
   RTS                                       ; $3FE0D5 |
 
+code_3FE0D6:
   LDX #$03                                  ; $3FE0D6 |
   BNE loc_7E0ED                             ; $3FE0D8 |
   LDX #$0F                                  ; $3FE0DA |
   BNE loc_7E0ED                             ; $3FE0DC |
   LDX #$1F                                  ; $3FE0DE |
-  JSR $CA71                                 ; $3FE0E0 |
+  JSR code_3ECA71                           ; $3FE0E0 |
   LDX #$0B                                  ; $3FE0E3 |
-  JSR $CA71                                 ; $3FE0E5 |
+  JSR code_3ECA71                           ; $3FE0E5 |
   LDX #$07                                  ; $3FE0E8 |
-  JSR $CA71                                 ; $3FE0EA |
+  JSR code_3ECA71                           ; $3FE0EA |
 loc_7E0ED:
-  JSR $CA71                                 ; $3FE0ED |
+  JSR code_3ECA71                           ; $3FE0ED |
   LDA #$05                                  ; $3FE0F0 |
-  JSR $C5F6                                 ; $3FE0F2 |
+  JSR code_3EC5F6                           ; $3FE0F2 |
   LDA $49                                   ; $3FE0F5 |
   SEC                                       ; $3FE0F7 |
   SBC #$10                                  ; $3FE0F8 |
   STA $49                                   ; $3FE0FA |
   RTS                                       ; $3FE0FC |
 
+code_3FE0FD:
   STA $94                                   ; $3FE0FD |
   ORA $98                                   ; $3FE0FF |
   LDY $9B                                   ; $3FE101 |
@@ -19234,7 +19636,7 @@ loc_7E0ED:
   LDA $E114,y                               ; $3FE108 |
   TAY                                       ; $3FE10B |
   LDX #$00                                  ; $3FE10C |
-  JMP $E522                                 ; $3FE10E |
+  JMP code_3FE522                           ; $3FE10E |
 
   db $00, $08, $10, $00, $01, $02, $03, $04 ; $3FE111 |
   db $0E, $07, $07, $1B, $1C, $1D, $FF, $20 ; $3FE119 |
@@ -19244,11 +19646,13 @@ loc_7E0ED:
   db $2F, $26, $67, $34, $34, $34, $FF, $22 ; $3FE139 |
   db $22, $33, $33                          ; $3FE141 |
 
+code_3FE144:
   LDA #$00                                  ; $3FE144 |
   STA $11                                   ; $3FE146 |
   STA $00                                   ; $3FE148 |
   STA $01                                   ; $3FE14A |
-  JSR $D9CD                                 ; $3FE14C |
+  JSR code_3ED9CD                           ; $3FE14C |
+code_3FE14F:
   LDA $13                                   ; $3FE14F |
   AND #$FC                                  ; $3FE151 |
   STA $80                                   ; $3FE153 |
@@ -19267,30 +19671,30 @@ loc_7E0ED:
   ADC #$10                                  ; $3FE16E |
   ADC $067B                                 ; $3FE170 |
   STA $04CB,x                               ; $3FE173 |
-  JSR $D8AB                                 ; $3FE176 |
-  JSR $DB94                                 ; $3FE179 |
-  JSR $D92E                                 ; $3FE17C |
+  JSR code_3ED8AB                           ; $3FE176 |
+  JSR code_3EDB94                           ; $3FE179 |
+  JSR code_3ED92E                           ; $3FE17C |
   INC $6B                                   ; $3FE17F |
   INC $6B                                   ; $3FE181 |
   INC $5C                                   ; $3FE183 |
   INC $5C                                   ; $3FE185 |
-  JSR $DB94                                 ; $3FE187 |
-  JSR $D92E                                 ; $3FE18A |
+  JSR code_3EDB94                           ; $3FE187 |
+  JSR code_3ED92E                           ; $3FE18A |
   DEC $6B                                   ; $3FE18D |
   LDA $5C                                   ; $3FE18F |
   CLC                                       ; $3FE191 |
   ADC #$3E                                  ; $3FE192 |
   STA $5C                                   ; $3FE194 |
-  JSR $DB94                                 ; $3FE196 |
-  JSR $D92E                                 ; $3FE199 |
+  JSR code_3EDB94                           ; $3FE196 |
+  JSR code_3ED92E                           ; $3FE199 |
   INC $6B                                   ; $3FE19C |
   INC $6B                                   ; $3FE19E |
   INC $5C                                   ; $3FE1A0 |
   INC $5C                                   ; $3FE1A2 |
-  JSR $DB94                                 ; $3FE1A4 |
-  JSR $D92E                                 ; $3FE1A7 |
+  JSR code_3EDB94                           ; $3FE1A4 |
+  JSR code_3ED92E                           ; $3FE1A7 |
 loc_7E1AA:
-  JSR $C62B                                 ; $3FE1AA |
+  JSR code_3EC62B                           ; $3FE1AA |
   LDA $47                                   ; $3FE1AD |
   BNE loc_7E1AA                             ; $3FE1AF |
   RTS                                       ; $3FE1B1 |
@@ -19302,11 +19706,13 @@ loc_7E1AA:
   db $06, $0A, $04, $FF, $02, $0E, $04, $04 ; $3FE1D2 |
   db $04, $04, $04                          ; $3FE1DA |
 
+code_3FE1DD:
   LDA #$00                                  ; $3FE1DD |
   STA $8C                                   ; $3FE1DF |
+code_3FE1E1:
   TXA                                       ; $3FE1E1 |
   PHA                                       ; $3FE1E2 |
-  JSR $CC20                                 ; $3FE1E3 |
+  JSR code_3ECC20                           ; $3FE1E3 |
   LDX #$16                                  ; $3FE1E6 |
   LDA $F3                                   ; $3FE1E8 |
   LSR                                       ; $3FE1EA |
@@ -19327,7 +19733,7 @@ loc_7E1F8:
   BPL loc_7E1F8                             ; $3FE1FE |
 loc_7E200:
   LDA #$3E                                  ; $3FE200 |
-  JSR $CB91                                 ; $3FE202 |
+  JSR code_3ECB91                           ; $3FE202 |
   LDY #$16                                  ; $3FE205 |
   STY $06                                   ; $3FE207 |
 loc_7E209:
@@ -19340,7 +19746,7 @@ loc_7E209:
   BNE loc_7E269                             ; $3FE218 |
   LDA $0458,x                               ; $3FE21A |
   TAY                                       ; $3FE21D |
-  JSR $CBC0                                 ; $3FE21E |
+  JSR code_3ECBC0                           ; $3FE21E |
   DEC $0555,x                               ; $3FE221 |
   BNE loc_7E24B                             ; $3FE224 |
   INC $0510,x                               ; $3FE226 |
@@ -19372,7 +19778,7 @@ loc_7E24B:
   CMP #$04                                  ; $3FE25D |
   BCC loc_7E269                             ; $3FE25F |
   STA $00                                   ; $3FE261 |
-  JSR $E2A9                                 ; $3FE263 |
+  JSR code_3FE2A9                           ; $3FE263 |
   TXA                                       ; $3FE266 |
   BEQ loc_7E283                             ; $3FE267 |
 loc_7E269:
@@ -19387,15 +19793,15 @@ loc_7E271:
   INX                                       ; $3FE276 |
   INX                                       ; $3FE277 |
   BNE loc_7E271                             ; $3FE278 |
-  JSR $CBE9                                 ; $3FE27A |
-  JSR $CC3A                                 ; $3FE27D |
+  JSR code_3ECBE9                           ; $3FE27A |
+  JSR code_3ECC3A                           ; $3FE27D |
   PLA                                       ; $3FE280 |
   TAX                                       ; $3FE281 |
   RTS                                       ; $3FE282 |
 
 loc_7E283:
-  JSR $CBE9                                 ; $3FE283 |
-  JSR $CC3A                                 ; $3FE286 |
+  JSR code_3ECBE9                           ; $3FE283 |
+  JSR code_3ECC3A                           ; $3FE286 |
   INC $8C                                   ; $3FE289 |
   PLA                                       ; $3FE28B |
   TAX                                       ; $3FE28C |
@@ -19408,6 +19814,7 @@ loc_7E283:
   LDX $8C                                   ; $3FE2A6 |
   RTS                                       ; $3FE2A8 |
 
+code_3FE2A9:
   LDA $04CB,x                               ; $3FE2A9 |
   SEC                                       ; $3FE2AC |
   SBC $F9                                   ; $3FE2AD |
@@ -19631,6 +20038,7 @@ locret_7E417:
 
   db $00, $01, $02, $02                     ; $3FE418 |
 
+code_3FE41C:
   LDA $40                                   ; $3FE41C |
   AND #$03                                  ; $3FE41E |
   TAY                                       ; $3FE420 |
@@ -19640,7 +20048,7 @@ locret_7E417:
   AND #$80                                  ; $3FE428 |
   STA $9A                                   ; $3FE42A |
   LDA #$3E                                  ; $3FE42C |
-  JSR $CB91                                 ; $3FE42E |
+  JSR code_3ECB91                           ; $3FE42E |
   TSX                                       ; $3FE431 |
   STX $90                                   ; $3FE432 |
   LDA #$16                                  ; $3FE434 |
@@ -19651,22 +20059,24 @@ loc_7E438:
   BEQ loc_7E47A                             ; $3FE43D |
   LDA $0441,x                               ; $3FE43F |
   TAY                                       ; $3FE442 |
-  JSR $CBC0                                 ; $3FE443 |
+  JSR code_3ECBC0                           ; $3FE443 |
   LDA $042A,x                               ; $3FE446 |
   STA $08                                   ; $3FE449 |
   LDA $0413,x                               ; $3FE44B |
   STA $09                                   ; $3FE44E |
-  JSR $E482                                 ; $3FE450 |
-  JMP $E477                                 ; $3FE453 |
+  JSR code_3FE482                           ; $3FE450 |
+  JMP code_3FE477                           ; $3FE453 |
 
+code_3FE456:
   LDX $8F                                   ; $3FE456 |
   LDA #$00                                  ; $3FE458 |
   STA $03A0,x                               ; $3FE45A |
   LDA #$FF                                  ; $3FE45D |
   STA $03FC,x                               ; $3FE45F |
   STA $03E5,x                               ; $3FE462 |
-  JMP $E477                                 ; $3FE465 |
+  JMP code_3FE477                           ; $3FE465 |
 
+code_3FE468:
   LDX $8F                                   ; $3FE468 |
   PLA                                       ; $3FE46A |
   CLC                                       ; $3FE46B |
@@ -19675,16 +20085,19 @@ loc_7E438:
   PLA                                       ; $3FE471 |
   ADC #$00                                  ; $3FE472 |
   STA $0413,x                               ; $3FE474 |
+code_3FE477:
   LDX $90                                   ; $3FE477 |
   TXS                                       ; $3FE479 |
 loc_7E47A:
   DEC $8F                                   ; $3FE47A |
   BPL loc_7E438                             ; $3FE47C |
-  JSR $CBE9                                 ; $3FE47E |
+  JSR code_3ECBE9                           ; $3FE47E |
   RTS                                       ; $3FE481 |
 
+code_3FE482:
   JMP ($0008)                               ; $3FE482 |
 
+code_3FE485:
   LDA $04CB,x                               ; $3FE485 |
   CMP #$F8                                  ; $3FE488 |
   BCS loc_7E4A5                             ; $3FE48A |
@@ -19704,8 +20117,10 @@ loc_7E47A:
 
 loc_7E4A5:
   SEC                                       ; $3FE4A5 |
+code_3FE4A6:
   RTS                                       ; $3FE4A6 |
 
+code_3FE4A7:
   LDA #$00                                  ; $3FE4A7 |
   STA $04B4,x                               ; $3FE4A9 |
   LDA $E4B9,y                               ; $3FE4AC |
@@ -19718,10 +20133,13 @@ loc_7E4A5:
   db $80, $77, $00, $3B, $60, $00, $AB, $C7 ; $3FE4C1 |
   db $88, $88                               ; $3FE4C9 |
 
+code_3FE4CB:
   LDA #$00                                  ; $3FE4CB |
   STA $EB                                   ; $3FE4CD |
   STA $EC                                   ; $3FE4CF |
+code_3FE4D1:
   LDX $8F                                   ; $3FE4D1 |
+code_3FE4D3:
   LDA $EB                                   ; $3FE4D3 |
   CLC                                       ; $3FE4D5 |
   ADC $049D,x                               ; $3FE4D6 |
@@ -19750,8 +20168,10 @@ loc_7E501:
   STA $04B4,x                               ; $3FE50C |
   RTS                                       ; $3FE50F |
 
+code_3FE510:
   LDX #$03                                  ; $3FE510 |
 loc_7E512:
+code_3FE512:
   LDA $03A0,x                               ; $3FE512 |
   BEQ loc_7E51C                             ; $3FE515 |
   DEX                                       ; $3FE517 |
@@ -19760,20 +20180,21 @@ loc_7E512:
   RTS                                       ; $3FE51B |
 
 loc_7E51C:
-  JSR $CB28                                 ; $3FE51C |
+  JSR code_3ECB28                           ; $3FE51C |
 
   db $41                                    ; $3FE51F |
 
   CLC                                       ; $3FE520 |
   RTS                                       ; $3FE521 |
 
+code_3FE522:
   LDA #$FE                                  ; $3FE522 |
   STA $0510,x                               ; $3FE524 |
   LDA $0458,x                               ; $3FE527 |
-  JSR $CB91                                 ; $3FE52A |
+  JSR code_3ECB91                           ; $3FE52A |
   CLC                                       ; $3FE52D |
   ADC #$01                                  ; $3FE52E |
-  JSR $CBDA                                 ; $3FE530 |
+  JSR code_3ECBDA                           ; $3FE530 |
   LDA $8600,y                               ; $3FE533 |
   STA $053E,x                               ; $3FE536 |
   STA $08                                   ; $3FE539 |
@@ -19789,14 +20210,15 @@ loc_7E51C:
   STA $04F9,x                               ; $3FE551 |
   LDA #$01                                  ; $3FE554 |
   STA $0555,x                               ; $3FE556 |
-  JSR $CBE9                                 ; $3FE559 |
+  JSR code_3ECBE9                           ; $3FE559 |
   RTS                                       ; $3FE55C |
 
+code_3FE55D:
   LDA $0458,x                               ; $3FE55D |
-  JSR $CB91                                 ; $3FE560 |
+  JSR code_3ECB91                           ; $3FE560 |
   CLC                                       ; $3FE563 |
   ADC #$01                                  ; $3FE564 |
-  JSR $CBDA                                 ; $3FE566 |
+  JSR code_3ECBDA                           ; $3FE566 |
   LDA $8600,y                               ; $3FE569 |
   STA $053E,x                               ; $3FE56C |
   STA $08                                   ; $3FE56F |
@@ -19812,9 +20234,10 @@ loc_7E51C:
   LDA #$01                                  ; $3FE587 |
   STA $0555,x                               ; $3FE589 |
 loc_7E58C:
-  JSR $CBE9                                 ; $3FE58C |
+  JSR code_3ECBE9                           ; $3FE58C |
   RTS                                       ; $3FE58F |
 
+code_3FE590:
   LDX #$0D                                  ; $3FE590 |
   TYA                                       ; $3FE592 |
 loc_7E593:
@@ -19822,8 +20245,10 @@ loc_7E593:
   BEQ loc_7E5A7                             ; $3FE596 |
   DEX                                       ; $3FE598 |
   BPL loc_7E593                             ; $3FE599 |
+code_3FE59B:
   LDX #$15                                  ; $3FE59B |
 loc_7E59D:
+code_3FE59D:
   LDA $03A0,x                               ; $3FE59D |
   BEQ loc_7E5A9                             ; $3FE5A0 |
   DEX                                       ; $3FE5A2 |
@@ -19837,9 +20262,10 @@ loc_7E5A9:
   CLC                                       ; $3FE5A9 |
   RTS                                       ; $3FE5AA |
 
-  JSR $E59B                                 ; $3FE5AB |
+code_3FE5AB:
+  JSR code_3FE59B                           ; $3FE5AB |
   BCS locret_7E5B5                          ; $3FE5AE |
-  JSR $CB28                                 ; $3FE5B0 |
+  JSR code_3ECB28                           ; $3FE5B0 |
 
   db $41                                    ; $3FE5B3 |
 
@@ -19847,7 +20273,9 @@ loc_7E5A9:
 locret_7E5B5:
   RTS                                       ; $3FE5B5 |
 
+code_3FE5B6:
   LDY #$00                                  ; $3FE5B6 |
+code_3FE5B8:
   LDA #$0C                                  ; $3FE5B8 |
   STA $11                                   ; $3FE5BA |
   LDA $0486,y                               ; $3FE5BC |
@@ -19863,6 +20291,7 @@ locret_7E5CE:
   db $00, $40, $40, $40, $40, $40, $C0, $C0 ; $3FE5CF |
   db $C0, $80, $80, $80, $00, $00, $00, $00 ; $3FE5D7 |
 
+code_3FE5DF:
   LDA $03CE,x                               ; $3FE5DF |
   TAY                                       ; $3FE5E2 |
   LDA $03B7,x                               ; $3FE5E3 |
@@ -19871,6 +20300,7 @@ locret_7E5CE:
   STA $03B7,x                               ; $3FE5EB |
   RTS                                       ; $3FE5EE |
 
+code_3FE5EF:
   ASL                                       ; $3FE5EF |
   ASL                                       ; $3FE5F0 |
   ASL                                       ; $3FE5F1 |
@@ -19881,17 +20311,20 @@ locret_7E5CE:
   TAY                                       ; $3FE5FB |
   LDA $E603,y                               ; $3FE5FC |
   TAY                                       ; $3FE5FF |
-  JMP $E522                                 ; $3FE600 |
+  JMP code_3FE522                           ; $3FE600 |
 
   db $49, $49, $4A, $4A, $4B, $4B, $4A, $4A ; $3FE603 |
 
   STA $03CE,x                               ; $3FE60B |
-  JSR $E61A                                 ; $3FE60E |
-  JMP $E4D3                                 ; $3FE611 |
+code_3FE60E:
+  JSR code_3FE61A                           ; $3FE60E |
+  JMP code_3FE4D3                           ; $3FE611 |
 
-  JSR $E61A                                 ; $3FE614 |
-  JMP $EC11                                 ; $3FE617 |
+code_3FE614:
+  JSR code_3FE61A                           ; $3FE614 |
+  JMP code_3FEC11                           ; $3FE617 |
 
+code_3FE61A:
   LDA $E646,y                               ; $3FE61A |
   STA $01                                   ; $3FE61D |
   LDA $E655,y                               ; $3FE61F |
@@ -19903,6 +20336,7 @@ locret_7E5CE:
   INY                                       ; $3FE62C |
   INY                                       ; $3FE62D |
   INY                                       ; $3FE62E |
+code_3FE62F:
   INY                                       ; $3FE62F |
   LDA ($01),y                               ; $3FE630 |
   STA $ED                                   ; $3FE632 |
@@ -20000,15 +20434,17 @@ locret_7E5CE:
   db $F0, $25, $91, $25, $F0, $21, $00, $DF ; $3FE8AE |
   db $10, $DB, $6F, $DB, $10, $DF           ; $3FE8B6 |
 
+code_3FE8BC:
   STY $00                                   ; $3FE8BC |
-  JSR $E927                                 ; $3FE8BE |
+  JSR code_3FE927                           ; $3FE8BE |
   LDY $00                                   ; $3FE8C1 |
   LDA $03CE,y                               ; $3FE8C3 |
   CMP #$04                                  ; $3FE8C6 |
   BNE loc_7E904                             ; $3FE8C8 |
   BEQ loc_7E8DA                             ; $3FE8CA |
+code_3FE8CC:
   STY $00                                   ; $3FE8CC |
-  JSR $E927                                 ; $3FE8CE |
+  JSR code_3FE927                           ; $3FE8CE |
   LDY $00                                   ; $3FE8D1 |
   LDA $03CE,y                               ; $3FE8D3 |
   CMP #$01                                  ; $3FE8D6 |
@@ -20030,8 +20466,9 @@ loc_7E8DA:
   STA $046F,x                               ; $3FE8F9 |
   RTS                                       ; $3FE8FC |
 
+code_3FE8FD:
   STY $00                                   ; $3FE8FD |
-  JSR $E927                                 ; $3FE8FF |
+  JSR code_3FE927                           ; $3FE8FF |
   LDY $00                                   ; $3FE902 |
 loc_7E904:
   LDA $03                                   ; $3FE904 |
@@ -20050,6 +20487,7 @@ loc_7E904:
   STA $046F,x                               ; $3FE923 |
   RTS                                       ; $3FE926 |
 
+code_3FE927:
   ASL                                       ; $3FE927 |
   TAY                                       ; $3FE928 |
   LDA #$00                                  ; $3FE929 |
@@ -20087,18 +20525,19 @@ locret_7E942:
   db $14, $F8, $F8, $15, $00, $E0, $20, $00 ; $3FE9C3 |
   db $00, $20, $E0, $00, $EE, $F9, $00, $CC ; $3FE9CB |
 
+code_3FE9D3:
   LDX $8F                                   ; $3FE9D3 |
   LDA $03B7,x                               ; $3FE9D5 |
   AND #$FE                                  ; $3FE9D8 |
   STA $03B7,x                               ; $3FE9DA |
-  JSR $E485                                 ; $3FE9DD |
+  JSR code_3FE485                           ; $3FE9DD |
   BCS loc_7EA19                             ; $3FE9E0 |
   LDA $056C,x                               ; $3FE9E2 |
   BEQ loc_7EA16                             ; $3FE9E5 |
   LDA $03B7,x                               ; $3FE9E7 |
   ORA #$01                                  ; $3FE9EA |
   STA $03B7,x                               ; $3FE9EC |
-  JSR $EB72                                 ; $3FE9EF |
+  JSR code_3FEB72                           ; $3FE9EF |
   LDA $056C,x                               ; $3FE9F2 |
   AND #$0F                                  ; $3FE9F5 |
   STA $00                                   ; $3FE9F7 |
@@ -20112,27 +20551,28 @@ locret_7E942:
   STA $03E5,x                               ; $3FEA08 |
   BPL loc_7EA16                             ; $3FEA0B |
   LDY #$17                                  ; $3FEA0D |
-  JSR $CB28                                 ; $3FEA0F |
+  JSR code_3ECB28                           ; $3FEA0F |
 
   db $41                                    ; $3FEA12 |
 
-  JMP $E477                                 ; $3FEA13 |
+  JMP code_3FE477                           ; $3FEA13 |
 
 loc_7EA16:
-  JMP $E468                                 ; $3FEA16 |
+  JMP code_3FE468                           ; $3FEA16 |
 
 loc_7EA19:
-  JMP $E456                                 ; $3FEA19 |
+  JMP code_3FE456                           ; $3FEA19 |
 
+code_3FEA1C:
   LDX $8F                                   ; $3FEA1C |
   LDA $03B7,x                               ; $3FEA1E |
   AND #$FE                                  ; $3FEA21 |
   STA $03B7,x                               ; $3FEA23 |
-  JSR $E485                                 ; $3FEA26 |
+  JSR code_3FE485                           ; $3FEA26 |
   BCS loc_7EA67                             ; $3FEA29 |
   LDA $056C,x                               ; $3FEA2B |
   BEQ loc_7EA64                             ; $3FEA2E |
-  JSR $EB72                                 ; $3FEA30 |
+  JSR code_3FEB72                           ; $3FEA30 |
   LDA $056C,x                               ; $3FEA33 |
   AND #$0F                                  ; $3FEA36 |
   STA $00                                   ; $3FEA38 |
@@ -20151,65 +20591,69 @@ loc_7EA19:
   LDA #$FF                                  ; $3FEA56 |
   STA $03E5,x                               ; $3FEA58 |
   LDY #$25                                  ; $3FEA5B |
-  JSR $CB28                                 ; $3FEA5D |
+  JSR code_3ECB28                           ; $3FEA5D |
 
   db $41                                    ; $3FEA60 |
 
-  JMP $E477                                 ; $3FEA61 |
+  JMP code_3FE477                           ; $3FEA61 |
 
 loc_7EA64:
-  JMP $E468                                 ; $3FEA64 |
+  JMP code_3FE468                           ; $3FEA64 |
 
 loc_7EA67:
-  JMP $E456                                 ; $3FEA67 |
+  JMP code_3FE456                           ; $3FEA67 |
 
+code_3FEA6A:
   LDX $8F                                   ; $3FEA6A |
   LDA #$00                                  ; $3FEA6C |
   STA $056C,x                               ; $3FEA6E |
-  JSR $E485                                 ; $3FEA71 |
+  JSR code_3FE485                           ; $3FEA71 |
   BCS loc_7EA79                             ; $3FEA74 |
-  JMP $E468                                 ; $3FEA76 |
+  JMP code_3FE468                           ; $3FEA76 |
 
 loc_7EA79:
-  JMP $E456                                 ; $3FEA79 |
+  JMP code_3FE456                           ; $3FEA79 |
 
+code_3FEA7C:
   LDX $8F                                   ; $3FEA7C |
   LDA #$00                                  ; $3FEA7E |
   STA $056C,x                               ; $3FEA80 |
   LDA $04B4,x                               ; $3FEA83 |
   CMP #$FF                                  ; $3FEA86 |
   BEQ loc_7EA8F                             ; $3FEA88 |
-  JSR $E485                                 ; $3FEA8A |
+  JSR code_3FE485                           ; $3FEA8A |
   BCS loc_7EA92                             ; $3FEA8D |
 loc_7EA8F:
-  JMP $E468                                 ; $3FEA8F |
+  JMP code_3FE468                           ; $3FEA8F |
 
 loc_7EA92:
-  JMP $E456                                 ; $3FEA92 |
+  JMP code_3FE456                           ; $3FEA92 |
 
+code_3FEA95:
   LDX $8F                                   ; $3FEA95 |
   LDA $056C,x                               ; $3FEA97 |
   BEQ loc_7EAA3                             ; $3FEA9A |
   CMP #$14                                  ; $3FEA9C |
   BNE loc_7EAA3                             ; $3FEA9E |
-  JMP $E9D3                                 ; $3FEAA0 |
+  JMP code_3FE9D3                           ; $3FEAA0 |
 
 loc_7EAA3:
-  JSR $E485                                 ; $3FEAA3 |
+  JSR code_3FE485                           ; $3FEAA3 |
   BCS loc_7EAB0                             ; $3FEAA6 |
   LDA #$00                                  ; $3FEAA8 |
   STA $056C,x                               ; $3FEAAA |
-  JMP $E468                                 ; $3FEAAD |
+  JMP code_3FE468                           ; $3FEAAD |
 
 loc_7EAB0:
-  JMP $E456                                 ; $3FEAB0 |
+  JMP code_3FE456                           ; $3FEAB0 |
 
+code_3FEAB3:
   PHA                                       ; $3FEAB3 |
   LDX $8F                                   ; $3FEAB4 |
   LDA $03B7,x                               ; $3FEAB6 |
   AND #$FE                                  ; $3FEAB9 |
   STA $03B7,x                               ; $3FEABB |
-  JSR $E485                                 ; $3FEABE |
+  JSR code_3FE485                           ; $3FEABE |
   BCS loc_7EB38                             ; $3FEAC1 |
   PLA                                       ; $3FEAC3 |
   TAY                                       ; $3FEAC4 |
@@ -20226,7 +20670,7 @@ loc_7EAB0:
   STA $01                                   ; $3FEADE |
   CPY #$00                                  ; $3FEAE0 |
   BEQ loc_7EAFA                             ; $3FEAE2 |
-  JSR $EB72                                 ; $3FEAE4 |
+  JSR code_3FEB72                           ; $3FEAE4 |
   LDA $056C,x                               ; $3FEAE7 |
   AND #$F0                                  ; $3FEAEA |
   CMP #$10                                  ; $3FEAEC |
@@ -20234,7 +20678,7 @@ loc_7EAB0:
   LDA $056C,x                               ; $3FEAF0 |
   AND #$0F                                  ; $3FEAF3 |
   STA $00                                   ; $3FEAF5 |
-  JMP $EB0A                                 ; $3FEAF7 |
+  JMP code_3FEB0A                           ; $3FEAF7 |
 
 loc_7EAFA:
   LDA $056C,x                               ; $3FEAFA |
@@ -20247,6 +20691,7 @@ loc_7EAFA:
   BEQ loc_7EB30                             ; $3FEB04 |
   BMI loc_7EB1E                             ; $3FEB06 |
   STA $00                                   ; $3FEB08 |
+code_3FEB0A:
   LDA #$35                                  ; $3FEB0A |
   STA $DC                                   ; $3FEB0C |
   LDA #$00                                  ; $3FEB0E |
@@ -20262,20 +20707,20 @@ loc_7EB1E:
   LDA #$35                                  ; $3FEB23 |
   STA $DC                                   ; $3FEB25 |
   LDY #$17                                  ; $3FEB27 |
-  JSR $CB28                                 ; $3FEB29 |
+  JSR code_3ECB28                           ; $3FEB29 |
 
   db $41                                    ; $3FEB2C |
 
-  JMP $E477                                 ; $3FEB2D |
+  JMP code_3FE477                           ; $3FEB2D |
 
 loc_7EB30:
   LDA #$00                                  ; $3FEB30 |
   STA $056C,x                               ; $3FEB32 |
-  JMP $E468                                 ; $3FEB35 |
+  JMP code_3FE468                           ; $3FEB35 |
 
 loc_7EB38:
   PLA                                       ; $3FEB38 |
-  JMP $E456                                 ; $3FEB39 |
+  JMP code_3FE456                           ; $3FEB39 |
 
   db $42, $52, $62, $EB, $EB, $EB, $00, $00 ; $3FEB3C |
   db $00, $00, $00, $00, $00, $80, $00, $00 ; $3FEB44 |
@@ -20285,6 +20730,7 @@ loc_7EB38:
   db $00, $00, $00, $02, $02, $80, $01, $03 ; $3FEB64 |
   db $03, $03, $04, $03, $00, $00           ; $3FEB6C |
 
+code_3FEB72:
   LDA $056C,x                               ; $3FEB72 |
   LSR                                       ; $3FEB75 |
   LSR                                       ; $3FEB76 |
@@ -20306,15 +20752,15 @@ loc_7EB38:
   BPL locret_7EBB0                          ; $3FEB95 |
 loc_7EB97:
   STA $03E5,x                               ; $3FEB97 |
-  JSR $E468                                 ; $3FEB9A |
+  JSR code_3FE468                           ; $3FEB9A |
   LDA #$FC                                  ; $3FEB9D |
   STA $EE                                   ; $3FEB9F |
   LDA #$00                                  ; $3FEBA1 |
   STA $ED                                   ; $3FEBA3 |
-  JSR $E4CB                                 ; $3FEBA5 |
-  JSR $E485                                 ; $3FEBA8 |
+  JSR code_3FE4CB                           ; $3FEBA5 |
+  JSR code_3FE485                           ; $3FEBA8 |
   BCC loc_7EB97                             ; $3FEBAB |
-  JMP $E456                                 ; $3FEBAD |
+  JMP code_3FE456                           ; $3FEBAD |
 
 locret_7EBB0:
   RTS                                       ; $3FEBB0 |
@@ -20324,6 +20770,7 @@ locret_7EBB0:
   db $EB, $EB, $EB, $EB, $EB, $EB, $EB, $EB ; $3FEBC1 |
   db $EB, $EB, $EB, $EB, $EB, $EB, $EB, $EB ; $3FEBC9 |
 
+code_3FEBD1:
   PLA                                       ; $3FEBD1 |
   STA $0A                                   ; $3FEBD2 |
   PLA                                       ; $3FEBD4 |
@@ -20331,6 +20778,7 @@ locret_7EBB0:
   PHA                                       ; $3FEBD7 |
   LDA $0A                                   ; $3FEBD8 |
   PHA                                       ; $3FEBDA |
+code_3FEBDB:
   LDA #$00                                  ; $3FEBDB |
   STA $056C,x                               ; $3FEBDD |
   LDY #$FD                                  ; $3FEBE0 |
@@ -20347,21 +20795,24 @@ locret_7EBB0:
   DEY                                       ; $3FEBF6 |
   LDA ($0A),y                               ; $3FEBF7 |
   BEQ loc_7EBFE                             ; $3FEBF9 |
-  JSR $C9EF                                 ; $3FEBFB |
+  JSR code_3EC9EF                           ; $3FEBFB |
 loc_7EBFE:
   DEY                                       ; $3FEBFE |
   LDA ($0A),y                               ; $3FEBFF |
   TAY                                       ; $3FEC01 |
-  JSR $E522                                 ; $3FEC02 |
+  JSR code_3FE522                           ; $3FEC02 |
   RTS                                       ; $3FEC05 |
 
+code_3FEC06:
   LDA #$40                                  ; $3FEC06 |
   BNE loc_7EC0C                             ; $3FEC08 |
+code_3FEC0A:
   LDA #$2A                                  ; $3FEC0A |
 loc_7EC0C:
   STA $00                                   ; $3FEC0C |
-  JSR $ECA4                                 ; $3FEC0E |
-  JSR $E4D1                                 ; $3FEC11 |
+  JSR code_3FECA4                           ; $3FEC0E |
+code_3FEC11:
+  JSR code_3FE4D1                           ; $3FEC11 |
   LDA $EE                                   ; $3FEC14 |
   STA $06                                   ; $3FEC16 |
   LDY #$00                                  ; $3FEC18 |
@@ -20379,22 +20830,22 @@ loc_7EC26:
   STA $01                                   ; $3FEC2D |
   INY                                       ; $3FEC2F |
   STY $07                                   ; $3FEC30 |
-  JSR $D9CD                                 ; $3FEC32 |
+  JSR code_3ED9CD                           ; $3FEC32 |
   LDY $07                                   ; $3FEC35 |
   LDA ($08),y                               ; $3FEC37 |
   STA $00                                   ; $3FEC39 |
   INY                                       ; $3FEC3B |
   LDA ($08),y                               ; $3FEC3C |
   STA $01                                   ; $3FEC3E |
-  JSR $D9CD                                 ; $3FEC40 |
+  JSR code_3ED9CD                           ; $3FEC40 |
   LDA $11                                   ; $3FEC43 |
   STA $12                                   ; $3FEC45 |
   BEQ loc_7EC55                             ; $3FEC47 |
   AND #$01                                  ; $3FEC49 |
   BEQ loc_7EC55                             ; $3FEC4B |
-  JSR $DB4F                                 ; $3FEC4D |
+  JSR code_3EDB4F                           ; $3FEC4D |
   LDX $8F                                   ; $3FEC50 |
-  JSR $E4CB                                 ; $3FEC52 |
+  JSR code_3FE4CB                           ; $3FEC52 |
 loc_7EC55:
   LDA #$00                                  ; $3FEC55 |
   STA $11                                   ; $3FEC57 |
@@ -20412,19 +20863,19 @@ loc_7EC65:
   STA $01                                   ; $3FEC6C |
   INY                                       ; $3FEC6E |
   STY $07                                   ; $3FEC6F |
-  JSR $D9CD                                 ; $3FEC71 |
+  JSR code_3ED9CD                           ; $3FEC71 |
   LDY $07                                   ; $3FEC74 |
   LDA ($08),y                               ; $3FEC76 |
   STA $00                                   ; $3FEC78 |
   INY                                       ; $3FEC7A |
   LDA ($08),y                               ; $3FEC7B |
   STA $01                                   ; $3FEC7D |
-  JSR $D9CD                                 ; $3FEC7F |
+  JSR code_3ED9CD                           ; $3FEC7F |
   LDA $11                                   ; $3FEC82 |
   BEQ loc_7ECA1                             ; $3FEC84 |
   AND #$01                                  ; $3FEC86 |
   BEQ loc_7ECA1                             ; $3FEC88 |
-  JSR $DB6D                                 ; $3FEC8A |
+  JSR code_3EDB6D                           ; $3FEC8A |
   LDX $8F                                   ; $3FEC8D |
   LDA $05F6,x                               ; $3FEC8F |
   BMI loc_7EC99                             ; $3FEC92 |
@@ -20433,11 +20884,12 @@ loc_7EC65:
 loc_7EC99:
   LDA #$00                                  ; $3FEC99 |
   STA $05F6,x                               ; $3FEC9B |
-  JSR $E4CB                                 ; $3FEC9E |
+  JSR code_3FE4CB                           ; $3FEC9E |
 loc_7ECA1:
   LDX $8F                                   ; $3FECA1 |
   RTS                                       ; $3FECA3 |
 
+code_3FECA4:
   LDA $05DF,x                               ; $3FECA4 |
   ORA #$01                                  ; $3FECA7 |
   CLC                                       ; $3FECA9 |
@@ -20455,8 +20907,10 @@ loc_7ECBE:
   STA $EE                                   ; $3FECC1 |
   RTS                                       ; $3FECC3 |
 
+code_3FECC4:
   LDA $04CB,x                               ; $3FECC4 |
   STA $02                                   ; $3FECC7 |
+code_3FECC9:
   LDA $04B4,x                               ; $3FECC9 |
   STA $03                                   ; $3FECCC |
   LDA $0486,x                               ; $3FECCE |
@@ -20471,7 +20925,7 @@ loc_7ECDA:
   STA $08                                   ; $3FECE2 |
   LDA $059A,y                               ; $3FECE4 |
   STA $0A                                   ; $3FECE7 |
-  JSR $F726                                 ; $3FECE9 |
+  JSR code_3FF726                           ; $3FECE9 |
   LDA $11                                   ; $3FECEC |
   BEQ loc_7ECF5                             ; $3FECEE |
   LDA $0583,y                               ; $3FECF0 |
@@ -20479,14 +20933,18 @@ loc_7ECDA:
   RTS                                       ; $3FECF4 |
 
 loc_7ECF5:
+code_3FECF5:
   DEY                                       ; $3FECF5 |
   CPY #$07                                  ; $3FECF6 |
   BNE loc_7ECDA                             ; $3FECF8 |
   CLC                                       ; $3FECFA |
   RTS                                       ; $3FECFB |
 
+code_3FECFC:
   LDY #$00                                  ; $3FECFC |
-  JSR $F8AE                                 ; $3FECFE |
+code_3FECFE:
+  JSR code_3FF8AE                           ; $3FECFE |
+code_3FED01:
   LDA $11                                   ; $3FED01 |
   SEC                                       ; $3FED03 |
   SBC $03CE,x                               ; $3FED04 |
@@ -20504,6 +20962,7 @@ loc_7ED18:
   STA $03CE,x                               ; $3FED1D |
   RTS                                       ; $3FED20 |
 
+code_3FED21:
   LDA $03FC,x                               ; $3FED21 |
   BMI locret_7ED3D                          ; $3FED24 |
   AND #$07                                  ; $3FED26 |
@@ -20521,12 +20980,13 @@ loc_7ED18:
 locret_7ED3D:
   RTS                                       ; $3FED3D |
 
+code_3FED3E:
   LDA #$F0                                  ; $3FED3E |
   STA $DC                                   ; $3FED40 |
-  JSR $C62B                                 ; $3FED42 |
+  JSR code_3EC62B                           ; $3FED42 |
   LDA #$26                                  ; $3FED45 |
   STA $DC                                   ; $3FED47 |
-  JSR $C62B                                 ; $3FED49 |
+  JSR code_3EC62B                           ; $3FED49 |
   LDA $0486,x                               ; $3FED4C |
   STA $06                                   ; $3FED4F |
   LDA $04CB,x                               ; $3FED51 |
@@ -20534,21 +20994,22 @@ locret_7ED3D:
   LDA #$05                                  ; $3FED56 |
   STA $05                                   ; $3FED58 |
   LDX #$15                                  ; $3FED5A |
-  JSR $ED69                                 ; $3FED5C |
+  JSR code_3FED69                           ; $3FED5C |
   BCS locret_7ED68                          ; $3FED5F |
   LDA #$09                                  ; $3FED61 |
   STA $05                                   ; $3FED63 |
-  JSR $ED69                                 ; $3FED65 |
+  JSR code_3FED69                           ; $3FED65 |
 locret_7ED68:
   RTS                                       ; $3FED68 |
 
+code_3FED69:
   LDA #$07                                  ; $3FED69 |
   STA $04                                   ; $3FED6B |
 loc_7ED6D:
   LDA $03A0,x                               ; $3FED6D |
   BNE loc_7EDA1                             ; $3FED70 |
   LDY #$08                                  ; $3FED72 |
-  JSR $CB28                                 ; $3FED74 |
+  JSR code_3ECB28                           ; $3FED74 |
 
   db $41                                    ; $3FED77 |
 
@@ -20579,7 +21040,9 @@ loc_7EDA6:
   CLC                                       ; $3FEDA6 |
   RTS                                       ; $3FEDA7 |
 
+code_3FEDA8:
   LDY #$00                                  ; $3FEDA8 |
+code_3FEDAA:
   LDA #$00                                  ; $3FEDAA |
   STA $11                                   ; $3FEDAC |
   LDA $00                                   ; $3FEDAE |
@@ -20639,6 +21102,7 @@ loc_7EE14:
 locret_7EE18:
   RTS                                       ; $3FEE18 |
 
+code_3FEE19:
   STA $00                                   ; $3FEE19 |
   CLC                                       ; $3FEE1B |
   LDA $05B1,x                               ; $3FEE1C |
@@ -20677,6 +21141,7 @@ locret_7EE62:
 
   db $01, $03, $02, $80, $00, $80           ; $3FEE63 |
 
+code_3FEE69:
   SEC                                       ; $3FEE69 |
   LDA $05B1,x                               ; $3FEE6A |
   SBC $EEF8,y                               ; $3FEE6D |
@@ -20700,6 +21165,7 @@ locret_7EE62:
   INC $ED                                   ; $3FEE97 |
   RTS                                       ; $3FEE99 |
 
+code_3FEE9A:
   CLC                                       ; $3FEE9A |
   LDA $060D,x                               ; $3FEE9B |
   ADC $EEF8,y                               ; $3FEE9E |
@@ -20723,6 +21189,7 @@ locret_7EE62:
 locret_7EEC8:
   RTS                                       ; $3FEEC8 |
 
+code_3FEEC9:
   SEC                                       ; $3FEEC9 |
   LDA $060D,x                               ; $3FEECA |
   SBC $EEF8,y                               ; $3FEECD |
@@ -20749,12 +21216,14 @@ locret_7EEC8:
   db $00, $30, $00, $00, $00, $00, $00, $00 ; $3FEF00 |
   db $01, $00, $0C, $00                     ; $3FEF08 |
 
-  JSR $E5B6                                 ; $3FEF0C |
+code_3FEF0C:
+  JSR code_3FE5B6                           ; $3FEF0C |
   LDA $11                                   ; $3FEF0F |
   STA $03CE,x                               ; $3FEF11 |
-  JSR $E5DF                                 ; $3FEF14 |
+  JSR code_3FE5DF                           ; $3FEF14 |
   RTS                                       ; $3FEF17 |
 
+code_3FEF18:
   LDA $03CE,x                               ; $3FEF18 |
   EOR #$08                                  ; $3FEF1B |
   STA $03CE,x                               ; $3FEF1D |
@@ -20763,6 +21232,7 @@ locret_7EEC8:
   STA $03B7,x                               ; $3FEF25 |
   RTS                                       ; $3FEF28 |
 
+code_3FEF29:
   LDA #$01                                  ; $3FEF29 |
   STA $0642                                 ; $3FEF2B |
   LDA #$FF                                  ; $3FEF2E |
@@ -20770,10 +21240,10 @@ locret_7EEC8:
   LDA #$F1                                  ; $3FEF33 |
   STA $DC                                   ; $3FEF35 |
 loc_7EF37:
-  JSR $E1DD                                 ; $3FEF37 |
-  JSR $CF4A                                 ; $3FEF3A |
+  JSR code_3FE1DD                           ; $3FEF37 |
+  JSR code_3ECF4A                           ; $3FEF3A |
   LDA #$04                                  ; $3FEF3D |
-  JSR $C5F6                                 ; $3FEF3F |
+  JSR code_3EC5F6                           ; $3FEF3F |
   LDX #$08                                  ; $3FEF42 |
   LDA #$31                                  ; $3FEF44 |
   STA $DC                                   ; $3FEF46 |
@@ -20785,8 +21255,10 @@ loc_7EF37:
 
   db $38, $C8, $38, $C8, $30, $C0, $C0, $30 ; $3FEF53 |
 
+code_3FEF5B:
   LDA #$5A                                  ; $3FEF5B |
   STA $062C                                 ; $3FEF5D |
+code_3FEF60:
   LDX #$08                                  ; $3FEF60 |
   LDA $056C,x                               ; $3FEF62 |
   BEQ loc_7EFC3                             ; $3FEF65 |
@@ -20804,10 +21276,11 @@ loc_7EF37:
   ORA $00                                   ; $3FEF7B |
   TAY                                       ; $3FEF7D |
   LDA $EFE0,y                               ; $3FEF7E |
-  JMP $EF87                                 ; $3FEF81 |
+  JMP code_3FEF87                           ; $3FEF81 |
 
 loc_7EF84:
   LDA $056C,x                               ; $3FEF84 |
+code_3FEF87:
   AND #$0F                                  ; $3FEF87 |
   STA $00                                   ; $3FEF89 |
   LDA #$00                                  ; $3FEF8B |
@@ -20824,15 +21297,15 @@ loc_7EF84:
   STA $03E5,x                               ; $3FEFA3 |
   BPL loc_7EFB9                             ; $3FEFA6 |
   LDA $0624,x                               ; $3FEFA8 |
-  JSR $C9EF                                 ; $3FEFAB |
-  JSR $D6F1                                 ; $3FEFAE |
+  JSR code_3EC9EF                           ; $3FEFAB |
+  JSR code_3ED6F1                           ; $3FEFAE |
   LDA #$00                                  ; $3FEFB1 |
   STA $05C7                                 ; $3FEFB3 |
-  JMP $E456                                 ; $3FEFB6 |
+  JMP code_3FE456                           ; $3FEFB6 |
 
 loc_7EFB9:
   LDA #$BB                                  ; $3FEFB9 |
-  JSR $C9EF                                 ; $3FEFBB |
+  JSR code_3EC9EF                           ; $3FEFBB |
   LDA #$20                                  ; $3FEFBE |
   STA $05DF,x                               ; $3FEFC0 |
 loc_7EFC3:
@@ -20847,11 +21320,11 @@ loc_7EFD0:
   BNE loc_7EFDA                             ; $3FEFD2 |
   LDA $0624,x                               ; $3FEFD4 |
 loc_7EFD7:
-  JSR $C9EF                                 ; $3FEFD7 |
+  JSR code_3EC9EF                           ; $3FEFD7 |
 loc_7EFDA:
   DEC $05DF,x                               ; $3FEFDA |
 loc_7EFDD:
-  JMP $E468                                 ; $3FEFDD |
+  JMP code_3FE468                           ; $3FEFDD |
 
   db $00, $00, $00, $00, $00, $00, $00, $00 ; $3FEFE0 |
   db $00, $00, $00, $00, $00, $00, $00, $00 ; $3FEFE8 |
@@ -20870,26 +21343,27 @@ loc_7EFDD:
   db $00, $F0, $10, $00, $FF, $00, $84, $84 ; $3FF050 |
   db $84, $84, $81, $80, $82, $83           ; $3FF058 |
 
-  JSR $CB28                                 ; $3FF05E |
+code_3FF05E:
+  JSR code_3ECB28                           ; $3FF05E |
 
   db $42                                    ; $3FF061 |
 
-  JSR $C9BF                                 ; $3FF062 |
+  JSR code_3EC9BF                           ; $3FF062 |
   LDA #$25                                  ; $3FF065 |
-  JSR $C9EF                                 ; $3FF067 |
+  JSR code_3EC9EF                           ; $3FF067 |
   LDA #$12                                  ; $3FF06A |
-  JSR $CB28                                 ; $3FF06C |
+  JSR code_3ECB28                           ; $3FF06C |
 
   db $00                                    ; $3FF06F |
 
   LDA #$8A                                  ; $3FF070 |
-  JSR $CAA4                                 ; $3FF072 |
+  JSR code_3ECAA4                           ; $3FF072 |
   LDA #$1D                                  ; $3FF075 |
-  JSR $CAA4                                 ; $3FF077 |
+  JSR code_3ECAA4                           ; $3FF077 |
   LDA #$79                                  ; $3FF07A |
-  JSR $CAA4                                 ; $3FF07C |
+  JSR code_3ECAA4                           ; $3FF07C |
   LDA #$7A                                  ; $3FF07F |
-  JSR $CAA4                                 ; $3FF081 |
+  JSR code_3ECAA4                           ; $3FF081 |
   LDA #$0F                                  ; $3FF084 |
   STA $DC                                   ; $3FF086 |
   LDX #$00                                  ; $3FF088 |
@@ -20897,17 +21371,17 @@ loc_7EFDD:
   STX $F9                                   ; $3FF08C |
   STX $FA                                   ; $3FF08E |
   LDY #$01                                  ; $3FF090 |
-  JSR $CB28                                 ; $3FF092 |
+  JSR code_3ECB28                           ; $3FF092 |
 
   db $41                                    ; $3FF095 |
 
   LDY #$99                                  ; $3FF096 |
-  JSR $E522                                 ; $3FF098 |
+  JSR code_3FE522                           ; $3FF098 |
   LDA #$8E                                  ; $3FF09B |
   STA $0C                                   ; $3FF09D |
   LDA #$F2                                  ; $3FF09F |
   STA $0D                                   ; $3FF0A1 |
-  JSR $F258                                 ; $3FF0A3 |
+  JSR code_3FF258                           ; $3FF0A3 |
   LDA #$01                                  ; $3FF0A6 |
   STA $04                                   ; $3FF0A8 |
   STA $05                                   ; $3FF0AA |
@@ -20921,24 +21395,24 @@ loc_7EFDD:
   STY $06A9                                 ; $3FF0BD |
 loc_7F0C0:
   LDY $06A9                                 ; $3FF0C0 |
-  JSR $F52F                                 ; $3FF0C3 |
+  JSR code_3FF52F                           ; $3FF0C3 |
   BCC loc_7F0ED                             ; $3FF0C6 |
   DEC $05C8                                 ; $3FF0C8 |
   LDA #$16                                  ; $3FF0CB |
   SEC                                       ; $3FF0CD |
   SBC $06A9                                 ; $3FF0CE |
   TAX                                       ; $3FF0D1 |
-  JSR $F51C                                 ; $3FF0D2 |
+  JSR code_3FF51C                           ; $3FF0D2 |
   BCS loc_7F0DC                             ; $3FF0D5 |
   LDA #$00                                  ; $3FF0D7 |
   STA $03A0,x                               ; $3FF0D9 |
 loc_7F0DC:
   LDA $F056,y                               ; $3FF0DC |
   TAY                                       ; $3FF0DF |
-  JSR $E522                                 ; $3FF0E0 |
+  JSR code_3FE522                           ; $3FF0E0 |
   LDY $06A9                                 ; $3FF0E3 |
   LDA $F6C7,y                               ; $3FF0E6 |
-  JSR $CB28                                 ; $3FF0E9 |
+  JSR code_3ECB28                           ; $3FF0E9 |
 
   db $00                                    ; $3FF0EC |
 
@@ -20950,26 +21424,27 @@ loc_7F0ED:
   LDA $51                                   ; $3FF0F7 |
   AND #$08                                  ; $3FF0F9 |
   BEQ loc_7F100                             ; $3FF0FB |
-  JMP $F193                                 ; $3FF0FD |
+  JMP code_3FF193                           ; $3FF0FD |
 
 loc_7F100:
-  JSR $E1DD                                 ; $3FF100 |
-  JSR $CA89                                 ; $3FF103 |
+  JSR code_3FE1DD                           ; $3FF100 |
+  JSR code_3ECA89                           ; $3FF103 |
   LDA $05C8                                 ; $3FF106 |
   BNE loc_7F124                             ; $3FF109 |
-  JSR $F6D9                                 ; $3FF10B |
-  JSR $F6D9                                 ; $3FF10E |
+  JSR code_3FF6D9                           ; $3FF10B |
+  JSR code_3FF6D9                           ; $3FF10E |
   LDA #$E0                                  ; $3FF111 |
-  JSR $C9EF                                 ; $3FF113 |
+  JSR code_3EC9EF                           ; $3FF113 |
   LDA #$45                                  ; $3FF116 |
-  JSR $CB28                                 ; $3FF118 |
+  JSR code_3ECB28                           ; $3FF118 |
 
   db $00                                    ; $3FF11B |
 
   LDA #$00                                  ; $3FF11C |
   STA $03AE                                 ; $3FF11E |
-  JSR $E1DD                                 ; $3FF121 |
+  JSR code_3FE1DD                           ; $3FF121 |
 loc_7F124:
+code_3FF124:
   LDY $04                                   ; $3FF124 |
   LDA $F21C,y                               ; $3FF126 |
   STA $0486                                 ; $3FF129 |
@@ -20977,8 +21452,8 @@ loc_7F124:
   LDA $F21F,y                               ; $3FF12E |
   STA $04CB                                 ; $3FF131 |
 loc_7F134:
-  JSR $C62B                                 ; $3FF134 |
-  JSR $E1DD                                 ; $3FF137 |
+  JSR code_3EC62B                           ; $3FF134 |
+  JSR code_3FE1DD                           ; $3FF137 |
   LDA $42                                   ; $3FF13A |
   AND #$0F                                  ; $3FF13C |
   BEQ loc_7F16D                             ; $3FF13E |
@@ -21005,7 +21480,7 @@ loc_7F134:
   STA $05                                   ; $3FF164 |
   LDA #$32                                  ; $3FF166 |
   STA $DC                                   ; $3FF168 |
-  JMP $F124                                 ; $3FF16A |
+  JMP code_3FF124                           ; $3FF16A |
 
 loc_7F16D:
   LDA $42                                   ; $3FF16D |
@@ -21027,59 +21502,62 @@ loc_7F18A:
   STA $51                                   ; $3FF18A |
   LDA #$33                                  ; $3FF18C |
   STA $DC                                   ; $3FF18E |
-  JSR $CA3D                                 ; $3FF190 |
+  JSR code_3ECA3D                           ; $3FF190 |
+code_3FF193:
   LDA $51                                   ; $3FF193 |
   BIT $FF5C                                 ; $3FF195 |
   BEQ loc_7F1A8                             ; $3FF198 |
   AND #$04                                  ; $3FF19A |
   BEQ loc_7F1A1                             ; $3FF19C |
-  JMP $F6CF                                 ; $3FF19E |
+  JMP code_3FF6CF                           ; $3FF19E |
 
 loc_7F1A1:
-  JMP $F6D4                                 ; $3FF1A1 |
+  JMP code_3FF6D4                           ; $3FF1A1 |
 
-  JSR $C62B                                 ; $3FF1A4 |
+  JSR code_3EC62B                           ; $3FF1A4 |
   RTS                                       ; $3FF1A7 |
 
 loc_7F1A8:
-  JSR $C9BF                                 ; $3FF1A8 |
-  JSR $CB28                                 ; $3FF1AB |
+  JSR code_3EC9BF                           ; $3FF1A8 |
+  JSR code_3ECB28                           ; $3FF1AB |
 
   db $03                                    ; $3FF1AE |
 
   RTS                                       ; $3FF1AF |
 
+code_3FF1B0:
   LDA #$3A                                  ; $3FF1B0 |
-  JSR $C9EF                                 ; $3FF1B2 |
+  JSR code_3EC9EF                           ; $3FF1B2 |
   LDA #$03                                  ; $3FF1B5 |
-  JSR $C5F6                                 ; $3FF1B7 |
+  JSR code_3EC5F6                           ; $3FF1B7 |
   LDA #$3B ; '                              ; $3FF1BA |
-  JSR $C9EF                                 ; $3FF1BC |
+  JSR code_3EC9EF                           ; $3FF1BC |
   LDA #$03                                  ; $3FF1BF |
-  JSR $C5F6                                 ; $3FF1C1 |
+  JSR code_3EC5F6                           ; $3FF1C1 |
   LDA #$5F                                  ; $3FF1C4 |
-  JSR $C9EF                                 ; $3FF1C6 |
+  JSR code_3EC9EF                           ; $3FF1C6 |
   LDA #$03                                  ; $3FF1C9 |
-  JSR $C5F6                                 ; $3FF1CB |
-  JMP $F1B0                                 ; $3FF1CE |
+  JSR code_3EC5F6                           ; $3FF1CB |
+  JMP code_3FF1B0                           ; $3FF1CE |
 
+code_3FF1D1:
   LDA #$60                                  ; $3FF1D1 |
-  JSR $C9EF                                 ; $3FF1D3 |
+  JSR code_3EC9EF                           ; $3FF1D3 |
   LDA #$05                                  ; $3FF1D6 |
-  JSR $C5F6                                 ; $3FF1D8 |
+  JSR code_3EC5F6                           ; $3FF1D8 |
   LDA #$61                                  ; $3FF1DB |
-  JSR $C9EF                                 ; $3FF1DD |
+  JSR code_3EC9EF                           ; $3FF1DD |
   LDA #$05                                  ; $3FF1E0 |
-  JSR $C5F6                                 ; $3FF1E2 |
+  JSR code_3EC5F6                           ; $3FF1E2 |
   LDA #$62                                  ; $3FF1E5 |
-  JSR $C9EF                                 ; $3FF1E7 |
+  JSR code_3EC9EF                           ; $3FF1E7 |
   LDA #$05                                  ; $3FF1EA |
-  JSR $C5F6                                 ; $3FF1EC |
+  JSR code_3EC5F6                           ; $3FF1EC |
   LDA #$63                                  ; $3FF1EF |
-  JSR $C9EF                                 ; $3FF1F1 |
+  JSR code_3EC9EF                           ; $3FF1F1 |
   LDA #$05                                  ; $3FF1F4 |
-  JSR $C5F6                                 ; $3FF1F6 |
-  JMP $F1D1                                 ; $3FF1F9 |
+  JSR code_3EC5F6                           ; $3FF1F6 |
+  JMP code_3FF1D1                           ; $3FF1F9 |
 
   db $00, $1B, $36, $24, $12, $2E, $09, $3E ; $3FF1FC |
   db $07, $23, $3A, $29, $1A, $33, $11, $41 ; $3FF204 |
@@ -21093,14 +21571,17 @@ loc_7F1A8:
   db $0E, $FF, $0A, $0B, $0F, $FF           ; $3FF244 |
 
 loc_7F24A:
-  JSR $C62B                                 ; $3FF24A |
+code_3FF24A:
+  JSR code_3EC62B                           ; $3FF24A |
   LDA $42                                   ; $3FF24D |
   AND #$90                                  ; $3FF24F |
   BEQ loc_7F24A                             ; $3FF251 |
   RTS                                       ; $3FF253 |
 
+code_3FF254:
   LDA #$60                                  ; $3FF254 |
   BNE loc_7F25A                             ; $3FF256 |
+code_3FF258:
   LDA #$90                                  ; $3FF258 |
 loc_7F25A:
   STA $07                                   ; $3FF25A |
@@ -21114,7 +21595,7 @@ loc_7F262:
   LDA ($0C),y                               ; $3FF269 |
   BEQ locret_7F28D                          ; $3FF26B |
   LDY $07                                   ; $3FF26D |
-  JSR $CB28                                 ; $3FF26F |
+  JSR code_3ECB28                           ; $3FF26F |
 
   db $41                                    ; $3FF272 |
 
@@ -21129,7 +21610,7 @@ loc_7F262:
   INY                                       ; $3FF283 |
   STY $06                                   ; $3FF284 |
   TAY                                       ; $3FF286 |
-  JSR $E522                                 ; $3FF287 |
+  JSR code_3FE522                           ; $3FF287 |
 loc_7F28A:
   DEX                                       ; $3FF28A |
   BPL loc_7F262                             ; $3FF28B |
@@ -21141,33 +21622,37 @@ locret_7F28D:
   db $6F, $47, $80, $AF, $49, $D0, $AF, $4A ; $3FF29E |
   db $80, $73, $4E, $00                     ; $3FF2A6 |
 
+code_3FF2AA:
   RTS                                       ; $3FF2AA |
 
-  JSR $CB28                                 ; $3FF2AB |
+code_3FF2AB:
+  JSR code_3ECB28                           ; $3FF2AB |
 
   db $42                                    ; $3FF2AE |
 
-  JSR $CB28                                 ; $3FF2AF |
+  JSR code_3ECB28                           ; $3FF2AF |
 
   db $4C                                    ; $3FF2B2 |
 
   RTS                                       ; $3FF2B3 |
 
-  JSR $F2AB                                 ; $3FF2B4 |
-  JSR $F473                                 ; $3FF2B7 |
-  JSR $E1DD                                 ; $3FF2BA |
-  JSR $CB28                                 ; $3FF2BD |
+code_3FF2B4:
+  JSR code_3FF2AB                           ; $3FF2B4 |
+  JSR code_3FF473                           ; $3FF2B7 |
+  JSR code_3FE1DD                           ; $3FF2BA |
+  JSR code_3ECB28                           ; $3FF2BD |
 
   db $02                                    ; $3FF2C0 |
 
   RTS                                       ; $3FF2C1 |
 
+code_3FF2C2:
   LDA #$15                                  ; $3FF2C2 |
   STA $DC                                   ; $3FF2C4 |
-  JSR $F2AB                                 ; $3FF2C6 |
+  JSR code_3FF2AB                           ; $3FF2C6 |
   LDX #$00                                  ; $3FF2C9 |
   LDY #$50                                  ; $3FF2CB |
-  JSR $CB28                                 ; $3FF2CD |
+  JSR code_3ECB28                           ; $3FF2CD |
 
   db $41                                    ; $3FF2D0 |
 
@@ -21175,26 +21660,27 @@ locret_7F28D:
   STA $05B1                                 ; $3FF2D2 |
   STA $05C8                                 ; $3FF2D5 |
 loc_7F2D8:
+code_3FF2D8:
   LDX #$00                                  ; $3FF2D8 |
   LDY #$A7                                  ; $3FF2DA |
-  JSR $E522                                 ; $3FF2DC |
+  JSR code_3FE522                           ; $3FF2DC |
   LDY $05B1                                 ; $3FF2DF |
   LDA $F563,y                               ; $3FF2E2 |
   STA $0486                                 ; $3FF2E5 |
   LDY $05C8                                 ; $3FF2E8 |
   LDA $F569,y                               ; $3FF2EB |
   STA $04CB                                 ; $3FF2EE |
-  JSR $E1DD                                 ; $3FF2F1 |
+  JSR code_3FE1DD                           ; $3FF2F1 |
 loc_7F2F4:
-  JSR $E1DD                                 ; $3FF2F4 |
-  JSR $C62B                                 ; $3FF2F7 |
+  JSR code_3FE1DD                           ; $3FF2F4 |
+  JSR code_3EC62B                           ; $3FF2F7 |
   LDA $42                                   ; $3FF2FA |
   BEQ loc_7F2F4                             ; $3FF2FC |
   BIT $FF5B                                 ; $3FF2FE |
   BNE loc_7F37A                             ; $3FF301 |
   BIT $FF58                                 ; $3FF303 |
   BEQ loc_7F348                             ; $3FF306 |
-  JSR $F3AB                                 ; $3FF308 |
+  JSR code_3FF3AB                           ; $3FF308 |
   LDA $0300,y                               ; $3FF30B |
   BEQ loc_7F320                             ; $3FF30E |
   AND #$7F                                  ; $3FF310 |
@@ -21204,25 +21690,25 @@ loc_7F2F4:
 loc_7F318:
   LDA #$00                                  ; $3FF318 |
   STA $03A0,x                               ; $3FF31A |
-  JMP $F2D8                                 ; $3FF31D |
+  JMP code_3FF2D8                           ; $3FF31D |
 
 loc_7F320:
   LDY #$01                                  ; $3FF320 |
-  JSR $E5AB                                 ; $3FF322 |
+  JSR code_3FE5AB                           ; $3FF322 |
   BCS loc_7F2D8                             ; $3FF325 |
   CPX #$10                                  ; $3FF327 |
   BEQ loc_7F318                             ; $3FF329 |
   LDY #$9D                                  ; $3FF32B |
-  JSR $E522                                 ; $3FF32D |
+  JSR code_3FE522                           ; $3FF32D |
   LDA $0486                                 ; $3FF330 |
   STA $0486,x                               ; $3FF333 |
   LDA $04CB                                 ; $3FF336 |
   STA $04CB,x                               ; $3FF339 |
-  JSR $F3AB                                 ; $3FF33C |
+  JSR code_3FF3AB                           ; $3FF33C |
   TXA                                       ; $3FF33F |
   ORA #$80                                  ; $3FF340 |
   STA $0300,y                               ; $3FF342 |
-  JMP $F2D8                                 ; $3FF345 |
+  JMP code_3FF2D8                           ; $3FF345 |
 
 loc_7F348:
   AND #$03                                  ; $3FF348 |
@@ -21248,21 +21734,23 @@ loc_7F348:
   TAY                                       ; $3FF36F |
   LDA $F555,y                               ; $3FF370 |
   STA $05C8                                 ; $3FF373 |
-  JMP $F2D8                                 ; $3FF376 |
+  JMP code_3FF2D8                           ; $3FF376 |
 
+code_3FF379:
   RTS                                       ; $3FF379 |
 
 loc_7F37A:
+code_3FF37A:
   LDA #$5B                                  ; $3FF37A |
   STA $04CB                                 ; $3FF37C |
   LDA #$D4                                  ; $3FF37F |
   STA $0486                                 ; $3FF381 |
   LDX #$00                                  ; $3FF384 |
   LDY #$A8                                  ; $3FF386 |
-  JSR $E522                                 ; $3FF388 |
+  JSR code_3FE522                           ; $3FF388 |
 loc_7F38B:
-  JSR $E1DD                                 ; $3FF38B |
-  JSR $C62B                                 ; $3FF38E |
+  JSR code_3FE1DD                           ; $3FF38B |
+  JSR code_3EC62B                           ; $3FF38E |
   LDA $42                                   ; $3FF391 |
   AND #$90                                  ; $3FF393 |
   BNE loc_7F3CC                             ; $3FF395 |
@@ -21275,8 +21763,9 @@ loc_7F38B:
   LDY #$05                                  ; $3FF3A3 |
 loc_7F3A5:
   STY $05B1                                 ; $3FF3A5 |
-  JMP $F2D8                                 ; $3FF3A8 |
+  JMP code_3FF2D8                           ; $3FF3A8 |
 
+code_3FF3AB:
   LDY $05C8                                 ; $3FF3AB |
   LDA $05B1                                 ; $3FF3AE |
   CLC                                       ; $3FF3B1 |
@@ -21284,6 +21773,7 @@ loc_7F3A5:
   TAY                                       ; $3FF3B5 |
   RTS                                       ; $3FF3B6 |
 
+code_3FF3B7:
   LDA #$00                                  ; $3FF3B7 |
   STA $05C8                                 ; $3FF3B9 |
   TYA                                       ; $3FF3BC |
@@ -21367,24 +21857,25 @@ loc_7F44B:
   STA $0692,y                               ; $3FF454 |
   DEY                                       ; $3FF457 |
   BPL loc_7F44B                             ; $3FF458 |
-  JMP $F379                                 ; $3FF45A |
+  JMP code_3FF379                           ; $3FF45A |
 
 loc_7F45D:
   LDA #$38                                  ; $3FF45D |
   STA $DC                                   ; $3FF45F |
   LDA #$16                                  ; $3FF461 |
-  JSR $CB28                                 ; $3FF463 |
+  JSR code_3ECB28                           ; $3FF463 |
 
   db $00                                    ; $3FF466 |
 
-  JSR $F24A                                 ; $3FF467 |
+  JSR code_3FF24A                           ; $3FF467 |
   LDA #$17                                  ; $3FF46A |
-  JSR $CB28                                 ; $3FF46C |
+  JSR code_3ECB28                           ; $3FF46C |
 
   db $00                                    ; $3FF46F |
 
-  JMP $F37A                                 ; $3FF470 |
+  JMP code_3FF37A                           ; $3FF470 |
 
+code_3FF473:
   LDA $F3                                   ; $3FF473 |
   AND #$02                                  ; $3FF475 |
   ORA $0696                                 ; $3FF477 |
@@ -21406,9 +21897,9 @@ loc_7F45D:
   ADC #$00                                  ; $3FF493 |
   STA $0F                                   ; $3FF495 |
   LDY #$01                                  ; $3FF497 |
-  JSR $E5AB                                 ; $3FF499 |
+  JSR code_3FE5AB                           ; $3FF499 |
   LDY #$9D                                  ; $3FF49C |
-  JSR $E522                                 ; $3FF49E |
+  JSR code_3FE522                           ; $3FF49E |
   PLA                                       ; $3FF4A1 |
   TAY                                       ; $3FF4A2 |
   LDA $F587,y                               ; $3FF4A3 |
@@ -21427,13 +21918,13 @@ loc_7F4B4:
   LDA $0692,x                               ; $3FF4B9 |
   CMP ($0E),y                               ; $3FF4BC |
   BNE loc_7F4B3                             ; $3FF4BE |
-  JSR $F3B7                                 ; $3FF4C0 |
+  JSR code_3FF3B7                           ; $3FF4C0 |
   TXA                                       ; $3FF4C3 |
   PHA                                       ; $3FF4C4 |
   LDY #$01                                  ; $3FF4C5 |
-  JSR $E5AB                                 ; $3FF4C7 |
+  JSR code_3FE5AB                           ; $3FF4C7 |
   LDY #$9D                                  ; $3FF4CA |
-  JSR $E522                                 ; $3FF4CC |
+  JSR code_3FE522                           ; $3FF4CC |
   LDY $05B1                                 ; $3FF4CF |
   LDA $F563,y                               ; $3FF4D2 |
   STA $0486,x                               ; $3FF4D5 |
@@ -21446,6 +21937,7 @@ loc_7F4B4:
   BPL loc_7F4B1                             ; $3FF4E4 |
   RTS                                       ; $3FF4E6 |
 
+code_3FF4E7:
   LDY $51                                   ; $3FF4E7 |
   CPY #$08                                  ; $3FF4E9 |
   BCS locret_7F513                          ; $3FF4EB |
@@ -21471,14 +21963,17 @@ locret_7F513:
 
   db $FF, $FF, $FF, $FF, $1D, $1F, $1A, $17 ; $3FF514 |
 
+code_3FF51C:
   LDA $F6BF,y                               ; $3FF51C |
   STA $00                                   ; $3FF51F |
   BNE loc_7F534                             ; $3FF521 |
+code_3FF523:
   LDA $F6BF,y                               ; $3FF523 |
   STA $00                                   ; $3FF526 |
   LDA $57                                   ; $3FF528 |
   CMP $F514,y                               ; $3FF52A |
   BEQ loc_7F534                             ; $3FF52D |
+code_3FF52F:
   LDA $F6B7,y                               ; $3FF52F |
   STA $00                                   ; $3FF532 |
 loc_7F534:
@@ -21552,18 +22047,21 @@ loc_7F549:
   db $04, $04, $30, $31, $33, $32, $35, $34 ; $3FF6C5 |
   db $36, $37                               ; $3FF6CD |
 
-  JSR $CB28                                 ; $3FF6CF |
+code_3FF6CF:
+  JSR code_3ECB28                           ; $3FF6CF |
 
   db $48                                    ; $3FF6D2 |
 
   RTS                                       ; $3FF6D3 |
 
-  JSR $CB28                                 ; $3FF6D4 |
+code_3FF6D4:
+  JSR code_3ECB28                           ; $3FF6D4 |
 
   db $49                                    ; $3FF6D7 |
 
   RTS                                       ; $3FF6D8 |
 
+code_3FF6D9:
   LDX #$04                                  ; $3FF6D9 |
 loc_7F6DB:
   LDA #$61                                  ; $3FF6DB |
@@ -21572,17 +22070,18 @@ loc_7F6DB:
   STA $0370                                 ; $3FF6E1 |
   INC $46                                   ; $3FF6E4 |
   LDA #$02                                  ; $3FF6E6 |
-  JSR $C5F6                                 ; $3FF6E8 |
+  JSR code_3EC5F6                           ; $3FF6E8 |
   LDA #$0F                                  ; $3FF6EB |
   STA $0370                                 ; $3FF6ED |
   INC $46                                   ; $3FF6F0 |
   LDA #$02                                  ; $3FF6F2 |
-  JSR $C5F6                                 ; $3FF6F4 |
+  JSR code_3EC5F6                           ; $3FF6F4 |
   DEX                                       ; $3FF6F7 |
   BNE loc_7F6DB                             ; $3FF6F8 |
   RTS                                       ; $3FF6FA |
 
-  JSR $CB28                                 ; $3FF6FB |
+code_3FF6FB:
+  JSR code_3ECB28                           ; $3FF6FB |
 
   db $4A                                    ; $3FF6FE |
 
@@ -21592,6 +22091,7 @@ loc_7F6DB:
   db $00, $57, $5D, $58, $59, $5A, $5C, $5B ; $3FF708 |
   db $00, $29                               ; $3FF710 |
 
+code_3FF712:
   LDA $0486,x                               ; $3FF712 |
   STA $00                                   ; $3FF715 |
   LDA $046F,x                               ; $3FF717 |
@@ -21600,6 +22100,7 @@ loc_7F6DB:
   STA $02                                   ; $3FF71F |
   LDA $04B4,x                               ; $3FF721 |
   STA $03                                   ; $3FF724 |
+code_3FF726:
   LDA $0486,y                               ; $3FF726 |
   STA $04                                   ; $3FF729 |
   LDA $046F,y                               ; $3FF72B |
@@ -21735,12 +22236,14 @@ loc_7F7C2:
   db $10, $10, $18, $04, $0A, $10, $1C, $10 ; $3FF8A4 |
   db $22, $0B                               ; $3FF8AC |
 
+code_3FF8AE:
   LDA $0486,y                               ; $3FF8AE |
   STA $08                                   ; $3FF8B1 |
   LDA $046F,y                               ; $3FF8B3 |
   STA $09                                   ; $3FF8B6 |
   LDA $04CB,y                               ; $3FF8B8 |
   STA $0A                                   ; $3FF8BB |
+code_3FF8BD:
   LDA $0486,x                               ; $3FF8BD |
   STA $0B                                   ; $3FF8C0 |
   LDA $046F,x                               ; $3FF8C2 |
@@ -21812,14 +22315,15 @@ loc_7F916:
   LDA #$80                                  ; $3FF946 |
   STA $06A5                                 ; $3FF948 |
   LDY $51                                   ; $3FF94B |
-  JSR $F523                                 ; $3FF94D |
+  JSR code_3FF523                           ; $3FF94D |
   BCS loc_7F99C                             ; $3FF950 |
   LDX $8F                                   ; $3FF952 |
-  JSR $FA03                                 ; $3FF954 |
-  JSR $FA5F                                 ; $3FF957 |
+  JSR code_3FFA03                           ; $3FF954 |
+  JSR code_3FFA5F                           ; $3FF957 |
+code_3FF95A:
   LDX $8F                                   ; $3FF95A |
 loc_7F95C:
-  JSR $E468                                 ; $3FF95C |
+  JSR code_3FE468                           ; $3FF95C |
   LDA $03A8                                 ; $3FF95F |
   BNE loc_7F95C                             ; $3FF962 |
   LDA #$F0                                  ; $3FF964 |
@@ -21830,33 +22334,33 @@ loc_7F95C:
 loc_7F96E:
   STA $05B1,x                               ; $3FF96E |
 loc_7F971:
-  JSR $E468                                 ; $3FF971 |
+  JSR code_3FE468                           ; $3FF971 |
   DEC $05B1,x                               ; $3FF974 |
   BNE loc_7F971                             ; $3FF977 |
   LDA $03E5                                 ; $3FF979 |
   BMI loc_7F971                             ; $3FF97C |
   LDA #$13                                  ; $3FF97E |
   STA $DC                                   ; $3FF980 |
-  JSR $C62B                                 ; $3FF982 |
+  JSR code_3EC62B                           ; $3FF982 |
   LDA #$F0                                  ; $3FF985 |
   STA $05B1,x                               ; $3FF987 |
 loc_7F98A:
   LDA #$00                                  ; $3FF98A |
   STA $40                                   ; $3FF98C |
-  JSR $D430                                 ; $3FF98E |
-  JSR $E468                                 ; $3FF991 |
+  JSR code_3ED430                           ; $3FF98E |
+  JSR code_3FE468                           ; $3FF991 |
   DEC $05B1,x                               ; $3FF994 |
   BNE loc_7F98A                             ; $3FF997 |
-  JSR $F4E7                                 ; $3FF999 |
+  JSR code_3FF4E7                           ; $3FF999 |
 loc_7F99C:
   LDA $51                                   ; $3FF99C |
   AND #$08                                  ; $3FF99E |
   BNE loc_7F9B4                             ; $3FF9A0 |
-  JSR $F9C6                                 ; $3FF9A2 |
+  JSR code_3FF9C6                           ; $3FF9A2 |
 loc_7F9A5:
   LDA #$00                                  ; $3FF9A5 |
-  JSR $D42A                                 ; $3FF9A7 |
-  JSR $E468                                 ; $3FF9AA |
+  JSR code_3ED42A                           ; $3FF9A7 |
+  JSR code_3FE468                           ; $3FF9AA |
   LDA $04CB                                 ; $3FF9AD |
   CMP #$B4                                  ; $3FF9B0 |
   BCC loc_7F9A5                             ; $3FF9B2 |
@@ -21866,9 +22370,10 @@ loc_7F9B4:
   LDA #$91                                  ; $3FF9B9 |
   STA $0413                                 ; $3FF9BB |
   LDA #$00                                  ; $3FF9BE |
-  JSR $D430                                 ; $3FF9C0 |
-  JMP $E456                                 ; $3FF9C3 |
+  JSR code_3ED430                           ; $3FF9C0 |
+  JMP code_3FE456                           ; $3FF9C3 |
 
+code_3FF9C6:
   PLA                                       ; $3FF9C6 |
   STA $05C7                                 ; $3FF9C7 |
   PLA                                       ; $3FF9CA |
@@ -21878,16 +22383,16 @@ loc_7F9B4:
   BCS loc_7F9E6                             ; $3FF9D3 |
 loc_7F9D5:
   LDA #$01                                  ; $3FF9D5 |
-  JSR $D42A                                 ; $3FF9D7 |
-  JSR $E468                                 ; $3FF9DA |
+  JSR code_3ED42A                           ; $3FF9D7 |
+  JSR code_3FE468                           ; $3FF9DA |
   LDA $0486                                 ; $3FF9DD |
   CMP #$80                                  ; $3FF9E0 |
   BCC loc_7F9D5                             ; $3FF9E2 |
   BCS loc_7F9F5                             ; $3FF9E4 |
 loc_7F9E6:
   LDA #$02                                  ; $3FF9E6 |
-  JSR $D42A                                 ; $3FF9E8 |
-  JSR $E468                                 ; $3FF9EB |
+  JSR code_3ED42A                           ; $3FF9E8 |
+  JSR code_3FE468                           ; $3FF9EB |
   LDA $0486                                 ; $3FF9EE |
   CMP #$80                                  ; $3FF9F1 |
   BCS loc_7F9E6                             ; $3FF9F3 |
@@ -21900,6 +22405,7 @@ loc_7F9F5:
   PHA                                       ; $3FFA01 |
   RTS                                       ; $3FFA02 |
 
+code_3FFA03:
   PLA                                       ; $3FFA03 |
   STA $05B1,x                               ; $3FFA04 |
   PLA                                       ; $3FFA07 |
@@ -21912,7 +22418,7 @@ loc_7F9F5:
   LDA #$18                                  ; $3FFA15 |
   STA $DC                                   ; $3FFA17 |
 loc_7FA19:
-  JSR $C62B                                 ; $3FFA19 |
+  JSR code_3EC62B                           ; $3FFA19 |
   LDY $57                                   ; $3FFA1C |
   DEY                                       ; $3FFA1E |
   STY $0684                                 ; $3FFA1F |
@@ -21922,17 +22428,17 @@ loc_7FA19:
   STA $0686                                 ; $3FFA2B |
 loc_7FA2E:
   LDA #$01                                  ; $3FFA2E |
-  JSR $D430                                 ; $3FFA30 |
-  JSR $E468                                 ; $3FFA33 |
+  JSR code_3ED430                           ; $3FFA30 |
+  JSR code_3FE468                           ; $3FFA33 |
   LDA $0486                                 ; $3FFA36 |
   CMP #$40                                  ; $3FFA39 |
   BCC loc_7FA2E                             ; $3FFA3B |
-  JSR $D6F1                                 ; $3FFA3D |
-  JSR $E1DD                                 ; $3FFA40 |
-  JSR $CF4A                                 ; $3FFA43 |
+  JSR code_3ED6F1                           ; $3FFA3D |
+  JSR code_3FE1DD                           ; $3FFA40 |
+  JSR code_3ECF4A                           ; $3FFA43 |
   LDA #$00                                  ; $3FFA46 |
-  JSR $D430                                 ; $3FFA48 |
-  JSR $E468                                 ; $3FFA4B |
+  JSR code_3ED430                           ; $3FFA48 |
+  JSR code_3FE468                           ; $3FFA4B |
   LDA $05C8,x                               ; $3FFA4E |
   PHA                                       ; $3FFA51 |
   LDA $05B1,x                               ; $3FFA52 |
@@ -21941,15 +22447,16 @@ loc_7FA2E:
 
   db $36, $3F, $45, $43, $3E, $44, $39, $46 ; $3FFA57 |
 
-  JSR $DE59                                 ; $3FFA5F |
+code_3FFA5F:
+  JSR code_3EDE59                           ; $3FFA5F |
   LDY $063D                                 ; $3FFA62 |
   LDA $FA57,y                               ; $3FFA65 |
-  JSR $CAA4                                 ; $3FFA68 |
+  JSR code_3ECAA4                           ; $3FFA68 |
   LDA #$3C                                  ; $3FFA6B |
-  JSR $C5F6                                 ; $3FFA6D |
+  JSR code_3EC5F6                           ; $3FFA6D |
   LDX #$08                                  ; $3FFA70 |
   LDY #$93                                  ; $3FFA72 |
-  JSR $CB28                                 ; $3FFA74 |
+  JSR code_3ECB28                           ; $3FFA74 |
 
   db $41                                    ; $3FFA77 |
 
@@ -21965,10 +22472,10 @@ loc_7FA2E:
 
   JSR $CAB4                                 ; $3FFA89 |
   LDA #$3C                                  ; $3FFA8C |
-  JSR $C606                                 ; $3FFA8E |
+  JSR code_3EC606                           ; $3FFA8E |
   LDX #$08                                  ; $3FFA91 |
   LDY #$93                                  ; $3FFA93 |
-  JSR $CB38                                 ; $3FFA95 |
+  JSR code_3ECB38                           ; $3FFA95 |
 
   db $41                                    ; $3FFA98 |
 
@@ -22134,6 +22641,7 @@ loc_7FA2E:
   db $01, $02, $03, $00, $04, $08, $0C, $00 ; $3FFF61 |
   db $10, $20, $30, $00, $40, $80, $C0      ; $3FFF69 |
 
+code_3FFF70:
   SEI                                       ; $3FFF70 |
   CLD                                       ; $3FFF71 |
   LDA #$00                                  ; $3FFF72 |
@@ -22186,7 +22694,7 @@ loc_7FFCE:
   STA $8001                                 ; $3FFFD4 |
   DEY                                       ; $3FFFD7 |
   BPL loc_7FFCE                             ; $3FFFD8 |
-  JMP $C51E                                 ; $3FFFDA |
+  JMP code_3EC51E                           ; $3FFFDA |
 
   db $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF ; $3FFFDD |
   db $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF ; $3FFFE5 |
