@@ -10173,7 +10173,7 @@ loc_76B57:
   LDA $40                                   ; $3B8B5A |
   AND #$10                                  ; $3B8B5C |
   BEQ loc_76B57                             ; $3B8B5E |
-  JMP code_3FFF70                           ; $3B8B60 |
+  JMP RESET                                 ; $3B8B60 |
 
 code_3B8B63:
   LDA #$30                                  ; $3B8B63 |
@@ -15143,6 +15143,7 @@ loc_7BF3D:
 bank $3E
 org $C000
 
+NMI:
   PHA                                       ; $3EA000 |
   TXA                                       ; $3EA001 |
   PHA                                       ; $3EC002 |
@@ -15315,6 +15316,7 @@ code_3EC104:
   dw $C4B2                                  ; $3EC148 |
   dw $C4F2                                  ; $3EC14A |
 
+IRQ:
   PHA                                       ; $3EC14C |
   TXA                                       ; $3EC14D |
   PHA                                       ; $3EC14E |
@@ -17133,7 +17135,7 @@ code_3ECE87:
   LDA $0681                                 ; $3ECEA2 |
   CMP #$08                                  ; $3ECEA5 |
   BNE loc_7CEAC                             ; $3ECEA7 |
-  JMP code_3FFF70                           ; $3ECEA9 |
+  JMP RESET                                 ; $3ECEA9 |
 
 loc_7CEAC:
   LDA #$01                                  ; $3ECEAC |
@@ -22487,6 +22489,7 @@ code_3FFA5F:
   STA $04CB,x                               ; $3FFAA5 |
   RTS                                       ; $3FFAA8 |
 
+; freespace
   db $00, $00, $00, $00, $00, $00, $00, $00 ; $3FFAA9 |
   db $00, $00, $00, $00, $00, $00, $00, $00 ; $3FFAB1 |
   db $00, $00, $00, $00, $00, $00, $24, $FF ; $3FFAB9 |
@@ -22635,13 +22638,14 @@ code_3FFA5F:
   db $00, $00, $00, $00, $00, $00, $00, $00 ; $3FFF31 |
   db $00, $00, $00, $00, $00, $00, $00, $37 ; $3FFF39 |
   db $BE, $FF, $FF, $00, $D9, $FF, $FF, $71 ; $3FFF41 |
-  db $BF, $FF, $FF, $F7, $EA, $FF, $FF, $00 ; $3FFF49 |
-  db $02, $04, $05, $06, $07, $FF, $FF, $80 ; $3FFF51 |
-  db $40, $20, $10, $08, $04, $02, $01, $00 ; $3FFF59 |
-  db $01, $02, $03, $00, $04, $08, $0C, $00 ; $3FFF61 |
-  db $10, $20, $30, $00, $40, $80, $C0      ; $3FFF69 |
+  db $BF, $FF, $FF, $F7, $EA, $FF, $FF      ; $3FFF49 |
 
-code_3FFF70:
+  db $00, $02, $04, $05, $06, $07, $FF, $FF ; $3FFF50 |
+  db $80, $40, $20, $10, $08, $04, $02, $01 ; $3FFF58 |
+  db $00, $01, $02, $03, $00, $04, $08, $0C ; $3FFF60 |
+  db $00, $10, $20, $30, $00, $40, $80, $C0 ; $3FFF68 |
+
+RESET:
   SEI                                       ; $3FFF70 |
   CLD                                       ; $3FFF71 |
   LDA #$00                                  ; $3FFF72 |
@@ -22700,6 +22704,8 @@ loc_7FFCE:
   db $FF, $FF, $FF, $FF, $FF, $FF, $FF, $FF ; $3FFFE5 |
   db $FF, $FF, $FF, $F4, $E5, $00, $00, $58 ; $3FFFED |
   db $04, $00, $00, $08, $9C                ; $3FFFF5 |
-  dw $C000                                  ; $3FFFFA |
-  dw $FF70                                  ; $3FFFFC |
-  dw $C14C                                  ; $3FFFFE |
+
+; interrupt vectors
+  dw NMI                                    ; $3FFFFA |
+  dw RESET                                  ; $3FFFFC |
+  dw IRQ                                    ; $3FFFFE |
